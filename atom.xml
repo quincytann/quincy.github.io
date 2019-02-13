@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Quincy&#39;s Blog</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://quincy.ink/"/>
+  <updated>2019-02-13T08:50:29.790Z</updated>
+  <id>http://quincy.ink/</id>
+  
+  <author>
+    <name>Quincy</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello</title>
+    <link href="http://quincy.ink/2019/02/13/Hello/"/>
+    <id>http://quincy.ink/2019/02/13/Hello/</id>
+    <published>2019-02-13T08:50:29.000Z</published>
+    <updated>2019-02-13T08:50:29.790Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://quincy.ink/2019/02/13/hello-world/"/>
+    <id>http://quincy.ink/2019/02/13/hello-world/</id>
+    <published>2019-02-13T00:51:37.219Z</published>
+    <updated>2019-02-13T00:51:37.219Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
