@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://quincy.ink/"/>
-  <updated>2019-02-16T01:50:58.805Z</updated>
+  <updated>2019-02-16T08:16:51.164Z</updated>
   <id>http://quincy.ink/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>牛客练习赛 40C--小A与欧拉路</title>
+    <link href="http://quincy.ink/2019/02/16/%E7%89%9B%E5%AE%A2%E7%BB%83%E4%B9%A0%E8%B5%9B-40C-%E5%B0%8FA%E4%B8%8E%E6%AC%A7%E6%8B%89%E8%B7%AF/"/>
+    <id>http://quincy.ink/2019/02/16/牛客练习赛-40C-小A与欧拉路/</id>
+    <published>2019-02-16T08:08:43.000Z</published>
+    <updated>2019-02-16T08:16:51.164Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>题意：</strong></p><p>小A给你了一棵树，对于这棵树上的每一条边，你都可以将它复制任意（可以为0）次（即在这条边连接的两个点之间再加一条边权相同的边），求所有可能新形成的图中欧拉路的最短长度 </p><p>欧拉路：从图中任意一个点开始到图中任意一个点结束的路径，并且图中每条边只通过恰好一次。</p><p>Input：<a id="more"></a></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">4</span><br><span class="line">1 2 1</span><br><span class="line">1 3 1</span><br><span class="line">1 4 2</span><br></pre></td></tr></table></figure><p>Output：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">5</span><br></pre></td></tr></table></figure><p><strong>思路：</strong></p><p>先考虑回路的情况。由于是一棵树，任两点间路径只有一条，从一条边走到深度更大的点，一定还会从同一条边返回以回到起点或者遍历其他子树，所以每条边需要复制一次，此时答案是边权和的两倍。</p><p>不是回路的情况可以减掉从终点回到起点的路径，要让这条路径尽量长，所以长度一定是直径的长度。</p><p>答案就是边权和的两倍减去直径长度。</p><p><strong>代码：</strong></p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">2e5</span>+<span class="number">5</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">EDGE</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> next,w,to;</span><br><span class="line">&#125;edge[maxn*<span class="number">2</span>];</span><br><span class="line"><span class="keyword">int</span> head[maxn];</span><br><span class="line"><span class="keyword">int</span> cnt;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> u,<span class="keyword">int</span> v,<span class="keyword">int</span> w)</span></span>&#123;</span><br><span class="line">    edge[++cnt].next=head[u];</span><br><span class="line">    edge[cnt].to=v;</span><br><span class="line">    edge[cnt].w=w;</span><br><span class="line">    head[u]=cnt;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">int</span> pos,ans;</span><br><span class="line"><span class="keyword">int</span> d[maxn];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> pre)</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=head[x];i;i=edge[i].next)&#123;</span><br><span class="line">        <span class="keyword">int</span> to=edge[i].to;</span><br><span class="line">        <span class="keyword">if</span>(to==pre) <span class="keyword">continue</span>;</span><br><span class="line">        d[to]=d[x]+edge[i].w;</span><br><span class="line">        dfs(to,x);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(d[x]&gt;ans)&#123;</span><br><span class="line">        ans=d[x];</span><br><span class="line">        pos=x;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</span><br><span class="line">    ll sum=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n<span class="number">-1</span>;i++)&#123;</span><br><span class="line">        <span class="keyword">int</span> u,v,w;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;u,&amp;v,&amp;w);</span><br><span class="line">        add(u,v,w);</span><br><span class="line">        add(v,u,w);</span><br><span class="line">        sum+=<span class="number">2</span>*w;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    dfs(<span class="number">1</span>,<span class="number">-1</span>);</span><br><span class="line">    <span class="built_in">memset</span>(d,<span class="number">0</span>,<span class="keyword">sizeof</span>(d));</span><br><span class="line">    dfs(pos,<span class="number">-1</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%lld\n"</span>,sum-ans);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;题意：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;小A给你了一棵树，对于这棵树上的每一条边，你都可以将它复制任意（可以为0）次（即在这条边连接的两个点之间再加一条边权相同的边），求所有可能新形成的图中欧拉路的最短长度 &lt;/p&gt;
+&lt;p&gt;欧拉路：从图中任意一个点开始到图中任意一个点结束的路径，并且图中每条边只通过恰好一次。&lt;/p&gt;
+&lt;p&gt;Input：
+    
+    </summary>
+    
+      <category term="ACM" scheme="http://quincy.ink/categories/ACM/"/>
+    
+    
+      <category term="dfs" scheme="http://quincy.ink/tags/dfs/"/>
+    
+      <category term="欧拉路" scheme="http://quincy.ink/tags/%E6%AC%A7%E6%8B%89%E8%B7%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>CSU 1803--2016(同余定理)</title>

@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[牛客练习赛 40C--小A与欧拉路]]></title>
+    <url>%2F2019%2F02%2F16%2F%E7%89%9B%E5%AE%A2%E7%BB%83%E4%B9%A0%E8%B5%9B-40C-%E5%B0%8FA%E4%B8%8E%E6%AC%A7%E6%8B%89%E8%B7%AF%2F</url>
+    <content type="text"><![CDATA[题意： 小A给你了一棵树，对于这棵树上的每一条边，你都可以将它复制任意（可以为0）次（即在这条边连接的两个点之间再加一条边权相同的边），求所有可能新形成的图中欧拉路的最短长度 欧拉路：从图中任意一个点开始到图中任意一个点结束的路径，并且图中每条边只通过恰好一次。 Input： 123441 2 11 3 11 4 2 Output： 15 思路： 先考虑回路的情况。由于是一棵树，任两点间路径只有一条，从一条边走到深度更大的点，一定还会从同一条边返回以回到起点或者遍历其他子树，所以每条边需要复制一次，此时答案是边权和的两倍。 不是回路的情况可以减掉从终点回到起点的路径，要让这条路径尽量长，所以长度一定是直径的长度。 答案就是边权和的两倍减去直径长度。 代码： 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849#include&lt;bits/stdc++.h&gt;using namespace std;typedef long long ll;const int maxn = 2e5+5;struct EDGE&#123; int next,w,to;&#125;edge[maxn*2];int head[maxn];int cnt; void add(int u,int v,int w)&#123; edge[++cnt].next=head[u]; edge[cnt].to=v; edge[cnt].w=w; head[u]=cnt;&#125; int pos,ans;int d[maxn];void dfs(int x,int pre)&#123; for(int i=head[x];i;i=edge[i].next)&#123; int to=edge[i].to; if(to==pre) continue; d[to]=d[x]+edge[i].w; dfs(to,x); &#125; if(d[x]&gt;ans)&#123; ans=d[x]; pos=x; &#125;&#125; int main()&#123; int n; scanf("%d",&amp;n); ll sum=0; for(int i=0;i&lt;n-1;i++)&#123; int u,v,w; scanf("%d%d%d",&amp;u,&amp;v,&amp;w); add(u,v,w); add(v,u,w); sum+=2*w; &#125; dfs(1,-1); memset(d,0,sizeof(d)); dfs(pos,-1); printf("%lld\n",sum-ans);&#125;]]></content>
+      <categories>
+        <category>ACM</category>
+      </categories>
+      <tags>
+        <tag>dfs</tag>
+        <tag>欧拉路</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[CSU 1803--2016(同余定理)]]></title>
     <url>%2F2019%2F02%2F14%2FCSU%201803--2016(%E5%90%8C%E4%BD%99%E5%AE%9A%E7%90%86)%2F</url>
     <content type="text"><![CDATA[题意： 求[l,r]之间有多少种a*b=2016的组合。 思路： 首先2016的1倍情况下有1 2016 , 2 1008 , 3 637… 等情况，2倍情况就是把a或b扩大2倍就行，那么我们可以把a看做[1,2016]的数，a’ 看做[2017,4032]的数，这样每次跨2016个数就知道有多少倍数了。最后两层for循环找出i j==2016的时候把对应的倍数种类乘起来加到答案就行了。 代码： 12345678910111213141516171819202122232425262728293031323334#include&lt;bits/stdc++.h&gt;using namespace std;typedef long long ll; int main()&#123; ll n,m; ll a[3000],b[3000]; //a[i]储存n有多少个i*2016&lt;=n，b[i]....m while(~scanf("%lld%lld",&amp;n,&amp;m)) &#123; ll k=n/2016; //有k个2016跨度 ll mm=n%2016; //余下的等下都要+1 for(int i=1;i&lt;=mm;i++) a[i]=k+1; for(int i=mm+1;i&lt;=2016;i++) a[i]=k; k=m/2016; mm=m%2016; for(int i=1;i&lt;=mm;i++) b[i]=k+1; for(int i=mm+1;i&lt;=2016;i++) b[i]=k; ll ans=0; for(int i=1;i&lt;=2016;i++) &#123; for(int j=1;j&lt;=2016;j++) &#123; if((i*j)%2016==0) &#123; ans+=(a[i]*b[j]); &#125; &#125; &#125; printf("%lld\n",ans); &#125;&#125;]]></content>
