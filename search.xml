@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[CSU 1803 2016（同余定理)]]></title>
-    <url>%2F2019%2F02%2F14%2FCSU-1803%202016%EF%BC%88%E5%90%8C%E4%BD%99%E5%AE%9A%E7%90%86%EF%BC%89%2F</url>
+    <title><![CDATA[CSU 1803--2016(同余定理)]]></title>
+    <url>%2F2019%2F02%2F14%2FCSU%201803--2016(%E5%90%8C%E4%BD%99%E5%AE%9A%E7%90%86)%2F</url>
     <content type="text"><![CDATA[题意： 求[l,r]之间有多少种a*b=2016的组合。 思路： 首先2016的1倍情况下有1 2016 , 2 1008 , 3 637… 等情况，2倍情况就是把a或b扩大2倍就行，那么我们可以把a看做[1,2016]的数，a’ 看做[2017,4032]的数，这样每次跨2016个数就知道有多少倍数了。最后两层for循环找出i j==2016的时候把对应的倍数种类乘起来加到答案就行了。 代码： 12345678910111213141516171819202122232425262728293031323334#include&lt;bits/stdc++.h&gt;using namespace std;typedef long long ll; int main()&#123; ll n,m; ll a[3000],b[3000]; //a[i]储存n有多少个i*2016&lt;=n，b[i]....m while(~scanf("%lld%lld",&amp;n,&amp;m)) &#123; ll k=n/2016; //有k个2016跨度 ll mm=n%2016; //余下的等下都要+1 for(int i=1;i&lt;=mm;i++) a[i]=k+1; for(int i=mm+1;i&lt;=2016;i++) a[i]=k; k=m/2016; mm=m%2016; for(int i=1;i&lt;=mm;i++) b[i]=k+1; for(int i=mm+1;i&lt;=2016;i++) b[i]=k; ll ans=0; for(int i=1;i&lt;=2016;i++) &#123; for(int j=1;j&lt;=2016;j++) &#123; if((i*j)%2016==0) &#123; ans+=(a[i]*b[j]); &#125; &#125; &#125; printf("%lld\n",ans); &#125;&#125;]]></content>
       <categories>
         <category>ACM</category>
@@ -12,8 +12,8 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[ZOJ 4011— Happy Sequence（dp）]]></title>
-    <url>%2F2019%2F02%2F14%2FZOJ-4011%E2%80%94-Happy-Sequence%EF%BC%88dp%EF%BC%89%2F</url>
+    <title><![CDATA[ZOJ 4011--Happy-Sequence(dp)]]></title>
+    <url>%2F2019%2F02%2F14%2FZOJ%204011--Happy-Sequence(dp)%2F</url>
     <content type="text"><![CDATA[题意： 给一个n和m，求所有组成m长且值在1-n内且满足 a[i]%a[i-1]==0 的序列方案数。 思路： dp[i] [j] 表示长度为 i 的序列的最后一位为 j ,转移方程：dp[i] [j]=0 , dp[i] [j]+=dp[i-1] [ j的因子 ] 。因子可以通过埃氏筛打表得到，dp[m] [i]累加和即为答案，预处理2000*2000以内所有答案即可。 代码： 12345678910111213141516171819202122232425262728293031323334353637383940#include&lt;bits/stdc++.h&gt;using namespace std; #define N 2005#define mod 1000000007int dp[N][N];vector&lt;int&gt;y[N]; //储存因子int main()&#123; for(int i=1; i&lt;=N; i++) &#123; for(int j=i; j&lt;=N; j+=i) &#123; y[j].push_back(i); &#125; &#125; for(int i=1; i&lt;=N; i++) dp[1][i]=1; for(int i=2; i&lt;=N; i++) &#123; for(int j=1; j&lt;=N; j++) &#123; for(int k=0; k&lt;y[j].size(); k++) &#123; dp[i][j]=(dp[i][j]+dp[i-1][y[j][k]])%mod; &#125; &#125; &#125; int t; scanf("%d",&amp;t); while(t--) &#123; int n,m; scanf("%d%d",&amp;n,&amp;m); int ans=0; for(int i=1; i&lt;=n; i++) ans=(ans+dp[m][i])%mod; printf("%d\n",ans); &#125;&#125;]]></content>
       <categories>
         <category>ACM</category>
@@ -23,8 +23,8 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[ZOJ 2594 Driving Straight（bfs）]]></title>
-    <url>%2F2019%2F02%2F14%2FZOJ-2594-Driving-Straight%EF%BC%88bfs%EF%BC%89%2F</url>
+    <title><![CDATA[ZOJ 2594--Driving-Straight(bfs)]]></title>
+    <url>%2F2019%2F02%2F14%2FZOJ%202594--Driving-Straight(bfs)%2F</url>
     <content type="text"><![CDATA[题意： 给出一个（2m-1）（2*n-1）的图，要求输出从左下角走到右上角最短距离走法的路径，只能在 ‘-’ 或 ‘|’ 上移动，答案保证有解，有多解输出任一，n,m&lt;=400。 思路： 因为题目要求输出路径，而bfs中如果每个状态都记录到当前状态的路径，可能会TLE或者MLE。 所以考虑先从终点开始bfs出每个点到终点的最短距离，然后再从起点出发bfs一直找 当前点的最短距离-1==下一步的最短距离 的位置就可以回到终点，注意方向的变换。 代码： 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121122123124125126127128129130131132133134135136137138139140141142143144145#include&lt;bits/stdc++.h&gt;using namespace std;char mp[1005][1005];int dis[1005][1005];int m,n;int dx[10]=&#123;-1,0,1,0&#125;; //反向由北到西顺时针 依次为0123int dy[10]=&#123;0,1,0,-1&#125;;int dd[10][10] = &#123;&#123;0, 1, 2, 3&#125;, // F&#123;3, 0, 1, 2&#125;, // L&#123;1, 2, 3, 0&#125; // R&#125;;char dir[10]=&#123;'F','L','R'&#125;; struct node&#123; int x,y; node()&#123;&#125; node(int x,int y):x(x),y(y)&#123;&#125;&#125;; void bfs()&#123; queue&lt;node&gt;q; memset(dis,-1,sizeof(dis)); dis[1][2*n-1]=0; q.push(node(1,2*n-1)); node now; int x,y,px,py; while(!q.empty()) &#123; now=q.front(); q.pop(); px=now.x,py=now.y; //printf("%d %d\n",px,py); for(int i=0;i&lt;4;i++) &#123; x=px+dx[i]; y=py+dy[i]; if(mp[x][y]=='-' || mp[x][y]=='|') &#123; x+=dx[i]; y+=dy[i]; if(dis[x][y]==-1) &#123; dis[x][y]=dis[px][py]+1; q.push(node(x,y)); &#125; &#125; &#125; &#125;&#125; void print()&#123; int statu,x,y,px,py; if(mp[2*m-1][2]=='-' &amp;&amp; dis[2*m-1][1]-1==dis[2*m-1][3]) &#123; puts("E"); px=2*m-1,py=3; statu=1; &#125; else if(mp[2*m-2][1]=='|' &amp;&amp; dis[2*m-1][1]-1==dis[2*m-3][1]) &#123; puts("N"); px=2*m-3,py=1; statu=0; &#125; while(1) &#123; if(dis[px][py]==0) &#123; puts(""); break; &#125; for(int i=0;i&lt;3;i++) &#123; x=px+dx[dd[i][statu]]; y=py+dy[dd[i][statu]]; if(mp[x][y]=='-' || mp[x][y]=='|') &#123; x+=dx[dd[i][statu]]; y+=dy[dd[i][statu]]; if(dis[x][y]==dis[px][py]-1) &#123; printf("%c",dir[i]); statu=dd[i][statu]; px=x,py=y; break; &#125; &#125; &#125; &#125;&#125; int main()&#123; int T; scanf("%d",&amp;T); while(T--) &#123; scanf("%d%d",&amp;m,&amp;n); memset(mp,' ',sizeof(mp)); getchar(); for(int i=1; i&lt;=2*m-1; i++) &#123; gets(mp[i]+1); &#125; bfs(); /*for(int i=1;i&lt;=2*m-1;i+=2) &#123; for(int j=1;j&lt;=2*n-1;j+=2) &#123; printf("%3d",dis[i][j]); &#125;puts(""); &#125;*/ print(); if(T) puts(""); &#125;&#125; /*24 4+-+-+-+|+-+-+-+ |+-+-+-+|+-+-+-+NRFFLLFFRRFF4 4+-+ +-+| | |+ +-+-+| | |+-+-+-+| |+-+-+-+EFFLFF*/]]></content>
       <categories>
         <category>ACM</category>
@@ -34,8 +34,8 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[CodeForces 110D Lucky Probability(dfs)]]></title>
-    <url>%2F2019%2F02%2F14%2FCodeForces%20110D%20Lucky%20Probability(dfs)%2F</url>
+    <title><![CDATA[Codeforces 110D--Lucky Probability(dfs)]]></title>
+    <url>%2F2019%2F02%2F14%2FCodeforces%20110D--Lucky%20Probability(dfs)%2F</url>
     <content type="text"><![CDATA[题意： 出个两个（P,V）范围在1e9的正整数区间，分别从其中随机选出一个数，选出的两个数作为一个新区间的左右端点。要求新区间内的幸运数刚好为k个的概率（幸运数指一个数的数位只有4或7）。 思路： 首先可以dfs找出所有在数据范围内的幸运数，记为L数组，因为数目不多，便可成k段遍历 L数组，每次分别计算【 L[i-1]+1，L[i]】与【Pl，Pr】的线段交集，和【 L[i+k-1]，L[i+k]-1】与【Vl，Vr】的线段交集，将两个结果相乘即是符合[i,i+k-1]区间幸运数的可能情况，同样的还要对P,V两个区间交换后在计算一遍，概率=所有可能情况/(Pr-Pl+1)/(Vr-Vl+1);然后还要注意k==1的情况会重复计算，需特判。 代码： 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657#include&lt;bits/stdc++.h&gt;using namespace std;typedef long long ll;ll L[1050];int num=0;void dfs(int len,int p,int v)&#123; if(p==len) &#123; L[++num]=v; return; &#125; dfs(len,p+1,v*10+4); dfs(len,p+1,v*10+7);&#125; ll contain(ll x1,ll y1,ll x2,ll y2)&#123; ll l=max(x1,x2); ll r=min(y1,y2); return r-l+1&gt;0?r-l+1:0;&#125; int main()&#123; for(int len=1;len&lt;=9;len++) dfs(len,0,0); L[0]=0; L[++num]=1000000000; //for(int i=1;i&lt;=num;i++) printf("%d %lld\n",i,L[i]); ll Pl,Pr,Vl,Vr; int k; scanf("%lld%lld%lld%lld%d",&amp;Pl,&amp;Pr,&amp;Vl,&amp;Vr,&amp;k); ll sum=0; for(int i=1;i&lt;=1022-k+1;i++) &#123; int j=i+k-1; sum+=contain(L[i-1]+1,L[i],Pl,Pr)*contain(L[j],L[j+1]-1,Vl,Vr); if(L[i]&gt;Pr) break; &#125; for(int i=1;i&lt;=1022-k+1;i++) &#123; int j=i+k-1; sum+=contain(L[i-1]+1,L[i],Vl,Vr)*contain(L[j],L[j+1]-1,Pl,Pr); if(L[i]&gt;Vr) break; &#125; if(k==1) &#123; for(int i=1;i&lt;=1022;i++) &#123; if(contain(L[i],L[i],Pl,Pr)&amp;&amp;contain(L[i],L[i],Vl,Vr)) sum--; &#125; &#125; printf("%.10f\n",sum*1.0/(Vr-Vl+1)/(Pr-Pl+1));&#125;]]></content>
       <categories>
         <category>ACM</category>
@@ -45,8 +45,8 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[POJ 2774 Long Long Message（二分+hash）]]></title>
-    <url>%2F2019%2F02%2F13%2FPOJ%202774%20Long%20Long%20Message%EF%BC%88%E4%BA%8C%E5%88%86%2Bhash%EF%BC%89%2F</url>
+    <title><![CDATA[POJ 2774--Long Long Message(二分+hash)]]></title>
+    <url>%2F2019%2F02%2F13%2FPOJ%202774--Long%20Long%20Message(%E4%BA%8C%E5%88%86%2Bhash)%2F</url>
     <content type="text"><![CDATA[题意：给出两个最长长为1e5的字符串，求他们的最长公共子串长度。 思路： 分别将两个字符串预处理出hash值，二分【1-min（lens，lent）】的长度，check函数中每次将长度为mid的hash值记录并检查是否符合条件，是则下边界右移，否则上边界左移。复杂度O(nlogn) 代码： 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869#include&lt;stdio.h&gt;#include&lt;vector&gt;#include&lt;stdlib.h&gt;#include&lt;algorithm&gt;#include&lt;string.h&gt;using namespace std;typedef long long ll;typedef unsigned long long ull;const int N =100000+5; char s[N],t[N];int lens,lent;ull base=233;ull p[N],hs[N],ht[N];ull geths(int l,int r)&#123; return hs[r]-p[r-l+1]*hs[l-1];&#125;ull getht(int l,int r)&#123; return ht[r]-p[r-l+1]*ht[l-1];&#125; int check(int len)&#123; vector&lt;ull&gt;mp; for(int i=1; i&lt;=lens-len+1; i++) &#123; ull tmp=geths(i,i+len-1); mp.push_back(tmp); &#125; sort(mp.begin(),mp.end()); for(int i=1; i&lt;=lent-len+1; i++) &#123; ull tmp=getht(i,i+len-1); if(binary_search(mp.begin(),mp.end(),tmp)) return 1; &#125; return 0;&#125; int main()&#123; //freopen("in.txt","r",stdin); //freopen("out.txt","w",stdout); p[0]=1; for(int i=1; i&lt;N; i++) p[i]=p[i-1]*base; while(~scanf("%s%s",s+1,t+1)) &#123; lens=strlen(s+1); lent=strlen(t+1); for(int i=1; i&lt;=lens; i++) &#123; hs[i]=hs[i-1]*base+s[i]-'a'; &#125; for(int i=1; i&lt;=lent; i++) &#123; ht[i]=ht[i-1]*base+t[i]-'a'; &#125; int l=1,r=min(lens,lent),mid; while(l&lt;=r) &#123; mid=(l+r)/2; if(check(mid)) l=mid+1; else r=mid-1; &#125; printf("%d\n",r); &#125;&#125;]]></content>
       <categories>
         <category>ACM</category>

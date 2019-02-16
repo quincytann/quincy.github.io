@@ -95,7 +95,7 @@
 
 
 
-  <meta name="keywords" content="二分,字符串hash,">
+  <meta name="keywords" content="dfs,">
 
 
 
@@ -108,18 +108,18 @@
 
 
 
-<meta name="description" content="题意：给出两个最长长为1e5的字符串，求他们的最长公共子串长度。 思路：">
-<meta name="keywords" content="二分,字符串hash">
+<meta name="description" content="题意：  出个两个（P,V）范围在1e9的正整数区间，分别从其中随机选出一个数，选出的两个数作为一个新区间的左右端点。要求新区间内的幸运数刚好为k个的概率（幸运数指一个数的数位只有4或7）。 思路：">
+<meta name="keywords" content="dfs">
 <meta property="og:type" content="article">
-<meta property="og:title" content="POJ 2774 Long Long Message（二分+hash）">
-<meta property="og:url" content="http://quincy.ink/2019/02/13/POJ 2774 Long Long Message（二分+hash）/index.html">
+<meta property="og:title" content="Codeforces 110D--Lucky Probability(dfs)">
+<meta property="og:url" content="http://quincy.ink/2019/02/14/Codeforces 110D--Lucky Probability(dfs)/index.html">
 <meta property="og:site_name" content="Quincy&#39;s Blog">
-<meta property="og:description" content="题意：给出两个最长长为1e5的字符串，求他们的最长公共子串长度。 思路：">
+<meta property="og:description" content="题意：  出个两个（P,V）范围在1e9的正整数区间，分别从其中随机选出一个数，选出的两个数作为一个新区间的左右端点。要求新区间内的幸运数刚好为k个的概率（幸运数指一个数的数位只有4或7）。 思路：">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-14T05:50:22.458Z">
+<meta property="og:updated_time" content="2019-02-16T01:51:23.640Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="POJ 2774 Long Long Message（二分+hash）">
-<meta name="twitter:description" content="题意：给出两个最长长为1e5的字符串，求他们的最长公共子串长度。 思路：">
+<meta name="twitter:title" content="Codeforces 110D--Lucky Probability(dfs)">
+<meta name="twitter:description" content="题意：  出个两个（P,V）范围在1e9的正整数区间，分别从其中随机选出一个数，选出的两个数作为一个新区间的左右端点。要求新区间内的幸运数刚好为k个的概率（幸运数指一个数的数位只有4或7）。 思路：">
 
 
 
@@ -149,13 +149,13 @@
 
 
 
-  <link rel="canonical" href="http://quincy.ink/2019/02/13/POJ 2774 Long Long Message（二分+hash）/">
+  <link rel="canonical" href="http://quincy.ink/2019/02/14/Codeforces 110D--Lucky Probability(dfs)/">
 
 
 
 
 
-  <title>POJ 2774 Long Long Message（二分+hash） | Quincy's Blog</title>
+  <title>Codeforces 110D--Lucky Probability(dfs) | Quincy's Blog</title>
   
 
 
@@ -190,7 +190,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle">Java是世界上最好的语言</p>
+        <p class="site-subtitle">芳林新叶催陈叶，流水前波让后波。</p>
       
   </div>
 
@@ -314,7 +314,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://quincy.ink/2019/02/13/POJ 2774 Long Long Message（二分+hash）/">
+    <link itemprop="mainEntityOfPage" href="http://quincy.ink/2019/02/14/Codeforces 110D--Lucky Probability(dfs)/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Quincy">
@@ -331,7 +331,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">POJ 2774 Long Long Message（二分+hash）</h1>
+          <h1 class="post-title" itemprop="name headline">Codeforces 110D--Lucky Probability(dfs)</h1>
         
 
         <div class="post-meta">
@@ -343,8 +343,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-13T19:51:55+08:00">
-                2019-02-13
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-14T13:51:31+08:00">
+                2019-02-14
               </time>
             
 
@@ -402,7 +402,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  378
+                  516
                 </span>
               
 
@@ -439,11 +439,11 @@
       
 
       
-        <p><strong>题意：</strong><br>给出两个最长长为1e5的字符串，求他们的最长公共子串长度。</p>
-<p><strong>思路：</strong><a id="more"></a></p>
-<p>分别将两个字符串预处理出hash值，二分【1-min（lens，lent）】的长度，check函数中每次将长度为mid的hash值记录并检查是否符合条件，是则下边界右移，否则上边界左移。复杂度O(nlogn)</p>
+        <p><strong>题意：</strong> </p>
+<p>出个两个（P,V）范围在1e9的正整数区间，分别从其中随机选出一个数，选出的两个数作为一个新区间的左右端点。要求新区间内的幸运数刚好为k个的概率（幸运数指一个数的数位只有4或7）。</p>
+<p><strong>思路：</strong> <a id="more"></a><br>首先可以dfs找出所有在数据范围内的幸运数，记为L数组，因为数目不多，便可成k段遍历 L数组，每次分别计算【 L[i-1]+1，L[i]】与【Pl，Pr】的线段交集，和【 L[i+k-1]，L[i+k]-1】与【Vl，Vr】的线段交集，将两个结果相乘即是符合[i,i+k-1]区间幸运数的可能情况，同样的还要对P,V两个区间交换后在计算一遍，概率=所有可能情况/(Pr-Pl+1)/(Vr-Vl+1);然后还要注意k==1的情况会重复计算，需特判。</p>
 <p><strong>代码：</strong></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">unsigned</span> <span class="keyword">long</span> <span class="keyword">long</span> ull;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N =<span class="number">100000</span>+<span class="number">5</span>;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">char</span> s[N],t[N];</span><br><span class="line"><span class="keyword">int</span> lens,lent;</span><br><span class="line">ull base=<span class="number">233</span>;</span><br><span class="line">ull p[N],hs[N],ht[N];</span><br><span class="line"><span class="function">ull <span class="title">geths</span><span class="params">(<span class="keyword">int</span> l,<span class="keyword">int</span> r)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> hs[r]-p[r-l+<span class="number">1</span>]*hs[l<span class="number">-1</span>];</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">ull <span class="title">getht</span><span class="params">(<span class="keyword">int</span> l,<span class="keyword">int</span> r)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> ht[r]-p[r-l+<span class="number">1</span>]*ht[l<span class="number">-1</span>];</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">check</span><span class="params">(<span class="keyword">int</span> len)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">vector</span>&lt;ull&gt;mp;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=lens-len+<span class="number">1</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        ull tmp=geths(i,i+len<span class="number">-1</span>);</span><br><span class="line">        mp.push_back(tmp);</span><br><span class="line">    &#125;</span><br><span class="line">    sort(mp.begin(),mp.end());</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=lent-len+<span class="number">1</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        ull tmp=getht(i,i+len<span class="number">-1</span>);</span><br><span class="line">        <span class="keyword">if</span>(binary_search(mp.begin(),mp.end(),tmp)) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//freopen("in.txt","r",stdin);</span></span><br><span class="line">    <span class="comment">//freopen("out.txt","w",stdout);</span></span><br><span class="line">    p[<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;N; i++) p[i]=p[i<span class="number">-1</span>]*base;</span><br><span class="line">    <span class="keyword">while</span>(~<span class="built_in">scanf</span>(<span class="string">"%s%s"</span>,s+<span class="number">1</span>,t+<span class="number">1</span>))</span><br><span class="line">    &#123;</span><br><span class="line">        lens=<span class="built_in">strlen</span>(s+<span class="number">1</span>);</span><br><span class="line">        lent=<span class="built_in">strlen</span>(t+<span class="number">1</span>);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=lens; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            hs[i]=hs[i<span class="number">-1</span>]*base+s[i]-<span class="string">'a'</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=lent; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            ht[i]=ht[i<span class="number">-1</span>]*base+t[i]-<span class="string">'a'</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> l=<span class="number">1</span>,r=min(lens,lent),mid;</span><br><span class="line">        <span class="keyword">while</span>(l&lt;=r)</span><br><span class="line">        &#123;</span><br><span class="line">            mid=(l+r)/<span class="number">2</span>;</span><br><span class="line">            <span class="keyword">if</span>(check(mid)) l=mid+<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">else</span>        r=mid<span class="number">-1</span>;</span><br><span class="line"> </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,r);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line">ll L[<span class="number">1050</span>];</span><br><span class="line"><span class="keyword">int</span> num=<span class="number">0</span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> len,<span class="keyword">int</span> p,<span class="keyword">int</span> v)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(p==len)</span><br><span class="line">    &#123;</span><br><span class="line">        L[++num]=v;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    dfs(len,p+<span class="number">1</span>,v*<span class="number">10</span>+<span class="number">4</span>);</span><br><span class="line">    dfs(len,p+<span class="number">1</span>,v*<span class="number">10</span>+<span class="number">7</span>);</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function">ll <span class="title">contain</span><span class="params">(ll x1,ll y1,ll x2,ll y2)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ll l=max(x1,x2);</span><br><span class="line">    ll r=min(y1,y2);</span><br><span class="line">    <span class="keyword">return</span> r-l+<span class="number">1</span>&gt;<span class="number">0</span>?r-l+<span class="number">1</span>:<span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> len=<span class="number">1</span>;len&lt;=<span class="number">9</span>;len++) dfs(len,<span class="number">0</span>,<span class="number">0</span>);</span><br><span class="line">    L[<span class="number">0</span>]=<span class="number">0</span>;</span><br><span class="line">    L[++num]=<span class="number">1000000000</span>;</span><br><span class="line">    <span class="comment">//for(int i=1;i&lt;=num;i++) printf("%d  %lld\n",i,L[i]);</span></span><br><span class="line">    ll Pl,Pr,Vl,Vr;</span><br><span class="line">    <span class="keyword">int</span> k;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%lld%lld%lld%lld%d"</span>,&amp;Pl,&amp;Pr,&amp;Vl,&amp;Vr,&amp;k);</span><br><span class="line">    ll sum=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">1022</span>-k+<span class="number">1</span>;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> j=i+k<span class="number">-1</span>;</span><br><span class="line">        sum+=contain(L[i<span class="number">-1</span>]+<span class="number">1</span>,L[i],Pl,Pr)*contain(L[j],L[j+<span class="number">1</span>]<span class="number">-1</span>,Vl,Vr);</span><br><span class="line">        <span class="keyword">if</span>(L[i]&gt;Pr) <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">1022</span>-k+<span class="number">1</span>;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> j=i+k<span class="number">-1</span>;</span><br><span class="line">        sum+=contain(L[i<span class="number">-1</span>]+<span class="number">1</span>,L[i],Vl,Vr)*contain(L[j],L[j+<span class="number">1</span>]<span class="number">-1</span>,Pl,Pr);</span><br><span class="line">        <span class="keyword">if</span>(L[i]&gt;Vr) <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="keyword">if</span>(k==<span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">1022</span>;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(contain(L[i],L[i],Pl,Pr)&amp;&amp;contain(L[i],L[i],Vl,Vr)) sum--;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%.10f\n"</span>,sum*<span class="number">1.0</span>/(Vr-Vl+<span class="number">1</span>)/(Pr-Pl+<span class="number">1</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -506,7 +506,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://quincy.ink/2019/02/13/POJ 2774 Long Long Message（二分+hash）/" title="POJ 2774 Long Long Message（二分+hash）">http://quincy.ink/2019/02/13/POJ 2774 Long Long Message（二分+hash）/</a>
+    <a href="http://quincy.ink/2019/02/14/Codeforces 110D--Lucky Probability(dfs)/" title="Codeforces 110D--Lucky Probability(dfs)">http://quincy.ink/2019/02/14/Codeforces 110D--Lucky Probability(dfs)/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -521,9 +521,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/二分/" rel="tag"><i class="fa fa-tag"></i> 二分</a>
-          
-            <a href="/tags/字符串hash/" rel="tag"><i class="fa fa-tag"></i> 字符串hash</a>
+            <a href="/tags/dfs/" rel="tag"><i class="fa fa-tag"></i> dfs</a>
           
         </div>
       
@@ -536,14 +534,18 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2019/02/13/POJ 2774--Long Long Message(二分+hash)/" rel="next" title="POJ 2774--Long Long Message(二分+hash)">
+                <i class="fa fa-chevron-left"></i> POJ 2774--Long Long Message(二分+hash)
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/02/14/CodeForces 110D Lucky Probability(dfs)/" rel="prev" title="CodeForces 110D Lucky Probability(dfs)">
-                CodeForces 110D Lucky Probability(dfs) <i class="fa fa-chevron-right"></i>
+              <a href="/2019/02/14/ZOJ 2594--Driving-Straight(bfs)/" rel="prev" title="ZOJ 2594--Driving-Straight(bfs)">
+                ZOJ 2594--Driving-Straight(bfs) <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -611,7 +613,7 @@
               <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="Quincy">
             
               <p class="site-author-name" itemprop="name">Quincy</p>
-              <p class="site-description motion-element" itemprop="description">我是弟弟</p>
+              <p class="site-description motion-element" itemprop="description">qwq</p>
           </div>
 
           <nav class="site-state motion-element">
