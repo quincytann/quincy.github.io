@@ -1,0 +1,7 @@
+quincy.ink/牛客练习赛-40A-小D的剧场.html
+quincy.ink/牛客练习赛-40C-小A与欧拉路.html
+quincy.ink/CSU 1803--2016.html
+quincy.ink/ZOJ 4011--Happy-Sequence.html
+quincy.ink/ZOJ 2594--Driving-Straight.html
+quincy.ink/Codeforces 110D--Lucky Probability.html
+quincy.ink/POJ 2774--Long Long Message.html

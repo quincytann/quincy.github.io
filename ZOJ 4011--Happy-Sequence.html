@@ -15,6 +15,21 @@
 
 <script>
 (function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+<script>
+(function(){
     if(''){
         if (prompt('请输入文章密码') !== ''){
             alert('密码错误！');
@@ -95,7 +110,7 @@
 
 
 
-  <meta name="keywords" content="数论,">
+  <meta name="keywords" content="dp,">
 
 
 
@@ -108,18 +123,18 @@
 
 
 
-<meta name="description" content="题意： 求[l,r]之间有多少种a*b=2016的组合。 思路：">
-<meta name="keywords" content="数论">
+<meta name="description" content="题意： 给一个n和m，求所有组成m长且值在1-n内且满足 a[i]%a[i-1]==0 的序列方案数。 思路：">
+<meta name="keywords" content="dp">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CSU 1803--2016">
-<meta property="og:url" content="https://quincy.ink/2019/02/14/CSU 1803--2016/index.html">
+<meta property="og:title" content="ZOJ 4011--Happy-Sequence">
+<meta property="og:url" content="quincy.ink/ZOJ 4011--Happy-Sequence.html">
 <meta property="og:site_name" content="Quincy&#39;s Blog">
-<meta property="og:description" content="题意： 求[l,r]之间有多少种a*b=2016的组合。 思路：">
+<meta property="og:description" content="题意： 给一个n和m，求所有组成m长且值在1-n内且满足 a[i]%a[i-1]==0 的序列方案数。 思路：">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-16T08:19:57.429Z">
+<meta property="og:updated_time" content="2019-02-16T08:19:11.447Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CSU 1803--2016">
-<meta name="twitter:description" content="题意： 求[l,r]之间有多少种a*b=2016的组合。 思路：">
+<meta name="twitter:title" content="ZOJ 4011--Happy-Sequence">
+<meta name="twitter:description" content="题意： 给一个n和m，求所有组成m长且值在1-n内且满足 a[i]%a[i-1]==0 的序列方案数。 思路：">
 
 
 
@@ -149,13 +164,13 @@
 
 
 
-  <link rel="canonical" href="https://quincy.ink/2019/02/14/CSU 1803--2016/">
+  <link rel="canonical" href="quincy.ink/ZOJ 4011--Happy-Sequence.html">
 
 
 
 
 
-  <title>CSU 1803--2016 | Quincy's Blog</title>
+  <title>ZOJ 4011--Happy-Sequence | Quincy's Blog</title>
   
 
 
@@ -314,7 +329,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://quincy.ink/2019/02/14/CSU 1803--2016/">
+    <link itemprop="mainEntityOfPage" href="quincy.ink/ZOJ 4011--Happy-Sequence.html">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Quincy">
@@ -331,7 +346,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">CSU 1803--2016</h1>
+          <h1 class="post-title" itemprop="name headline">ZOJ 4011--Happy-Sequence</h1>
         
 
         <div class="post-meta">
@@ -343,7 +358,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-14T14:11:52+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-14T14:06:40+08:00">
                 2019-02-14
               </time>
             
@@ -402,7 +417,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  286
+                  267
                 </span>
               
 
@@ -440,11 +455,11 @@
 
       
         <p><strong>题意：</strong></p>
-<p>求[l,r]之间有多少种a*b=2016的组合。</p>
+<p>给一个n和m，求所有组成m长且值在1-n内且满足 a[i]%a[i-1]==0 的序列方案数。</p>
 <p><strong>思路：</strong><a id="more"></a></p>
-<p>首先2016的1倍情况下有1<em> 2016 , 2</em> 1008 , 3<em> 637… 等情况，2倍情况就是把a或b扩大2倍就行，那么我们可以把a看做[1,2016]的数，a’ 看做[2017,4032]的数，这样每次跨2016个数就知道有多少倍数了。最后两层for循环找出i</em> j==2016的时候把对应的倍数种类乘起来加到答案就行了。</p>
+<p>dp[i] [j] 表示长度为 i 的序列的最后一位为 j ,转移方程：dp[i] [j]=0 , dp[i] [j]+=dp[i-1] [ j的因子 ] 。因子可以通过埃氏筛打表得到，dp[m] [i]累加和即为答案，预处理2000*2000以内所有答案即可。</p>
 <p><strong>代码：</strong></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ll n,m;</span><br><span class="line">    ll a[<span class="number">3000</span>],b[<span class="number">3000</span>];            <span class="comment">//a[i]储存n有多少个i*2016&lt;=n，b[i]....m</span></span><br><span class="line">    <span class="keyword">while</span>(~<span class="built_in">scanf</span>(<span class="string">"%lld%lld"</span>,&amp;n,&amp;m))</span><br><span class="line">    &#123;</span><br><span class="line">        ll k=n/<span class="number">2016</span>;                <span class="comment">//有k个2016跨度</span></span><br><span class="line">        ll mm=n%<span class="number">2016</span>;               <span class="comment">//余下的等下都要+1</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=mm;i++)      a[i]=k+<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=mm+<span class="number">1</span>;i&lt;=<span class="number">2016</span>;i++)  a[i]=k;</span><br><span class="line"> </span><br><span class="line">        k=m/<span class="number">2016</span>;</span><br><span class="line">        mm=m%<span class="number">2016</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=mm;i++)    b[i]=k+<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=mm+<span class="number">1</span>;i&lt;=<span class="number">2016</span>;i++)  b[i]=k;</span><br><span class="line"> </span><br><span class="line">        ll ans=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">2016</span>;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=<span class="number">2016</span>;j++)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span>((i*j)%<span class="number">2016</span>==<span class="number">0</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    ans+=(a[i]*b[j]);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%lld\n"</span>,ans);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"> </span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> N 2005</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> mod 1000000007</span></span><br><span class="line"><span class="keyword">int</span> dp[N][N];</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;y[N];         <span class="comment">//储存因子</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"> </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=N; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=i; j&lt;=N; j+=i)</span><br><span class="line">        &#123;</span><br><span class="line">            y[j].push_back(i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=N; i++) dp[<span class="number">1</span>][i]=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>; i&lt;=N; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>; j&lt;=N; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">0</span>; k&lt;y[j].size(); k++)</span><br><span class="line">            &#123;</span><br><span class="line">                dp[i][j]=(dp[i][j]+dp[i<span class="number">-1</span>][y[j][k]])%mod;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> t;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;t);</span><br><span class="line">    <span class="keyword">while</span>(t--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> n,m;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;m);</span><br><span class="line">        <span class="keyword">int</span> ans=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=n; i++) ans=(ans+dp[m][i])%mod;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,ans);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -507,7 +522,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://quincy.ink/2019/02/14/CSU 1803--2016/" title="CSU 1803--2016">https://quincy.ink/2019/02/14/CSU 1803--2016/</a>
+    <a href="quincy.ink/ZOJ 4011--Happy-Sequence.html" title="ZOJ 4011--Happy-Sequence">quincy.ink/ZOJ 4011--Happy-Sequence.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -522,7 +537,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/数论/" rel="tag"><i class="fa fa-tag"></i> 数论</a>
+            <a href="/tags/dp/" rel="tag"><i class="fa fa-tag"></i> dp</a>
           
         </div>
       
@@ -535,8 +550,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/02/14/ZOJ 4011--Happy-Sequence/" rel="next" title="ZOJ 4011--Happy-Sequence">
-                <i class="fa fa-chevron-left"></i> ZOJ 4011--Happy-Sequence
+              <a href="/ZOJ 2594--Driving-Straight.html" rel="next" title="ZOJ 2594--Driving-Straight">
+                <i class="fa fa-chevron-left"></i> ZOJ 2594--Driving-Straight
               </a>
             
           </div>
@@ -545,8 +560,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/02/16/牛客练习赛-40C-小A与欧拉路/" rel="prev" title="牛客练习赛 40C--小A与欧拉路">
-                牛客练习赛 40C--小A与欧拉路 <i class="fa fa-chevron-right"></i>
+              <a href="/CSU 1803--2016.html" rel="prev" title="CSU 1803--2016">
+                CSU 1803--2016 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -680,6 +695,9 @@
                 
             </div>
           
+
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=569213279&auto=0&height=66"></iframe>
 
           
           
@@ -1259,6 +1277,21 @@
   
 
   
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
 
   
   
