@@ -1,7 +1,8 @@
+quincy.ink/牛客OI周赛7-普及组.html
 quincy.ink/EOJ-Monthly-2019-2.html
 quincy.ink/牛客OI周赛7-提高组.html
-quincy.ink/牛客练习赛-40A-小D的剧场.html
-quincy.ink/牛客练习赛-40C-小A与欧拉路.html
+quincy.ink/牛客练习赛-40A--小D的剧场.html
+quincy.ink/牛客练习赛-40C--小A与欧拉路.html
 quincy.ink/CSU 1803--2016.html
 quincy.ink/ZOJ 4011--Happy-Sequence.html
 quincy.ink/ZOJ 2594--Driving-Straight.html
