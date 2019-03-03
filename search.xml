@@ -30,9 +30,9 @@
         <category>ACM</category>
       </categories>
       <tags>
+        <tag>暴力</tag>
         <tag>二分</tag>
         <tag>字符串hash</tag>
-        <tag>暴力</tag>
         <tag>kmp</tag>
         <tag>STL</tag>
         <tag>离散化</tag>
