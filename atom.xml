@@ -84,9 +84,9 @@
     
       <category term="数学" scheme="quincy.ink/tags/%E6%95%B0%E5%AD%A6/"/>
     
-      <category term="dp" scheme="quincy.ink/tags/dp/"/>
-    
       <category term="bfs" scheme="quincy.ink/tags/bfs/"/>
+    
+      <category term="dp" scheme="quincy.ink/tags/dp/"/>
     
       <category term="并查集" scheme="quincy.ink/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/"/>
     
