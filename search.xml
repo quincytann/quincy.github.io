@@ -1,12 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[概率论与数理统计 学习笔记]]></title>
+    <url>%2F%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.html</url>
+    <content type="text"><![CDATA[[TOC] 第一章 随机事件及其概率第二章 随机变量及其分布第三章 多维随机变量及其分布第四章 随机变量的数字特征第五章 大数定律与中心极限定理第六章 数理统计的基本概念与抽样分析第七章 参数估计第八章 假设验证 待更…]]></content>
+      <categories>
+        <category>概率论与数理统计</category>
+      </categories>
+      <tags>
+        <tag>概率论与数理统计</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[计算机网络(第7版)-谢希仁 学习笔记]]></title>
     <url>%2F%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E7%AC%AC7%E7%89%88-%E8%B0%A2%E5%B8%8C%E4%BB%81-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.html</url>
-    <content type="text"><![CDATA[[TOC] 第1章 概述第2章 物理层第3章 数据链路层第4章 网络层第5章 运输层第6章 应用层待更…]]></content>
+    <content type="text"><![CDATA[[TOC] 第1章 概述第2章 物理层第3章 数据链路层第4章 网络层第5章 运输层第6章 应用层 待更…]]></content>
       <categories>
         <category>计算机网络</category>
       </categories>
+      <tags>
+        <tag>计算机网络</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[牛客练习赛-41]]></title>
@@ -17,8 +31,8 @@
       </categories>
       <tags>
         <tag>数学</tag>
-        <tag>bfs</tag>
         <tag>dp</tag>
+        <tag>bfs</tag>
         <tag>并查集</tag>
       </tags>
   </entry>
@@ -30,9 +44,9 @@
         <category>ACM</category>
       </categories>
       <tags>
-        <tag>暴力</tag>
         <tag>二分</tag>
         <tag>字符串hash</tag>
+        <tag>暴力</tag>
         <tag>kmp</tag>
         <tag>STL</tag>
         <tag>离散化</tag>
