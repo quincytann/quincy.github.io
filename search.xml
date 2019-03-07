@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[物联网概论 学习笔记]]></title>
+    <url>%2F%E7%89%A9%E8%81%94%E7%BD%91%E6%A6%82%E8%AE%BA-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.html</url>
+    <content type="text"><![CDATA[物联网（IoT）：Internet of Things 物联网是具有自我标示、感知和智能的物理实体基于通信技术相互连接形成的网络，这些物理设备可以在无需人工干预的条件下实现协同和互动，为人们提供智慧和集约的服务，传感网是物联网的基础，是物联网的组成部分 物联网三层体系结构：感知层、网络层和应用层 感知层是物联网的皮肤和五官——识别物体，采集信息； 网络层是物联网的神经中枢和大脑——信息传递和处理； 应用层是物联网的“社会分工”——与行业需求结合，实现广泛智能化]]></content>
+      <categories>
+        <category>物联网概论</category>
+      </categories>
+      <tags>
+        <tag>物联网概论</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[概率论与数理统计 学习笔记]]></title>
     <url>%2F%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.html</url>
     <content type="text"><![CDATA[[TOC] 第一章 随机事件及其概率第二章 随机变量及其分布第三章 多维随机变量及其分布第四章 随机变量的数字特征第五章 大数定律与中心极限定理第六章 数理统计的基本概念与抽样分析第七章 参数估计第八章 假设验证 待更…]]></content>
