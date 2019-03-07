@@ -35,7 +35,7 @@
 &lt;li&gt;&lt;p&gt;物联网三层体系结构：感知层、网络层和应用层&lt;/p&gt;
 &lt;p&gt;感知层是物联网的皮肤和五官——识别物体，采集信息；&lt;/p&gt;
 &lt;p&gt;网络层是物联网的神经中枢和大脑——信息传递和处理；&lt;/p&gt;
-&lt;p&gt;应用层是物联网的“社会分工”——与行业需求结合，实现广泛智能化&lt;/p&gt;
+&lt;p&gt;应用层是物联网的“社会分工”——与行业需求结合，实现广泛智能化&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;
     
     </summary>
     
@@ -73,9 +73,9 @@
     <link href="quincy.ink/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E7%AC%AC7%E7%89%88-%E8%B0%A2%E5%B8%8C%E4%BB%81-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.html"/>
     <id>quincy.ink/计算机网络-第7版-谢希仁-学习笔记.html</id>
     <published>2019-03-03T11:19:16.000Z</published>
-    <updated>2019-03-07T15:20:09.725Z</updated>
+    <updated>2019-03-07T15:42:16.448Z</updated>
     
-    <content type="html"><![CDATA[<p>[TOC]</p><a id="more"></a><h3 id="第1章-概述"><a href="#第1章-概述" class="headerlink" title="第1章 概述"></a>第1章 概述</h3><h4 id="1-1-计算机网络在信息时代中的作用"><a href="#1-1-计算机网络在信息时代中的作用" class="headerlink" title="1.1 计算机网络在信息时代中的作用"></a>1.1 计算机网络在信息时代中的作用</h4><p>网络分类：电信网络、有线电视网络和计算机网络</p><p>互联网基本特点：</p><p>①连通性：互联网用户不管距离多远，都能通信，就像这些用户终端都彼此连通</p><p>②共享：指资源共享，包含信息、软件、硬件等共享，就像资源在用户身边</p><h4 id="1-2-互联网概述"><a href="#1-2-互联网概述" class="headerlink" title="1.2 互联网概述"></a>1.2 互联网概述</h4><p>计算机网络组成：由若干结点和连接这些结点的链路组成；结点可以是计算机、集线器、交换机或路由器等</p><p>互连网：网络之间通过路由互连起来，形成更大的网络，是网络的网络</p><p>主机(host)：与网络相连的计算机</p><h4 id="1-3-互联网的组成"><a href="#1-3-互联网的组成" class="headerlink" title="1.3 互联网的组成"></a>1.3 互联网的组成</h4><p>从工作方式上分为：</p><p>(1) 边缘部分：由互联网上的主机组成，是用户直接使用的部分，用来进行通信和资源共享</p><p>端系统：主机</p><p>计算机之间的通信：主机A上的进程与主机B上的进程进行通信</p><p>端系统间通信方式：</p><p>①客户-服务器方式</p><p><img src="https://img-blog.csdnimg.cn/20190307091548203.jpg" alt=""></p><p>客户和服务器：指通信中涉及的两个应用进程</p><p>主要特点：客户是服务请求方（主动发起请求服务，需要知道服务器地址），服务器是服务提供方（可同时处理多个服务请求，需要强大的硬件和高级的操作系统支持）</p><p>②对等连接方式</p><p><img src="https://img-blog.csdnimg.cn/20190307092929245.jpg" alt=""></p><p>两台主机不区分服务器和客户，只要都运行p2p软件，就可以进行平等对等连接通信，双方都可访问对方硬盘中的共享文档。可支持大量对等用户同时工作</p><p><br></p><p>(2) 核心部分：由大量网络和连接这些网络的路由器组成，是为边缘部分提供服务的，提供连通性和交换</p><p><br></p><h3 id="第2章-物理层"><a href="#第2章-物理层" class="headerlink" title="第2章 物理层"></a>第2章 物理层</h3><p><br></p><h3 id="第3章-数据链路层"><a href="#第3章-数据链路层" class="headerlink" title="第3章 数据链路层"></a>第3章 数据链路层</h3><p><br></p><h3 id="第4章-网络层"><a href="#第4章-网络层" class="headerlink" title="第4章 网络层"></a>第4章 网络层</h3><p><br></p><h3 id="第5章-运输层"><a href="#第5章-运输层" class="headerlink" title="第5章 运输层"></a>第5章 运输层</h3><p><br></p><h3 id="第6章-应用层"><a href="#第6章-应用层" class="headerlink" title="第6章 应用层"></a>第6章 应用层</h3><p><br></p><p><br></p><p>待更…</p>]]></content>
+    <content type="html"><![CDATA[<p>[TOC]</p><a id="more"></a><h3 id="第1章-概述"><a href="#第1章-概述" class="headerlink" title="第1章 概述"></a>第1章 概述</h3><h4 id="1-1-计算机网络在信息时代中的作用"><a href="#1-1-计算机网络在信息时代中的作用" class="headerlink" title="1.1 计算机网络在信息时代中的作用"></a>1.1 计算机网络在信息时代中的作用</h4><p>网络分类：电信网络、有线电视网络和计算机网络</p><p>互联网基本特点：</p><p>①连通性：互联网用户不管距离多远，都能通信，就像这些用户终端都彼此连通</p><p>②共享：指资源共享，包含信息、软件、硬件等共享，就像资源在用户身边</p><h4 id="1-2-互联网概述"><a href="#1-2-互联网概述" class="headerlink" title="1.2 互联网概述"></a>1.2 互联网概述</h4><p>计算机网络组成：由若干结点和连接这些结点的链路组成；结点可以是计算机、集线器、交换机或路由器等</p><p>互连网：网络之间通过路由互连起来，形成更大的网络，是网络的网络</p><p>主机(host)：与网络相连的计算机</p><h4 id="1-3-互联网的组成"><a href="#1-3-互联网的组成" class="headerlink" title="1.3 互联网的组成"></a>1.3 互联网的组成</h4><p>从工作方式上分为：</p><p>(1) 边缘部分：由互联网上的主机组成，是用户直接使用的部分，用来进行通信和资源共享</p><p>端系统：主机</p><p>计算机之间的通信：主机A上的进程与主机B上的进程进行通信</p><p>端系统间通信方式：</p><p>①客户-服务器方式</p><p><img src="/计算机网络-第7版-谢希仁-学习笔记.html计算机网络-第7版-谢希仁-学习笔记/1.3.1.jpg" alt=""></p><p>客户和服务器：指通信中涉及的两个应用进程</p><p>主要特点：客户是服务请求方（主动发起请求服务，需要知道服务器地址），服务器是服务提供方（可同时处理多个服务请求，需要强大的硬件和高级的操作系统支持）</p><p>②对等连接方式</p><p><img src="/计算机网络-第7版-谢希仁-学习笔记.html计算机网络-第7版-谢希仁-学习笔记/1.3.2.jpg" alt=""></p><p>两台主机不区分服务器和客户，只要都运行p2p软件，就可以进行平等对等连接通信，双方都可访问对方硬盘中的共享文档。可支持大量对等用户同时工作</p><p><br></p><p>(2) 核心部分：由大量网络和连接这些网络的路由器组成，是为边缘部分提供服务的，提供连通性和交换</p><p><br></p><h3 id="第2章-物理层"><a href="#第2章-物理层" class="headerlink" title="第2章 物理层"></a>第2章 物理层</h3><p><br></p><h3 id="第3章-数据链路层"><a href="#第3章-数据链路层" class="headerlink" title="第3章 数据链路层"></a>第3章 数据链路层</h3><p><br></p><h3 id="第4章-网络层"><a href="#第4章-网络层" class="headerlink" title="第4章 网络层"></a>第4章 网络层</h3><p><br></p><h3 id="第5章-运输层"><a href="#第5章-运输层" class="headerlink" title="第5章 运输层"></a>第5章 运输层</h3><p><br></p><h3 id="第6章-应用层"><a href="#第6章-应用层" class="headerlink" title="第6章 应用层"></a>第6章 应用层</h3><p><br></p><p><br></p><p>待更…</p>]]></content>
     
     <summary type="html">
     
@@ -105,7 +105,7 @@
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;A 翻硬币问题&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;题意：&lt;/strong&gt;A和B玩游戏，A先手，要将n个正面硬币翻转为反面且每次只能翻转m个，B有一次可以在A翻转后将一枚硬币翻转的机会，给出n,m问A是否能将所有硬币翻转
+&lt;p&gt;&lt;strong&gt;题意：&lt;/strong&gt;A和B玩游戏，A先手，要将n个正面硬币翻转为反面且每次只能翻转m个，B有一次可以在A翻转后将一枚硬币翻转的机会，给出n,m问A是否能将所有硬币翻转&lt;/p&gt;
     
     </summary>
     
@@ -114,9 +114,9 @@
     
       <category term="数学" scheme="quincy.ink/tags/%E6%95%B0%E5%AD%A6/"/>
     
-      <category term="bfs" scheme="quincy.ink/tags/bfs/"/>
-    
       <category term="dp" scheme="quincy.ink/tags/dp/"/>
+    
+      <category term="bfs" scheme="quincy.ink/tags/bfs/"/>
     
       <category term="并查集" scheme="quincy.ink/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/"/>
     
@@ -141,7 +141,7 @@
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;B 救救兔子&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;题意：&lt;/strong&gt;给出n长数组，m个询问，每次询问给出一个x，要求数组中与x差距最小的数(如果差距相等，输出较小的那个)
+&lt;p&gt;&lt;strong&gt;题意：&lt;/strong&gt;给出n长数组，m个询问，每次询问给出一个x，要求数组中与x差距最小的数(如果差距相等，输出较小的那个)&lt;/p&gt;
     
     </summary>
     
@@ -179,7 +179,7 @@
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;D 进制转换&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;题意：&lt;/strong&gt;求[l,r]中所有数的k进制末尾恰好有m个零的数有多少个
+&lt;p&gt;&lt;strong&gt;题意：&lt;/strong&gt;求[l,r]中所有数的k进制末尾恰好有m个零的数有多少个&lt;/p&gt;
     
     </summary>
     
@@ -205,7 +205,7 @@
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;A  小睿睿的等式&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;题意：&lt;/strong&gt;有n根火柴棒，能摆成形如“A+B=n”的等式且使用的火柴棒数也恰好等于n/k的等式有多少种(B+A=n与A+B=n看作一种,“=”与“+”分别需要使用2根火柴棒,maxn=5e7)
+&lt;p&gt;&lt;strong&gt;题意：&lt;/strong&gt;有n根火柴棒，能摆成形如“A+B=n”的等式且使用的火柴棒数也恰好等于n/k的等式有多少种(B+A=n与A+B=n看作一种,“=”与“+”分别需要使用2根火柴棒,maxn=5e7)&lt;/p&gt;
     
     </summary>
     
@@ -236,7 +236,7 @@
       &lt;p&gt;&lt;strong&gt;题意：&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;给出自然数1-49的49个数要求拼接成长度为n的序列，且要求任意相邻的三个不能为给出q个条件中任意一个条件的全排列，求所有合法序列数对 1e9+7 取模。&lt;/p&gt;
 &lt;p&gt;原题链接：&lt;a href=&quot;https://ac.nowcoder.com/acm/contest/369/A&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://ac.nowcoder.com/acm/contest/369/A&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Input:
+&lt;p&gt;Input:&lt;/p&gt;
     
     </summary>
     
@@ -262,7 +262,7 @@
 &lt;p&gt;小A给你了一棵树，对于这棵树上的每一条边，你都可以将它复制任意（可以为0）次（即在这条边连接的两个点之间再加一条边权相同的边），求所有可能新形成的图中欧拉路的最短长度 &lt;/p&gt;
 &lt;p&gt;欧拉路：从图中任意一个点开始到图中任意一个点结束的路径，并且图中每条边只通过恰好一次。&lt;/p&gt;
 &lt;p&gt;原题链接：&lt;a href=&quot;https://ac.nowcoder.com/acm/contest/369/C&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://ac.nowcoder.com/acm/contest/369/C&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Input：
+&lt;p&gt;Input：&lt;/p&gt;
     
     </summary>
     
@@ -288,7 +288,7 @@
     
       &lt;p&gt;&lt;strong&gt;题意：&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;求[l,r]之间有多少种a*b=2016的组合。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;思路：&lt;/strong&gt;
+&lt;p&gt;&lt;strong&gt;思路：&lt;/strong&gt;&lt;/p&gt;
     
     </summary>
     
@@ -312,7 +312,7 @@
     
       &lt;p&gt;&lt;strong&gt;题意：&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;给一个n和m，求所有组成m长且值在1-n内且满足 a[i]%a[i-1]==0 的序列方案数。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;思路：&lt;/strong&gt;
+&lt;p&gt;&lt;strong&gt;思路：&lt;/strong&gt;&lt;/p&gt;
     
     </summary>
     
@@ -336,7 +336,7 @@
     
       &lt;p&gt;&lt;strong&gt;题意：&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;给出一个（2&lt;em&gt;m-1）&lt;/em&gt;（2*n-1）的图，要求输出从左下角走到右上角最短距离走法的路径，只能在 ‘-’ 或 ‘|’ 上移动，答案保证有解，有多解输出任一，n,m&amp;lt;=400。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;思路：&lt;/strong&gt;
+&lt;p&gt;&lt;strong&gt;思路：&lt;/strong&gt;&lt;/p&gt;
     
     </summary>
     
@@ -360,7 +360,7 @@
     
       &lt;p&gt;&lt;strong&gt;题意：&lt;/strong&gt; &lt;/p&gt;
 &lt;p&gt;出个两个（P,V）范围在1e9的正整数区间，分别从其中随机选出一个数，选出的两个数作为一个新区间的左右端点。要求新区间内的幸运数刚好为k个的概率（幸运数指一个数的数位只有4或7）。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;思路：&lt;/strong&gt;
+&lt;p&gt;&lt;strong&gt;思路：&lt;/strong&gt;&lt;/p&gt;
     
     </summary>
     
@@ -383,7 +383,7 @@
     <summary type="html">
     
       &lt;p&gt;&lt;strong&gt;题意：&lt;/strong&gt;&lt;br&gt;给出两个最长长为1e5的字符串，求他们的最长公共子串长度。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;思路：&lt;/strong&gt;
+&lt;p&gt;&lt;strong&gt;思路：&lt;/strong&gt;&lt;/p&gt;
     
     </summary>
     
