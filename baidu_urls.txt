@@ -1,3 +1,4 @@
+quincy.ink/算法设计与分析-学习笔记.html
 quincy.ink/物联网概论-学习笔记.html
 quincy.ink/概率论与数理统计-学习笔记.html
 quincy.ink/计算机网络-第7版-谢希仁-学习笔记.html
