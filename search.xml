@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[算法设计与分析 学习笔记]]></title>
     <url>%2F%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.html</url>
-    <content type="text"><![CDATA[[TOC] 第1章 算法概述算法定义：解决问题的有穷序列指令 算法的性质：输入、输出、确定性、有限性 程序和算法的区别：程序可不满足有限性，比如操作系统 求上下届函数： \lim_{n\rightarrow\infty} \frac{f(n)}{g(n)} = \begin{cases}0, & \text{f(n)=O(g(n))}\\\infty, & \text{f(n)= $\Omega$(g(n))}\\c,& \text{f(n)=$\Theta$(g(n))} \end{cases} 第2章 递归与分治一般递归方程时间复杂度分析 T(n)1} \end{cases}其中，a是子问题的个数，b是递减的步长，|表示递减方式，D(n)是合成子问题的开销 当|为减法： T(n)1}\\ O(n),&\text{a=1} \end{cases}当|为除法： $p=log_ba$ ①D(n)为常数 T(n)1}\\ O(log_bn),&\text{a=1} \end{cases}②D(n)为线性函数cn T(n)]]></content>
+    <content type="text"><![CDATA[[TOC] 第1章 算法概述算法定义：解决问题的有穷序列指令 算法的性质：输入、输出、确定性、有限性 程序和算法的区别：程序可不满足有限性，比如操作系统 求上下界函数： \lim_{n\rightarrow\infty} \frac{f(n)}{g(n)} = \begin{cases}0, & \text{f(n)=O(g(n))}\\\infty, & \text{f(n)= $\Omega$(g(n))}\\c,& \text{f(n)=$\Theta$(g(n))} \end{cases} 第2章 递归与分治一般递归方程时间复杂度分析 T(n)1} \end{cases}其中，a是子问题的个数，b是递减的步长，|表示递减方式，D(n)是合成子问题的开销 当|为减法： T(n)1}\\ O(n),&\text{a=1} \end{cases}当|为除法： $p=log_ba$ ①D(n)为常数 T(n)1}\\ O(log_bn),&\text{a=1} \end{cases}②D(n)为线性函数cn T(n)]]></content>
       <categories>
         <category>算法设计与分析</category>
       </categories>
@@ -25,7 +25,7 @@
   <entry>
     <title><![CDATA[概率论与数理统计 学习笔记]]></title>
     <url>%2F%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.html</url>
-    <content type="text"><![CDATA[[TOC] 第一章 随机事件及其概率第一节 随机事件及其频率、概率的统计定义随机事件(偶然事件)：在试验的结果中，可能发生、也可能不发生的事件 随机事件的频率具有一定的稳定性 随机事件的概率为频率的近似值 P(A)\approxf(A) = $\frac{m}{n}$ 必然事件 P(U)=1 不可能事件 P(V)=0 第二节 样本空间样本点：随机试验的每一个可能出现的且是最简单的不可再分的结果 样本空间：所有的样本点构成的集合（分可列个和不可列个） 任一随机事件A都是样本空间Ω的一个子集 第三节 事件的关系及运算包含/包含于：$A \subset B$ 和(并)：A∪B 积(交)：A∩B 或 AB 互斥(互不相容)：两个互不相容的和 A+B 对立(逆) 完备事件组：n个事件至少有一个事件一定发生 交换律、结合律、分配律、德摩根律 第四节 概率的古典定义乘法定理：完成一件事需r步，第i步有$ m_ i $种方法，完成这件事总方法数 $ m_ 1m_ 2…m_ r $ 加法定理：完成一件事有r类方法，第i类有$ m_ i $种方法，完成这件事总方法数 $ m_ 1+m_ 2+…+m_ r $ 排列：$ A _ n ^m = \frac{n!}{(n-m)!} $ 组合：$ C _ n ^m = \frac{A _ n ^m}{P_ m} = \frac{n!}{(n-m)!m!}$ 概率的古典定义：试验样本总共有$ n_Ω$ 个等可能的基本事件，其中随机事件A包含$ n_A$个基本事件，($ n_A$&lt;=$ n_Ω$) 则 $P(A) = \frac{n_A}{n_Ω}$ 不放回依次抽样与一次抽样的一致性 、 抽签次序无关性 第五节 概率加法定理若随机事件A与B互斥，即$AB = \emptyset，则P(A+B)= P(A)+P(B) \Rightarrow P(A)+P(\overline{A})=1$ 若A、B是任意的两个随机事件，则二者和事件的概率为 $P(A∪B)=P(A)+P(B)-P(AB)$ &ensp;&ensp; $\Rightarrow P(A∪B∪C)=P(A)+P(B)+P(C)-P(AB)-P(AC)-P(BC)+P(ABC) $ 第六节 条件概率与乘法定理$P(B|A)=\frac{P(AB)}{P(A)}$ 若$P(A_1A_2…A_{n-1})&gt;0,则 P(A_1A_2…A_{n})=P(A_1)P(A_2|A_1)P(A_3|A_1A_2)…P(A_n|A_1A_2…A_n-1)$ 第七节 全概率公式与贝叶斯公式$P(A) = \sum_{i=1}^nP(B_i)P(A|B_i)$&ensp;&ensp;&ensp;&ensp;先验，由因溯果 $P(B_i|A) = \frac{P(AB_i)}{P(A)} = \frac{P(B_i)P(A|B_i)}{\sum_{i=1}^nP(B_i)P(A|B_i)}$,i=1,2,…,n &ensp;&ensp;后验，由果溯因 第八节 随机事件的独立性若两事件A与B满足P(AB) = P(A)P(B)，则称事件A与B相互独立 &ensp;&ensp;性质1：不可能事件及必然事件与任意的随机事件相互独立 &ensp;&ensp;性质2：A与B相互独立，则A与$\overline{B},\overline{A}与B,\overline{A}与\overline{A}$也相互独立&ensp;&ensp;（相互对称性） 第二章 随机变量及其分布 第三章 多维随机变量及其分布 第四章 随机变量的数字特征 第五章 大数定律与中心极限定理 第六章 数理统计的基本概念与抽样分析 第七章 参数估计 第八章 假设验证 待更…]]></content>
+    <content type="text"><![CDATA[[TOC] 第一章 随机事件及其概率第一节 随机事件及其频率、概率的统计定义随机事件(偶然事件)：在试验的结果中，可能发生、也可能不发生的事件 随机事件的频率具有一定的稳定性 随机事件的概率为频率的近似值 P(A)\approxf(A) = $\frac{m}{n}$ 必然事件 P(U)=1 不可能事件 P(V)=0 第二节 样本空间样本点：随机试验的每一个可能出现的且是最简单的不可再分的结果 样本空间：所有的样本点构成的集合（分可列个和不可列个） 任一随机事件A都是样本空间Ω的一个子集 第三节 事件的关系及运算包含/包含于：$A \subset B$ 和(并)：$A∪B$ 积(交)：$A∩B 或 AB$ 互斥(互不相容)：两个互不相容的和 $A+B$ 对立(逆) 完备事件组：n个事件至少有一个事件一定发生 交换律、结合律、分配律、德摩根律 第四节 概率的古典定义乘法定理：完成一件事需r步，第i步有$ m_ i $种方法，完成这件事总方法数 $ m_ 1m_ 2…m_ r $ 加法定理：完成一件事有r类方法，第i类有$ m_ i $种方法，完成这件事总方法数 $ m_ 1+m_ 2+…+m_ r $ 排列：$ A _ n ^m = \frac{n!}{(n-m)!} $ 组合：$ C _ n ^m = \frac{A _ n ^m}{P_ m} = \frac{n!}{(n-m)!m!}$ 概率的古典定义：试验样本总共有$ n_Ω$ 个等可能的基本事件，其中随机事件A包含$ n_A$个基本事件，($ n_A$&lt;=$ n_Ω$) 则 $P(A) = \frac{n_A}{n_Ω}$ 不放回依次抽样与一次抽样的一致性 、 抽签次序无关性 第五节 概率加法定理若随机事件A与B互斥，即$AB = \emptyset，则P(A+B)= P(A)+P(B) \Rightarrow P(A)+P(\overline{A})=1$ 若A、B是任意的两个随机事件，则二者和事件的概率为 $P(A∪B)=P(A)+P(B)-P(AB)$ &ensp;&ensp; $\Rightarrow P(A∪B∪C)=P(A)+P(B)+P(C)-P(AB)-P(AC)-P(BC)+P(ABC) $ 第六节 条件概率与乘法定理$P(B|A)=\frac{P(AB)}{P(A)}$ 若$P(A_1A_2…A_{n-1})&gt;0,则 P(A_1A_2…A_{n})=P(A_1)P(A_2|A_1)P(A_3|A_1A_2)…P(A_n|A_1A_2…A_n-1)$ 第七节 全概率公式与贝叶斯公式&ensp;&ensp;先验，由因溯果 P(A) = \sum_{i=1}^nP(B_i)P(A|B_i) &ensp;&ensp;后验，由果溯因 P(B_i|A) = \frac{P(AB_i)}{P(A)} = \frac{P(B_i)P(A|B_i)}{\sum_{i=1}^nP(B_i)P(A|B_i)},i=1,2,...,n第八节 随机事件的独立性若两事件A与B满足P(AB) = P(A)P(B)，则称事件A与B相互独立 &ensp;&ensp;性质1：不可能事件及必然事件与任意的随机事件相互独立 &ensp;&ensp;性质2：A与B相互独立，则A与$\overline{B},\overline{A}与B,\overline{A}与\overline{A}$也相互独立&ensp;&ensp;（相互对称性） 第二章 随机变量及其分布 第三章 多维随机变量及其分布 第四章 随机变量的数字特征 第五章 大数定律与中心极限定理 第六章 数理统计的基本概念与抽样分析 第七章 参数估计 第八章 假设验证 待更…]]></content>
       <categories>
         <category>概率论与数理统计</category>
       </categories>
@@ -53,8 +53,8 @@
       </categories>
       <tags>
         <tag>数学</tag>
-        <tag>dp</tag>
         <tag>bfs</tag>
+        <tag>dp</tag>
         <tag>并查集</tag>
       </tags>
   </entry>
