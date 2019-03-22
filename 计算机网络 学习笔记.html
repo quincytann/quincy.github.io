@@ -136,7 +136,7 @@
 <meta property="og:image" content="https://s2.ax1x.com/2019/03/10/A9K9xK.jpg">
 <meta property="og:image" content="https://s2.ax1x.com/2019/03/16/AZUgZ8.jpg">
 <meta property="og:image" content="https://s2.ax1x.com/2019/03/16/AZU6qf.jpg">
-<meta property="og:updated_time" content="2019-03-20T15:06:11.451Z">
+<meta property="og:updated_time" content="2019-03-22T01:25:43.739Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="计算机网络 学习笔记">
 <meta name="twitter:description" content="[TOC]">
@@ -429,7 +429,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2.7k
+                  2.9k
                 </span>
               
 
@@ -445,7 +445,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  9
+                  10
                 </span>
               
             </div>
@@ -562,9 +562,15 @@
 <blockquote>
 <p>时分多址（TDMA）：甲与乙先讲一句，再换丙与丁讲一句，再换戊与己讲一句，依此类推，大家轮流（分时）讲话彼此就不会互相干扰。<br>频分多址（FDMA）：甲与乙在客厅讲话，丙与丁在书房讲话，戊与己在卧室讲话，大家在不同的房间（分频）讲话彼此就不会互相干扰。<br>码分多址（CDMA）：甲与乙用中文讲话，丙与丁用英文讲话，戊与己用日文讲话，这样虽然大家在同一个房子里讲话，各自仍然可以分辨出各自不同的语言，当甲与乙用中文讲话时，丙与丁的英文以及戊与己的日文只是声音干扰而己，不会造成甲与乙解读中文的困扰；同理，当丙与丁用英文讲话时，甲与乙的中文以及戊与己的日文只是声音干扰而己，不会造成丙与丁解读英文的困扰，在这个例子里「用不同的语言讲话」就好像「用不同的密码加密」一样。</p>
 </blockquote>
-<h4 id="2-5-数字复用技术"><a href="#2-5-数字复用技术" class="headerlink" title="2.5 数字复用技术"></a>2.5 数字复用技术</h4><p>&ensp;&ensp;</p>
+<p>码片：每一个比特时间划分为m个短的间隔</p>
+<p>工作方式：每个站被指派一个唯一的m bit码片，若发送1，则发送自己的m bit码片；若发送0，则发送该码片的二进制反码</p>
+<p>码片实现扩频：由于一个比特可转换成m个比特的码片，因此实际发送数据率提高了m倍</p>
+<p>重要特点：每个站的码片必须各不相同，并相互正交</p>
+<p>码片正交关系：不同码片正交，就是向量S和T的规格化内积为0（规格化内积即对应为<strong>点乘</strong>）</p>
+<p>正交关系的重要特征：任何码片与自己的规格化内积为1，与自己反码的规格化内积为-1</p>
+<h4 id="2-5-数字传输技术"><a href="#2-5-数字传输技术" class="headerlink" title="2.5 数字传输技术"></a>2.5 数字传输技术</h4><p>&ensp;&ensp;早期主要缺点：速率标准不统一、不是同步传输</p>
 <p>&ensp;&ensp;</p>
-<p><br></p>
+<h4 id="2-6-宽带接入技术"><a href="#2-6-宽带接入技术" class="headerlink" title="2.6 宽带接入技术"></a>2.6 宽带接入技术</h4><p><br></p>
 <h3 id="第3章-数据链路层"><a href="#第3章-数据链路层" class="headerlink" title="第3章 数据链路层"></a>第3章 数据链路层</h3><p><br></p>
 <h3 id="第4章-网络层"><a href="#第4章-网络层" class="headerlink" title="第4章 网络层"></a>第4章 网络层</h3><p><br></p>
 <h3 id="第5章-运输层"><a href="#第5章-运输层" class="headerlink" title="第5章 运输层"></a>第5章 运输层</h3><p><br></p>
@@ -860,7 +866,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#第1章-概述"><span class="nav-number">1.</span> <span class="nav-text">第1章 概述</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-计算机网络在信息时代中的作用"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 计算机网络在信息时代中的作用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-互联网概述"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 互联网概述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-3-互联网的组成"><span class="nav-number">1.3.</span> <span class="nav-text">1.3 互联网的组成</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-4-计算机在我国的发展"><span class="nav-number">1.4.</span> <span class="nav-text">1.4 计算机在我国的发展</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-5-计算机网络的类别"><span class="nav-number">1.5.</span> <span class="nav-text">1.5 计算机网络的类别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-6-计算机网络的性能"><span class="nav-number">1.6.</span> <span class="nav-text">1.6 计算机网络的性能</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-7-计算机网络体系结构"><span class="nav-number">1.7.</span> <span class="nav-text">1.7 计算机网络体系结构</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第2章-物理层"><span class="nav-number">2.</span> <span class="nav-text">第2章 物理层</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-物理层的基本概念"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 物理层的基本概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-数据通信的基础知识"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 数据通信的基础知识</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-物理层下面的传输介质"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 物理层下面的传输介质</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-信道复用技术"><span class="nav-number">2.4.</span> <span class="nav-text">2.4 信道复用技术</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-5-数字复用技术"><span class="nav-number">2.5.</span> <span class="nav-text">2.5 数字复用技术</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第3章-数据链路层"><span class="nav-number">3.</span> <span class="nav-text">第3章 数据链路层</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第4章-网络层"><span class="nav-number">4.</span> <span class="nav-text">第4章 网络层</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第5章-运输层"><span class="nav-number">5.</span> <span class="nav-text">第5章 运输层</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第6章-应用层"><span class="nav-number">6.</span> <span class="nav-text">第6章 应用层</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#第1章-概述"><span class="nav-number">1.</span> <span class="nav-text">第1章 概述</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-计算机网络在信息时代中的作用"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 计算机网络在信息时代中的作用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-互联网概述"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 互联网概述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-3-互联网的组成"><span class="nav-number">1.3.</span> <span class="nav-text">1.3 互联网的组成</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-4-计算机在我国的发展"><span class="nav-number">1.4.</span> <span class="nav-text">1.4 计算机在我国的发展</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-5-计算机网络的类别"><span class="nav-number">1.5.</span> <span class="nav-text">1.5 计算机网络的类别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-6-计算机网络的性能"><span class="nav-number">1.6.</span> <span class="nav-text">1.6 计算机网络的性能</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-7-计算机网络体系结构"><span class="nav-number">1.7.</span> <span class="nav-text">1.7 计算机网络体系结构</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第2章-物理层"><span class="nav-number">2.</span> <span class="nav-text">第2章 物理层</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-物理层的基本概念"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 物理层的基本概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-数据通信的基础知识"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 数据通信的基础知识</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-物理层下面的传输介质"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 物理层下面的传输介质</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-信道复用技术"><span class="nav-number">2.4.</span> <span class="nav-text">2.4 信道复用技术</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-5-数字传输技术"><span class="nav-number">2.5.</span> <span class="nav-text">2.5 数字传输技术</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-6-宽带接入技术"><span class="nav-number">2.6.</span> <span class="nav-text">2.6 宽带接入技术</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第3章-数据链路层"><span class="nav-number">3.</span> <span class="nav-text">第3章 数据链路层</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第4章-网络层"><span class="nav-number">4.</span> <span class="nav-text">第4章 网络层</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第5章-运输层"><span class="nav-number">5.</span> <span class="nav-text">第5章 运输层</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第6章-应用层"><span class="nav-number">6.</span> <span class="nav-text">第6章 应用层</span></a></li></ol></div>
             
 
           </div>
@@ -894,7 +900,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">13k</span>
+    <span title="Site words total count">13.3k</span>
   
 </div>
 
