@@ -131,7 +131,7 @@
 <meta property="og:site_name" content="Quincy&#39;s Blog">
 <meta property="og:description" content="[TOC]">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-20T15:25:04.241Z">
+<meta property="og:updated_time" content="2019-03-22T00:22:25.833Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="概率论与数理统计 学习笔记">
 <meta name="twitter:description" content="[TOC]">
@@ -423,7 +423,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  987
+                  1.3k
                 </span>
               
 
@@ -439,7 +439,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  4
+                  5
                 </span>
               
             </div>
@@ -508,7 +508,20 @@ P(B_i|A) = \frac{P(AB_i)}{P(A)} = \frac{P(B_i)P(A|B_i)}{\sum_{i=1}^nP(B_i)P(A|B_
 <p>规范性：P(Ω)=1;</p>
 <p>可列可加性(可数可加性)：$A_1,A_2,…$ 两两互不相容，则$P(\sum_{i=1}^\infty A_i) = \sum_{i=1}^\infty P(A_i)$</p>
 <p><br></p>
-<h3 id="第二章-随机变量及其分布"><a href="#第二章-随机变量及其分布" class="headerlink" title="第二章 随机变量及其分布"></a>第二章 随机变量及其分布</h3><p><br></p>
+<h3 id="第二章-随机变量及其分布"><a href="#第二章-随机变量及其分布" class="headerlink" title="第二章 随机变量及其分布"></a>第二章 随机变量及其分布</h3><h4 id="第一节-随机变量的概念"><a href="#第一节-随机变量的概念" class="headerlink" title="第一节 随机变量的概念"></a>第一节 随机变量的概念</h4><p>设Ω为随机变量的样本空间，如果对每一个样本点$\omega \in Ω$，均有唯一确定的实数X($\omega$)与之对应，即存在一个定义于Ω的单值实函数X=X($\omega$)，则称X=X($\omega$)为样本空间Ω上的随机变量</p>
+<h4 id="第二节-离散型随机变量的概率分布"><a href="#第二节-离散型随机变量的概率分布" class="headerlink" title="第二节 离散型随机变量的概率分布"></a>第二节 离散型随机变量的概率分布</h4><p>性质：</p>
+<p>①$p_k&gt;=0 (k=1,2,..) $</p>
+<p>②$\sum_{k=1}^{\infty}p_k = 1$</p>
+<h4 id="第三节-几种常用的离散型随机变量的分布"><a href="#第三节-几种常用的离散型随机变量的分布" class="headerlink" title="第三节 几种常用的离散型随机变量的分布"></a>第三节 几种常用的离散型随机变量的分布</h4><p>“0-1”分布：$P(X=1) = p，P(X=0) = q（0&lt;p&lt;1，p+q=1）$</p>
+<p>超几何分布：$P(X=m) = \frac{C_M^mC_{N-M}^{n-m}}{C_N^n} （n&lt;=N,M&lt;=N）$</p>
+<p>二项分布：$P(X=k) = C_n^kp^kq^{n-k} （k=0,1,2,…,n）$ 记作X ~ B(n,p)</p>
+<p>&ensp;&ensp;二项式分布的最可能取值( P(X=k)取得最大值的k )：</p>
+<p>&ensp;&ensp;①若(n+1)p不是整数，则其整数部分[(n+1)p]即为所求；</p>
+<p>&ensp;&ensp;②若(n+1)p=m是整数，则m和m-1即为所求</p>
+<p>泊松分布：$P(X=k) = P_{\lambda}(k) = \frac{\lambda^k}{k!}e^{-\lambda} （k=0,1,2,…）$</p>
+<p>&ensp;&ensp;泊松定理：</p>
+<p>几何分布：</p>
+<p><br></p>
 <h3 id="第三章-多维随机变量及其分布"><a href="#第三章-多维随机变量及其分布" class="headerlink" title="第三章 多维随机变量及其分布"></a>第三章 多维随机变量及其分布</h3><p><br></p>
 <h3 id="第四章-随机变量的数字特征"><a href="#第四章-随机变量的数字特征" class="headerlink" title="第四章 随机变量的数字特征"></a>第四章 随机变量的数字特征</h3><p><br></p>
 <h3 id="第五章-大数定律与中心极限定理"><a href="#第五章-大数定律与中心极限定理" class="headerlink" title="第五章 大数定律与中心极限定理"></a>第五章 大数定律与中心极限定理</h3><p><br></p>
@@ -806,7 +819,7 @@ P(B_i|A) = \frac{P(AB_i)}{P(A)} = \frac{P(B_i)P(A|B_i)}{\sum_{i=1}^nP(B_i)P(A|B_
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一章-随机事件及其概率"><span class="nav-number">1.</span> <span class="nav-text">第一章 随机事件及其概率</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#第一节-随机事件及其频率、概率的统计定义"><span class="nav-number">1.1.</span> <span class="nav-text">第一节 随机事件及其频率、概率的统计定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第二节-样本空间"><span class="nav-number">1.2.</span> <span class="nav-text">第二节 样本空间</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第三节-事件的关系及运算"><span class="nav-number">1.3.</span> <span class="nav-text">第三节 事件的关系及运算</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第四节-概率的古典定义"><span class="nav-number">1.4.</span> <span class="nav-text">第四节 概率的古典定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第五节-概率加法定理"><span class="nav-number">1.5.</span> <span class="nav-text">第五节 概率加法定理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第六节-条件概率与乘法定理"><span class="nav-number">1.6.</span> <span class="nav-text">第六节 条件概率与乘法定理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第七节-全概率公式与贝叶斯公式"><span class="nav-number">1.7.</span> <span class="nav-text">第七节 全概率公式与贝叶斯公式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第八节-随机事件的独立性"><span class="nav-number">1.8.</span> <span class="nav-text">第八节 随机事件的独立性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第九节-贝努力概型"><span class="nav-number">1.9.</span> <span class="nav-text">第九节 贝努力概型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第十节-概率论的公理化体系"><span class="nav-number">1.10.</span> <span class="nav-text">第十节 概率论的公理化体系</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二章-随机变量及其分布"><span class="nav-number">2.</span> <span class="nav-text">第二章 随机变量及其分布</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第三章-多维随机变量及其分布"><span class="nav-number">3.</span> <span class="nav-text">第三章 多维随机变量及其分布</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第四章-随机变量的数字特征"><span class="nav-number">4.</span> <span class="nav-text">第四章 随机变量的数字特征</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第五章-大数定律与中心极限定理"><span class="nav-number">5.</span> <span class="nav-text">第五章 大数定律与中心极限定理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第六章-数理统计的基本概念与抽样分析"><span class="nav-number">6.</span> <span class="nav-text">第六章 数理统计的基本概念与抽样分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第七章-参数估计"><span class="nav-number">7.</span> <span class="nav-text">第七章 参数估计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第八章-假设验证"><span class="nav-number">8.</span> <span class="nav-text">第八章 假设验证</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一章-随机事件及其概率"><span class="nav-number">1.</span> <span class="nav-text">第一章 随机事件及其概率</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#第一节-随机事件及其频率、概率的统计定义"><span class="nav-number">1.1.</span> <span class="nav-text">第一节 随机事件及其频率、概率的统计定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第二节-样本空间"><span class="nav-number">1.2.</span> <span class="nav-text">第二节 样本空间</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第三节-事件的关系及运算"><span class="nav-number">1.3.</span> <span class="nav-text">第三节 事件的关系及运算</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第四节-概率的古典定义"><span class="nav-number">1.4.</span> <span class="nav-text">第四节 概率的古典定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第五节-概率加法定理"><span class="nav-number">1.5.</span> <span class="nav-text">第五节 概率加法定理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第六节-条件概率与乘法定理"><span class="nav-number">1.6.</span> <span class="nav-text">第六节 条件概率与乘法定理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第七节-全概率公式与贝叶斯公式"><span class="nav-number">1.7.</span> <span class="nav-text">第七节 全概率公式与贝叶斯公式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第八节-随机事件的独立性"><span class="nav-number">1.8.</span> <span class="nav-text">第八节 随机事件的独立性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第九节-贝努力概型"><span class="nav-number">1.9.</span> <span class="nav-text">第九节 贝努力概型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第十节-概率论的公理化体系"><span class="nav-number">1.10.</span> <span class="nav-text">第十节 概率论的公理化体系</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二章-随机变量及其分布"><span class="nav-number">2.</span> <span class="nav-text">第二章 随机变量及其分布</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#第一节-随机变量的概念"><span class="nav-number">2.1.</span> <span class="nav-text">第一节 随机变量的概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第二节-离散型随机变量的概率分布"><span class="nav-number">2.2.</span> <span class="nav-text">第二节 离散型随机变量的概率分布</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第三节-几种常用的离散型随机变量的分布"><span class="nav-number">2.3.</span> <span class="nav-text">第三节 几种常用的离散型随机变量的分布</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第三章-多维随机变量及其分布"><span class="nav-number">3.</span> <span class="nav-text">第三章 多维随机变量及其分布</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第四章-随机变量的数字特征"><span class="nav-number">4.</span> <span class="nav-text">第四章 随机变量的数字特征</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第五章-大数定律与中心极限定理"><span class="nav-number">5.</span> <span class="nav-text">第五章 大数定律与中心极限定理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第六章-数理统计的基本概念与抽样分析"><span class="nav-number">6.</span> <span class="nav-text">第六章 数理统计的基本概念与抽样分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第七章-参数估计"><span class="nav-number">7.</span> <span class="nav-text">第七章 参数估计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第八章-假设验证"><span class="nav-number">8.</span> <span class="nav-text">第八章 假设验证</span></a></li></ol></div>
             
 
           </div>
@@ -840,7 +853,7 @@ P(B_i|A) = \frac{P(AB_i)}{P(A)} = \frac{P(B_i)P(A|B_i)}{\sum_{i=1}^nP(B_i)P(A|B_
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">12.8k</span>
+    <span title="Site words total count">13k</span>
   
 </div>
 
