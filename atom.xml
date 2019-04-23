@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="quincy.ink/"/>
-  <updated>2019-04-16T01:09:17.089Z</updated>
+  <updated>2019-04-23T01:29:18.316Z</updated>
   <id>quincy.ink/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ARM嵌入式系统 学习笔记</title>
+    <link href="quincy.ink/ARM%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.html"/>
+    <id>quincy.ink/ARM嵌入式系统-学习笔记.html</id>
+    <published>2019-04-23T00:15:17.000Z</published>
+    <updated>2019-04-23T01:29:18.316Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="第1章-嵌入式系统概述"><a href="#第1章-嵌入式系统概述" class="headerlink" title="第1章 嵌入式系统概述"></a>第1章 嵌入式系统概述</h3><ol><li>嵌入式系统定义：嵌入到对象体系中的专用计算机应用系统。</li><li>应用举例：手机、MP3、打印机、DV等。</li><li>嵌入式系统分类：①嵌入式微系统（EMPU，应用于专门设计的电路板上）②微控制器（MCU）③DSP处理器（DSP，应用于大批量的消费类产品）④片上系统（SOC）</li><li>嵌入式系统基本概念：<ul><li>实时操作系统（RTOS）：一段在嵌入式系统启动后首先执行的背景程序，用户的应用程序是运行于RTOS之上的各个任务，RTOS根据各个任务的要求，进行资源管理、消息管理、任务调度及异常处理等工作。</li><li>资源：程序运行时可使用的软、硬件环境。</li><li>共享资源：被一个以上任务使用的资源。</li><li>任务：一个线程。</li><li>任务切换：保存当前运行任务的工作状态并入栈，把下一个要运行任务的当前状态从栈中装回CPU寄存器并开始运行。</li><li>内核：负责管理各个任务，提供任务切换的基本服务。</li><li>非占先式内核：中断后回到中断了的任务。</li><li>占先式内核：中断后让进入就绪态优先级最高的开始运行。</li></ul></li><li>常见嵌入式实时操作系统<ul><li>μClinux：开源</li><li>Windows CE：开源</li><li>VxWorks：实时性卓越</li><li>μC/OS - ΙΙ：开源、抢占式</li></ul></li></ol><p><br></p><h3 id="第2章-ARM7体系结构"><a href="#第2章-ARM7体系结构" class="headerlink" title="第2章 ARM7体系结构"></a>第2章 ARM7体系结构</h3><p><br></p><h3 id="第3章-ARM7TDMI（-S）指令系统"><a href="#第3章-ARM7TDMI（-S）指令系统" class="headerlink" title="第3章 ARM7TDMI（-S）指令系统"></a>第3章 ARM7TDMI（-S）指令系统</h3><p><br></p><h3 id="第4章-LPC2000系列ARM硬件结构"><a href="#第4章-LPC2000系列ARM硬件结构" class="headerlink" title="第4章 LPC2000系列ARM硬件结构"></a>第4章 LPC2000系列ARM硬件结构</h3><p><br></p><p>待更…</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;第1章-嵌入式系统概述&quot;&gt;&lt;a href=&quot;#第1章-嵌入式系统概述&quot; class=&quot;headerlink&quot; title=&quot;第1章 嵌入式系统概述&quot;&gt;&lt;/a&gt;第1章 嵌入式系统概述&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;嵌入式系统定义：嵌入到对象体系中的专用计算机应用系统。&lt;
+      
+    
+    </summary>
+    
+      <category term="嵌入式系统" scheme="quincy.ink/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+      <category term="嵌入式系统" scheme="quincy.ink/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>算法设计与分析 学习笔记</title>
@@ -142,9 +168,9 @@
     
       <category term="数学" scheme="quincy.ink/tags/%E6%95%B0%E5%AD%A6/"/>
     
-      <category term="dp" scheme="quincy.ink/tags/dp/"/>
-    
       <category term="bfs" scheme="quincy.ink/tags/bfs/"/>
+    
+      <category term="dp" scheme="quincy.ink/tags/dp/"/>
     
       <category term="并查集" scheme="quincy.ink/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/"/>
     
