@@ -131,7 +131,7 @@
 <meta property="og:site_name" content="Quincy&#39;s Blog">
 <meta property="og:description" content="[TOC] 第1章 嵌入式系统概述 嵌入式系统定义：嵌入到对象体系中的专用计算机应用系统。  应用举例：手机、MP3、打印机、DV等。  嵌入式系统分类：①嵌入式微处理器（EMPU，应用于专门设计的电路板上）②微控制器（MCU）③DSP处理器（DSP，应用于大批量的消费类产品）④片上系统（SOC）  嵌入式系统基本概念：">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-25T23:41:58.022Z">
+<meta property="og:updated_time" content="2019-04-26T01:15:02.635Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ARM嵌入式系统 学习笔记">
 <meta name="twitter:description" content="[TOC] 第1章 嵌入式系统概述 嵌入式系统定义：嵌入到对象体系中的专用计算机应用系统。  应用举例：手机、MP3、打印机、DV等。  嵌入式系统分类：①嵌入式微处理器（EMPU，应用于专门设计的电路板上）②微控制器（MCU）③DSP处理器（DSP，应用于大批量的消费类产品）④片上系统（SOC）  嵌入式系统基本概念：">
@@ -371,7 +371,7 @@
           
   <span class="post-updated">
     &nbsp; | &nbsp; 更新于
-    <time itemprop="dateUpdated" datetime="2019-04-26T07:41:58+08:00" content="2019-04-26">
+    <time itemprop="dateUpdated" datetime="2019-04-26T09:15:02+08:00" content="2019-04-26">
       2019-04-26
     </time>
   </span>
@@ -650,7 +650,55 @@
 </li>
 </ul>
 <p><br></p>
-<h3 id="第3章-ARM7TDMI（-S）指令系统"><a href="#第3章-ARM7TDMI（-S）指令系统" class="headerlink" title="第3章 ARM7TDMI（-S）指令系统"></a>第3章 ARM7TDMI（-S）指令系统</h3><p><br></p>
+<h3 id="第3章-ARM7TDMI（-S）指令系统"><a href="#第3章-ARM7TDMI（-S）指令系统" class="headerlink" title="第3章 ARM7TDMI（-S）指令系统"></a>第3章 ARM7TDMI（-S）指令系统</h3><ol>
+<li><p>ARM处理器寻址方式</p>
+<ul>
+<li><p>寄存器寻址： 寄存器编号</p>
+<blockquote>
+<p>MOV  R1,R2 ；将R2的值存入R1</p>
+<p>SUB R0,R1,R2；将R1的值减R2的值结果存入R0</p>
+</blockquote>
+</li>
+<li><p>立即寻址： 操作数</p>
+<blockquote>
+<p>SUBS R0,R0,#1；R0-1存入R0</p>
+<p>MOV R0,#0xFF000；将立即数0xFF000装入R0</p>
+</blockquote>
+</li>
+<li><p>寄存器移位寻址： ASR(1-32)、LSL(1-31)、LSR(1-32)、ROR(1-31)、RRX(1)</p>
+<blockquote>
+<p>MOV R0,R2,LSL #3 ；R2的值左移3位结果存入R0</p>
+<p>ANDS R1,R1,R2,LSL R3 ；R2的值左移R3位，结果与R1相与后存入R1</p>
+</blockquote>
+</li>
+<li><p>寄存器间寻址： []</p>
+<blockquote>
+<p>LDR R1,[R2] ；将R2指向的储存单元的数据读出存入R1    //加载字数据</p>
+<p>SWP R1,R1,R2；将R2指向的储存单元的数据与R1的值交换</p>
+</blockquote>
+</li>
+<li><p>基址寻址</p>
+<blockquote>
+<p>STR R1,[R0,#-4]！；将R1的值存入R0-4指定的储存单元    //存储字数据</p>
+</blockquote>
+</li>
+<li><p>多寄存器寻址：！，{ }</p>
+<blockquote>
+<p>LDMIA R1!,{R2-R7,R12}；将R1指向的单元中的数据读出到R2-R7,R12中，R1++；//多寄存器加载</p>
+<p>STMIA R0!,{R2-R7,R12}；将R2-R7,R12的值保存到R1指向的存储单元中，R0++;   //多寄存器存储</p>
+</blockquote>
+</li>
+<li><p>堆栈寻址</p>
+<p>满堆栈：指向最后压入栈的有效数据项，向移动指针再写数据；</p>
+<p>空堆栈：指向下一个待压入数据的空位置，先写入数据在移动指针。</p>
+</li>
+<li><p>相对寻址</p>
+<p>程序计数器PC提供基准地址，地址码字段作为偏移量</p>
+</li>
+</ul>
+</li>
+</ol>
+<p><br></p>
 <h3 id="第4章-LPC2000系列ARM硬件结构"><a href="#第4章-LPC2000系列ARM硬件结构" class="headerlink" title="第4章 LPC2000系列ARM硬件结构"></a>第4章 LPC2000系列ARM硬件结构</h3><p><br></p>
 <p>待更…</p>
 
@@ -972,7 +1020,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">18.7k</span>
+    <span title="Site words total count">19.1k</span>
   
 </div>
 
