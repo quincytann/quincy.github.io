@@ -131,7 +131,7 @@
 <meta property="og:site_name" content="Quincy&#39;s Blog">
 <meta property="og:description" content="[TOC] 第1章 嵌入式系统概述 嵌入式系统定义：嵌入到对象体系中的专用计算机应用系统。  应用举例：手机、MP3、打印机、DV等。  嵌入式系统分类：①嵌入式微处理器（EMPU，应用于专门设计的电路板上）②微控制器（MCU）③DSP处理器（DSP，应用于大批量的消费类产品）④片上系统（SOC）  嵌入式系统基本概念：">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-30T03:21:41.710Z">
+<meta property="og:updated_time" content="2019-05-02T12:36:23.794Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ARM嵌入式系统 学习笔记">
 <meta name="twitter:description" content="[TOC] 第1章 嵌入式系统概述 嵌入式系统定义：嵌入到对象体系中的专用计算机应用系统。  应用举例：手机、MP3、打印机、DV等。  嵌入式系统分类：①嵌入式微处理器（EMPU，应用于专门设计的电路板上）②微控制器（MCU）③DSP处理器（DSP，应用于大批量的消费类产品）④片上系统（SOC）  嵌入式系统基本概念：">
@@ -371,8 +371,8 @@
           
   <span class="post-updated">
     &nbsp; | &nbsp; 更新于
-    <time itemprop="dateUpdated" datetime="2019-04-30T11:21:41+08:00" content="2019-04-30">
-      2019-04-30
+    <time itemprop="dateUpdated" datetime="2019-05-02T20:36:23+08:00" content="2019-05-02">
+      2019-05-02
     </time>
   </span>
 
@@ -703,13 +703,10 @@
 <li>为存储器分配地址的过程称为存储器映射；但为了增加系统的灵活性，系统中有部分存储单元（主要包括引导块(Boot Block)和用于保存向量表的少量存储单元）可以同时出现在不同地址上，则称为存储器重映射。</li>
 <li>存储器重映射并不是对映射单元的内容进行了复制，只是将多个地址指向了同一个存储单元，通过“存储器管理部件”实现。即一个物理地址对应多个逻辑地址。</li>
 <li>Boot Block是芯片设计厂家在LPC2000系列ARM内部固化的一段代码，用户无法对其修改或删除。这段代码在芯片复位后被首先运行，其功能主要是判断运行哪个存储器上的程序，检查用户代码是否有效，判断芯片是否被加密，芯片的在应用编程(IAP)以及在系统编程功能(ISP)。</li>
-<li><p>系统启动代码(Boot Loader)：大部分由汇编指令构成，可以实现向量表定义、堆栈初始化、系统变量初始化、中断系统初始化、I/O初始化、外围初始化、地址重映射等操作。启动顺序：Boot Block-&gt;Boot Loader-&gt;操作系统</p>
-</li>
-<li><p>时钟系统概述：时钟是计算机系统的脉搏，处理器核在一拍接一拍的时钟驱动下完成指令执行、状态变换等动作。外部部件在时钟的驱动下进行着各种工作，比如串口数据的手法收发、A/D转换、定时器计数等。因此十时钟对于一个计算机系统是至关重要的，通常时钟系统出现问题也是最致命的，比如振荡器不起振、振荡不稳、停振等。</p>
-</li>
+<li>系统启动代码(Boot Loader)：大部分由汇编指令构成，可以实现向量表定义、堆栈初始化、系统变量初始化、中断系统初始化、I/O初始化、外围初始化、地址重映射等操作。启动顺序：Boot Block-&gt;Boot Loader-&gt;操作系统</li>
+<li>时钟系统概述：时钟是计算机系统的脉搏，处理器核在一拍接一拍的时钟驱动下完成指令执行、状态变换等动作。外部部件在时钟的驱动下进行着各种工作，比如串口数据的手法收发、A/D转换、定时器计数等。因此十时钟对于一个计算机系统是至关重要的，通常时钟系统出现问题也是最致命的，比如振荡器不起振、振荡不稳、停振等。</li>
 <li>晶体振荡器的两个模式：使用外部时钟源时，称为“从属模式”；使用外部晶体时，称为“振荡模式”。</li>
-<li><p>LPC2000系列ARM两个复位源：</p>
-<ul>
+<li>LPC2000系列ARM两个复位源：<ul>
 <li>外部复位：通过把芯片的$\overline{RESET}$引脚拉为低电平使芯片复位。$\overline{RESET}$引脚为施密特触发输入引脚，带有一个额外的干扰滤波器，可以滤除非常短促的脉冲信号，使处理器不会被干扰脉冲意外复位，或者被不稳定的复位信号复位多次。<ul>
 <li>$\overline{RESET}$需要保持一段时间的低电平，必须在晶振稳定运行之后才能撤除。</li>
 <li>在系统编程(ISP)：是一种非常实用的片内Flash烧写方式。ISP工作时，通过<strong>UART0</strong>使用约定协议与计算机上的ISP软件进行通信，并按用户的操作要求，调用内部的IAP代码实现各种功能。</li>
@@ -718,22 +715,73 @@
 <li>看门狗复位：内置看门狗部件，可以利用此部件来复位处理器。</li>
 </ul>
 </li>
-<li><p>锁相环PLL</p>
-<ul>
+<li>锁相环PLL<ul>
 <li>作用：将振荡器产生的时钟频率$F_{OSC}$进行升频。</li>
 <li>LPC2000系列ARM是基于ARM7内核的，该内核的工作频率基本在100Mhz以下，所以LPC2000系列ARM大部分支持最高60MHz的内核时钟，少部分支持70MHz的内核时钟。</li>
 <li>PLL频率计算：$F_{OSC}$经流控振荡器CCO得到$F_{CCO}$，$F_{CCO}$经过2P分频后得$F_{CCLK}=F_{CCO}/(2*P)$，$F_{CCO}/(2*P)$经M分频后得到$F_{CCO}/(2*P*M) = F_{OSC}$</li>
-<li><strong>PLL设置</strong></li>
+<li><strong>PLL设置</strong>  <a href="https://www.cnblogs.com/tureno/articles/2714811.html" target="_blank" rel="noopener">参考链接</a><ul>
+<li>$F_{CCO}$取值必须在156～320MHz内</li>
+<li>M取值1-32，将M-1放在PLLCFG[4:0]</li>
+<li>P取值1,2,4,8，将P-1放在PLLCFG[6:5]</li>
+<li>PLLCON寄存器:包涵使能连接PLL的位,也就是控制PLL是否进行连接.这个连接需要在向PLLFEED发送正确的信息(馈送序列)的时候才生效,否则及时将使能位置位,PLL也不会连接到电路中。PLLCON必须在PLL开始连接之前就设置好,否则会造成系统不可预知的错误,<strong>先设置1后设置3</strong>。</li>
+<li>PLLSTAT寄存器:从里面可以读出PLLCON,PLLCFG的值,但必须是在PLLFEED的馈送序列被发送,PLLCON,PLLCFG生效以后才可以读到正确的值(<strong>while(PLLSTAT &amp; (1&lt;&lt;10) == 0) ;</strong>)</li>
+<li>PLLFEED寄存器:向此寄存器以连续的VPB总线周期写入<strong>0xaa,0x55</strong>,即馈送序列.在正确的序列被写入PLLFEED之后,PLLCON,PLLCFG才生效,PLL电路才能正确的连接到电路中</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>VPB分频器<ul>
-<li>将$F_{CCLK}$分频，方便外设工作</li>
-<li>降低系统功耗</li>
+<li>作用：将$F_{CCLK}$分频，方便外设工作、降低系统功耗</li>
 </ul>
 </li>
 <li>两种节电模式：<ul>
 <li>空闲模式：处理器停止执行指令，使功耗最低降至1～2mA电流</li>
 <li>掉电模式：振荡器关闭，芯片没有任何内部时钟，功耗降低到几乎为零</li>
+</ul>
+</li>
+<li>外部存储器的地址范围</li>
+</ol>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">bank</th>
+<th style="text-align:center">地址范围</th>
+<th style="text-align:center">配置寄存器</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0x8000 0000~0x80FF FFFF</td>
+<td style="text-align:center">BCFG0</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0x8100 0000~0x81FF FFFF</td>
+<td style="text-align:center">BCFG1</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">0x8200 0000~0x82FF FFFF</td>
+<td style="text-align:center">BCFG2</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">0x8300 0000~0x83FF FFFF</td>
+<td style="text-align:center">BCFG3</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;在引脚BOOT[1:0]的控制下，bank0可控制引导程序运行。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;bank0~bank3的片选信号分别是CS0~CS3。</p>
+<ol>
+<li>外部存储器接口<ul>
+<li>LPC2200的外部存储器宽度可设定为8位，16位和32位</li>
+<li>宽度为8位时，有效数据线D7~D0</li>
+<li>宽度为16位时，有效数据线D15~D0</li>
+<li>操作16位存储器时，需将地址线A1连接到A0处</li>
 </ul>
 </li>
 <li></li>
@@ -1059,7 +1107,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">20k</span>
+    <span title="Site words total count">20.5k</span>
   
 </div>
 
