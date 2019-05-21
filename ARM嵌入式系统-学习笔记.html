@@ -123,18 +123,20 @@
 
 
 
-<meta name="description" content="[TOC] 第1章 嵌入式系统概述 嵌入式系统定义：嵌入到对象体系中的专用计算机应用系统。  应用举例：手机、MP3、打印机、DV等。  嵌入式系统分类：①嵌入式微处理器（EMPU，应用于专门设计的电路板上）②微控制器（MCU）③DSP处理器（DSP，应用于大批量的消费类产品）④片上系统（SOC）  嵌入式系统基本概念：">
+<meta name="description" content="[TOC] 第1章 嵌入式系统概述 嵌入式系统定义：嵌入到对象体系中的专用计算机应用系统。 应用举例：手机、MP3、打印机、DV等。 嵌入式系统分类：①嵌入式微处理器（EMPU，应用于专门设计的电路板上）②微控制器（MCU）③DSP处理器（DSP，应用于大批量的消费类产品）④片上系统（SOC） 嵌入式系统基本概念：">
 <meta name="keywords" content="嵌入式系统">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ARM嵌入式系统 学习笔记">
 <meta property="og:url" content="quincy.ink/ARM嵌入式系统-学习笔记.html">
 <meta property="og:site_name" content="Quincy&#39;s Blog">
-<meta property="og:description" content="[TOC] 第1章 嵌入式系统概述 嵌入式系统定义：嵌入到对象体系中的专用计算机应用系统。  应用举例：手机、MP3、打印机、DV等。  嵌入式系统分类：①嵌入式微处理器（EMPU，应用于专门设计的电路板上）②微控制器（MCU）③DSP处理器（DSP，应用于大批量的消费类产品）④片上系统（SOC）  嵌入式系统基本概念：">
+<meta property="og:description" content="[TOC] 第1章 嵌入式系统概述 嵌入式系统定义：嵌入到对象体系中的专用计算机应用系统。 应用举例：手机、MP3、打印机、DV等。 嵌入式系统分类：①嵌入式微处理器（EMPU，应用于专门设计的电路板上）②微控制器（MCU）③DSP处理器（DSP，应用于大批量的消费类产品）④片上系统（SOC） 嵌入式系统基本概念：">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-21T00:13:14.417Z">
+<meta property="og:image" content="https://s2.ax1x.com/2019/05/21/EztbfU.jpg">
+<meta property="og:updated_time" content="2019-05-21T03:21:42.636Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ARM嵌入式系统 学习笔记">
-<meta name="twitter:description" content="[TOC] 第1章 嵌入式系统概述 嵌入式系统定义：嵌入到对象体系中的专用计算机应用系统。  应用举例：手机、MP3、打印机、DV等。  嵌入式系统分类：①嵌入式微处理器（EMPU，应用于专门设计的电路板上）②微控制器（MCU）③DSP处理器（DSP，应用于大批量的消费类产品）④片上系统（SOC）  嵌入式系统基本概念：">
+<meta name="twitter:description" content="[TOC] 第1章 嵌入式系统概述 嵌入式系统定义：嵌入到对象体系中的专用计算机应用系统。 应用举例：手机、MP3、打印机、DV等。 嵌入式系统分类：①嵌入式微处理器（EMPU，应用于专门设计的电路板上）②微控制器（MCU）③DSP处理器（DSP，应用于大批量的消费类产品）④片上系统（SOC） 嵌入式系统基本概念：">
+<meta name="twitter:image" content="https://s2.ax1x.com/2019/05/21/EztbfU.jpg">
 
 
 
@@ -144,7 +146,7 @@
     root: '/',
     scheme: 'Pisces',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":true,"onmobile":true},
+    sidebar: {"position":"left","display":"always","offset":10,"b2t":false,"scrollpercent":true,"onmobile":true},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -371,7 +373,7 @@
           
   <span class="post-updated">
     &nbsp; | &nbsp; 更新于
-    <time itemprop="dateUpdated" datetime="2019-05-21T08:13:14+08:00" content="2019-05-21">
+    <time itemprop="dateUpdated" datetime="2019-05-21T11:21:42+08:00" content="2019-05-21">
       2019-05-21
     </time>
   </span>
@@ -440,14 +442,10 @@
       
         <p>[TOC]</p>
 <h3 id="第1章-嵌入式系统概述"><a href="#第1章-嵌入式系统概述" class="headerlink" title="第1章 嵌入式系统概述"></a>第1章 嵌入式系统概述</h3><ol>
-<li><p>嵌入式系统定义：嵌入到对象体系中的专用计算机应用系统。</p>
-</li>
-<li><p>应用举例：手机、MP3、打印机、DV等。</p>
-</li>
-<li><p>嵌入式系统分类：①嵌入式微处理器（EMPU，应用于专门设计的电路板上）②微控制器（MCU）③DSP处理器（DSP，应用于大批量的消费类产品）④片上系统（SOC）</p>
-</li>
-<li><p>嵌入式系统基本概念：</p>
-<a id="more"></a>
+<li>嵌入式系统定义：嵌入到对象体系中的专用计算机应用系统。</li>
+<li>应用举例：手机、MP3、打印机、DV等。</li>
+<li>嵌入式系统分类：①嵌入式微处理器（EMPU，应用于专门设计的电路板上）②微控制器（MCU）③DSP处理器（DSP，应用于大批量的消费类产品）④片上系统（SOC）</li>
+<li><p>嵌入式系统基本概念：<a id="more"></a></p>
 <ul>
 <li>实时操作系统（RTOS）：一段在嵌入式系统启动后首先执行的背景程序，用户的应用程序是运行于RTOS之上的各个任务，RTOS根据各个任务的要求，进行资源管理、消息管理、任务调度及异常处理等工作。</li>
 <li>资源：程序运行时可使用的软、硬件环境。</li>
@@ -644,10 +642,12 @@
 </table>
 </div>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;12. ARM体系的储存系统</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;位于地址A的字包含的字节位于A、A+1、A+2、A+3；</p>
 <ul>
-<li><p>小端格式：一个字中的最低地址被看作是最低位字节，最高地址的字节被看作是最高位字节</p>
+<li><p>小端格式：一个字中的最低地址被看作是最低位字节，最高地址的字节被看作是最高位字节，储存器系统字节0连接到数据线7~0；</p>
 </li>
-<li><p>大端格式：一个字中的最高位字节保存在最低地址，最低位字节保存在最高位地址</p>
+<li><p>大端格式：一个字中的最高位字节保存在最低地址，最低位字节保存在最高位地址，储存器系统字节0连接到数据线31~24；</p>
+<p><img src="https://s2.ax1x.com/2019/05/21/EztbfU.jpg" alt="EztbfU.jpg"></p>
 </li>
 </ul>
 <p><br></p>
@@ -675,7 +675,7 @@
 <li><p>寄存器间寻址： []</p>
 <blockquote>
 <p>LDR R1,[R2] ；将R2指向的储存单元的数据读出存入R1    //加载字数据</p>
-<p>SWP R1,R1,R2；将R2指向的储存单元的数据与R1的值交换</p>
+<p>SWP R1,R1,[R2]；将R2指向的储存单元的数据与R1的值交换</p>
 </blockquote>
 </li>
 <li><p>基址寻址</p>
@@ -691,7 +691,8 @@
 </li>
 <li><p>堆栈寻址</p>
 <p>满堆栈：指向最后压入栈的有效数据项，向移动指针再写数据；</p>
-<p>空堆栈：指向下一个待压入数据的空位置，先写入数据在移动指针。</p>
+<p>空堆栈：指向下一个待压入数据的空位置，先写入数据在移动指针；</p>
+<p>X递增：增大地址向上增长；X递减：减小地址向下增长。</p>
 </li>
 <li><p>相对寻址</p>
 <p>程序计数器PC提供基准地址，地址码字段作为偏移量</p>
@@ -716,22 +717,34 @@
 <li>看门狗复位：内置看门狗部件，可以利用此部件来复位处理器。</li>
 </ul>
 </li>
-<li>锁相环PLL<ul>
+<li><p>锁相环PLL</p>
+<ul>
 <li>作用：将振荡器产生的时钟频率$F_{OSC}$进行升频。</li>
 <li>LPC2000系列ARM是基于ARM7内核的，该内核的工作频率基本在100Mhz以下，所以LPC2000系列ARM大部分支持最高60MHz的内核时钟，少部分支持70MHz的内核时钟。</li>
 <li>PLL频率计算：$F_{OSC}$经流控振荡器CCO得到$F_{CCO}$，$F_{CCO}$经过2P分频后得$F_{CCLK}=F_{CCO}/(2*P)$，$F_{CCO}/(2*P)$经M分频后得到$F_{CCO}/(2*P*M) = F_{OSC}$</li>
-<li><strong>PLL设置</strong>  <a href="https://www.cnblogs.com/tureno/articles/2714811.html" target="_blank" rel="noopener">参考链接</a><ul>
-<li>$F_{CCO}$取值必须在156～320MHz内</li>
-<li>M取值1-32，将M-1放在PLLCFG[4:0]</li>
-<li>P取值1,2,4,8，将P-1放在PLLCFG[6:5]</li>
-<li>PLLCON寄存器:包涵使能连接PLL的位,也就是控制PLL是否进行连接.这个连接需要在向PLLFEED发送正确的信息(馈送序列)的时候才生效,否则及时将使能位置位,PLL也不会连接到电路中。PLLCON必须在PLL开始连接之前就设置好,否则会造成系统不可预知的错误,<strong>先设置1后设置3</strong>。</li>
-<li>PLLSTAT寄存器:从里面可以读出PLLCON,PLLCFG的值,但必须是在PLLFEED的馈送序列被发送,PLLCON,PLLCFG生效以后才可以读到正确的值(<strong>while(PLLSTAT &amp; (1&lt;&lt;10) == 0) ;</strong>)</li>
-<li>PLLFEED寄存器:向此寄存器以连续的VPB总线周期写入<strong>0xaa,0x55</strong>,即馈送序列，在正确的序列被写入PLLFEED之后,PLLCON,PLLCFG才生效,PLL电路才能正确的连接到电路中</li>
-</ul>
+<li><p><strong>PLL设置</strong>  <a href="https://www.cnblogs.com/tureno/articles/2714811.html" target="_blank" rel="noopener">参考链接</a></p>
+<ul>
+<li><p>$F_{CCO}$取值必须在156～320MHz内</p>
+</li>
+<li><p>M取值1-32，将M-1放在PLLCFG[4:0]</p>
+</li>
+<li><p>P取值1,2,4,8，将P-1放在PLLCFG[6:5]</p>
+</li>
+<li><p>PLLCON寄存器:包涵使能连接PLL的位,也就是控制PLL是否进行连接,这个连接需要在向PLLFEED发送正确的信息(馈送序列)的时候才生效,否则及时将使能位置位,PLL也不会连接到电路中。PLLCON必须在PLL开始连接之前就设置好,否则会造成系统不可预知的错误,<strong>先设置1后设置3</strong>。</p>
+</li>
+<li><p>PLLSTAT寄存器:从里面可以读出PLLCON,PLLCFG的值,但必须是在PLLFEED的馈送序列被发送,PLLCON,PLLCFG生效以后才可以读到正确的值(<strong>while(PLLSTAT &amp; (1&lt;&lt;10) == 0) ;</strong>)</p>
+</li>
+<li><p>PLLFEED寄存器:向此寄存器以连续的VPB总线周期写入<strong>0xaa,0x55</strong>,即馈送序列，在正确的序列被写入PLLFEED之后,PLLCON,PLLCFG才生效,PLL电路才能正确的连接到电路中</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">PLLCON = <span class="number">1</span>;</span><br><span class="line">PLLCFG = (M<span class="number">-1</span>)|（log2(P)&lt;&lt;<span class="number">5</span>）;</span><br><span class="line">PLLFEED = <span class="number">0xaa</span>;</span><br><span class="line">PLLFEED = <span class="number">0x55</span>;</span><br><span class="line"><span class="keyword">while</span>(PLLSTAT &amp; (<span class="number">1</span>&lt;&lt;<span class="number">10</span>) == <span class="number">0</span>);</span><br><span class="line">PLLCON = <span class="number">3</span>;</span><br><span class="line">PLLFEED = <span class="number">0xaa</span>;</span><br><span class="line">PLLFEED = <span class="number">0x55</span>;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
-<li>VPB分频器<ul>
+</ul>
+</li>
+</ol>
+<ol>
+<li><p>VPB分频器</p>
+<ul>
 <li>作用：将$F_{CCLK}$分频，方便外设工作、降低系统功耗</li>
 </ul>
 </li>
@@ -1185,7 +1198,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">21.7k</span>
+    <span title="Site words total count">21.8k</span>
   
 </div>
 
