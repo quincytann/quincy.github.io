@@ -132,7 +132,8 @@
 <meta property="og:description" content="[TOC] 第1章 嵌入式系统概述 嵌入式系统定义：嵌入到对象体系中的专用计算机应用系统。  应用举例：手机、MP3、打印机、DV等。  嵌入式系统分类： ①嵌入式微处理器（EMPU，基础是CPU，应用于专门设计的电路板上，满足嵌入式应用的特殊要求，在其工作温度、抗电磁干扰、可靠性等方面做了增强） ②微控制器（MCU，整个计算机系统集成到一块芯片中，适用于控制） ③DSP处理器（DSP，应用目标是">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://s2.ax1x.com/2019/05/21/EztbfU.jpg">
-<meta property="og:updated_time" content="2019-05-21T08:37:01.189Z">
+<meta property="og:image" content="https://s2.ax1x.com/2019/05/21/VSfToV.jpg">
+<meta property="og:updated_time" content="2019-05-21T13:43:33.169Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ARM嵌入式系统 学习笔记">
 <meta name="twitter:description" content="[TOC] 第1章 嵌入式系统概述 嵌入式系统定义：嵌入到对象体系中的专用计算机应用系统。  应用举例：手机、MP3、打印机、DV等。  嵌入式系统分类： ①嵌入式微处理器（EMPU，基础是CPU，应用于专门设计的电路板上，满足嵌入式应用的特殊要求，在其工作温度、抗电磁干扰、可靠性等方面做了增强） ②微控制器（MCU，整个计算机系统集成到一块芯片中，适用于控制） ③DSP处理器（DSP，应用目标是">
@@ -373,7 +374,7 @@
           
   <span class="post-updated">
     &nbsp; | &nbsp; 更新于
-    <time itemprop="dateUpdated" datetime="2019-05-21T16:37:01+08:00" content="2019-05-21">
+    <time itemprop="dateUpdated" datetime="2019-05-21T21:43:33+08:00" content="2019-05-21">
       2019-05-21
     </time>
   </span>
@@ -763,43 +764,8 @@
 <li>掉电模式：振荡器关闭，芯片没有任何内部时钟，功耗降低到几乎为零</li>
 </ul>
 </li>
-<li>外部存储器的地址范围</li>
+<li>bank0~bank3的片选信号分别是CS0~CS3。</li>
 </ol>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:center">bank</th>
-<th style="text-align:center">地址范围</th>
-<th style="text-align:center">配置寄存器</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">0</td>
-<td style="text-align:center">0x8000 0000~0x80FF FFFF</td>
-<td style="text-align:center">BCFG0</td>
-</tr>
-<tr>
-<td style="text-align:center">1</td>
-<td style="text-align:center">0x8100 0000~0x81FF FFFF</td>
-<td style="text-align:center">BCFG1</td>
-</tr>
-<tr>
-<td style="text-align:center">2</td>
-<td style="text-align:center">0x8200 0000~0x82FF FFFF</td>
-<td style="text-align:center">BCFG2</td>
-</tr>
-<tr>
-<td style="text-align:center">3</td>
-<td style="text-align:center">0x8300 0000~0x83FF FFFF</td>
-<td style="text-align:center">BCFG3</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;在引脚BOOT[1:0]的控制下，bank0可控制引导程序运行。</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;bank0~bank3的片选信号分别是CS0~CS3。</p>
 <p>&nbsp;&nbsp;12. 外部存储器接口</p>
 <ul>
 <li>LPC2200的外部存储器宽度可设定为8位，16位和32位</li>
@@ -831,6 +797,8 @@
 </ul>
 <p>&nbsp;&nbsp;16. GPIO应用示例</p>
 <ul>
+<li><p><a href="https://imgchr.com/i/VSfToV" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/05/21/VSfToV.jpg" alt="VSfToV.jpg"></a></p>
+</li>
 <li><p>设置P0.0为输出高电平</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">PINSEL0 &amp;= <span class="number">0xFFFFFFFC</span>; <span class="comment">//设置引脚连接模块，将P0.0设置为GPIO功能</span></span><br><span class="line">IO0DIR |= <span class="number">0x00000001</span>; <span class="comment">//将P0.0设置为输出</span></span><br><span class="line">IOSET = <span class="number">0x00000001</span>; <span class="comment">//设置P0.0输出高电平</span></span><br></pre></td></tr></table></figure>
 </li>
