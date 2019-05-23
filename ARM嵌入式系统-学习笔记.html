@@ -136,7 +136,7 @@
 <meta property="og:image" content="https://s2.ax1x.com/2019/05/21/VpSrex.jpg">
 <meta property="og:image" content="https://s2.ax1x.com/2019/05/21/VpSyTK.jpg">
 <meta property="og:image" content="https://s2.ax1x.com/2019/05/21/VSze29.jpg">
-<meta property="og:updated_time" content="2019-05-21T15:07:34.122Z">
+<meta property="og:updated_time" content="2019-05-23T01:16:19.898Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ARM嵌入式系统 学习笔记">
 <meta name="twitter:description" content="[TOC] 第1章 嵌入式系统概述 嵌入式系统定义：嵌入到对象体系中的专用计算机应用系统。  应用举例：手机、MP3、打印机、DV等。  嵌入式系统分类： ①嵌入式微处理器（EMPU，基础是CPU，应用于专门设计的电路板上，满足嵌入式应用的特殊要求，在其工作温度、抗电磁干扰、可靠性等方面做了增强） ②微控制器（MCU，整个计算机系统集成到一块芯片中，适用于控制） ③DSP处理器（DSP，应用目标是">
@@ -377,8 +377,8 @@
           
   <span class="post-updated">
     &nbsp; | &nbsp; 更新于
-    <time itemprop="dateUpdated" datetime="2019-05-21T23:07:34+08:00" content="2019-05-21">
-      2019-05-21
+    <time itemprop="dateUpdated" datetime="2019-05-23T09:16:19+08:00" content="2019-05-23">
+      2019-05-23
     </time>
   </span>
 
@@ -686,7 +686,7 @@
 <p>ANDS R1,R1,R2,LSL R3 ；R2的值左移R3位，结果与R1相与后存入R1</p>
 </blockquote>
 </li>
-<li><p>寄存器间寻址： []</p>
+<li><p>寄存器间接寻址： []</p>
 <blockquote>
 <p>LDR R1,[R2] ；将R2指向的储存单元的数据读出存入R1    //加载字数据</p>
 <p>SWP R1,R1,[R2]；将R2指向的储存单元的数据与R1的值交换</p>
@@ -742,7 +742,7 @@
 </li>
 <li><p>M取值1-32，将M-1放在PLLCFG[4:0]</p>
 </li>
-<li><p>P取值1,2,4,8，将P-1放在PLLCFG[6:5]</p>
+<li><p>P取值1,2,4,8，将$log_2P$放在PLLCFG[6:5]</p>
 </li>
 <li><p>PLLCON寄存器:包涵使能连接PLL的位,也就是控制PLL是否进行连接,这个连接需要在向PLLFEED发送正确的信息(馈送序列)的时候才生效,否则及时将使能位置位,PLL也不会连接到电路中。PLLCON必须在PLL开始连接之前就设置好,否则会造成系统不可预知的错误,<strong>先设置1后设置3</strong>。</p>
 </li>
