@@ -136,7 +136,7 @@
 <meta property="og:image" content="https://s2.ax1x.com/2019/05/21/VpSrex.jpg">
 <meta property="og:image" content="https://s2.ax1x.com/2019/05/21/VpSyTK.jpg">
 <meta property="og:image" content="https://s2.ax1x.com/2019/05/21/VSze29.jpg">
-<meta property="og:updated_time" content="2019-05-23T07:01:06.744Z">
+<meta property="og:updated_time" content="2019-05-23T08:08:42.835Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ARM嵌入式系统 学习笔记">
 <meta name="twitter:description" content="[TOC] 第1章 嵌入式系统概述 嵌入式系统定义：嵌入到对象体系中的专用计算机应用系统。  应用举例：手机、MP3、打印机、DV等。  嵌入式系统分类： ①嵌入式微处理器（EMPU，基础是CPU，应用于专门设计的电路板上，满足嵌入式应用的特殊要求，在其工作温度、抗电磁干扰、可靠性等方面做了增强） ②微控制器（MCU，整个计算机系统集成到一块芯片中，适用于控制） ③DSP处理器（DSP，应用目标是">
@@ -377,7 +377,7 @@
           
   <span class="post-updated">
     &nbsp; | &nbsp; 更新于
-    <time itemprop="dateUpdated" datetime="2019-05-23T15:01:06+08:00" content="2019-05-23">
+    <time itemprop="dateUpdated" datetime="2019-05-23T16:08:42+08:00" content="2019-05-23">
       2019-05-23
     </time>
   </span>
@@ -501,7 +501,7 @@
 <p>如果一个数据是以半字方式存储的，那么它就是半字对齐的，否则就是非半字对齐的；特征：bit0=0,其他任意。</p>
 </li>
 <li><p><strong>流水线</strong></p>
-<p>取值，译码，执行…</p>
+<p>①取指：从存储器装载一条指令 ②译码：识别将要执行的指令 ③执行：处理指令并将结果写回寄存器</p>
 </li>
 <li><p>ARM处理器状态</p>
 <ul>
@@ -522,7 +522,7 @@
 <li>ARM处理器内部共有37个用户可访问的32位寄存器，其中有6个32位状态寄存器目前只使用了其中12位；31个通用寄存器+6个状态寄存器(1个CPSR+5个SPSR)</li>
 <li>堆栈指针R13(SP)</li>
 <li>链接寄存器R14(LR),子程序的返回地址自动存入R14</li>
-<li>程序计数器R15(PC)</li>
+<li>程序计数器R15(PC),总是指向“正在取值”的指令</li>
 <li>所有模式共享一个程序状态寄存器CPSR，ARM通过此寄存器监视和控制内部操作的。SPSR为异常模式中保存CPSR当前值的备份程序寄存器。</li>
 </ul>
 </li>
@@ -812,7 +812,7 @@
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> BEEPCON 0x00000080 <span class="comment">//P0.7控制B1，低电平蜂鸣</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;</span><br><span class="line">    PINSEL0 = <span class="number">0x00000000</span>; <span class="comment">//设置引脚连接GPIO</span></span><br><span class="line">    IO0DIR = BEEPCON; <span class="comment">//设置I/O为输出</span></span><br><span class="line">    <span class="keyword">while</span>(<span class="number">1</span>)&#123;</span><br><span class="line">        IO0SET = BEEPCON; <span class="comment">//BEEPCON=1</span></span><br><span class="line">        Delay(<span class="number">10</span>);</span><br><span class="line">        IO0CLR = BEEPCON; <span class="comment">//BEEPCON=0</span></span><br><span class="line">        Delay(<span class="number">10</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    reuturn <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>读取P0.0引脚的电平状态</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">uint32 PinStat; <span class="comment">//定义存放I/O状态的变量</span></span><br><span class="line">PINSEL0 &amp;= <span class="number">0xFFFFFFFC</span>; <span class="comment">//设置引脚连接模块，将P0.0设置为GPIO功能</span></span><br><span class="line">IO0DIR &amp;= <span class="number">0xFFFFFFFE</span>; <span class="comment">//将P0.0设置为输入</span></span><br><span class="line">PinStat = IO0PIn&amp;<span class="number">0x01</span>; <span class="comment">//通过IP0PIN寄存器获取P0.0当前电平状态</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">uint32 PinStat; <span class="comment">//定义存放I/O状态的变量</span></span><br><span class="line">PINSEL0 &amp;= <span class="number">0xFFFFFFFC</span>; <span class="comment">//设置引脚连接模块，将P0.0设置为GPIO功能</span></span><br><span class="line">IO0DIR &amp;= <span class="number">0xFFFFFFFE</span>; <span class="comment">//将P0.0设置为输入</span></span><br><span class="line">PinStat = IO0PIN&amp;<span class="number">0x01</span>; <span class="comment">//通过IP0PIN寄存器获取P0.0当前电平状态</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>读取按键状态</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> BEEPCON 0x00000080</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> PIN_P014 0x00004000 <span class="comment">//定义P0.14屏蔽字</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;</span><br><span class="line">    uint32 i;</span><br><span class="line">    PINSEL0 = <span class="number">0x00000000</span>; <span class="comment">//设置引脚连接GPIO</span></span><br><span class="line">    IO0DIR = BEEPCON; <span class="comment">//设置B1控制口为输出，其他I/O为输入</span></span><br><span class="line">    <span class="keyword">while</span>(<span class="number">1</span>)&#123;</span><br><span class="line">        <span class="keyword">if</span>((IO0DIR&amp;PIN_P014)!=<span class="number">0</span>) IO0SET = BEEPCON;</span><br><span class="line">        <span class="keyword">else</span> IO0CLR = BEEPCON;</span><br><span class="line">        Delay(<span class="number">10</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -855,7 +855,7 @@
 <li><p><img src="https://s2.ax1x.com/2019/05/21/VSze29.jpg" alt="VSze29.jpg"></p>
 </li>
 <li><p>UART0查询方式接受数据</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">uint8 <span class="title">UART0_RcvByte</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;</span><br><span class="line">    uint8 rcv_data;</span><br><span class="line">    <span class="keyword">while</span>((<span class="number">0L</span>SR&amp;<span class="number">0x01</span>)==<span class="number">0</span>);	<span class="comment">//状态</span></span><br><span class="line">    rcv_data = U0RBR;	<span class="comment">//接受缓存</span></span><br><span class="line">    <span class="keyword">return</span> rcv_data;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">uint8 <span class="title">UART0_RcvByte</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;</span><br><span class="line">    uint8 rcv_data;</span><br><span class="line">    <span class="keyword">while</span>((U0LSR&amp;<span class="number">0x01</span>)==<span class="number">0</span>);	<span class="comment">//状态</span></span><br><span class="line">    rcv_data = U0RBR;	<span class="comment">//接受缓存</span></span><br><span class="line">    <span class="keyword">return</span> rcv_data;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>UART0中断方式接受数据</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> __<span class="function">irq <span class="title">UART_Exception</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;</span><br><span class="line">    ...</span><br><span class="line">    <span class="keyword">switch</span>(U0IIR&amp;<span class="number">0x0f</span>)&#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">0x04</span>:	<span class="comment">//发生RDA中断</span></span><br><span class="line">            <span class="comment">//从接受FIFO中读取数据</span></span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">0x0c</span>:	<span class="comment">//发生字符超时中断——CTI</span></span><br><span class="line">            <span class="keyword">while</span>((U0LSR&amp;<span class="number">0x01</span>)==<span class="number">1</span>)&#123;</span><br><span class="line">                <span class="comment">//如果接受FIFO中含有的有效数据，就读取UnRBR寄存器 </span></span><br><span class="line">                RcvData[i++]=U0RBR;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        ...</span><br><span class="line">        <span class="keyword">default</span>: </span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">            </span><br><span class="line">    &#125;</span><br><span class="line">    VICVectAddr = <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -1186,7 +1186,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">22k</span>
+    <span title="Site words total count">22.1k</span>
   
 </div>
 
