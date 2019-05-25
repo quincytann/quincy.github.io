@@ -136,7 +136,7 @@
 <meta property="og:image" content="https://s2.ax1x.com/2019/05/21/VpSrex.jpg">
 <meta property="og:image" content="https://s2.ax1x.com/2019/05/21/VpSyTK.jpg">
 <meta property="og:image" content="https://s2.ax1x.com/2019/05/21/VSze29.jpg">
-<meta property="og:updated_time" content="2019-05-23T08:08:42.835Z">
+<meta property="og:updated_time" content="2019-05-25T01:54:51.045Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ARM嵌入式系统 学习笔记">
 <meta name="twitter:description" content="[TOC] 第1章 嵌入式系统概述 嵌入式系统定义：嵌入到对象体系中的专用计算机应用系统。  应用举例：手机、MP3、打印机、DV等。  嵌入式系统分类： ①嵌入式微处理器（EMPU，基础是CPU，应用于专门设计的电路板上，满足嵌入式应用的特殊要求，在其工作温度、抗电磁干扰、可靠性等方面做了增强） ②微控制器（MCU，整个计算机系统集成到一块芯片中，适用于控制） ③DSP处理器（DSP，应用目标是">
@@ -377,8 +377,8 @@
           
   <span class="post-updated">
     &nbsp; | &nbsp; 更新于
-    <time itemprop="dateUpdated" datetime="2019-05-23T16:08:42+08:00" content="2019-05-23">
-      2019-05-23
+    <time itemprop="dateUpdated" datetime="2019-05-25T09:54:51+08:00" content="2019-05-25">
+      2019-05-25
     </time>
   </span>
 
@@ -522,7 +522,7 @@
 <li>ARM处理器内部共有37个用户可访问的32位寄存器，其中有6个32位状态寄存器目前只使用了其中12位；31个通用寄存器+6个状态寄存器(1个CPSR+5个SPSR)</li>
 <li>堆栈指针R13(SP)</li>
 <li>链接寄存器R14(LR),子程序的返回地址自动存入R14</li>
-<li>程序计数器R15(PC),总是指向“正在取值”的指令</li>
+<li>程序计数器R15(PC),总是指向“正在取指”的指令</li>
 <li>所有模式共享一个程序状态寄存器CPSR，ARM通过此寄存器监视和控制内部操作的。SPSR为异常模式中保存CPSR当前值的备份程序寄存器。</li>
 </ul>
 </li>
@@ -724,7 +724,7 @@
 </li>
 <li><p>系统启动代码(Boot Loader)：大部分由汇编指令构成，可以实现向量表定义、堆栈初始化、系统变量初始化、中断系统初始化、I/O初始化、外围初始化、地址重映射等操作。启动顺序：Boot Block-&gt;Boot Loader-&gt;操作系统</p>
 </li>
-<li><p>时钟系统概述：时钟是计算机系统的脉搏，处理器核在一拍接一拍的时钟驱动下完成指令执行、状态变换等动作。外部部件在时钟的驱动下进行着各种工作，比如串口数据的收发、A/D转换、定时器计数等。因此时钟对于一个计算机系统是至关重要的，通常时钟系统出现问题也是最致命的，比如振荡器不起振、振荡不稳、停振等。</p>
+<li><p>时钟系统概述：时钟是计算机系统的脉搏，处理器核在一拍接一拍的时钟驱动下完成指令执行、状态变换等动作。外设部件在时钟的驱动下进行着各种工作，比如串口数据的收发、A/D转换、定时器计数等。因此时钟对于一个计算机系统是至关重要的，通常时钟系统出现问题也是最致命的，比如振荡器不起振、振荡不稳、停振等。</p>
 </li>
 <li><p>晶体振荡器的两个模式：使用外部时钟源时，称为“从属模式”；使用外部晶体时，称为“振荡模式”。</p>
 </li>
@@ -776,9 +776,9 @@
 <p>&nbsp;&nbsp;12. 外部存储器接口</p>
 <ul>
 <li>LPC2200的外部存储器宽度可设定为8位，16位和32位</li>
-<li>宽度为8位时，有效数据线D7~D0</li>
-<li>宽度为16位时，有效数据线D15~D0</li>
-<li>操作16位存储器时，需将地址线A1连接到A0处</li>
+<li>宽度为8位时，有效数据线D7~D0，只有BLS0有效</li>
+<li>宽度为16位时，有效数据线D15~D0，BLS0、BLS1都有效</li>
+<li>操作16位存储器时，需将LPC2200的地址线A1连接到存储器地址A0处</li>
 </ul>
 <p>&nbsp;&nbsp;13. PSRAM读写数据</p>
 <ul>
