@@ -1,3 +1,4 @@
+quincy.ink/Template-of-ACM.html
 quincy.ink/ARM嵌入式系统-学习笔记.html
 quincy.ink/算法设计与分析-学习笔记.html
 quincy.ink/物联网概论-学习笔记.html
