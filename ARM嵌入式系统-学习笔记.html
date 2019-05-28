@@ -136,7 +136,7 @@
 <meta property="og:image" content="https://s2.ax1x.com/2019/05/21/VpSrex.jpg">
 <meta property="og:image" content="https://s2.ax1x.com/2019/05/21/VpSyTK.jpg">
 <meta property="og:image" content="https://s2.ax1x.com/2019/05/21/VSze29.jpg">
-<meta property="og:updated_time" content="2019-05-28T10:58:22.102Z">
+<meta property="og:updated_time" content="2019-05-28T15:17:29.072Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ARM嵌入式系统 学习笔记">
 <meta name="twitter:description" content="[TOC] 第1章 嵌入式系统概述 嵌入式系统定义：嵌入到对象体系中的专用计算机应用系统。  应用举例：手机、MP3、打印机、DV等。  嵌入式系统  分类  ①嵌入式微处理器（EMPU，基础是CPU，应用于专门设计的电路板上，满足嵌入式应用的特殊要求，在其工作温度、抗电磁干扰、可靠性等方面做了增强） ②微控制器（MCU，整个计算机系统集成到一块芯片中，适用于控制） ③DSP处理器（DSP，应用目">
@@ -377,7 +377,7 @@
           
   <span class="post-updated">
     &nbsp; | &nbsp; 更新于
-    <time itemprop="dateUpdated" datetime="2019-05-28T18:58:22+08:00" content="2019-05-28">
+    <time itemprop="dateUpdated" datetime="2019-05-28T23:17:29+08:00" content="2019-05-28">
       2019-05-28
     </time>
   </span>
@@ -622,40 +622,49 @@
 <tr>
 <th style="text-align:center">地址</th>
 <th style="text-align:center">异常</th>
+<th style="text-align:center">模式</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align:center">0x0000 0000</td>
 <td style="text-align:center">复位</td>
+<td style="text-align:center">管理</td>
 </tr>
 <tr>
 <td style="text-align:center">0x0000 0004</td>
 <td style="text-align:center">未定义指令</td>
+<td style="text-align:center">未定义</td>
 </tr>
 <tr>
 <td style="text-align:center">0x0000 0008</td>
 <td style="text-align:center">软件中断</td>
+<td style="text-align:center">管理</td>
 </tr>
 <tr>
 <td style="text-align:center">0x0000 000C</td>
 <td style="text-align:center">中止（预取）</td>
+<td style="text-align:center">中止</td>
 </tr>
 <tr>
 <td style="text-align:center">0x0000 0010</td>
 <td style="text-align:center">中止（数据）</td>
+<td style="text-align:center">中止</td>
 </tr>
 <tr>
 <td style="text-align:center">0x0000 0014</td>
+<td style="text-align:center">保留</td>
 <td style="text-align:center">保留</td>
 </tr>
 <tr>
 <td style="text-align:center">0x0000 0018</td>
 <td style="text-align:center">IRQ</td>
+<td style="text-align:center">中断</td>
 </tr>
 <tr>
 <td style="text-align:center">0x0000 001C</td>
 <td style="text-align:center">FIQ</td>
+<td style="text-align:center">快速中断</td>
 </tr>
 </tbody>
 </table>
@@ -770,7 +779,7 @@
 </li>
 <li><p>系统启动代码(Boot Loader)：大部分由汇编指令构成，可以实现向量表定义、堆栈初始化、系统变量初始化、中断系统初始化、I/O初始化、外围初始化、地址重映射等操作。启动顺序：Boot Block-&gt;Boot Loader-&gt;操作系统</p>
 </li>
-<li><p>时钟系统概述：时钟是计算机系统的脉搏，处理器核在一拍接一拍的时钟驱动下完成指令执行、状态变换等动作。外设部件在时钟的驱动下进行着各种工作，比如串口数据的收发、A/D转换、定时器计数等。因此时钟对于一个计算机系统是至关重要的，通常时钟系统出现问题也是最致命的，比如振荡器不起振、振荡不稳、停振等。</p>
+<li><p>时钟系统概述：时钟是计算机系统的脉搏，处理器核在一拍接一拍的时钟驱动下完成指令执行、状态变换等动作。外设部件在时钟的驱动下进行着各种工作，比如串口数据的收发、A/D转换、定时器计数等。因此时钟对于一个计算机系统是至关重要的，通常时钟系统出现问题也是最致命的，比如振荡器不起振、振荡不稳、停振等。组成：晶体振荡器、唤醒定时器、锁相环（PLL）和VPB分频器。</p>
 </li>
 <li><p>晶体振荡器的两个模式：使用外部时钟源时，称为“从属模式”；使用外部晶体时，称为“振荡模式”。</p>
 </li>
@@ -1235,7 +1244,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">23.2k</span>
+    <span title="Site words total count">23.3k</span>
   
 </div>
 
