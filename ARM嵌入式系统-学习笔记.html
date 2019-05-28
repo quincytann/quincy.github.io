@@ -136,7 +136,7 @@
 <meta property="og:image" content="https://s2.ax1x.com/2019/05/21/VpSrex.jpg">
 <meta property="og:image" content="https://s2.ax1x.com/2019/05/21/VpSyTK.jpg">
 <meta property="og:image" content="https://s2.ax1x.com/2019/05/21/VSze29.jpg">
-<meta property="og:updated_time" content="2019-05-28T10:52:12.210Z">
+<meta property="og:updated_time" content="2019-05-28T10:58:22.102Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ARM嵌入式系统 学习笔记">
 <meta name="twitter:description" content="[TOC] 第1章 嵌入式系统概述 嵌入式系统定义：嵌入到对象体系中的专用计算机应用系统。  应用举例：手机、MP3、打印机、DV等。  嵌入式系统  分类  ①嵌入式微处理器（EMPU，基础是CPU，应用于专门设计的电路板上，满足嵌入式应用的特殊要求，在其工作温度、抗电磁干扰、可靠性等方面做了增强） ②微控制器（MCU，整个计算机系统集成到一块芯片中，适用于控制） ③DSP处理器（DSP，应用目">
@@ -377,7 +377,7 @@
           
   <span class="post-updated">
     &nbsp; | &nbsp; 更新于
-    <time itemprop="dateUpdated" datetime="2019-05-28T18:52:12+08:00" content="2019-05-28">
+    <time itemprop="dateUpdated" datetime="2019-05-28T18:58:22+08:00" content="2019-05-28">
       2019-05-28
     </time>
   </span>
@@ -518,10 +518,24 @@
 <li>ARM指令集为32位长度，效率高，代码密度低，都是有条件执行，具有最完整的功能；Thumb指令集为16位长度，代码密度较高，只有一条具备有条件执行，能实现ARM指令集的大部分功能。在功能上可以认为Thumb是ARM的子集。</li>
 <li>当前程序状态寄存器CPSR中的控制位<strong>T</strong>反映处理器正在操作的状态，T=0，处理器处于ARM状态，T=1，处理器处于Thumb状态。</li>
 <li>从一个ARM例程调用另一个Thumb例程时，内核必须切换状态，反之亦然。<strong>BX分支</strong>将ARM内核的操作状态在ARM和Thumb之间进行切换。</li>
-<li>程序状态寄存器格式</li>
 </ul>
 </li>
 </ol>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;7. ARM处理器模式</p>
+<ul>
+<li>除了用户模式以外，其余所有6种模式称之为非用户模式</li>
+<li>特权模式中除去系统模式外的5种模式称之为异常模式</li>
+<li>用户(usr)、系统(sys)、管理(svc)、中止(abt)、未定义(und)、中断(irq)、快速中断(fiq)</li>
+</ul>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;8. ARM内部寄存器</p>
+<ul>
+<li>ARM处理器内部共有37个用户可访问的32位寄存器，其中有6个32位状态寄存器目前只使用了其中12位；31个通用寄存器+6个状态寄存器(1个CPSR+5个SPSR)；不可同时访问，对其访问取决于处理器状态和处理器模式。</li>
+<li>堆栈指针R13(SP)，保存堆栈的出入口地址、待使用寄存器内容</li>
+<li>链接寄存器R14(LR)，保存子程序和子程序的返回地址</li>
+<li>程序计数器R15(PC)，总是指向“正在取指”的指令</li>
+<li>所有模式共享一个程序状态寄存器CPSR，ARM通过此寄存器监视和控制内部操作的。SPSR为异常模式中保存CPSR当前值的备份程序寄存器。</li>
+<li>程序状态寄存器格式</li>
+</ul>
 <div class="table-container">
 <table>
 <thead>
@@ -560,21 +574,6 @@
 </tbody>
 </table>
 </div>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;7. ARM处理器模式</p>
-<ul>
-<li>除了用户模式以外，其余所有6种模式称之为非用户模式</li>
-<li>特权模式中除去系统模式外的5种模式称之为异常模式</li>
-<li>用户(usr)、系统(sys)、管理(svc)、中止(abt)、未定义(und)、中断(irq)、快速中断(fiq)</li>
-</ul>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;8. ARM内部寄存器</p>
-<ul>
-<li>ARM处理器内部共有37个用户可访问的32位寄存器，其中有6个32位状态寄存器目前只使用了其中12位；31个通用寄存器+6个状态寄存器(1个CPSR+5个SPSR)；不可同时访问，对其访问取决于处理器状态和处理器模式。</li>
-<li>堆栈指针R13(SP)，保存堆栈的出入口地址、待使用寄存器内容</li>
-<li>链接寄存器R14(LR)，保存子程序和子程序的返回地址</li>
-<li>程序计数器R15(PC)，总是指向“正在取指”的指令</li>
-<li>所有模式共享一个程序状态寄存器CPSR，ARM通过此寄存器监视和控制内部操作的。SPSR为异常模式中保存CPSR当前值的备份程序寄存器。</li>
-<li></li>
-</ul>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;9. 模式控制位</p>
 <div class="table-container">
 <table>
