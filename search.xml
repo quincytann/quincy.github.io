@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[湘潭大学2019程序设计实践]]></title>
     <url>%2F%E6%B9%98%E6%BD%AD%E5%A4%A7%E5%AD%A62019%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%AE%9E%E8%B7%B5.html</url>
-    <content type="text"><![CDATA[抄袭一时爽，查重火葬场 因考前会查重，故仅提供思路参考，代码后续补上，有更好解法欢迎交流 1262 Fish贪心，优先队列维护每个池塘能钓到鱼的数量即可，当前池塘有最多鱼的池塘优先出队列。时间复杂度O(Tnlogn+Tmnlogn) 12 1271 Color结论：nm-(x的种类数)\(y的种类数) 12 1163 ASCLL直接模拟，注意输出空格和回车的地方 12 1243 Bob’s Password枚举九个数字会非法的情况即可 12 1246 Matrix Transposition看半天题意，n,m没用，将输入的x看做y，输入的y看做x，反过来按y优先排序即可，时间复杂度O（T*KlogK） 12 1248 Alice and Bob 待更…]]></content>
+    <content type="text"><![CDATA[抄袭一时爽，查重火葬场 因考前会查重，故仅提供思路参考，代码后续补上，有更好解法欢迎交流 1262 Fish贪心，优先队列维护每个池塘能钓到鱼的数量即可，当前池塘有最多鱼的池塘优先出队列。时间复杂度O(Tnlogn+Tmnlogn) 12 1271 Color结论：n*m-(x的种类数)*(y的种类数) 12 1163 ASCLL直接模拟，输出%05X和%02X即带前导0的十六进制，回车的ASCLL码也要输出，注意输出空格和回车的地方 12 1243 Bob’s Password枚举九个数字会非法的情况即可 12 1246 Matrix Transposition看半天题意，n,m没用，将输入的x看做y，输入的y看做x，反过来按y优先排序即可，时间复杂度O（T*KlogK） 12 1248 Alice and Bob直接模拟，将1作为数字7处理会很好写很多，注意求和依然是+1 12 1251 Colombian Number简单数学，注意到[1,1000000000]区间内数位和在[1,81]内，所以只需在区间[n-81,n]内枚举k看是否能使k+sum(k)==n成立即可 12 1253 Robot贪心，如果在中途转弯肯定不如每次从头走到尾，可以证明最多转n-1次，时间复杂度O(n^2) 12 1252 Matrix Word统计每个字符在每一行每一列的出现次数，最后判断是否都为1即可 12 待更…]]></content>
       <categories>
         <category>ACM</category>
       </categories>
