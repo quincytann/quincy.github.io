@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="quincy.ink/"/>
-  <updated>2019-06-02T23:45:34.256Z</updated>
+  <updated>2019-06-03T04:57:44.679Z</updated>
   <id>quincy.ink/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>湘潭大学2019程序设计实践</title>
+    <link href="quincy.ink/%E6%B9%98%E6%BD%AD%E5%A4%A7%E5%AD%A62019%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%AE%9E%E8%B7%B5.html"/>
+    <id>quincy.ink/湘潭大学2019程序设计实践.html</id>
+    <published>2019-06-03T04:45:18.000Z</published>
+    <updated>2019-06-03T04:57:44.679Z</updated>
+    
+    <content type="html"><![CDATA[<center><font face="黑体" color="red" size="4px">抄袭一时爽，查重火葬场</font></center><center>因考前会查重，故仅提供思路参考，代码后续补上，有更好解法欢迎交流</center><h5 id="1262-Fish"><a href="#1262-Fish" class="headerlink" title="1262 Fish"></a>1262 Fish</h5><p>优先队列维护每个池塘能钓到鱼的数量即可，当前池塘有最多鱼的池塘优先出队列。时间复杂度O(mnlogn)<a id="more"></a></p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure><h5 id="1271-Color"><a href="#1271-Color" class="headerlink" title="1271 Color"></a>1271 Color</h5><p>结论：n<em>m-(x的种类数)\</em>(y的种类数)</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure><h5 id="1163-ASCLL"><a href="#1163-ASCLL" class="headerlink" title="1163 ASCLL"></a>1163 ASCLL</h5><p>&lt;/br&gt;</p><p>待更…</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;center&gt;&lt;font face=&quot;黑体&quot; color=&quot;red&quot; size=&quot;4px&quot;&gt;抄袭一时爽，查重火葬场&lt;/font&gt;&lt;/center&gt;
+
+&lt;center&gt;因考前会查重，故仅提供思路参考，代码后续补上，有更好解法欢迎交流&lt;/center&gt;
+
+&lt;h5 id=&quot;1262-Fish&quot;&gt;&lt;a href=&quot;#1262-Fish&quot; class=&quot;headerlink&quot; title=&quot;1262 Fish&quot;&gt;&lt;/a&gt;1262 Fish&lt;/h5&gt;&lt;p&gt;优先队列维护每个池塘能钓到鱼的数量即可，当前池塘有最多鱼的池塘优先出队列。时间复杂度O(mnlogn)
+    
+    </summary>
+    
+      <category term="ACM" scheme="quincy.ink/categories/ACM/"/>
+    
+    
+      <category term="程序设计实践" scheme="quincy.ink/tags/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%AE%9E%E8%B7%B5/"/>
+    
+  </entry>
   
   <entry>
     <title>湖南大学第15届校赛 H-Longest Common Palindrome Substring</title>
@@ -221,9 +247,9 @@
     
       <category term="数学" scheme="quincy.ink/tags/%E6%95%B0%E5%AD%A6/"/>
     
-      <category term="dp" scheme="quincy.ink/tags/dp/"/>
-    
       <category term="bfs" scheme="quincy.ink/tags/bfs/"/>
+    
+      <category term="dp" scheme="quincy.ink/tags/dp/"/>
     
       <category term="并查集" scheme="quincy.ink/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/"/>
     

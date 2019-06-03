@@ -1,3 +1,4 @@
+quincy.ink/湘潭大学2019程序设计实践.html
 quincy.ink/湖南大学第15届校赛-H-Longest-Common-Palindrome-Substring.html
 quincy.ink/Template-of-ACM.html
 quincy.ink/ARM嵌入式系统-学习笔记.html
