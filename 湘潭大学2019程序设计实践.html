@@ -131,7 +131,7 @@
 <meta property="og:site_name" content="Quincy&#39;s Blog">
 <meta property="og:description" content="抄袭一时爽，查重火葬场  因考前会查重，故仅提供思路参考，代码后续补上，有更好解法欢迎交流  1262 Fish贪心，优先队列维护每个池塘能钓到鱼的数量即可，当前池塘有最多鱼的池塘优先出队列。时间复杂度O(Tnlogn+Tmnlogn)">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-03T13:13:38.501Z">
+<meta property="og:updated_time" content="2019-06-04T05:05:04.601Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="湘潭大学2019程序设计实践">
 <meta name="twitter:description" content="抄袭一时爽，查重火葬场  因考前会查重，故仅提供思路参考，代码后续补上，有更好解法欢迎交流  1262 Fish贪心，优先队列维护每个池塘能钓到鱼的数量即可，当前池塘有最多鱼的池塘优先出队列。时间复杂度O(Tnlogn+Tmnlogn)">
@@ -371,8 +371,8 @@
           
   <span class="post-updated">
     &nbsp; | &nbsp; 更新于
-    <time itemprop="dateUpdated" datetime="2019-06-03T21:13:38+08:00" content="2019-06-03">
-      2019-06-03
+    <time itemprop="dateUpdated" datetime="2019-06-04T13:05:04+08:00" content="2019-06-04">
+      2019-06-04
     </time>
   </span>
 
@@ -459,6 +459,11 @@
 <h5 id="1253-Robot"><a href="#1253-Robot" class="headerlink" title="1253 Robot"></a>1253 Robot</h5><p>贪心，如果在中途转弯肯定不如每次从头走到尾，可以证明最多转n-1次，时间复杂度O(n^2)</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <h5 id="1252-Matrix-Word"><a href="#1252-Matrix-Word" class="headerlink" title="1252 Matrix Word"></a>1252 Matrix Word</h5><p>统计每个字符在每一行每一列的出现次数，最后判断是否都为1即可</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h5 id="1621-Duplicate-Elements"><a href="#1621-Duplicate-Elements" class="headerlink" title="1621 Duplicate Elements"></a>1621 Duplicate Elements</h5><p>map或unordered_map记录每个值是否出现即可，这题卡常，贴个快读</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">read</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> x=<span class="number">0</span>; <span class="keyword">bool</span> f=<span class="number">0</span>; <span class="keyword">char</span> ch=getchar();</span><br><span class="line">    <span class="keyword">while</span> (ch&lt;<span class="string">'0'</span> || <span class="string">'9'</span>&lt;ch) f|=ch==<span class="string">'-'</span>, ch=getchar();</span><br><span class="line">    <span class="keyword">while</span> (<span class="string">'0'</span>&lt;=ch &amp;&amp; ch&lt;=<span class="string">'9'</span>) x=x*<span class="number">10</span>+ch-<span class="string">'0'</span>, ch=getchar();</span><br><span class="line">    <span class="keyword">return</span> f?-x:x;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="1263-矩形面积的并"><a href="#1263-矩形面积的并" class="headerlink" title="1263 矩形面积的并"></a>1263 矩形面积的并</h5><p>哪一年的蓝桥杯原题，求出相交矩形的边界,判掉不会相交的情况，在不知道位置相对位置的情况下计算面积注意取绝对值，面积并=两矩形面积和-两矩形面积交</p>
+<p>l=max(min(x1,x2),min(x3,x4));<br>r=min(max(x1,x2),max(x3,x4));<br>d=max(min(y1,y2),min(y3,y4));<br>u=min(max(y1,y2),max(y3,y4));</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p><br></p>
 <p>待更…</p>
@@ -747,7 +752,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1262-Fish"><span class="nav-number">1.</span> <span class="nav-text">1262 Fish</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1271-Color"><span class="nav-number">2.</span> <span class="nav-text">1271 Color</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1163-ASCLL"><span class="nav-number">3.</span> <span class="nav-text">1163 ASCLL</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1243-Bob’s-Password"><span class="nav-number">4.</span> <span class="nav-text">1243 Bob’s Password</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1246-Matrix-Transposition"><span class="nav-number">5.</span> <span class="nav-text">1246 Matrix Transposition</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1248-Alice-and-Bob"><span class="nav-number">6.</span> <span class="nav-text">1248 Alice and Bob</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1251-Colombian-Number"><span class="nav-number">7.</span> <span class="nav-text">1251 Colombian Number</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1253-Robot"><span class="nav-number">8.</span> <span class="nav-text">1253 Robot</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1252-Matrix-Word"><span class="nav-number">9.</span> <span class="nav-text">1252 Matrix Word</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1262-Fish"><span class="nav-number">1.</span> <span class="nav-text">1262 Fish</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1271-Color"><span class="nav-number">2.</span> <span class="nav-text">1271 Color</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1163-ASCLL"><span class="nav-number">3.</span> <span class="nav-text">1163 ASCLL</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1243-Bob’s-Password"><span class="nav-number">4.</span> <span class="nav-text">1243 Bob’s Password</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1246-Matrix-Transposition"><span class="nav-number">5.</span> <span class="nav-text">1246 Matrix Transposition</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1248-Alice-and-Bob"><span class="nav-number">6.</span> <span class="nav-text">1248 Alice and Bob</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1251-Colombian-Number"><span class="nav-number">7.</span> <span class="nav-text">1251 Colombian Number</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1253-Robot"><span class="nav-number">8.</span> <span class="nav-text">1253 Robot</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1252-Matrix-Word"><span class="nav-number">9.</span> <span class="nav-text">1252 Matrix Word</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1621-Duplicate-Elements"><span class="nav-number">10.</span> <span class="nav-text">1621 Duplicate Elements</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1263-矩形面积的并"><span class="nav-number">11.</span> <span class="nav-text">1263 矩形面积的并</span></a></li></ol></div>
             
 
           </div>
@@ -781,7 +786,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">19k</span>
+    <span title="Site words total count">19.2k</span>
   
 </div>
 
