@@ -49,7 +49,7 @@
   <entry>
     <title><![CDATA[算法设计与分析 学习笔记]]></title>
     <url>%2F%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.html</url>
-    <content type="text"><![CDATA[[TOC] 第1章 算法概述算法定义：解决问题的有穷序列指令 算法的性质：输入、输出、确定性、有限性 程序和算法的区别：程序可不满足有限性，比如操作系统 求上下界函数： \lim_{n\rightarrow\infty} \frac{f(n)}{g(n)} = \begin{cases}0, & \text{f(n)=O(g(n))}\\\infty, & \text{f(n)= $\Omega$(g(n))}\\c,& \text{f(n)=$\Theta$(g(n))} \end{cases} 第2章 递归与分治策略一般递归方程时间复杂度分析 T(n)1} \end{cases}其中，a是子问题的个数，b是递减的步长，|表示递减方式，D(n)是合成子问题的开销 当|为减法： T(n)1}\\ O(n),&\text{a=1} \end{cases}当|为除法： $p=log_ba$ ①D(n)为常数 T(n)1}\\ O(log_bn),&\text{a=1} \end{cases}②D(n)为线性函数cn T(n)]]></content>
+    <content type="text"><![CDATA[[TOC] 第一章 算法概述算法的定义：是对特定问题求解步骤的一种描述，包含操作的有限规则和操作的有限序列 算法的性质：确定性（指令无歧义）、有限性（无死循环）、输入、输出 程序的定义：是算法用某种程序设计语言的具体实现 程序和算法的区别：程序不一定满足有限性，比如操作系统 算法复杂性决定于：(1)求解问题的规模；(2)具体的输入数据；(3)算法本身的设计 O(1)&lt;O(logn)&lt;O(n)&lt;O($n^c$)&lt;O($c^n$)&lt;O(n!) 求上下界函数： \lim_{n\rightarrow\infty} \frac{f(n)}{g(n)} = \begin{cases}0, & \text{f(n)=O(g(n))}\\\infty, & \text{f(n)= $\Omega$(g(n))}\\c,& \text{f(n)=$\Theta$(g(n))} \end{cases}第二章 递归与分治策略一般递归方程时间复杂度分析 T(n)1} \end{cases}其中，a是子问题的个数，b是递减的步长，|表示递减方式，D(n)是合成子问题的开销 当|为减法： T(n)1}\\ O(n),&\text{a=1} \end{cases}当|为除法： $p=log_ba$ ①D(n)为常数 T(n)1}\\ O(log_bn),&\text{a=1} \end{cases}②D(n)为线性函数cn T(n)]]></content>
       <categories>
         <category>算法设计与分析</category>
       </categories>
