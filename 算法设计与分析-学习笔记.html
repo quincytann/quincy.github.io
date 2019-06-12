@@ -131,7 +131,7 @@
 <meta property="og:site_name" content="Quincy&#39;s Blog">
 <meta property="og:description" content="[TOC] 第一章 算法概述算法的定义：是对特定问题求解步骤的一种描述，包含操作的有限规则和操作的有限序列 算法的性质：确定性（指令无歧义）、有限性（无死循环）、输入、输出 程序的定义：是算法用某种程序设计语言的具体实现 程序和算法的区别：程序不一定满足有限性，比如操作系统  算法复杂性决定于：(1)求解问题的规模；(2)具体的输入数据；(3)算法本身的设计">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-12T02:54:28.549Z">
+<meta property="og:updated_time" content="2019-06-12T03:38:18.933Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="算法设计与分析 学习笔记">
 <meta name="twitter:description" content="[TOC] 第一章 算法概述算法的定义：是对特定问题求解步骤的一种描述，包含操作的有限规则和操作的有限序列 算法的性质：确定性（指令无歧义）、有限性（无死循环）、输入、输出 程序的定义：是算法用某种程序设计语言的具体实现 程序和算法的区别：程序不一定满足有限性，比如操作系统  算法复杂性决定于：(1)求解问题的规模；(2)具体的输入数据；(3)算法本身的设计">
@@ -371,7 +371,7 @@
           
   <span class="post-updated">
     &nbsp; | &nbsp; 更新于
-    <time itemprop="dateUpdated" datetime="2019-06-12T10:54:28+08:00" content="2019-06-12">
+    <time itemprop="dateUpdated" datetime="2019-06-12T11:38:18+08:00" content="2019-06-12">
       2019-06-12
     </time>
   </span>
@@ -448,7 +448,7 @@
 <p>O(1)&lt;O(logn)&lt;O(n)&lt;O($n^c$)&lt;O($c^n$)&lt;O(n!)</p>
 <p>求上下界函数：</p>
 <script type="math/tex; mode=display">
-\lim_{n\rightarrow\infty} \frac{f(n)}{g(n)} = \begin{cases}0, & \text{f(n)=O(g(n))}\\\infty, & \text{f(n)= $\Omega$(g(n))}\\c,& \text{f(n)=$\Theta$(g(n))} \end{cases}</script><h4 id="第二章-递归与分治策略"><a href="#第二章-递归与分治策略" class="headerlink" title="第二章 递归与分治策略"></a>第二章 递归与分治策略</h4><p>一般递归方程时间复杂度分析</p>
+\lim_{n\rightarrow\infty} \frac{f(n)}{g(n)} = \begin{cases}0, & \text{f(n)=O(g(n))}\\\infty, & \text{f(n)= $\Omega$(g(n))}\\c,& \text{f(n)=$\Theta$(g(n))} \end{cases}</script><h4 id="第二章-递归与分治"><a href="#第二章-递归与分治" class="headerlink" title="第二章 递归与分治"></a>第二章 递归与分治</h4><p>一般递归方程时间复杂度分析</p>
 <script type="math/tex; mode=display">
 T(n)<=\begin{cases}1,&\text{n=1}\\ aT(n∣b)+D(n),&\text{n>1}     \end{cases}</script><p>其中，a是子问题的个数，b是递减的步长，|表示递减方式，D(n)是合成子问题的开销</p>
 <p>当|为减法：</p>
@@ -475,7 +475,7 @@ T(n)<=\begin{cases}O(n^x),&\text{a<D(b)}\\ O(n^plog_bn),&\text{a=D(b)}\\ O(n^p),
 <li>求解目标不同：求出所有解；求出最优解</li>
 <li>搜索方式不同：DFS；BFS</li>
 </ul>
-<p><br></p>
+<h4 id="第七章-概率算法"><a href="#第七章-概率算法" class="headerlink" title="第七章 概率算法"></a>第七章 概率算法</h4><h4 id="第八章-字符串"><a href="#第八章-字符串" class="headerlink" title="第八章 字符串"></a>第八章 字符串</h4><h4 id="第九章-NP完全问题"><a href="#第九章-NP完全问题" class="headerlink" title="第九章 NP完全问题"></a>第九章 NP完全问题</h4><p><br></p>
 <p>待更…</p>
 
       
@@ -766,7 +766,7 @@ T(n)<=\begin{cases}O(n^x),&\text{a<D(b)}\\ O(n^plog_bn),&\text{a=D(b)}\\ O(n^p),
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#第一章-算法概述"><span class="nav-number">1.</span> <span class="nav-text">第一章 算法概述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第二章-递归与分治策略"><span class="nav-number">2.</span> <span class="nav-text">第二章 递归与分治策略</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第三章-动态规划"><span class="nav-number">3.</span> <span class="nav-text">第三章 动态规划</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第四章-贪心算法"><span class="nav-number">4.</span> <span class="nav-text">第四章 贪心算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第五章-回溯法"><span class="nav-number">5.</span> <span class="nav-text">第五章 回溯法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第六章-分支限界法"><span class="nav-number">6.</span> <span class="nav-text">第六章 分支限界法</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#第一章-算法概述"><span class="nav-number">1.</span> <span class="nav-text">第一章 算法概述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第二章-递归与分治"><span class="nav-number">2.</span> <span class="nav-text">第二章 递归与分治</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第三章-动态规划"><span class="nav-number">3.</span> <span class="nav-text">第三章 动态规划</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第四章-贪心算法"><span class="nav-number">4.</span> <span class="nav-text">第四章 贪心算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第五章-回溯法"><span class="nav-number">5.</span> <span class="nav-text">第五章 回溯法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第六章-分支限界法"><span class="nav-number">6.</span> <span class="nav-text">第六章 分支限界法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第七章-概率算法"><span class="nav-number">7.</span> <span class="nav-text">第七章 概率算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第八章-字符串"><span class="nav-number">8.</span> <span class="nav-text">第八章 字符串</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第九章-NP完全问题"><span class="nav-number">9.</span> <span class="nav-text">第九章 NP完全问题</span></a></li></ol></div>
             
 
           </div>
@@ -800,7 +800,7 @@ T(n)<=\begin{cases}O(n^x),&\text{a<D(b)}\\ O(n^plog_bn),&\text{a=D(b)}\\ O(n^p),
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">22.1k</span>
+    <span title="Site words total count">22.4k</span>
   
 </div>
 
