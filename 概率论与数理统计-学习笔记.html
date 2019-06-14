@@ -131,7 +131,7 @@
 <meta property="og:site_name" content="Quincy&#39;s Blog">
 <meta property="og:description" content="第一章 随机事件及其概率第一节 随机事件及其频率、概率的统计定义随机事件(偶然事件)：在试验的结果中，可能发生、也可能不发生的事件 随机事件的频率具有一定的稳定性   随机事件的概率为频率的近似值 $P(A) \approx f(A) = \frac{m}{n}$">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-14T00:33:41.777Z">
+<meta property="og:updated_time" content="2019-06-14T03:09:17.088Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="概率论与数理统计 学习笔记">
 <meta name="twitter:description" content="第一章 随机事件及其概率第一节 随机事件及其频率、概率的统计定义随机事件(偶然事件)：在试验的结果中，可能发生、也可能不发生的事件 随机事件的频率具有一定的稳定性   随机事件的概率为频率的近似值 $P(A) \approx f(A) = \frac{m}{n}$">
@@ -371,7 +371,7 @@
           
   <span class="post-updated">
     &nbsp; | &nbsp; 更新于
-    <time itemprop="dateUpdated" datetime="2019-06-14T08:33:41+08:00" content="2019-06-14">
+    <time itemprop="dateUpdated" datetime="2019-06-14T11:09:17+08:00" content="2019-06-14">
       2019-06-14
     </time>
   </span>
@@ -450,33 +450,30 @@
 <h4 id="第三节-事件的关系及运算"><a href="#第三节-事件的关系及运算" class="headerlink" title="第三节 事件的关系及运算"></a>第三节 事件的关系及运算</h4><p>包含/包含于：$A \subset B$</p>
 <p>和(并)：$A∪B$</p>
 <p>积(交)：$A∩B 或 AB$</p>
-<p>互斥(互不相容)：两个互不相容的和 $A+B$</p>
-<p>对立(逆)    </p>
+<p>互不相容(互斥)：两个互不相容事件的和 $A+B$</p>
+<p>对立(逆)：$\overline{A}=B$</p>
 <p>完备事件组：n个事件至少有一个事件一定发生</p>
-<p><br></p>
-<p>交换律、结合律、分配律、德摩根律</p>
+<p>运算性质：交换律、结合律、分配律、德摩根律（$\overline{A∪B}=\overline{A}&ensp;\overline{B},\overline{AB}=\overline{A}∪\overline{B}$）</p>
 <h4 id="第四节-概率的古典定义"><a href="#第四节-概率的古典定义" class="headerlink" title="第四节 概率的古典定义"></a>第四节 概率的古典定义</h4><p>乘法定理：完成一件事需r步，第i步有$ m_ i $种方法，完成这件事总方法数 $ m_ 1m_ 2…m_ r $</p>
 <p>加法定理：完成一件事有r类方法，第i类有$ m_ i $种方法，完成这件事总方法数 $ m_ 1+m_ 2+…+m_ r $</p>
 <p>排列：$ A _ n ^m = \frac{n!}{(n-m)!} $</p>
 <p>组合：$ C _ n ^m = \frac{A _ n ^m}{P_ m} =  \frac{n!}{(n-m)!m!}$</p>
 <p>概率的古典定义：试验样本总共有$ n_Ω$ 个<font color="#FF0000">等可能</font>的基本事件，其中随机事件A包含$ n_A$个基本事件，($ n_A$&lt;=$ n_Ω$)</p>
 <p>则 $P(A) =  \frac{n_A}{n_Ω}$</p>
-<font color="blue">不放回依次抽样与一次抽样的一致性</font>  、
-
-<font color="blue">抽签次序无关性</font>
+<font color="blue">不放回依次抽样与一次抽样的一致性、抽签次序无关性</font>
 
 <h4 id="第五节-概率加法定理"><a href="#第五节-概率加法定理" class="headerlink" title="第五节 概率加法定理"></a>第五节 概率加法定理</h4><p>若随机事件A与B互斥，即$AB = \emptyset，则P(A+B)= P(A)+P(B)  \Rightarrow  P(A)+P(\overline{A})=1$</p>
 <p>若A、B是任意的两个随机事件，则二者和事件的概率为 $P(A∪B)=P(A)+P(B)-P(AB)$</p>
-<p>&ensp;&ensp; $\Rightarrow   P(A∪B∪C)=P(A)+P(B)+P(C)-P(AB)-P(AC)-P(BC)+P(ABC) $</p>
-<h4 id="第六节-条件概率与乘法定理"><a href="#第六节-条件概率与乘法定理" class="headerlink" title="第六节 条件概率与乘法定理"></a>第六节 条件概率与乘法定理</h4><p>$P(B|A)=\frac{P(AB)}{P(A)}$</p>
+<p>$\Rightarrow   P(A∪B∪C)=P(A)+P(B)+P(C)-P(AB)-P(AC)-P(BC)+P(ABC) $</p>
+<h4 id="第六节-条件概率与乘法定理"><a href="#第六节-条件概率与乘法定理" class="headerlink" title="第六节 条件概率与乘法定理"></a>第六节 条件概率与乘法定理</h4><p>已知事件A发生的条件下，事件B发生的概率：$P(B|A)=\frac{P(AB)}{P(A)}$</p>
 <p>若$P(A_1A_2…A_{n-1})&gt;0,则 P(A_1A_2…A_{n})=P(A_1)P(A_2|A_1)P(A_3|A_1A_2)…P(A_n|A_1A_2…A_n-1)$</p>
 <h4 id="第七节-全概率公式与贝叶斯公式"><a href="#第七节-全概率公式与贝叶斯公式" class="headerlink" title="第七节 全概率公式与贝叶斯公式"></a>第七节 全概率公式与贝叶斯公式</h4><p>&ensp;&ensp;先验，由因溯果</p>
 <script type="math/tex; mode=display">
 P(A) = \sum_{i=1}^nP(B_i)P(A|B_i)</script><p> &ensp;&ensp;后验，由果溯因</p>
 <script type="math/tex; mode=display">
-P(B_i|A) = \frac{P(AB_i)}{P(A)} = \frac{P(B_i)P(A|B_i)}{\sum_{i=1}^nP(B_i)P(A|B_i)},i=1,2,...,n</script><h4 id="第八节-随机事件的独立性"><a href="#第八节-随机事件的独立性" class="headerlink" title="第八节 随机事件的独立性"></a>第八节 随机事件的独立性</h4><p>若两事件A与B满足P(AB) = P(A)P(B)，则称事件A与B相互独立</p>
+P(B_i|A) = \frac{P(AB_i)}{P(A)} = \frac{P(B_i)P(A|B_i)}{\sum_{i=1}^nP(B_i)P(A|B_i)},i=1,2,...,n</script><h4 id="第八节-随机事件的独立性"><a href="#第八节-随机事件的独立性" class="headerlink" title="第八节 随机事件的独立性"></a>第八节 随机事件的独立性</h4><p>若两事件A与B满足$P(AB) = P(A)P(B)$，则称事件A与B相互独立</p>
 <p>&ensp;&ensp;性质1：不可能事件及必然事件与任意的随机事件相互独立</p>
-<p>&ensp;&ensp;性质2：A与B相互独立，则A与$\overline{B},\overline{A}与B,\overline{A}与\overline{A}$也相互独立&ensp;&ensp;（相互对称性）</p>
+<p>&ensp;&ensp;性质2：A与B相互独立，则A与$\overline{B},\overline{A}与B,\overline{A}与\overline{B}$也相互独立&ensp;&ensp;（相互对称性）</p>
 <h4 id="第九节-贝努力概型"><a href="#第九节-贝努力概型" class="headerlink" title="第九节 贝努力概型"></a>第九节 贝努力概型</h4><p>事件A恰好发生k次的概率：$P_n(k) = C_n^kp^kq^{n-k},k=0,1,2,…,n$</p>
 <p>$\sum_{k=0}^nP_n(k) = \sum_{k=0}^nC_n^kp^kq^{n-k} = (p+q)^n = 1$</p>
 <p>事件A发生次数介于$m_1$与$m_2$之间：$P_n(m_1&lt;=k&lt;=m_2) = \sum_{k=m1}^{m2}P_n(k)$</p>
@@ -904,7 +901,7 @@ f(x,y)=\frac{1}{2\pi\sigma_1\sigma_2\sqrt{1-\rho^2}}e^{-\frac{1}{2(1-\rho^2)}[\f
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">23.9k</span>
+    <span title="Site words total count">24k</span>
   
 </div>
 
