@@ -131,7 +131,7 @@
 <meta property="og:site_name" content="Quincy&#39;s Blog">
 <meta property="og:description" content="第一章 随机事件及其概率第一节 随机事件及其频率、概率的统计定义随机事件(偶然事件)：在试验的结果中，可能发生、也可能不发生的事件 随机事件的频率具有一定的稳定性   随机事件的概率为频率的近似值 $P(A) \approx f(A) = \frac{m}{n}$">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-14T03:09:17.088Z">
+<meta property="og:updated_time" content="2019-06-15T02:22:33.811Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="概率论与数理统计 学习笔记">
 <meta name="twitter:description" content="第一章 随机事件及其概率第一节 随机事件及其频率、概率的统计定义随机事件(偶然事件)：在试验的结果中，可能发生、也可能不发生的事件 随机事件的频率具有一定的稳定性   随机事件的概率为频率的近似值 $P(A) \approx f(A) = \frac{m}{n}$">
@@ -371,8 +371,8 @@
           
   <span class="post-updated">
     &nbsp; | &nbsp; 更新于
-    <time itemprop="dateUpdated" datetime="2019-06-14T11:09:17+08:00" content="2019-06-14">
-      2019-06-14
+    <time itemprop="dateUpdated" datetime="2019-06-15T10:22:33+08:00" content="2019-06-15">
+      2019-06-15
     </time>
   </span>
 
@@ -486,17 +486,27 @@ P(B_i|A) = \frac{P(AB_i)}{P(A)} = \frac{P(B_i)P(A|B_i)}{\sum_{i=1}^nP(B_i)P(A|B_
 <h4 id="第二节-离散型随机变量的概率分布"><a href="#第二节-离散型随机变量的概率分布" class="headerlink" title="第二节 离散型随机变量的概率分布"></a>第二节 离散型随机变量的概率分布</h4><p>性质：</p>
 <p>①$p_k&gt;=0 (k=1,2,..) $</p>
 <p>②$\sum_{k=1}^{\infty}p_k = 1$</p>
-<h4 id="第三节-几种常用的离散型随机变量的分布"><a href="#第三节-几种常用的离散型随机变量的分布" class="headerlink" title="第三节 几种常用的离散型随机变量的分布"></a>第三节 几种常用的离散型随机变量的分布</h4><p>“0-1”分布：$P(X=1) = p，P(X=0) = q（0&lt;p&lt;1，p+q=1）$</p>
-<p>超几何分布：$P(X=m) = \frac{C_M^mC_{N-M}^{n-m}}{C_N^n} （n&lt;=N,M&lt;=N）记作X～H(n,M,N)$</p>
-<p>二项分布：$P(X=k) = C_n^kp^kq^{n-k} （k=0,1,2,…,n） 记作X ～B(n,p)$</p>
-<p>&ensp;&ensp;二项式分布的最可能取值( P(X=k)取得最大值的k )：</p>
-<p>&ensp;&ensp;①若(n+1)p不是整数，则其整数部分[(n+1)p]即为所求；</p>
-<p>&ensp;&ensp;②若(n+1)p=m是整数，则m和m-1即为所求</p>
-<p>泊松分布：$P(X=k) = P_{\lambda}(k) = \frac{\lambda^k}{k!}e^{-\lambda} （k=0,1,2,…）记作X～P(\lambda)$</p>
-<p>几何分布：$P(X=k)=q^{k-1}p（k=1,2,…） 记作X～G(p)$</p>
+<h4 id="第三节-几种常用的离散型随机变量的分布"><a href="#第三节-几种常用的离散型随机变量的分布" class="headerlink" title="第三节 几种常用的离散型随机变量的分布"></a>第三节 几种常用的离散型随机变量的分布</h4><ul>
+<li><p>0-1分布：$P(X=1) = p，P(X=0) = q（0&lt;p&lt;1，p+q=1）$</p>
+</li>
+<li><p>超几何分布：$P(X=m) = \frac{C_M^mC_{N-M}^{n-m}}{C_N^n} （n&lt;=N,M&lt;=N），记作X～H(n,M,N)$，N趋向无穷大时近似服从二项分布</p>
+</li>
+<li><p>二项分布：$P(X=k) = C_n^kp^kq^{n-k} （k=0,1,2,…,n） ，记作X ～B(n,p)$    ，n很大，p很小时，可用泊松分布近似替代二项分布</p>
+</li>
+</ul>
+<p>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;二项式分布的最可能取值( P(X=k)取得最大值的k )：</p>
+<p>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;①若(n+1)p不是整数，则其整数部分[(n+1)p]即为所求；</p>
+<p>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;②若(n+1)p=m是整数，则m和m-1即为所求</p>
+<ul>
+<li><p>泊松分布：$P(X=k) = P_{\lambda}(k) = \frac{\lambda^k}{k!}e^{-\lambda} （k=0,1,2,…），记作X～P(\lambda)$</p>
+</li>
+<li><p>几何分布：$P(X=k)=q^{k-1}p（k=1,2,…）， 记作X～G(p)$</p>
+</li>
+</ul>
 <h4 id="第四节-随机变量的分布函数"><a href="#第四节-随机变量的分布函数" class="headerlink" title="第四节 随机变量的分布函数"></a>第四节 随机变量的分布函数</h4><p>$F(x) = P(X&lt;=x)$</p>
 <p>性质：</p>
 <p>$F(x) 单调不减，若x_1&lt;x_2,则F(x_1)&lt;=F(x_2)$</p>
+<p>对于任意x，P(x)=F(x)-F(x-0),即当前值-左极限值</p>
 <p>$P(x_1&lt;X&lt;=x_2) = F(x_2)-F(x_1)$离散型随机变量只能用</p>
 <p>$P(x_1&lt;=X&lt;=x_2) =P(x_1&lt;X&lt;=x_2)=P(x_1&lt;=X&lt;x_2)=P(x_1&lt;X&lt;x_2) =F(x_2)-F(x_1)$连续性随机变量都适用</p>
 <p>离散型随机变量的F(x)含跳跃间断点；连续性随机变量F(x)连续且位于y=0与y=1之间</p>
@@ -533,7 +543,7 @@ F(x)=\begin{cases}1-e^{-\lambda x},&\text{x>0}\\ 0,&\text{x<=0} \end{cases}</scr
 <li><script type="math/tex; mode=display">
 f(x)=\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^{2}}{2\sigma^2}},x\in(-\infty,+\infty)</script></li>
 <li><script type="math/tex; mode=display">
-F(x)=\Phi(\frac{x-\mu}{\sigma})</script></li>
+F(x)=\Phi(\frac{x-\mu}{\sigma})，\Phi(-x)=1-\Phi(x)</script></li>
 </ul>
 <h4 id="第七节-随机变量函数的分布"><a href="#第七节-随机变量函数的分布" class="headerlink" title="第七节 随机变量函数的分布"></a>第七节 随机变量函数的分布</h4><p><br></p>
 <h3 id="第三章-多维随机变量及其分布"><a href="#第三章-多维随机变量及其分布" class="headerlink" title="第三章 多维随机变量及其分布"></a>第三章 多维随机变量及其分布</h3><h4 id="第一节-二维随机变量的联合分布"><a href="#第一节-二维随机变量的联合分布" class="headerlink" title="第一节 二维随机变量的联合分布"></a>第一节 二维随机变量的联合分布</h4><ul>
@@ -901,7 +911,7 @@ f(x,y)=\frac{1}{2\pi\sigma_1\sigma_2\sqrt{1-\rho^2}}e^{-\frac{1}{2(1-\rho^2)}[\f
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">24.4k</span>
+    <span title="Site words total count">24.5k</span>
   
 </div>
 
