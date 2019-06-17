@@ -131,7 +131,7 @@
 <meta property="og:site_name" content="Quincy&#39;s Blog">
 <meta property="og:description" content="第一章 随机事件及其概率第一节 随机事件及其频率、概率的统计定义随机事件(偶然事件)：在试验的结果中，可能发生、也可能不发生的事件 随机事件的频率具有一定的稳定性   随机事件的概率为频率的近似值 $P(A) \approx f(A) = \frac{m}{n}$">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-17T09:09:09.301Z">
+<meta property="og:updated_time" content="2019-06-17T15:30:53.641Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="概率论与数理统计 学习笔记">
 <meta name="twitter:description" content="第一章 随机事件及其概率第一节 随机事件及其频率、概率的统计定义随机事件(偶然事件)：在试验的结果中，可能发生、也可能不发生的事件 随机事件的频率具有一定的稳定性   随机事件的概率为频率的近似值 $P(A) \approx f(A) = \frac{m}{n}$">
@@ -371,7 +371,7 @@
           
   <span class="post-updated">
     &nbsp; | &nbsp; 更新于
-    <time itemprop="dateUpdated" datetime="2019-06-17T17:09:09+08:00" content="2019-06-17">
+    <time itemprop="dateUpdated" datetime="2019-06-17T23:30:53+08:00" content="2019-06-17">
       2019-06-17
     </time>
   </span>
@@ -597,8 +597,8 @@ F_Z(z)=1-[1-F_X(z)][1-F_Y(z)]，f_Z(z)=f_X(z)[1-F_Y(z)]+f_Y(z)[1-F_X(z)]</script
 <h3 id="第四章-随机变量的数字特征"><a href="#第四章-随机变量的数字特征" class="headerlink" title="第四章 随机变量的数字特征"></a>第四章 随机变量的数字特征</h3><h4 id="第一节-数学期望"><a href="#第一节-数学期望" class="headerlink" title="第一节 数学期望"></a>第一节 数学期望</h4><p>离散型：$\sum_{i=1}^{\infty}x_ip_i$，绝对收敛时才有期望</p>
 <p>连续性：</p>
 <ul>
-<li>一维：$E(X)\int_{-\infty}^{+\infty}xf(x)dx$，绝对收敛时才有期望</li>
-<li>二维：$E(X)\int_{-\infty}^{+\infty}xf_X(x)dx=\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}xf(x,y)dxdy$</li>
+<li>一维：$E(X)=\int_{-\infty}^{+\infty}xf(x)dx$，绝对收敛时才有期望</li>
+<li>二维：$E(X)=\int_{-\infty}^{+\infty}xf_X(x)dx=\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}xf(x,y)dxdy$</li>
 </ul>
 <p>随机变量函数：</p>
 <ul>
@@ -661,11 +661,16 @@ F_Z(z)=1-[1-F_X(z)][1-F_Y(z)]，f_Z(z)=f_X(z)[1-F_Y(z)]+f_Y(z)[1-F_X(z)]</script
 <td style="text-align:center">$\mu$</td>
 <td style="text-align:center">$\sigma^2$</td>
 </tr>
+<tr>
+<td style="text-align:center">$\chi^2$分布</td>
+<td style="text-align:center">n</td>
+<td style="text-align:center">2n</td>
+</tr>
 </tbody>
 </table>
 </div>
-<p>k阶原点矩：$E(|X|^k)$，一阶即为期望</p>
-<p>k阶中心矩：$E(|X-E(X)|^k)$，二阶即为方差</p>
+<p>k阶原点矩：$E(|X|^k)$，一阶原点矩即为期望</p>
+<p>k阶中心矩：$E(|X-E(X)|^k)$，二阶中心矩即为方差</p>
 <h4 id="第三节-协方差与相关系数"><a href="#第三节-协方差与相关系数" class="headerlink" title="第三节 协方差与相关系数"></a>第三节 协方差与相关系数</h4><p>计算公式：$Cov(X,Y)=E(XY)-E(X)E(Y)$</p>
 <p>性质：</p>
 <ul>
