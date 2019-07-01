@@ -5,9 +5,9 @@
   <subtitle>学习时长两年的在校本科生</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="quincy.ink/"/>
+  <link href="http://quincy.ink/"/>
   <updated>2019-06-14T13:18:40.298Z</updated>
-  <id>quincy.ink/</id>
+  <id>http://quincy.ink/</id>
   
   <author>
     <name>Quincy</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Codeforces-1182C Beautiful Lyrics</title>
-    <link href="quincy.ink/Codeforces-1182C-Beautiful-Lyrics.html"/>
-    <id>quincy.ink/Codeforces-1182C-Beautiful-Lyrics.html</id>
+    <link href="http://quincy.ink/Codeforces-1182C-Beautiful-Lyrics.html"/>
+    <id>http://quincy.ink/Codeforces-1182C-Beautiful-Lyrics.html</id>
     <published>2019-06-14T13:00:10.000Z</published>
     <updated>2019-06-14T13:18:40.298Z</updated>
     
@@ -32,23 +32,23 @@
     
     </summary>
     
-      <category term="ACM" scheme="quincy.ink/categories/ACM/"/>
+      <category term="ACM" scheme="http://quincy.ink/categories/ACM/"/>
     
     
-      <category term="cf" scheme="quincy.ink/tags/cf/"/>
+      <category term="cf" scheme="http://quincy.ink/tags/cf/"/>
     
-      <category term="STL" scheme="quincy.ink/tags/STL/"/>
+      <category term="STL" scheme="http://quincy.ink/tags/STL/"/>
     
-      <category term="贪心" scheme="quincy.ink/tags/%E8%B4%AA%E5%BF%83/"/>
+      <category term="贪心" scheme="http://quincy.ink/tags/%E8%B4%AA%E5%BF%83/"/>
     
-      <category term="字符串" scheme="quincy.ink/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+      <category term="字符串" scheme="http://quincy.ink/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
     
   </entry>
   
   <entry>
     <title>湘潭大学2019程序设计实践</title>
-    <link href="quincy.ink/%E6%B9%98%E6%BD%AD%E5%A4%A7%E5%AD%A62019%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%AE%9E%E8%B7%B5.html"/>
-    <id>quincy.ink/湘潭大学2019程序设计实践.html</id>
+    <link href="http://quincy.ink/%E6%B9%98%E6%BD%AD%E5%A4%A7%E5%AD%A62019%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%AE%9E%E8%B7%B5.html"/>
+    <id>http://quincy.ink/湘潭大学2019程序设计实践.html</id>
     <published>2019-06-03T04:45:18.000Z</published>
     <updated>2019-07-01T00:16:57.057Z</updated>
     
@@ -62,29 +62,29 @@
     
     </summary>
     
-      <category term="程序设计实践" scheme="quincy.ink/categories/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%AE%9E%E8%B7%B5/"/>
+      <category term="程序设计实践" scheme="http://quincy.ink/categories/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%AE%9E%E8%B7%B5/"/>
     
     
-      <category term="数学" scheme="quincy.ink/tags/%E6%95%B0%E5%AD%A6/"/>
+      <category term="数学" scheme="http://quincy.ink/tags/%E6%95%B0%E5%AD%A6/"/>
     
-      <category term="STL" scheme="quincy.ink/tags/STL/"/>
+      <category term="STL" scheme="http://quincy.ink/tags/STL/"/>
     
-      <category term="暴力" scheme="quincy.ink/tags/%E6%9A%B4%E5%8A%9B/"/>
+      <category term="暴力" scheme="http://quincy.ink/tags/%E6%9A%B4%E5%8A%9B/"/>
     
-      <category term="程序设计实践" scheme="quincy.ink/tags/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%AE%9E%E8%B7%B5/"/>
+      <category term="程序设计实践" scheme="http://quincy.ink/tags/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%AE%9E%E8%B7%B5/"/>
     
-      <category term="模拟" scheme="quincy.ink/tags/%E6%A8%A1%E6%8B%9F/"/>
+      <category term="模拟" scheme="http://quincy.ink/tags/%E6%A8%A1%E6%8B%9F/"/>
     
-      <category term="动态规划" scheme="quincy.ink/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+      <category term="动态规划" scheme="http://quincy.ink/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
     
-      <category term="图论" scheme="quincy.ink/tags/%E5%9B%BE%E8%AE%BA/"/>
+      <category term="图论" scheme="http://quincy.ink/tags/%E5%9B%BE%E8%AE%BA/"/>
     
   </entry>
   
   <entry>
     <title>湖南大学第15届校赛 H-Longest Common Palindrome Substring</title>
-    <link href="quincy.ink/%E6%B9%96%E5%8D%97%E5%A4%A7%E5%AD%A6%E7%AC%AC15%E5%B1%8A%E6%A0%A1%E8%B5%9B-H-Longest-Common-Palindrome-Substring.html"/>
-    <id>quincy.ink/湖南大学第15届校赛-H-Longest-Common-Palindrome-Substring.html</id>
+    <link href="http://quincy.ink/%E6%B9%96%E5%8D%97%E5%A4%A7%E5%AD%A6%E7%AC%AC15%E5%B1%8A%E6%A0%A1%E8%B5%9B-H-Longest-Common-Palindrome-Substring.html"/>
+    <id>http://quincy.ink/湖南大学第15届校赛-H-Longest-Common-Palindrome-Substring.html</id>
     <published>2019-06-02T23:29:56.000Z</published>
     <updated>2019-06-02T23:45:34.256Z</updated>
     
@@ -104,21 +104,21 @@
     
     </summary>
     
-      <category term="ACM" scheme="quincy.ink/categories/ACM/"/>
+      <category term="ACM" scheme="http://quincy.ink/categories/ACM/"/>
     
     
-      <category term="二分" scheme="quincy.ink/tags/%E4%BA%8C%E5%88%86/"/>
+      <category term="二分" scheme="http://quincy.ink/tags/%E4%BA%8C%E5%88%86/"/>
     
-      <category term="manacher" scheme="quincy.ink/tags/manacher/"/>
+      <category term="manacher" scheme="http://quincy.ink/tags/manacher/"/>
     
-      <category term="hash" scheme="quincy.ink/tags/hash/"/>
+      <category term="hash" scheme="http://quincy.ink/tags/hash/"/>
     
   </entry>
   
   <entry>
     <title>Template of ACM</title>
-    <link href="quincy.ink/Template-of-ACM.html"/>
-    <id>quincy.ink/Template-of-ACM.html</id>
+    <link href="http://quincy.ink/Template-of-ACM.html"/>
+    <id>http://quincy.ink/Template-of-ACM.html</id>
     <published>2019-05-26T11:40:21.000Z</published>
     <updated>2019-07-01T00:17:31.490Z</updated>
     
@@ -130,17 +130,17 @@
     
     </summary>
     
-      <category term="ACM" scheme="quincy.ink/categories/ACM/"/>
+      <category term="ACM" scheme="http://quincy.ink/categories/ACM/"/>
     
     
-      <category term="Template" scheme="quincy.ink/tags/Template/"/>
+      <category term="Template" scheme="http://quincy.ink/tags/Template/"/>
     
   </entry>
   
   <entry>
     <title>ARM嵌入式系统 学习笔记</title>
-    <link href="quincy.ink/ARM%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.html"/>
-    <id>quincy.ink/ARM嵌入式系统-学习笔记.html</id>
+    <link href="http://quincy.ink/ARM%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.html"/>
+    <id>http://quincy.ink/ARM嵌入式系统-学习笔记.html</id>
     <published>2019-04-23T00:15:17.000Z</published>
     <updated>2019-06-14T00:29:29.250Z</updated>
     
@@ -156,17 +156,17 @@
     
     </summary>
     
-      <category term="嵌入式系统" scheme="quincy.ink/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F/"/>
+      <category term="嵌入式系统" scheme="http://quincy.ink/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F/"/>
     
     
-      <category term="嵌入式系统" scheme="quincy.ink/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F/"/>
+      <category term="嵌入式系统" scheme="http://quincy.ink/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F/"/>
     
   </entry>
   
   <entry>
     <title>算法设计与分析 学习笔记</title>
-    <link href="quincy.ink/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.html"/>
-    <id>quincy.ink/算法设计与分析-学习笔记.html</id>
+    <link href="http://quincy.ink/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.html"/>
+    <id>http://quincy.ink/算法设计与分析-学习笔记.html</id>
     <published>2019-03-19T01:06:26.000Z</published>
     <updated>2019-06-19T04:45:57.993Z</updated>
     
@@ -180,17 +180,17 @@
     
     </summary>
     
-      <category term="算法设计与分析" scheme="quincy.ink/categories/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90/"/>
+      <category term="算法设计与分析" scheme="http://quincy.ink/categories/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90/"/>
     
     
-      <category term="算法设计与分析" scheme="quincy.ink/tags/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90/"/>
+      <category term="算法设计与分析" scheme="http://quincy.ink/tags/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90/"/>
     
   </entry>
   
   <entry>
     <title>物联网概论 学习笔记</title>
-    <link href="quincy.ink/%E7%89%A9%E8%81%94%E7%BD%91%E6%A6%82%E8%AE%BA-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.html"/>
-    <id>quincy.ink/物联网概论-学习笔记.html</id>
+    <link href="http://quincy.ink/%E7%89%A9%E8%81%94%E7%BD%91%E6%A6%82%E8%AE%BA-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.html"/>
+    <id>http://quincy.ink/物联网概论-学习笔记.html</id>
     <published>2019-03-07T15:06:49.000Z</published>
     <updated>2019-06-14T00:29:52.568Z</updated>
     
@@ -205,17 +205,17 @@
     
     </summary>
     
-      <category term="物联网概论" scheme="quincy.ink/categories/%E7%89%A9%E8%81%94%E7%BD%91%E6%A6%82%E8%AE%BA/"/>
+      <category term="物联网概论" scheme="http://quincy.ink/categories/%E7%89%A9%E8%81%94%E7%BD%91%E6%A6%82%E8%AE%BA/"/>
     
     
-      <category term="物联网概论" scheme="quincy.ink/tags/%E7%89%A9%E8%81%94%E7%BD%91%E6%A6%82%E8%AE%BA/"/>
+      <category term="物联网概论" scheme="http://quincy.ink/tags/%E7%89%A9%E8%81%94%E7%BD%91%E6%A6%82%E8%AE%BA/"/>
     
   </entry>
   
   <entry>
     <title>概率论与数理统计 学习笔记</title>
-    <link href="quincy.ink/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.html"/>
-    <id>quincy.ink/概率论与数理统计-学习笔记.html</id>
+    <link href="http://quincy.ink/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.html"/>
+    <id>http://quincy.ink/概率论与数理统计-学习笔记.html</id>
     <published>2019-03-04T01:31:59.000Z</published>
     <updated>2019-06-26T04:13:43.775Z</updated>
     
@@ -229,17 +229,17 @@
     
     </summary>
     
-      <category term="概率论与数理统计" scheme="quincy.ink/categories/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/"/>
+      <category term="概率论与数理统计" scheme="http://quincy.ink/categories/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/"/>
     
     
-      <category term="概率论与数理统计" scheme="quincy.ink/tags/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/"/>
+      <category term="概率论与数理统计" scheme="http://quincy.ink/tags/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/"/>
     
   </entry>
   
   <entry>
     <title>牛客练习赛-41</title>
-    <link href="quincy.ink/%E7%89%9B%E5%AE%A2%E7%BB%83%E4%B9%A0%E8%B5%9B-41.html"/>
-    <id>quincy.ink/牛客练习赛-41.html</id>
+    <link href="http://quincy.ink/%E7%89%9B%E5%AE%A2%E7%BB%83%E4%B9%A0%E8%B5%9B-41.html"/>
+    <id>http://quincy.ink/牛客练习赛-41.html</id>
     <published>2019-03-03T02:33:31.000Z</published>
     <updated>2019-03-03T05:27:21.099Z</updated>
     
@@ -255,23 +255,23 @@
     
     </summary>
     
-      <category term="ACM" scheme="quincy.ink/categories/ACM/"/>
+      <category term="ACM" scheme="http://quincy.ink/categories/ACM/"/>
     
     
-      <category term="数学" scheme="quincy.ink/tags/%E6%95%B0%E5%AD%A6/"/>
+      <category term="数学" scheme="http://quincy.ink/tags/%E6%95%B0%E5%AD%A6/"/>
     
-      <category term="dp" scheme="quincy.ink/tags/dp/"/>
+      <category term="dp" scheme="http://quincy.ink/tags/dp/"/>
     
-      <category term="bfs" scheme="quincy.ink/tags/bfs/"/>
+      <category term="bfs" scheme="http://quincy.ink/tags/bfs/"/>
     
-      <category term="并查集" scheme="quincy.ink/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/"/>
+      <category term="并查集" scheme="http://quincy.ink/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/"/>
     
   </entry>
   
   <entry>
     <title>牛客OI周赛7-普及组</title>
-    <link href="quincy.ink/%E7%89%9B%E5%AE%A2OI%E5%91%A8%E8%B5%9B7-%E6%99%AE%E5%8F%8A%E7%BB%84.html"/>
-    <id>quincy.ink/牛客OI周赛7-普及组.html</id>
+    <link href="http://quincy.ink/%E7%89%9B%E5%AE%A2OI%E5%91%A8%E8%B5%9B7-%E6%99%AE%E5%8F%8A%E7%BB%84.html"/>
+    <id>http://quincy.ink/牛客OI周赛7-普及组.html</id>
     <published>2019-02-24T08:16:20.000Z</published>
     <updated>2019-02-24T08:56:54.228Z</updated>
     
@@ -291,27 +291,27 @@
     
     </summary>
     
-      <category term="ACM" scheme="quincy.ink/categories/ACM/"/>
+      <category term="ACM" scheme="http://quincy.ink/categories/ACM/"/>
     
     
-      <category term="STL" scheme="quincy.ink/tags/STL/"/>
+      <category term="STL" scheme="http://quincy.ink/tags/STL/"/>
     
-      <category term="二分" scheme="quincy.ink/tags/%E4%BA%8C%E5%88%86/"/>
+      <category term="二分" scheme="http://quincy.ink/tags/%E4%BA%8C%E5%88%86/"/>
     
-      <category term="字符串hash" scheme="quincy.ink/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2hash/"/>
+      <category term="字符串hash" scheme="http://quincy.ink/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2hash/"/>
     
-      <category term="暴力" scheme="quincy.ink/tags/%E6%9A%B4%E5%8A%9B/"/>
+      <category term="暴力" scheme="http://quincy.ink/tags/%E6%9A%B4%E5%8A%9B/"/>
     
-      <category term="kmp" scheme="quincy.ink/tags/kmp/"/>
+      <category term="kmp" scheme="http://quincy.ink/tags/kmp/"/>
     
-      <category term="离散化" scheme="quincy.ink/tags/%E7%A6%BB%E6%95%A3%E5%8C%96/"/>
+      <category term="离散化" scheme="http://quincy.ink/tags/%E7%A6%BB%E6%95%A3%E5%8C%96/"/>
     
   </entry>
   
   <entry>
     <title>EOJ Monthly 2019.2</title>
-    <link href="quincy.ink/EOJ-Monthly-2019-2.html"/>
-    <id>quincy.ink/EOJ-Monthly-2019-2.html</id>
+    <link href="http://quincy.ink/EOJ-Monthly-2019-2.html"/>
+    <id>http://quincy.ink/EOJ-Monthly-2019-2.html</id>
     <published>2019-02-23T06:03:29.000Z</published>
     <updated>2019-03-02T01:43:05.072Z</updated>
     
@@ -329,17 +329,17 @@
     
     </summary>
     
-      <category term="ACM" scheme="quincy.ink/categories/ACM/"/>
+      <category term="ACM" scheme="http://quincy.ink/categories/ACM/"/>
     
     
-      <category term="数学" scheme="quincy.ink/tags/%E6%95%B0%E5%AD%A6/"/>
+      <category term="数学" scheme="http://quincy.ink/tags/%E6%95%B0%E5%AD%A6/"/>
     
   </entry>
   
   <entry>
     <title>牛客OI周赛7-提高组</title>
-    <link href="quincy.ink/%E7%89%9B%E5%AE%A2OI%E5%91%A8%E8%B5%9B7-%E6%8F%90%E9%AB%98%E7%BB%84.html"/>
-    <id>quincy.ink/牛客OI周赛7-提高组.html</id>
+    <link href="http://quincy.ink/%E7%89%9B%E5%AE%A2OI%E5%91%A8%E8%B5%9B7-%E6%8F%90%E9%AB%98%E7%BB%84.html"/>
+    <id>http://quincy.ink/牛客OI周赛7-提高组.html</id>
     <published>2019-02-23T01:49:50.000Z</published>
     <updated>2019-03-03T11:25:52.633Z</updated>
     
@@ -355,23 +355,23 @@
     
     </summary>
     
-      <category term="ACM" scheme="quincy.ink/categories/ACM/"/>
+      <category term="ACM" scheme="http://quincy.ink/categories/ACM/"/>
     
     
-      <category term="OI" scheme="quincy.ink/tags/OI/"/>
+      <category term="OI" scheme="http://quincy.ink/tags/OI/"/>
     
-      <category term="ST" scheme="quincy.ink/tags/ST/"/>
+      <category term="ST" scheme="http://quincy.ink/tags/ST/"/>
     
-      <category term="线段树" scheme="quincy.ink/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/"/>
+      <category term="线段树" scheme="http://quincy.ink/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/"/>
     
-      <category term="打表" scheme="quincy.ink/tags/%E6%89%93%E8%A1%A8/"/>
+      <category term="打表" scheme="http://quincy.ink/tags/%E6%89%93%E8%A1%A8/"/>
     
   </entry>
   
   <entry>
     <title>牛客练习赛 40A--小D的剧场</title>
-    <link href="quincy.ink/%E7%89%9B%E5%AE%A2%E7%BB%83%E4%B9%A0%E8%B5%9B-40A--%E5%B0%8FD%E7%9A%84%E5%89%A7%E5%9C%BA.html"/>
-    <id>quincy.ink/牛客练习赛-40A--小D的剧场.html</id>
+    <link href="http://quincy.ink/%E7%89%9B%E5%AE%A2%E7%BB%83%E4%B9%A0%E8%B5%9B-40A--%E5%B0%8FD%E7%9A%84%E5%89%A7%E5%9C%BA.html"/>
+    <id>http://quincy.ink/牛客练习赛-40A--小D的剧场.html</id>
     <published>2019-02-16T11:26:46.000Z</published>
     <updated>2019-03-02T01:42:53.831Z</updated>
     
@@ -386,17 +386,17 @@
     
     </summary>
     
-      <category term="ACM" scheme="quincy.ink/categories/ACM/"/>
+      <category term="ACM" scheme="http://quincy.ink/categories/ACM/"/>
     
     
-      <category term="dp" scheme="quincy.ink/tags/dp/"/>
+      <category term="dp" scheme="http://quincy.ink/tags/dp/"/>
     
   </entry>
   
   <entry>
     <title>牛客练习赛 40C--小A与欧拉路</title>
-    <link href="quincy.ink/%E7%89%9B%E5%AE%A2%E7%BB%83%E4%B9%A0%E8%B5%9B-40C--%E5%B0%8FA%E4%B8%8E%E6%AC%A7%E6%8B%89%E8%B7%AF.html"/>
-    <id>quincy.ink/牛客练习赛-40C--小A与欧拉路.html</id>
+    <link href="http://quincy.ink/%E7%89%9B%E5%AE%A2%E7%BB%83%E4%B9%A0%E8%B5%9B-40C--%E5%B0%8FA%E4%B8%8E%E6%AC%A7%E6%8B%89%E8%B7%AF.html"/>
+    <id>http://quincy.ink/牛客练习赛-40C--小A与欧拉路.html</id>
     <published>2019-02-16T08:08:43.000Z</published>
     <updated>2019-02-16T12:00:40.487Z</updated>
     
@@ -412,19 +412,19 @@
     
     </summary>
     
-      <category term="ACM" scheme="quincy.ink/categories/ACM/"/>
+      <category term="ACM" scheme="http://quincy.ink/categories/ACM/"/>
     
     
-      <category term="dfs" scheme="quincy.ink/tags/dfs/"/>
+      <category term="dfs" scheme="http://quincy.ink/tags/dfs/"/>
     
-      <category term="欧拉路" scheme="quincy.ink/tags/%E6%AC%A7%E6%8B%89%E8%B7%AF/"/>
+      <category term="欧拉路" scheme="http://quincy.ink/tags/%E6%AC%A7%E6%8B%89%E8%B7%AF/"/>
     
   </entry>
   
   <entry>
     <title>CSU 1803--2016</title>
-    <link href="quincy.ink/CSU%201803--2016.html"/>
-    <id>quincy.ink/CSU 1803--2016.html</id>
+    <link href="http://quincy.ink/CSU%201803--2016.html"/>
+    <id>http://quincy.ink/CSU 1803--2016.html</id>
     <published>2019-02-14T06:11:52.000Z</published>
     <updated>2019-03-03T03:19:53.525Z</updated>
     
@@ -438,17 +438,17 @@
     
     </summary>
     
-      <category term="ACM" scheme="quincy.ink/categories/ACM/"/>
+      <category term="ACM" scheme="http://quincy.ink/categories/ACM/"/>
     
     
-      <category term="数学" scheme="quincy.ink/tags/%E6%95%B0%E5%AD%A6/"/>
+      <category term="数学" scheme="http://quincy.ink/tags/%E6%95%B0%E5%AD%A6/"/>
     
   </entry>
   
   <entry>
     <title>ZOJ 4011--Happy-Sequence</title>
-    <link href="quincy.ink/ZOJ%204011--Happy-Sequence.html"/>
-    <id>quincy.ink/ZOJ 4011--Happy-Sequence.html</id>
+    <link href="http://quincy.ink/ZOJ%204011--Happy-Sequence.html"/>
+    <id>http://quincy.ink/ZOJ 4011--Happy-Sequence.html</id>
     <published>2019-02-14T06:06:40.000Z</published>
     <updated>2019-02-16T08:19:11.447Z</updated>
     
@@ -462,17 +462,17 @@
     
     </summary>
     
-      <category term="ACM" scheme="quincy.ink/categories/ACM/"/>
+      <category term="ACM" scheme="http://quincy.ink/categories/ACM/"/>
     
     
-      <category term="dp" scheme="quincy.ink/tags/dp/"/>
+      <category term="dp" scheme="http://quincy.ink/tags/dp/"/>
     
   </entry>
   
   <entry>
     <title>ZOJ 2594--Driving-Straight</title>
-    <link href="quincy.ink/ZOJ%202594--Driving-Straight.html"/>
-    <id>quincy.ink/ZOJ 2594--Driving-Straight.html</id>
+    <link href="http://quincy.ink/ZOJ%202594--Driving-Straight.html"/>
+    <id>http://quincy.ink/ZOJ 2594--Driving-Straight.html</id>
     <published>2019-02-14T06:02:16.000Z</published>
     <updated>2019-03-08T12:49:21.593Z</updated>
     
@@ -486,17 +486,17 @@
     
     </summary>
     
-      <category term="ACM" scheme="quincy.ink/categories/ACM/"/>
+      <category term="ACM" scheme="http://quincy.ink/categories/ACM/"/>
     
     
-      <category term="bfs" scheme="quincy.ink/tags/bfs/"/>
+      <category term="bfs" scheme="http://quincy.ink/tags/bfs/"/>
     
   </entry>
   
   <entry>
     <title>Codeforces 110D--Lucky Probability</title>
-    <link href="quincy.ink/Codeforces%20110D--Lucky%20Probability.html"/>
-    <id>quincy.ink/Codeforces 110D--Lucky Probability.html</id>
+    <link href="http://quincy.ink/Codeforces%20110D--Lucky%20Probability.html"/>
+    <id>http://quincy.ink/Codeforces 110D--Lucky Probability.html</id>
     <published>2019-02-14T05:51:31.000Z</published>
     <updated>2019-02-16T08:20:09.847Z</updated>
     
@@ -510,17 +510,17 @@
     
     </summary>
     
-      <category term="ACM" scheme="quincy.ink/categories/ACM/"/>
+      <category term="ACM" scheme="http://quincy.ink/categories/ACM/"/>
     
     
-      <category term="dfs" scheme="quincy.ink/tags/dfs/"/>
+      <category term="dfs" scheme="http://quincy.ink/tags/dfs/"/>
     
   </entry>
   
   <entry>
     <title>POJ 2774--Long Long Message</title>
-    <link href="quincy.ink/POJ%202774--Long%20Long%20Message.html"/>
-    <id>quincy.ink/POJ 2774--Long Long Message.html</id>
+    <link href="http://quincy.ink/POJ%202774--Long%20Long%20Message.html"/>
+    <id>http://quincy.ink/POJ 2774--Long Long Message.html</id>
     <published>2019-02-13T11:51:55.000Z</published>
     <updated>2019-02-16T08:19:43.247Z</updated>
     
@@ -533,12 +533,12 @@
     
     </summary>
     
-      <category term="ACM" scheme="quincy.ink/categories/ACM/"/>
+      <category term="ACM" scheme="http://quincy.ink/categories/ACM/"/>
     
     
-      <category term="二分" scheme="quincy.ink/tags/%E4%BA%8C%E5%88%86/"/>
+      <category term="二分" scheme="http://quincy.ink/tags/%E4%BA%8C%E5%88%86/"/>
     
-      <category term="字符串hash" scheme="quincy.ink/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2hash/"/>
+      <category term="字符串hash" scheme="http://quincy.ink/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2hash/"/>
     
   </entry>
   

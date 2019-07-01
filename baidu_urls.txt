@@ -1,19 +1,19 @@
-quincy.ink/Codeforces-1182C-Beautiful-Lyrics.html
-quincy.ink/湘潭大学2019程序设计实践.html
-quincy.ink/湖南大学第15届校赛-H-Longest-Common-Palindrome-Substring.html
-quincy.ink/Template-of-ACM.html
-quincy.ink/ARM嵌入式系统-学习笔记.html
-quincy.ink/算法设计与分析-学习笔记.html
-quincy.ink/物联网概论-学习笔记.html
-quincy.ink/概率论与数理统计-学习笔记.html
-quincy.ink/牛客练习赛-41.html
-quincy.ink/牛客OI周赛7-普及组.html
-quincy.ink/EOJ-Monthly-2019-2.html
-quincy.ink/牛客OI周赛7-提高组.html
-quincy.ink/牛客练习赛-40A--小D的剧场.html
-quincy.ink/牛客练习赛-40C--小A与欧拉路.html
-quincy.ink/CSU 1803--2016.html
-quincy.ink/ZOJ 4011--Happy-Sequence.html
-quincy.ink/ZOJ 2594--Driving-Straight.html
-quincy.ink/Codeforces 110D--Lucky Probability.html
-quincy.ink/POJ 2774--Long Long Message.html
+http://quincy.ink/Codeforces-1182C-Beautiful-Lyrics.html
+http://quincy.ink/湘潭大学2019程序设计实践.html
+http://quincy.ink/湖南大学第15届校赛-H-Longest-Common-Palindrome-Substring.html
+http://quincy.ink/Template-of-ACM.html
+http://quincy.ink/ARM嵌入式系统-学习笔记.html
+http://quincy.ink/算法设计与分析-学习笔记.html
+http://quincy.ink/物联网概论-学习笔记.html
+http://quincy.ink/概率论与数理统计-学习笔记.html
+http://quincy.ink/牛客练习赛-41.html
+http://quincy.ink/牛客OI周赛7-普及组.html
+http://quincy.ink/EOJ-Monthly-2019-2.html
+http://quincy.ink/牛客OI周赛7-提高组.html
+http://quincy.ink/牛客练习赛-40A--小D的剧场.html
+http://quincy.ink/牛客练习赛-40C--小A与欧拉路.html
+http://quincy.ink/CSU 1803--2016.html
+http://quincy.ink/ZOJ 4011--Happy-Sequence.html
+http://quincy.ink/ZOJ 2594--Driving-Straight.html
+http://quincy.ink/Codeforces 110D--Lucky Probability.html
+http://quincy.ink/POJ 2774--Long Long Message.html
