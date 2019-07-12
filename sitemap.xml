@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://quincy.ink/Template-of-ACM.html</loc>
+    <loc>http://quincy.ink/%E8%8B%B1%E8%AF%AD%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0-%E8%BD%AC.html</loc>
     
-    <lastmod>2019-07-09T09:32:43.218Z</lastmod>
+    <lastmod>2019-07-12T08:25:50.058Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://quincy.ink/%E6%B9%98%E6%BD%AD%E5%A4%A7%E5%AD%A62019%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%AE%9E%E8%B7%B5.html</loc>
     
-    <lastmod>2019-07-01T00:16:57.057Z</lastmod>
+    <lastmod>2019-07-12T08:25:29.971Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://quincy.ink/Template-of-ACM.html</loc>
+    
+    <lastmod>2019-07-09T09:32:43.218Z</lastmod>
     
   </url>
   
