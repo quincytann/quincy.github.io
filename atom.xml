@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://quincy.ink/"/>
-  <updated>2019-07-22T11:59:53.367Z</updated>
+  <updated>2019-07-22T13:40:02.154Z</updated>
   <id>http://quincy.ink/</id>
   
   <author>
@@ -21,12 +21,22 @@
     <link href="http://quincy.ink/2019%E6%9D%AD%E7%94%B5%E5%A4%9A%E6%A0%A1-%E8%A1%A5%E9%A2%98%E6%97%A5%E5%BF%97.html"/>
     <id>http://quincy.ink/2019杭电多校-补题日志.html</id>
     <published>2019-07-22T11:59:53.000Z</published>
-    <updated>2019-07-22T11:59:53.367Z</updated>
+    <updated>2019-07-22T13:40:02.154Z</updated>
+    
+    <content type="html"><![CDATA[<p>留点曾经被搞自闭的印象…<a id="more"></a></p><h4 id="第一场"><a href="#第一场" class="headerlink" title="第一场"></a>第一场</h4>]]></content>
     
     <summary type="html">
     
+      &lt;p&gt;留点曾经被搞自闭的印象…
+    
     </summary>
     
+      <category term="ACM" scheme="http://quincy.ink/categories/ACM/"/>
+    
+    
+      <category term="线性基" scheme="http://quincy.ink/tags/%E7%BA%BF%E6%80%A7%E5%9F%BA/"/>
+    
+      <category term="SAM" scheme="http://quincy.ink/tags/SAM/"/>
     
   </entry>
   
