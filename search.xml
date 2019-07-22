@@ -21,8 +21,8 @@
       </categories>
       <tags>
         <tag>dfs</tag>
-        <tag>dp</tag>
         <tag>二分</tag>
+        <tag>dp</tag>
         <tag>分治</tag>
         <tag>单调栈</tag>
         <tag>bitset</tag>
