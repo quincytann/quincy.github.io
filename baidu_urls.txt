@@ -1,3 +1,4 @@
+http://quincy.ink/通信原理-学习笔记.html
 http://quincy.ink/2019杭电多校-补题日志.html
 http://quincy.ink/2019牛客暑期多校训练营-补题日志.html
 http://quincy.ink/CCPC2019女生专场D-Tree.html
@@ -6,7 +7,6 @@ http://quincy.ink/英语语法学习-转.html
 http://quincy.ink/Codeforces-1182C-Beautiful-Lyrics.html
 http://quincy.ink/湘潭大学2019程序设计实践.html
 http://quincy.ink/湖南大学第15届校赛-H-Longest-Common-Palindrome-Substring.html
-http://quincy.ink/Template-of-ACM.html
 http://quincy.ink/ARM嵌入式系统-学习笔记.html
 http://quincy.ink/算法设计与分析-学习笔记.html
 http://quincy.ink/物联网概论-学习笔记.html
