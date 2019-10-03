@@ -227,14 +227,14 @@
     </url>
 
     <url>
-        <loc>http://quincy.ink/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/</loc>
+        <loc>http://quincy.ink/tags/dfs/</loc>
         <lastmod>2019-08-22T08:29:45.923Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://quincy.ink/tags/dfs/</loc>
+        <loc>http://quincy.ink/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/</loc>
         <lastmod>2019-08-22T08:29:45.923Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -248,14 +248,14 @@
     </url>
 
     <url>
-        <loc>http://quincy.ink/tags/dp/</loc>
+        <loc>http://quincy.ink/tags/%E4%BA%8C%E5%88%86/</loc>
         <lastmod>2019-08-22T08:29:45.923Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://quincy.ink/tags/%E4%BA%8C%E5%88%86/</loc>
+        <loc>http://quincy.ink/tags/dp/</loc>
         <lastmod>2019-08-22T08:29:45.923Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -354,7 +354,7 @@
 
     <url>
         <loc>http://quincy.ink/tags/Template/</loc>
-        <lastmod>2019-09-21T15:10:58.289Z</lastmod>
+        <lastmod>2019-09-29T02:04:54.624Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
