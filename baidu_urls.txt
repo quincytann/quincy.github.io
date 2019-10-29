@@ -1,5 +1,4 @@
 http://quincy.ink/数字图像处理-学习笔记.html
-http://quincy.ink/Markdown常用数学符号整理.html
 http://quincy.ink/通信原理-学习笔记.html
 http://quincy.ink/2019杭电多校-补题日志.html
 http://quincy.ink/2019牛客暑期多校训练营-补题日志.html

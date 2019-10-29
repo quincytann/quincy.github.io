@@ -131,7 +131,7 @@
 <meta property="og:site_name" content="Quincy&#39;s Blog">
 <meta property="og:description" content="第一章 数字图像基础 数字图像的概念 数字图像用二维的亮度函数 f(x,y) 表示，函数值与对应点的光强成正比。其中数字化的空间位置称为像素（Pixel），数字化的亮度值称为灰度值，表示数字图像的二维矩阵N*M为空间分辨率。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-10-29T03:27:34.777Z">
+<meta property="og:updated_time" content="2019-10-29T15:08:40.962Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数字图像处理 学习笔记">
 <meta name="twitter:description" content="第一章 数字图像基础 数字图像的概念 数字图像用二维的亮度函数 f(x,y) 表示，函数值与对应点的光强成正比。其中数字化的空间位置称为像素（Pixel），数字化的亮度值称为灰度值，表示数字图像的二维矩阵N*M为空间分辨率。">
@@ -371,7 +371,7 @@
           
   <span class="post-updated">
     &nbsp; | &nbsp; 更新于
-    <time itemprop="dateUpdated" datetime="2019-10-29T11:27:34+08:00" content="2019-10-29">
+    <time itemprop="dateUpdated" datetime="2019-10-29T23:08:40+08:00" content="2019-10-29">
       2019-10-29
     </time>
   </span>
@@ -448,7 +448,7 @@
 </li>
 <li><p>数字图像的多样性</p>
 <p>成像类型多样：<strong>反射成像</strong>是由物体表面反射的电磁波到达成像传感器而成像；<strong>发光成像</strong>是物体本身辐射的电磁波到达成像传感器而成像；<strong>吸收成像</strong>是由于一部分透过物体的电磁波到达成像传感器而成像</p>
-<p>尺度多样：日常观察物体或场景1~10^3; 天文望远镜&gt;10^(30)；电子显微镜&lt;10^(-10)</p>
+<p>尺度多样：日常观察物体或场景$1～10^3$; 天文望远镜$&gt;10^{30}$；电子显微镜$&lt;10^{-10}$</p>
 </li>
 <li><p>根据图像数据量的分类</p>
 <p>二值图像：每一个像素仅占用1位，灰度值为0或1，其中，0表示黑色，1表示白色</p>
@@ -473,6 +473,36 @@
 <li>模糊效应<br>长时间曝光过程中成像设备与成像场景的相对运动而造成运动模糊；<br>光学镜头散焦、大气湍流、短时间曝光而造成散焦模糊。</li>
 <li>块效应<br>在相邻块之间引入的非连续性，视觉上看似马赛克的效果。<br>块效应产生的原因：<br>对图像分块处理而引起的块状失真。<br>在图像压缩编码中，分块离散余弦变换编码和分块运动补偿是造成块效应的两个主要原因。</li>
 <li>噪声<br>感光器件接收光信号并输出的过程中产生的异常像素。<br>根据噪声的分布和统计特征，成像系统的噪声源可以分为光电散粒噪声、读出噪声和脉冲噪声等</li>
+</ul>
+</li>
+</ol>
+<p>&lt;/br&gt;</p>
+<h4 id="第二章-数字图像处理基础"><a href="#第二章-数字图像处理基础" class="headerlink" title="第二章 数字图像处理基础"></a>第二章 数字图像处理基础</h4><ol>
+<li><p>数字图像处理的关键阶段：图像获取、图像增强、图像恢复、形态学处理、图像分割、表示与描述、目标识别</p>
+</li>
+<li><p>数码相机组成：光圈、镜头和成像传感器</p>
+</li>
+<li><p>凸透镜成像利用光的折射和光的直线传播原理成像</p>
+</li>
+<li><p>人眼组成：瞳孔、晶状体和视网膜</p>
+</li>
+<li><p>人类视觉特性</p>
+<p>视觉范围：$10^{-6}～10^6 cd/m^2$</p>
+<p>同时观察的动态范围：$10^3cd/m^2$</p>
+<p>分辨力：人眼中央凹处的分辨力最高，与物体所处的背景亮度和对比度、物体的运动速度和颜色都有关</p>
+<p>视觉停留：光对视网膜所产生的视觉在光的作用终止后，仍能保留短暂时间的现象</p>
+<p>对比敏感度、边缘对比效应、侧抑制效应(边缘增强)、马赫带现象、主观轮廓、视觉错觉、掩盖效应…</p>
+</li>
+<li><p>线性不移系统</p>
+<p>系统冲激响应是指系统对输入为单位冲激函数的响应输出</p>
+<p>线性移不变算子的输出等于输入信号与系统冲激响应的卷积</p>
+</li>
+<li><p>像素的空间关系</p>
+<p>领域：</p>
+<ul>
+<li>4领域：UDLR4个</li>
+<li>对角领域 ：对角4个</li>
+<li>8领域 ：周围8个</li>
 </ul>
 </li>
 </ol>
@@ -566,8 +596,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Markdown常用数学符号整理.html" rel="next" title="Markdown常用数学符号整理">
-                <i class="fa fa-chevron-left"></i> Markdown常用数学符号整理
+              <a href="/通信原理-学习笔记.html" rel="next" title="通信原理 学习笔记">
+                <i class="fa fa-chevron-left"></i> 通信原理 学习笔记
               </a>
             
           </div>
@@ -662,7 +692,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">27</span>
+                  <span class="site-state-item-count">26</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -673,7 +703,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -767,7 +797,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#第一章-数字图像基础"><span class="nav-number">1.</span> <span class="nav-text">第一章 数字图像基础</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#第一章-数字图像基础"><span class="nav-number">1.</span> <span class="nav-text">第一章 数字图像基础</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第二章-数字图像处理基础"><span class="nav-number">2.</span> <span class="nav-text">第二章 数字图像处理基础</span></a></li></ol></div>
             
 
           </div>
@@ -801,7 +831,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">86.2k</span>
+    <span title="Site words total count">86.4k</span>
   
 </div>
 
