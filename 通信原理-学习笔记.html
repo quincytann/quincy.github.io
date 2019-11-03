@@ -123,21 +123,21 @@
 
 
 
-<meta name="description" content="第一章 绪论 通信：发送者和接受者通过某种媒体进行的信息传递 消息：通信系统传输对象，信息的载体；分连续消息(语音、温度数据等)和离散消息(符号、文字、数字等)两大类 信息：消息的内涵 信号：消息的传输载体，分为模拟信号和数字信号两大类">
+<meta name="description" content="第一章 绪论 模拟信号与数字信号的区别(给定信号，要求能够区分) 模拟信号：载荷消息的信号参量取值连续（不可数、无穷多），如电话机输出的语音信号，其电压瞬时值随时间连续变化。也称为连续信号，连续是指信号载荷的消息的常量连续变化，在某一取值范围内可以取无穷多个值，而不一定要在时间上连续。 数字信号：载荷消息的信号参量只有有限个取值，如电报机、计算机输出的信号。">
 <meta name="keywords" content="通信原理">
 <meta property="og:type" content="article">
 <meta property="og:title" content="通信原理 学习笔记">
 <meta property="og:url" content="http://quincy.ink/通信原理-学习笔记.html">
 <meta property="og:site_name" content="Quincy&#39;s Blog">
-<meta property="og:description" content="第一章 绪论 通信：发送者和接受者通过某种媒体进行的信息传递 消息：通信系统传输对象，信息的载体；分连续消息(语音、温度数据等)和离散消息(符号、文字、数字等)两大类 信息：消息的内涵 信号：消息的传输载体，分为模拟信号和数字信号两大类">
+<meta property="og:description" content="第一章 绪论 模拟信号与数字信号的区别(给定信号，要求能够区分) 模拟信号：载荷消息的信号参量取值连续（不可数、无穷多），如电话机输出的语音信号，其电压瞬时值随时间连续变化。也称为连续信号，连续是指信号载荷的消息的常量连续变化，在某一取值范围内可以取无穷多个值，而不一定要在时间上连续。 数字信号：载荷消息的信号参量只有有限个取值，如电报机、计算机输出的信号。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://s2.ax1x.com/2019/09/16/nR4On1.jpg">
 <meta property="og:image" content="https://s2.ax1x.com/2019/09/16/nR4bc9.jpg">
 <meta property="og:image" content="https://s2.ax1x.com/2019/09/16/nR4qXR.jpg">
-<meta property="og:updated_time" content="2019-09-18T14:08:34.633Z">
+<meta property="og:updated_time" content="2019-11-03T03:21:49.734Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="通信原理 学习笔记">
-<meta name="twitter:description" content="第一章 绪论 通信：发送者和接受者通过某种媒体进行的信息传递 消息：通信系统传输对象，信息的载体；分连续消息(语音、温度数据等)和离散消息(符号、文字、数字等)两大类 信息：消息的内涵 信号：消息的传输载体，分为模拟信号和数字信号两大类">
+<meta name="twitter:description" content="第一章 绪论 模拟信号与数字信号的区别(给定信号，要求能够区分) 模拟信号：载荷消息的信号参量取值连续（不可数、无穷多），如电话机输出的语音信号，其电压瞬时值随时间连续变化。也称为连续信号，连续是指信号载荷的消息的常量连续变化，在某一取值范围内可以取无穷多个值，而不一定要在时间上连续。 数字信号：载荷消息的信号参量只有有限个取值，如电报机、计算机输出的信号。">
 <meta name="twitter:image" content="https://s2.ax1x.com/2019/09/16/nR4On1.jpg">
 
 
@@ -375,8 +375,8 @@
           
   <span class="post-updated">
     &nbsp; | &nbsp; 更新于
-    <time itemprop="dateUpdated" datetime="2019-09-18T22:08:34+08:00" content="2019-09-18">
-      2019-09-18
+    <time itemprop="dateUpdated" datetime="2019-11-03T11:21:49+08:00" content="2019-11-03">
+      2019-11-03
     </time>
   </span>
 
@@ -447,12 +447,11 @@
 
       
         <h4 id="第一章-绪论"><a href="#第一章-绪论" class="headerlink" title="第一章 绪论"></a>第一章 绪论</h4><ol>
-<li><p>通信：发送者和接受者通过某种媒体进行的信息传递</p>
-<p>消息：通信系统传输对象，信息的载体；分连续消息(语音、温度数据等)和离散消息(符号、文字、数字等)两大类</p>
-<p>信息：消息的内涵</p>
-<p>信号：消息的传输载体，分为模拟信号和数字信号两大类<a id="more"></a></p>
+<li><p>模拟信号与数字信号的区别(给定信号，要求能够区分)</p>
+<p>模拟信号：载荷消息的信号参量取值连续（不可数、无穷多），如电话机输出的语音信号，其电压瞬时值随时间连续变化。也称为连续信号，连续是指信号载荷的消息的常量连续变化，在某一取值范围内可以取无穷多个值，而不一定要在时间上连续。</p>
+<p>数字信号：载荷消息的信号参量只有有限个取值，如电报机、计算机输出的信号。<a id="more"></a></p>
 </li>
-<li><p>通信系统模型</p>
+<li><p>通信系统的一般模型</p>
 <p>① 一般模型</p>
 <p><a href="https://imgchr.com/i/nR4On1" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/09/16/nR4On1.jpg" alt="nR4On1.jpg"></a></p>
 <p>信源：把消息变为原始电信号(基带信号)</p>
@@ -470,96 +469,99 @@
 <p>加密与解密：提高安全性</p>
 <p>调制：使信号适应信道的特性</p>
 <p>同步：使收发两端的信号在时间上保持步调一直一致</p>
-<p>Advantages：抗干扰能力强，噪声不积累；传输差错可控；便于数字信息的处理、变换、储存；易于集成；易于加密且保密性好</p>
-<p>Disadvantages：可能需要较大的传输带宽；对同步要求高</p>
 </li>
-<li><p>通信系统的分类</p>
-<p>按通信业务：电报通信、电话通信、数据通信、图像通信等</p>
-<p>按调制方式：基带传输、带通传输</p>
-<p>按信号特征：模拟信号、数字信号</p>
-<p>按传输媒介：有线通信、无线通信</p>
-<p>按工作波段：长波通信、中波通信、短波通信远红外通信</p>
-<p>按复用方式：频分复用、时分复用、码分复用</p>
+<li><p>数字通信的特点</p>
+<p>优点：抗干扰能力强，噪声不积累；传输差错可控；便于数字信息的处理、变换、储存；易于集成，使通信设备轻量化；易于加密且保密性好</p>
+<p>缺点：可能需要较大的传输带宽；对同步要求高，系统设备复杂</p>
 </li>
-<li><p>通信方式</p>
-<p>单工通信：只能单方向传输的工作方式</p>
-<p>半双工通信：通信双方都能收发消息，但不能同时收发</p>
-<p>全双工通信：通信双方可同时收发消息</p>
-<hr>
-<p>并行传输：将信息的数字码元序列以成组的方式在一条以上信道同时传输</p>
-<p>串行传输：将信息的数字码元序列以串行方式一个码元接一个码元地在一条信道传输</p>
-</li>
-<li><p>信息度量</p>
-<p>①信息量 ，其中a=e时,单位为奈特(nit)；a=10时,单位为哈特莱(Hartly)；a=10时,单位为比特(bit,b)</p>
+<li><p>信息及其度量</p>
+<p>①信息量 ，其中a=e时,单位为奈特(nit)；a=10时,单位为哈特莱(Hartly)；a=2时,单位为比特(bit,b)</p>
 <script type="math/tex; mode=display">
 I = log_a\frac{1}{P(x)} = -log_aP(x)</script><p>②平均信息量(熵)，等概率时，$H_{max}=log_2M$；M代表符号集合大小</p>
 <script type="math/tex; mode=display">
 H(x)=-\sum_{i=1}^{M}P(x_i)log_2P(x_i) (b/符号)</script><p>③总信息量，n代表符号数</p>
 <script type="math/tex; mode=display">
 I=n*H(x)</script></li>
-<li><p>主要性能指标</p>
+<li><p>通信系统的两个性能指标</p>
 <p>①有效性</p>
 <p>模拟通信系统看传输同样信源信号所需带宽，其越小频带利用率越高，有效性越好</p>
 <p>数字通信系统</p>
 <script type="math/tex; mode=display">
-\eta=\frac{R_B}{B} (Baud/Hz) 或 \eta=\frac{R_b}{B}(b/s*Hz)</script></li>
+R_B(码元传输速率，波特率) = \frac{1}{T_B(码元持续时间,码元宽度)} (Baud)</script><script type="math/tex; mode=display">
+R_b(信息传输速率,比特率) = R_B*log_2M(b/s)</script><script type="math/tex; mode=display">
+频带利用率\eta = \frac{R_B}{B}(Baud/Hz) 或 \eta_b = \frac{R_b}{B}(b/(s*Hz))</script><p>②可靠性</p>
+<script type="math/tex; mode=display">
+误码率 P_e = \frac{错误码元数}{传输总码元数}</script><script type="math/tex; mode=display">
+误信率P_b = \frac{错误比特数}{传输总比特数}</script><p>在二进制中，$P_b=P_e$；M进制中，$P_b&lt;P_e$</p>
+</li>
 </ol>
-<script type="math/tex; mode=display">
-   R_B(码元传输速度,波特率)=\frac{1}{T_B(码元持续时间,码元宽度)}(Baud)</script><script type="math/tex; mode=display">
-   当二进制码元持续时间为T_b,则T_B=T_b*log_2M</script><script type="math/tex; mode=display">
-R_b(信息传输速率,比特率)=R_B*H(b/s)=(等概率时)R_B*log_2M</script><p>   ②可靠性</p>
-<p>   误码率：</p>
-<script type="math/tex; mode=display">
-   P_e = \frac{N_e(错误接受码元数)}{N(传输总码元数)}</script><p>   误信率：</p>
-<script type="math/tex; mode=display">
-   P_b = \frac{I_e(错误接受比特数)}{I(传输总比特数)}</script><p>   两者关系：二进制时，$P_b=P_e$；M进制时，$P_b&lt;P_e$</p>
+<p><br></p>
 <h4 id="第二章-确知信号"><a href="#第二章-确知信号" class="headerlink" title="第二章 确知信号"></a>第二章 确知信号</h4><ol>
-<li><p>信号分类</p>
-<p>① 信号在定义域内的任意时刻都有确定的函数值，即可表示为确定的时间函数，则这种信号为确知信号；</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;否则为随机信号或者不确知信号</p>
-<p>② 确知信号s(t)每隔一段时间间隔按相同规律重复且无始无终，即s(t)=s(t+T)，则称为周期信号；</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;否则为非周期信号</p>
-<p>③ 能量信号：信号的振幅和持续时间均有限，非周期性</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;功率信号：信号的持续时间无限</p>
+<li><p>单位门函数频谱密度 ：$  \tau Sa(\pi f  \tau )$</p>
 </li>
-<li><p>频域分析</p>
-<ul>
-<li>频谱</li>
-</ul>
+<li><p>单位冲激函数的特点（$ \delta $函数的性质）</p>
+<p>①可用抽样函数的极限表示</p>
 <script type="math/tex; mode=display">
-C_n=C(nf_0)=\frac{1}{T_0}\int_{-T_0/2}^{T_0/2}s(t)e^{-j2\pi nf_0t} dt</script><p>​    $f_0=\frac{1}{T_0}$为基频，$nf_0$为n次谐波频率；$C_n$反映了信号中各次谐波的幅度值和相位值</p>
-<p>​    特点：正频率部分和负频率部分存在复数共轭关系，即模偶对称，相位奇对称</p>
-<ul>
-<li><p>频谱密度</p>
+\delta(t) = \lim_{k\to \infty}\frac{k}{\pi}Sa(kt)</script><p>②</p>
 <script type="math/tex; mode=display">
-S(f)=\int_{-\infty}^{\infty}s(t)e^{-j2\pi ft} dt ，s(t)=\int_{-\infty}^{\infty}S(f)e^{j2\pi ft} df</script><script type="math/tex; mode=display">
-S(w)=\int_{-\infty}^{\infty}s(t)e^{-jwt} dt ，s(t)=\frac{1}{2\pi}\int_{-\infty}^{\infty}S(w)e^{jwt} dw</script><p>单位门矩阵脉冲的频谱密度：$\tau Sa(\pi ft)$</p>
-</li>
-<li><p>能量谱密度</p>
+f(t_0)=\int_{-\infty}^{\infty}f(t)\delta(t-t_0)dt</script><p>③可以看做单位阶跃函数的导数</p>
 <script type="math/tex; mode=display">
-G(f)=|S(f)|^2 (J/Hz)</script></li>
-</ul>
-</li>
+u(t) =\begin{cases}0, & t<0 \\1, & t>0 \end{cases};u'(t)=\delta(t)</script></li>
 </ol>
-<ul>
-<li>功率谱密度<script type="math/tex; mode=display">
-P(f)=\lim_{T\rightarrow \infty} \frac{1}{T}|S_T(f)|^2 (W/Hz) = (周期信号时)\sum_{n=-\infty}^{\infty}|C_n|^2\delta(f-nf_0)</script></li>
-</ul>
-<ol>
-<li><p>时域分析</p>
-<ul>
-<li><p>两能量信号的互相关函数，其它类似</p>
-<script type="math/tex; mode=display">
-R_{12}(\tau)=\int_{-\infty}^{\infty}s_1(t)s_2(t+\tau)dt</script></li>
-<li><p>自相关函数的一些性质</p>
-<script type="math/tex; mode=display">
-能量信号：R(\tau)\iff G(f),R(0)=E</script><script type="math/tex; mode=display">
-功率信号：R(\tau)\iff P(f),R(0)=P</script></li>
-</ul>
-</li>
+<p><br></p>
+<h4 id="第三章-随机过程"><a href="#第三章-随机过程" class="headerlink" title="第三章 随机过程"></a>第三章 随机过程</h4><ol>
+<li>什么是随机过程？</li>
+<li>什么是平稳随机过程？</li>
+<li>什么是各态历经性？</li>
+<li>广义平稳、严平稳（结论）</li>
+<li>平稳随机过程通过线性系统（输出均值、功率谱密度）</li>
+<li>窄带过程的两种表示方法（结论1，2）and 包络和相位的形式（服从的分布）</li>
 </ol>
-<h4 id="第三章-随机过程"><a href="#第三章-随机过程" class="headerlink" title="第三章 随机过程"></a>第三章 随机过程</h4><p><br></p>
-<p>Updating…</p>
+<p><br></p>
+<h4 id="第四章-信道"><a href="#第四章-信道" class="headerlink" title="第四章 信道"></a>第四章 信道</h4><ol>
+<li>信道的分类</li>
+<li>随参信道 and 恒参信道</li>
+<li>多径效应</li>
+<li>频率选择性衰弱</li>
+<li>连续信道容量的表达式 </li>
+</ol>
+<p><br></p>
+<h4 id="第五章-模拟调制系统"><a href="#第五章-模拟调制系统" class="headerlink" title="第五章 模拟调制系统"></a>第五章 模拟调制系统</h4><ol>
+<li>调制的目的和作用</li>
+<li>线性调制有哪一些？为什么要线性调制？</li>
+<li>单边带调制实现的两种方法</li>
+<li>调频信号的带宽</li>
+</ol>
+<p><br></p>
+<h4 id="第六章-数字基带传输系统"><a href="#第六章-数字基带传输系统" class="headerlink" title="第六章 数字基带传输系统"></a>第六章 数字基带传输系统</h4><ol>
+<li>什么是数字基带传输系统？</li>
+<li>什么是数字频带传输系统？</li>
+<li>导致误码率的两个原因</li>
+<li>数字基带信号的几种波形（画图）</li>
+<li>基带信号的频谱情况/离散 or 不离散（结论）</li>
+<li>无码间串扰的时域条件 推导出 频率条件(大题15)</li>
+</ol>
+<p><br></p>
+<h4 id="第七章-数字带通传输系统"><a href="#第七章-数字带通传输系统" class="headerlink" title="第七章 数字带通传输系统"></a>第七章 数字带通传输系统</h4><ol>
+<li>两种解调方法</li>
+<li>几种二进制调制系统所占带宽</li>
+<li>2DPSK的解调方法</li>
+<li>2FSK的分析模型图 （画图，图7-25,7-22,7-26） 每个模块的作用</li>
+<li>性能比较 为什么</li>
+</ol>
+<p><br></p>
+<h4 id="第十章-信源编码"><a href="#第十章-信源编码" class="headerlink" title="第十章 信源编码"></a>第十章 信源编码</h4><ol>
+<li>数字化三个步骤</li>
+<li>两个抽样定理</li>
+<li>典型电话信号所占带宽</li>
+<li>13 15折线（例题）</li>
+</ol>
+<p><br></p>
+<h4 id="第十一章-差错控制编码"><a href="#第十一章-差错控制编码" class="headerlink" title="第十一章 差错控制编码"></a>第十一章 差错控制编码</h4><ol>
+<li>差错控制编码的作用</li>
+<li>最小码距d0和编码检错和纠错的三个公式</li>
+</ol>
+<p><br></p>
 
       
     </div>
@@ -855,7 +857,7 @@ R_{12}(\tau)=\int_{-\infty}^{\infty}s_1(t)s_2(t+\tau)dt</script></li>
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#第一章-绪论"><span class="nav-number">1.</span> <span class="nav-text">第一章 绪论</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第二章-确知信号"><span class="nav-number">2.</span> <span class="nav-text">第二章 确知信号</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第三章-随机过程"><span class="nav-number">3.</span> <span class="nav-text">第三章 随机过程</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#第一章-绪论"><span class="nav-number">1.</span> <span class="nav-text">第一章 绪论</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第二章-确知信号"><span class="nav-number">2.</span> <span class="nav-text">第二章 确知信号</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第三章-随机过程"><span class="nav-number">3.</span> <span class="nav-text">第三章 随机过程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第四章-信道"><span class="nav-number">4.</span> <span class="nav-text">第四章 信道</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第五章-模拟调制系统"><span class="nav-number">5.</span> <span class="nav-text">第五章 模拟调制系统</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第六章-数字基带传输系统"><span class="nav-number">6.</span> <span class="nav-text">第六章 数字基带传输系统</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第七章-数字带通传输系统"><span class="nav-number">7.</span> <span class="nav-text">第七章 数字带通传输系统</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第十章-信源编码"><span class="nav-number">8.</span> <span class="nav-text">第十章 信源编码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第十一章-差错控制编码"><span class="nav-number">9.</span> <span class="nav-text">第十一章 差错控制编码</span></a></li></ol></div>
             
 
           </div>
@@ -889,7 +891,7 @@ R_{12}(\tau)=\int_{-\infty}^{\infty}s_1(t)s_2(t+\tau)dt</script></li>
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">87.1k</span>
+    <span title="Site words total count">87k</span>
   
 </div>
 
