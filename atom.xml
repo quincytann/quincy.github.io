@@ -143,6 +143,10 @@
     
       <category term="并查集" scheme="http://quincy.ink/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/"/>
     
+      <category term="PAM" scheme="http://quincy.ink/tags/PAM/"/>
+    
+      <category term="主席树" scheme="http://quincy.ink/tags/%E4%B8%BB%E5%B8%AD%E6%A0%91/"/>
+    
       <category term="分治" scheme="http://quincy.ink/tags/%E5%88%86%E6%B2%BB/"/>
     
       <category term="单调栈" scheme="http://quincy.ink/tags/%E5%8D%95%E8%B0%83%E6%A0%88/"/>
@@ -155,13 +159,9 @@
     
       <category term="SAM" scheme="http://quincy.ink/tags/SAM/"/>
     
-      <category term="PAM" scheme="http://quincy.ink/tags/PAM/"/>
-    
       <category term="组合数学" scheme="http://quincy.ink/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/"/>
     
       <category term="几何" scheme="http://quincy.ink/tags/%E5%87%A0%E4%BD%95/"/>
-    
-      <category term="主席树" scheme="http://quincy.ink/tags/%E4%B8%BB%E5%B8%AD%E6%A0%91/"/>
     
   </entry>
   
@@ -483,9 +483,9 @@
     
       <category term="数学" scheme="http://quincy.ink/tags/%E6%95%B0%E5%AD%A6/"/>
     
-      <category term="dp" scheme="http://quincy.ink/tags/dp/"/>
-    
       <category term="bfs" scheme="http://quincy.ink/tags/bfs/"/>
+    
+      <category term="dp" scheme="http://quincy.ink/tags/dp/"/>
     
       <category term="并查集" scheme="http://quincy.ink/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/"/>
     

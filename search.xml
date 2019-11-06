@@ -60,16 +60,16 @@
         <tag>dp</tag>
         <tag>离散化</tag>
         <tag>并查集</tag>
+        <tag>PAM</tag>
+        <tag>主席树</tag>
         <tag>分治</tag>
         <tag>单调栈</tag>
         <tag>bitset</tag>
         <tag>单调队列</tag>
         <tag>模拟</tag>
         <tag>SAM</tag>
-        <tag>PAM</tag>
         <tag>组合数学</tag>
         <tag>几何</tag>
-        <tag>主席树</tag>
       </tags>
   </entry>
   <entry>
@@ -217,8 +217,8 @@
       </categories>
       <tags>
         <tag>数学</tag>
-        <tag>dp</tag>
         <tag>bfs</tag>
+        <tag>dp</tag>
         <tag>并查集</tag>
       </tags>
   </entry>

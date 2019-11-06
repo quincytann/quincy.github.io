@@ -1,24 +1,1184 @@
-<!DOCTYPE html><html class="theme-next pisces use-motion" lang="zh-Hans"><head><meta name="generator" content="Hexo 3.8.0"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><meta name="theme-color" content="#222"><script>!function(){var t=document.createElement("script"),e=window.location.protocol.split(":")[0];t.src="https"===e?"https://zz.bdstatic.com/linksubmit/push.js":"http://push.zhanzhang.baidu.com/push.js";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}()</script><script></script><script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script><link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-flash.min.css" rel="stylesheet"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link href="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css"><link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"><link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css"><link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.png?v=5.1.4"><link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png?v=5.1.4"><link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.png?v=5.1.4"><link rel="mask-icon" href="/images/favicon.png?v=5.1.4" color="#222"><meta name="keywords" content="通信原理,"><link rel="alternate" href="/atom.xml" title="Quincy's Blog" type="application/atom+xml"><meta name="description" content="第一章 绪论 模拟信号与数字信号的区别(给定信号，要求能够区分) 模拟信号：载荷消息的信号参量取值连续（不可数、无穷多），如电话机输出的语音信号，其电压瞬时值随时间连续变化。也称为连续信号，连续是指信号载荷的消息的常量连续变化，在某一取值范围内可以取无穷多个值，而不一定要在时间上连续。 数字信号：载荷消息的信号参量只有有限个取值，如电报机、计算机输出的信号。"><meta name="keywords" content="通信原理"><meta property="og:type" content="article"><meta property="og:title" content="通信原理 学习笔记"><meta property="og:url" content="http://quincy.ink/通信原理-学习笔记.html"><meta property="og:site_name" content="Quincy&#39;s Blog"><meta property="og:description" content="第一章 绪论 模拟信号与数字信号的区别(给定信号，要求能够区分) 模拟信号：载荷消息的信号参量取值连续（不可数、无穷多），如电话机输出的语音信号，其电压瞬时值随时间连续变化。也称为连续信号，连续是指信号载荷的消息的常量连续变化，在某一取值范围内可以取无穷多个值，而不一定要在时间上连续。 数字信号：载荷消息的信号参量只有有限个取值，如电报机、计算机输出的信号。"><meta property="og:locale" content="zh-Hans"><meta property="og:image" content="https://s2.ax1x.com/2019/09/16/nR4On1.jpg"><meta property="og:image" content="https://s2.ax1x.com/2019/09/16/nR4bc9.jpg"><meta property="og:image" content="https://s2.ax1x.com/2019/09/16/nR4qXR.jpg"><meta property="og:image" content="https://s2.ax1x.com/2019/11/04/KxKt3D.md.jpg"><meta property="og:image" content="https://s2.ax1x.com/2019/11/04/KxKs4f.md.jpg"><meta property="og:image" content="https://s2.ax1x.com/2019/11/04/KxK2vQ.md.jpg"><meta property="og:updated_time" content="2019-11-06T03:08:38.499Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="通信原理 学习笔记"><meta name="twitter:description" content="第一章 绪论 模拟信号与数字信号的区别(给定信号，要求能够区分) 模拟信号：载荷消息的信号参量取值连续（不可数、无穷多），如电话机输出的语音信号，其电压瞬时值随时间连续变化。也称为连续信号，连续是指信号载荷的消息的常量连续变化，在某一取值范围内可以取无穷多个值，而不一定要在时间上连续。 数字信号：载荷消息的信号参量只有有限个取值，如电报机、计算机输出的信号。"><meta name="twitter:image" content="https://s2.ax1x.com/2019/09/16/nR4On1.jpg"><script type="text/javascript" id="hexo.configurations">var NexT=window.NexT||{},CONFIG={root:"/",scheme:"Pisces",version:"5.1.4",sidebar:{position:"left",display:"always",offset:10,b2t:!1,scrollpercent:!0,onmobile:!0},fancybox:!0,tabs:!0,motion:{enable:!0,async:!1,transition:{post_block:"fadeIn",post_header:"slideDownIn",post_body:"slideDownIn",coll_header:"slideLeftIn",sidebar:"slideUpIn"}},duoshuo:{userId:"0",author:"博主"},algolia:{applicationID:"",apiKey:"",indexName:"",hits:{per_page:10},labels:{input_placeholder:"Search for Posts",hits_empty:"We didn't find any results for the search: ${query}",hits_stats:"${hits} results found in ${time} ms"}}}</script><link rel="canonical" href="http://quincy.ink/通信原理-学习笔记.html"><title>通信原理 学习笔记 | Quincy's Blog</title></head><body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans"><div class="container sidebar-position-left page-post-detail"><div class="headband"></div><header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader"><div class="header-inner"><div class="site-brand-wrapper"><div class="site-meta"><div class="custom-logo-site-title"><a href="/" class="brand" rel="start"><span class="logo-line-before"><i></i></span> <span class="site-title">Quincy's Blog</span><span class="logo-line-after"><i></i></span></a></div><p class="site-subtitle">学习时长两年的在校本科生</p></div><div class="site-nav-toggle"> <button><span class="btn-bar"></span><span class="btn-bar"></span><span class="btn-bar"></span></button></div></div><nav class="site-nav"><ul id="menu" class="menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i><br> 首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i><br> 标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i><br> 分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i><br> 归档</a></li><li class="menu-item menu-item-search"><a href="javascript:;" class="popup-trigger"><i class="menu-item-icon fa fa-search fa-fw"></i><br> 搜索</a></li></ul><div class="site-search"><div class="popup search-popup local-search-popup"><div class="local-search-header clearfix"><span class="search-icon"><i class="fa fa-search"></i></span><span class="popup-btn-close"><i class="fa fa-times-circle"></i></span><div class="local-search-input-wrapper"> <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input"></div></div><div id="local-search-result"></div></div></div></nav></div></header><main id="main" class="main"><div class="main-inner"><div class="content-wrap"><div id="content" class="content"><div id="posts" class="posts-expand"><article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article"><div class="post-block"><link itemprop="mainEntityOfPage" href="http://quincy.ink/通信原理-学习笔记.html"><span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person"><meta itemprop="name" content="Quincy"><meta itemprop="description" content=""><meta itemprop="image" content="/images/01.jpg"></span><span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization"><meta itemprop="name" content="Quincy's Blog"></span><header class="post-header"><h1 class="post-title" itemprop="name headline">通信原理 学习笔记</h1><div class="post-meta"><span class="post-time"><span class="post-meta-item-icon"><i class="fa fa-calendar-o"></i></span> <span class="post-meta-item-text">发表于</span> <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-16T15:49:32+08:00">2019-09-16</time></span> <span class="post-updated">&nbsp; | &nbsp; 更新于 <time itemprop="dateUpdated" datetime="2019-11-06T11:08:38+08:00" content="2019-11-06">2019-11-06</time></span> <span class="post-category"><span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-folder-o"></i></span> <span class="post-meta-item-text">分类于</span> <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/通信原理/" itemprop="url" rel="index"><span itemprop="name">通信原理</span></a></span></span> <span class="post-comments-count"><span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-comment-o"></i></span><a href="/通信原理-学习笔记.html#comments" itemprop="discussionUrl"><span class="post-comments-count valine-comment-count" data-xid="/通信原理-学习笔记.html" itemprop="commentCount"></span></a></span> <span class="post-meta-divider">|</span><span class="page-pv"><i class="fa fa-file-o"></i> 阅读量<span class="busuanzi-value" id="busuanzi_value_page_pv"></span> 次</span></div></header><div class="post-body" itemprop="articleBody"><h4 id="第一章-绪论"><a href="#第一章-绪论" class="headerlink" title="第一章 绪论"></a>第一章 绪论</h4><ol><li><p>模拟信号与数字信号的区别(给定信号，要求能够区分)</p><p>模拟信号：载荷消息的信号参量取值连续（不可数、无穷多），如电话机输出的语音信号，其电压瞬时值随时间连续变化。也称为连续信号，连续是指信号载荷的消息的常量连续变化，在某一取值范围内可以取无穷多个值，而不一定要在时间上连续。</p><p>数字信号：载荷消息的信号参量只有有限个取值，如电报机、计算机输出的信号。<a id="more"></a></p></li><li><p>通信系统的一般模型</p><p>① 一般模型</p><p><a href="https://imgchr.com/i/nR4On1" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/09/16/nR4On1.jpg" alt="nR4On1.jpg"></a></p><p>信源：把消息变为原始电信号(基带信号)</p><p>发送设备：信号变换、放大、滤波、编码和调制等过程</p><p>信道：传输媒介</p><p>接收设备：信号放大、译码、解调等</p><p>信宿：把原始电信号变为消息</p><p>② 模拟通信模型</p><p><a href="https://imgchr.com/i/nR4bc9" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/09/16/nR4bc9.jpg" alt="nR4bc9.jpg"></a></p><p>调制器：基带信号变换为已调信号(带通信号)</p><p>③ 数字通信模型</p><p><a href="https://imgchr.com/i/nR4qXR" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/09/16/nR4qXR.jpg" alt="nR4qXR.jpg"></a></p><p>信源编码与译码：提高信息传输有效性；完成模/数(A/D)转换</p><p>信道编码与译码：加入监督码元，提高通信系统可靠性</p><p>加密与解密：提高安全性</p><p>调制：使信号适应信道的特性</p><p>同步：使收发两端的信号在时间上保持步调一直一致</p></li><li><p>数字通信的特点</p><p>优点：抗干扰能力强，噪声不积累；传输差错可控；便于数字信息的处理、变换、储存；易于集成，使通信设备轻量化；易于加密且保密性好</p><p>缺点：可能需要较大的传输带宽；对同步要求高，系统设备复杂</p></li><li><p>信息及其度量</p><p>①信息量 ，其中a=e时,单位为奈特(nit)；a=10时,单位为哈特莱(Hartly)；a=2时,单位为比特(bit,b)</p><script type="math/tex;mode=display">
-I = log_a\frac{1}{P(x)} = -log_aP(x)</script><p>②平均信息量(熵)，等概率时，$H_{max}=log_2M$；M代表符号集合大小</p><script type="math/tex;mode=display">
-H(x)=-\sum_{i=1}^{M}P(x_i)log_2P(x_i) (b/符号)</script><p>③总信息量，n代表符号数</p><script type="math/tex;mode=display">
-I=n*H(x)</script></li><li><p>通信系统的两个性能指标</p><p>①有效性</p><p>模拟通信系统看传输同样信源信号所需带宽，其越小频带利用率越高，有效性越好</p><p>数字通信系统</p><script type="math/tex;mode=display">
-R_B(码元传输速率，波特率) = \frac{1}{T_B(码元持续时间,码元宽度)} (Baud)</script><script type="math/tex;mode=display">
-R_b(信息传输速率,比特率) = R_B*log_2M(b/s)</script><script type="math/tex;mode=display">
-频带利用率\eta = \frac{R_B}{B}(Baud/Hz) 或 \eta_b = \frac{R_b}{B}(b/(s*Hz))</script><p>②可靠性</p><script type="math/tex;mode=display">
-误码率 P_e = \frac{错误码元数}{传输总码元数}</script><script type="math/tex;mode=display">
-误信率P_b = \frac{错误比特数}{传输总比特数}</script><p>在二进制中，$P_b=P_e$；M进制中，$P_b&lt;P_e$</p></li></ol><p><br></p><h4 id="第二章-确知信号"><a href="#第二章-确知信号" class="headerlink" title="第二章 确知信号"></a>第二章 确知信号</h4><ol><li><p>单位门函数频谱密度 ：$ \tau Sa(\pi f \tau )$</p></li><li><p>单位冲激函数的特点（$ \delta $函数的性质）</p><p>①可用抽样函数的极限表示</p><script type="math/tex;mode=display">
-\delta(t) = \lim_{k\to \infty}\frac{k}{\pi}Sa(kt)</script><p>②</p><script type="math/tex;mode=display">
-f(t_0)=\int_{-\infty}^{\infty}f(t)\delta(t-t_0)dt</script><p>③可以看做单位阶跃函数的导数</p><script type="math/tex;mode=display">
-u(t) =\begin{cases}0, & t<0 \\1, & t>0 \end{cases};u'(t)=\delta(t)</script></li></ol><p><br></p><h4 id="第三章-随机过程"><a href="#第三章-随机过程" class="headerlink" title="第三章 随机过程"></a>第三章 随机过程</h4><ol><li><p>什么是随机过程？</p><p>①随机试验的全体样本函数的集合</p><p>②在时间进程中处于不同时刻的随机变量的集合</p><p>兼有随机变量和时间函数的特点。</p></li><li><p>什么是平稳随机过程？</p><p>狭义平稳(严平稳)；随机过程的统计特性与时间起点无关，即时间平移不影响其任何统计特性，则称该随机过程是在严格意义下的平稳随机过程，简称严平稳随机过程。</p><p>广义平稳：①均值与t无关，为常数a；②自相关函数只与时间间t2-t1有关</p><p>严平稳随机过程必定是广义平稳过程，反之不一定成立。</p></li><li><p>什么是各态历经性？</p><p>含义：随机过程中任一次实现都经历了随机过程的所有可能状态。</p><p>意义：过程的统计平均值和样本的时间平均值相同，可用一次实现的”<strong>时间平均</strong>“取代过程的”<strong>统计平均</strong>“，使测量和计算的问题大大简化。</p><p>具有各态历经性的随机过程一定是平稳过程，反之不一定成立。</p></li><li><p>平稳随机过程通过线性系统（输出均值、功率谱密度）</p><p>输出均值：$E = a * H(0)$ ，H(0)为线性系统在f=0处的频率响应，即直流增益</p><p>功率谱密度：$P_o(f) = P_i(f) * |H(f)|^2$，输入过程的功率谱密度乘以系统频率响应模值的平方</p></li><li><p>窄带过程的两种表示方法 and 结论1,2</p><p>表达式1：包络-相位形式</p><script type="math/tex;mode=display">
-\xi(t) = a_{\xi}(t)cos[w_ct+\varphi_{\xi}(t)]，a_{\xi}\ge0</script><p>表达式2：同相-正交形式</p><script type="math/tex;mode=display">
-\xi(t) = \xi_c(t)cosw_ct - \xi_s(t)sinw_ct</script><p>其中$\xi_c(t)$为同相分量 ，$\xi_s(t)$为正交分量</p><p>结论1：对于均值为0，方差为$\sigma_{\xi}^2$的平稳高斯窄带过程，其同相分量和正交分量也是平稳高斯过程；均值皆为0，方差等于为 $\sigma_{\xi}^2$，且两者在同一时刻的取值是互不相关的和统计独立的（因为是高斯过程）。</p><p>结论2：对于均值为0，方差为$\sigma_{\xi}^2$的平稳高斯窄带过程，其包络和相位的一维分布分别为瑞利分布和均匀分布，且两者统计独立。</p></li></ol><p><br></p><h4 id="第四章-信道"><a href="#第四章-信道" class="headerlink" title="第四章 信道"></a>第四章 信道</h4><ol><li><p>信道的分类</p><p>按照传输媒介分类</p><ul><li>有线信道：明线、对称电缆、同轴电缆及光纤等；</li><li>无线信道：可以传输电磁波(包括光波)的空间；传输方式有地波、天波和视线传播三种。</li></ul><p>按信道特性分类</p><ul><li>恒定参量信道：信道特性参数随时间缓变或不变；</li><li>随机参量信道：信道特性参数随时间随机变化；</li></ul></li><li><p>多径效应</p><p>多径传播：①信号的传输时延随时间而变②信号的传输时延随时间而变③信号经过几条路径到达接收端，且每条路径的时延和衰减都随时间而变。</p><p>多径传播对信号的影响称为多径效应。</p></li><li><p>频率选择性衰弱</p><p>衰弱与信号频率及相对时延差有关，当发送信号具有一定频带宽度时，多径传播会导致信号中某些频率成分发生严重的随机性衰弱。</p></li><li><p>连续信道容量的表达式</p><p>B(带宽Hz)、S(信号平均功率W)、N(噪声功率W)、n0(噪声功率谱密度W/Hz)</p><script type="math/tex;mode=display">
-C_t = Blog_2(1+\frac{S}{N})=Blog_2(1+\frac{S}{n_0B})</script></li></ol><p><br></p><h4 id="第五章-模拟调制系统"><a href="#第五章-模拟调制系统" class="headerlink" title="第五章 模拟调制系统"></a>第五章 模拟调制系统</h4><ol><li><p>调制的目的和作用</p><p>将基带信号转换成适合在信道中传输的已调信号，提高发射效率；实现信道的多路复用，以提高信道利用率；扩展信号带宽，提高系统抗干扰能力。</p></li><li><p>线性调制有哪一些？为什么要线性调制？</p><p>调幅(AM)、双边带(DSB)、单边带(SSB)、残留边带(VSB)</p><p>…</p></li><li><p>单边带调制实现的两种方法</p><p>滤波法、相移法</p></li><li><p>调频信号的带宽</p><script type="math/tex;mode=display">
-B_{FM}=2(m_f+1)f_m=2(\Delta f+f_m)</script></li></ol><p><br></p><h4 id="第六章-数字基带传输系统"><a href="#第六章-数字基带传输系统" class="headerlink" title="第六章 数字基带传输系统"></a>第六章 数字基带传输系统</h4><ol><li><p>什么是数字基带传输系统？</p><p>未经过载波调制而直接传输数字基带信号的系统。</p></li><li><p>什么是数字频带传输系统？</p><p>包括了调制和解调过程的传输系统。</p></li><li><p>导致误码率的两个原因</p><p>码间串扰、噪声</p></li><li><p>数字基带信号的几种波形（画图）</p><p>…</p></li><li><p>基带信号的频谱情况</p><p>①二进制随机脉冲序列的功率谱$P_s(f)$可能包含连续谱和离散谱；</p><p>②连续谱总是存在，因为实际中的$G1(f) &ne; G2(f)$。连续谱的形状取决于$g_1(t)$和$g_2(t)$的频谱以及概率P；</p><p>③离散谱是否存在，取决于$g_1(t)$和$g_2(t)$的频谱以及概率P。当$g_1(t) = g_2(t) = g(t) $ 且概率 $P=1/2$时，没有离散分量；</p><p>④根据连续谱可以确定信号的带宽，根据离散谱可以确定随机序列是否有直流分量和定时分量。</p></li><li><p>无码间串扰的时域条件推导出频率条件(大题15)</p><p>教材P146</p></li></ol><p><br></p><h4 id="第七章-数字带通传输系统"><a href="#第七章-数字带通传输系统" class="headerlink" title="第七章 数字带通传输系统"></a>第七章 数字带通传输系统</h4><ol><li><p>两种解调方法</p><p>非相干解调(包络检波法)、相干解调(同步检测法)</p></li><li><p>几种二进制调制系统所占带宽</p><script type="math/tex;mode=display">
-B_{2ASK}=2f_B=2/T_B=2R_B</script><script type="math/tex;mode=display">
-B_{2FSK}\approx |f_2-f_1|+2f_B</script><script type="math/tex;mode=display">
-B_{2PSK}=B_{2DPSK}=B_{2ASK}=2f_B</script></li><li><p>2DPSK的解调方法</p><p> 相干解调(极性比较)—码反变换法、差分相干解调(相位比较法)</p></li><li><p>2FSK的分析模型图 （画图，图7-25,7-22,7-26） 每个模块的作用</p><p><a href="https://imgchr.com/i/KxKt3D" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/11/04/KxKt3D.md.jpg" alt="KxKt3D.md.jpg"></a></p><p><br></p><p><a href="https://imgchr.com/i/KxKs4f" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/11/04/KxKs4f.md.jpg" alt="KxKs4f.md.jpg"></a></p><p><br></p><p><a href="https://imgchr.com/i/KxK2vQ" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/11/04/KxK2vQ.md.jpg" alt="KxK2vQ.md.jpg"></a></p></li><li><p>性能比较 为什么</p><ul><li>误码率：2PSK&lt;2DPSK&lt;2FSK&lt;2ASK</li><li>频带宽度：2FSK系统的频带利用率最低</li></ul></li></ol><p><br></p><h4 id="第十章-信源编码"><a href="#第十章-信源编码" class="headerlink" title="第十章 信源编码"></a>第十章 信源编码</h4><ol><li><p>数字化三个步骤</p><p>抽样、量化、编码</p></li><li><p>两个抽样定理</p><p>低通抽样定理：</p><script type="math/tex;mode=display">
-最低抽样速率f_S\geq2f_H,最大抽样间隔T_s\leq\frac{1}{2f_H}</script><p>带通抽样定理：</p><script type="math/tex;mode=display">
-fs = 2B(1+\frac{k}{n})，B为信号带宽,n为f_H/B的整数部分,k为小数部分</script></li><li><p>典型电话信号带宽</p><p>最高频率3400Hz，抽样频率8000Hz</p></li><li><p>13、15折线（例题）</p><ul><li>A=1和$\mu$=0无压缩效果</li><li>实用的典型值A=87.5，$\mu$=255</li></ul></li></ol><p><br></p><h4 id="第十一章-差错控制编码"><a href="#第十一章-差错控制编码" class="headerlink" title="第十一章 差错控制编码"></a>第十一章 差错控制编码</h4><ol><li><p>差错控制编码的作用</p><p>克服信道噪声及其他干扰引起的误码，提高传输可靠性</p></li><li><p>最小码距d0和编码检错纠错的关系</p><ul><li>要求检测e个错码：$d_0 \geq e+1$</li><li>要求纠正t个错误：$d_0 \geq 2t+1$</li><li>要求纠正t个错码，同时检测e个错误：$d_0 \geq e+t+1,e \gt t$</li></ul></li></ol><p><br></p></div><div><div><div style="text-align:center;color:#ccc;font-size:14px">-------------本文结束<i class="fa fa-heart"></i>感谢阅读-------------</div></div></div><div><div style="padding:10px 0;margin:20px auto;width:90%;text-align:center"><div>Thanks :)</div> <button id="rewardButton" disable="enable" onclick='var qr=document.getElementById("QR");"none"===qr.style.display?qr.style.display="block":qr.style.display="none"'> <span>打赏</span></button><div id="QR" style="display:none"><div id="wechat" style="display:inline-block"> <img id="wechat_qr" src="/images/wechatpay.jpg" alt="Quincy 微信支付"><p>微信支付</p></div><div id="alipay" style="display:inline-block"> <img id="alipay_qr" src="/images/alipay.jpg" alt="Quincy 支付宝"><p>支付宝</p></div></div></div></div><div><ul class="post-copyright"><li class="post-copyright-author"> <strong>本文作者：</strong> Quincy</li><li class="post-copyright-link"> <strong>本文链接：</strong> <a href="http://quincy.ink/通信原理-学习笔记.html" title="通信原理 学习笔记">http://quincy.ink/通信原理-学习笔记.html</a></li><li class="post-copyright-license"> <strong>版权声明：</strong> 本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！</li></ul></div><footer class="post-footer"><div class="post-tags"><a href="/tags/通信原理/" rel="tag"><i class="fa fa-tag"></i> 通信原理</a></div><div class="post-nav"><div class="post-nav-next post-nav-item"><a href="/2019杭电多校-补题日志.html" rel="next" title="2019杭电多校 补题日志"><i class="fa fa-chevron-left"></i> 2019杭电多校 补题日志</a></div><span class="post-nav-divider"></span><div class="post-nav-prev post-nav-item"> <a href="/数字图像处理-学习笔记.html" rel="prev" title="数字图像处理 学习笔记">数字图像处理 学习笔记<i class="fa fa-chevron-right"></i></a></div></div></footer></div></article><div class="post-spread"></div></div></div><div class="comments" id="comments"></div></div><div class="sidebar-toggle"><div class="sidebar-toggle-line-wrap"><span class="sidebar-toggle-line sidebar-toggle-line-first"></span><span class="sidebar-toggle-line sidebar-toggle-line-middle"></span><span class="sidebar-toggle-line sidebar-toggle-line-last"></span></div></div><aside id="sidebar" class="sidebar"><div id="sidebar-dimmer"></div><div class="sidebar-inner"><ul class="sidebar-nav motion-element"><li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap"> 文章目录</li><li class="sidebar-nav-overview" data-target="site-overview-wrap"> 站点概览</li></ul><section class="site-overview-wrap sidebar-panel"><div class="site-overview"><div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person"> <img class="site-author-image" itemprop="image" src="/images/01.jpg" alt="Quincy"><p class="site-author-name" itemprop="name">Quincy</p><p class="site-description motion-element" itemprop="description">生活明朗，万物可爱；<br>人间值得，未来可期。</p></div><nav class="site-state motion-element"><div class="site-state-item site-state-posts"> <a href="/archives/"><span class="site-state-item-count">26</span> <span class="site-state-item-name">日志</span></a></div><div class="site-state-item site-state-categories"> <a href="/categories/index.html"><span class="site-state-item-count">9</span> <span class="site-state-item-name">分类</span></a></div><div class="site-state-item site-state-tags"> <a href="/tags/index.html"><span class="site-state-item-count">52</span> <span class="site-state-item-name">标签</span></a></div></nav><div class="feed-link motion-element"><a href="/atom.xml" rel="alternate"><i class="fa fa-rss"></i> RSS</a></div><div class="links-of-author motion-element"><span class="links-of-author-item"><a href="https://github.com/QuincyTan" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i> GitHub</a></span><span class="links-of-author-item"><a href="mailto:1589366031@qq.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i> E-Mail</a></span></div><div class="links-of-blogroll motion-element links-of-blogroll-block"><div class="links-of-blogroll-title"><i class="fa fa-fw fa-link"></i> Links</div><ul class="links-of-blogroll-list"><li class="links-of-blogroll-item"> <a href="https://www.baidu.com/" title="百度" target="_blank">百度</a></li><li class="links-of-blogroll-item"> <a href="https://zhihu.com/" title="知乎" target="_blank">知乎</a></li><li class="links-of-blogroll-item"> <a href="https://www.nowcoder.com/" title="牛客" target="_blank">牛客</a></li><li class="links-of-blogroll-item"> <a href="http://codeforces.com/" title="Codeforces" target="_blank">Codeforces</a></li></ul></div></div></section><section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active"><div class="post-toc"><div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#第一章-绪论"><span class="nav-number">1.</span> <span class="nav-text">第一章 绪论</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第二章-确知信号"><span class="nav-number">2.</span> <span class="nav-text">第二章 确知信号</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第三章-随机过程"><span class="nav-number">3.</span> <span class="nav-text">第三章 随机过程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第四章-信道"><span class="nav-number">4.</span> <span class="nav-text">第四章 信道</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第五章-模拟调制系统"><span class="nav-number">5.</span> <span class="nav-text">第五章 模拟调制系统</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第六章-数字基带传输系统"><span class="nav-number">6.</span> <span class="nav-text">第六章 数字基带传输系统</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第七章-数字带通传输系统"><span class="nav-number">7.</span> <span class="nav-text">第七章 数字带通传输系统</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第十章-信源编码"><span class="nav-number">8.</span> <span class="nav-text">第十章 信源编码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第十一章-差错控制编码"><span class="nav-number">9.</span> <span class="nav-text">第十一章 差错控制编码</span></a></li></ol></div></div></section></div></aside></div></main><footer id="footer" class="footer"><div class="footer-inner"><div class="copyright">&copy; <span itemprop="copyrightYear">2019</span><span class="with-love"><i class="fa fa-snowflake-o"></i></span> <span class="author" itemprop="copyrightHolder">Quincy</span> <span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-area-chart"></i></span> <span class="post-meta-item-text">Site words total count&#58;</span> <span title="Site words total count">88.2k</span></div><div class="busuanzi-count"><script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script><span class="site-uv"><i class="fa fa-user"></i> 访客数<span class="busuanzi-value" id="busuanzi_value_site_uv"></span> 人</span><span class="site-pv"><i class="fa fa-eye"></i> 访问量<span class="busuanzi-value" id="busuanzi_value_site_pv"></span> 人次</span></div></div></footer><div class="back-to-top"><i class="fa fa-arrow-up"></i> <span id="scrollpercent"><span>0</span>%</span></div></div><script type="text/javascript">"[object Function]"!==Object.prototype.toString.call(window.Promise)&&(window.Promise=null)</script><script type="text/javascript" src="//cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script><script type="text/javascript" src="//cdn.jsdelivr.net/fastclick/1.0.6/fastclick.min.js"></script><script type="text/javascript" src="//cdn.jsdelivr.net/jquery.lazyload/1.9.3/jquery.lazyload.min.js"></script><script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.min.js"></script><script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.ui.min.js"></script><script type="text/javascript" src="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.pack.js"></script><script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script><script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script><script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script><script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script><script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script><script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script><script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//unpkg.com/valine/dist/Valine.min.js"></script><script type="text/javascript">
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+<script>
+(function(){
+    if(''){
+        if (prompt('请输入文章密码') !== ''){
+            alert('密码错误！');
+            history.back();
+        }
+    }
+})();
+</script>
+
+
+
+  
+  
+    
+      
+    
+    
+      
+    
+  <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+  <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-flash.min.css" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  <link href="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+  
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/favicon.png?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="通信原理,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Quincy's Blog" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="第一章 绪论 模拟信号与数字信号的区别(给定信号，要求能够区分) 模拟信号：载荷消息的信号参量取值连续（不可数、无穷多），如电话机输出的语音信号，其电压瞬时值随时间连续变化。也称为连续信号，连续是指信号载荷的消息的常量连续变化，在某一取值范围内可以取无穷多个值，而不一定要在时间上连续。 数字信号：载荷消息的信号参量只有有限个取值，如电报机、计算机输出的信号。">
+<meta name="keywords" content="通信原理">
+<meta property="og:type" content="article">
+<meta property="og:title" content="通信原理 学习笔记">
+<meta property="og:url" content="http://quincy.ink/通信原理-学习笔记.html">
+<meta property="og:site_name" content="Quincy&#39;s Blog">
+<meta property="og:description" content="第一章 绪论 模拟信号与数字信号的区别(给定信号，要求能够区分) 模拟信号：载荷消息的信号参量取值连续（不可数、无穷多），如电话机输出的语音信号，其电压瞬时值随时间连续变化。也称为连续信号，连续是指信号载荷的消息的常量连续变化，在某一取值范围内可以取无穷多个值，而不一定要在时间上连续。 数字信号：载荷消息的信号参量只有有限个取值，如电报机、计算机输出的信号。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://s2.ax1x.com/2019/09/16/nR4On1.jpg">
+<meta property="og:image" content="https://s2.ax1x.com/2019/09/16/nR4bc9.jpg">
+<meta property="og:image" content="https://s2.ax1x.com/2019/09/16/nR4qXR.jpg">
+<meta property="og:image" content="https://s2.ax1x.com/2019/11/04/KxKt3D.md.jpg">
+<meta property="og:image" content="https://s2.ax1x.com/2019/11/04/KxKs4f.md.jpg">
+<meta property="og:image" content="https://s2.ax1x.com/2019/11/04/KxK2vQ.md.jpg">
+<meta property="og:updated_time" content="2019-11-06T03:08:38.499Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="通信原理 学习笔记">
+<meta name="twitter:description" content="第一章 绪论 模拟信号与数字信号的区别(给定信号，要求能够区分) 模拟信号：载荷消息的信号参量取值连续（不可数、无穷多），如电话机输出的语音信号，其电压瞬时值随时间连续变化。也称为连续信号，连续是指信号载荷的消息的常量连续变化，在某一取值范围内可以取无穷多个值，而不一定要在时间上连续。 数字信号：载荷消息的信号参量只有有限个取值，如电报机、计算机输出的信号。">
+<meta name="twitter:image" content="https://s2.ax1x.com/2019/09/16/nR4On1.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"always","offset":10,"b2t":false,"scrollpercent":true,"onmobile":true},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://quincy.ink/通信原理-学习笔记.html">
+
+
+
+
+
+  <title>通信原理 学习笔记 | Quincy's Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Quincy's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">学习时长两年的在校本科生</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://quincy.ink/通信原理-学习笔记.html">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Quincy">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/01.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Quincy's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">通信原理 学习笔记</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-16T15:49:32+08:00">
+                2019-09-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+  <span class="post-updated">
+    &nbsp; | &nbsp; 更新于
+    <time itemprop="dateUpdated" datetime="2019-11-06T11:08:38+08:00" content="2019-11-06">
+      2019-11-06
+    </time>
+  </span>
+
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/通信原理/" itemprop="url" rel="index">
+                    <span itemprop="name">通信原理</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/通信原理-学习笔记.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/通信原理-学习笔记.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>阅读量
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>次
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h4 id="第一章-绪论"><a href="#第一章-绪论" class="headerlink" title="第一章 绪论"></a>第一章 绪论</h4><ol>
+<li><p>模拟信号与数字信号的区别(给定信号，要求能够区分)</p>
+<p>模拟信号：载荷消息的信号参量取值连续（不可数、无穷多），如电话机输出的语音信号，其电压瞬时值随时间连续变化。也称为连续信号，连续是指信号载荷的消息的常量连续变化，在某一取值范围内可以取无穷多个值，而不一定要在时间上连续。</p>
+<p>数字信号：载荷消息的信号参量只有有限个取值，如电报机、计算机输出的信号。<a id="more"></a></p>
+</li>
+<li><p>通信系统的一般模型</p>
+<p>① 一般模型</p>
+<p><a href="https://imgchr.com/i/nR4On1" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/09/16/nR4On1.jpg" alt="nR4On1.jpg"></a></p>
+<p>信源：把消息变为原始电信号(基带信号)</p>
+<p>发送设备：信号变换、放大、滤波、编码和调制等过程</p>
+<p>信道：传输媒介</p>
+<p>接收设备：信号放大、译码、解调等</p>
+<p>信宿：把原始电信号变为消息</p>
+<p>② 模拟通信模型</p>
+<p><a href="https://imgchr.com/i/nR4bc9" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/09/16/nR4bc9.jpg" alt="nR4bc9.jpg"></a></p>
+<p>调制器：基带信号变换为已调信号(带通信号)</p>
+<p>③ 数字通信模型</p>
+<p><a href="https://imgchr.com/i/nR4qXR" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/09/16/nR4qXR.jpg" alt="nR4qXR.jpg"></a></p>
+<p>信源编码与译码：提高信息传输有效性；完成模/数(A/D)转换</p>
+<p>信道编码与译码：加入监督码元，提高通信系统可靠性</p>
+<p>加密与解密：提高安全性</p>
+<p>调制：使信号适应信道的特性</p>
+<p>同步：使收发两端的信号在时间上保持步调一直一致</p>
+</li>
+<li><p>数字通信的特点</p>
+<p>优点：抗干扰能力强，噪声不积累；传输差错可控；便于数字信息的处理、变换、储存；易于集成，使通信设备轻量化；易于加密且保密性好</p>
+<p>缺点：可能需要较大的传输带宽；对同步要求高，系统设备复杂</p>
+</li>
+<li><p>信息及其度量</p>
+<p>①信息量 ，其中a=e时,单位为奈特(nit)；a=10时,单位为哈特莱(Hartly)；a=2时,单位为比特(bit,b)</p>
+<script type="math/tex; mode=display">
+I = log_a\frac{1}{P(x)} = -log_aP(x)</script><p>②平均信息量(熵)，等概率时，$H_{max}=log_2M$；M代表符号集合大小</p>
+<script type="math/tex; mode=display">
+H(x)=-\sum_{i=1}^{M}P(x_i)log_2P(x_i) (b/符号)</script><p>③总信息量，n代表符号数</p>
+<script type="math/tex; mode=display">
+I=n*H(x)</script></li>
+<li><p>通信系统的两个性能指标</p>
+<p>①有效性</p>
+<p>模拟通信系统看传输同样信源信号所需带宽，其越小频带利用率越高，有效性越好</p>
+<p>数字通信系统</p>
+<script type="math/tex; mode=display">
+R_B(码元传输速率，波特率) = \frac{1}{T_B(码元持续时间,码元宽度)} (Baud)</script><script type="math/tex; mode=display">
+R_b(信息传输速率,比特率) = R_B*log_2M(b/s)</script><script type="math/tex; mode=display">
+频带利用率\eta = \frac{R_B}{B}(Baud/Hz) 或 \eta_b = \frac{R_b}{B}(b/(s*Hz))</script><p>②可靠性</p>
+<script type="math/tex; mode=display">
+误码率 P_e = \frac{错误码元数}{传输总码元数}</script><script type="math/tex; mode=display">
+误信率P_b = \frac{错误比特数}{传输总比特数}</script><p>在二进制中，$P_b=P_e$；M进制中，$P_b&lt;P_e$</p>
+</li>
+</ol>
+<p><br></p>
+<h4 id="第二章-确知信号"><a href="#第二章-确知信号" class="headerlink" title="第二章 确知信号"></a>第二章 确知信号</h4><ol>
+<li><p>单位门函数频谱密度 ：$  \tau Sa(\pi f  \tau )$</p>
+</li>
+<li><p>单位冲激函数的特点（$ \delta $函数的性质）</p>
+<p>①可用抽样函数的极限表示</p>
+<script type="math/tex; mode=display">
+\delta(t) = \lim_{k\to \infty}\frac{k}{\pi}Sa(kt)</script><p>②</p>
+<script type="math/tex; mode=display">
+f(t_0)=\int_{-\infty}^{\infty}f(t)\delta(t-t_0)dt</script><p>③可以看做单位阶跃函数的导数</p>
+<script type="math/tex; mode=display">
+u(t) =\begin{cases}0, & t<0 \\1, & t>0 \end{cases};u'(t)=\delta(t)</script></li>
+</ol>
+<p><br></p>
+<h4 id="第三章-随机过程"><a href="#第三章-随机过程" class="headerlink" title="第三章 随机过程"></a>第三章 随机过程</h4><ol>
+<li><p>什么是随机过程？</p>
+<p>①随机试验的全体样本函数的集合</p>
+<p>②在时间进程中处于不同时刻的随机变量的集合</p>
+<p>兼有随机变量和时间函数的特点。</p>
+</li>
+<li><p>什么是平稳随机过程？</p>
+<p>狭义平稳(严平稳)；随机过程的统计特性与时间起点无关，即时间平移不影响其任何统计特性，则称该随机过程是在严格意义下的平稳随机过程，简称严平稳随机过程。</p>
+<p>广义平稳：①均值与t无关，为常数a；②自相关函数只与时间间t2-t1有关</p>
+<p>严平稳随机过程必定是广义平稳过程，反之不一定成立。</p>
+</li>
+<li><p>什么是各态历经性？</p>
+<p>含义：随机过程中任一次实现都经历了随机过程的所有可能状态。</p>
+<p>意义：过程的统计平均值和样本的时间平均值相同，可用一次实现的”<strong>时间平均</strong>“取代过程的”<strong>统计平均</strong>“，使测量和计算的问题大大简化。</p>
+<p>具有各态历经性的随机过程一定是平稳过程，反之不一定成立。</p>
+</li>
+<li><p>平稳随机过程通过线性系统（输出均值、功率谱密度）</p>
+<p>输出均值：$E = a * H(0)$ ，H(0)为线性系统在f=0处的频率响应，即直流增益</p>
+<p>功率谱密度：$P_o(f) = P_i(f) * |H(f)|^2$，输入过程的功率谱密度乘以系统频率响应模值的平方</p>
+</li>
+<li><p>窄带过程的两种表示方法 and 结论1,2</p>
+<p>表达式1：包络-相位形式</p>
+<script type="math/tex; mode=display">
+\xi(t) = a_{\xi}(t)cos[w_ct+\varphi_{\xi}(t)]，a_{\xi}\ge0</script><p>表达式2：同相-正交形式</p>
+<script type="math/tex; mode=display">
+\xi(t) = \xi_c(t)cosw_ct - \xi_s(t)sinw_ct</script><p>其中$\xi_c(t)$为同相分量 ，$\xi_s(t)$为正交分量</p>
+<p>结论1：对于均值为0，方差为$\sigma_{\xi}^2$的平稳高斯窄带过程，其同相分量和正交分量也是平稳高斯过程；均值皆为0，方差等于为 $\sigma_{\xi}^2$，且两者在同一时刻的取值是互不相关的和统计独立的（因为是高斯过程）。</p>
+<p>结论2：对于均值为0，方差为$\sigma_{\xi}^2$的平稳高斯窄带过程，其包络和相位的一维分布分别为瑞利分布和均匀分布，且两者统计独立。</p>
+</li>
+</ol>
+<p><br></p>
+<h4 id="第四章-信道"><a href="#第四章-信道" class="headerlink" title="第四章 信道"></a>第四章 信道</h4><ol>
+<li><p>信道的分类</p>
+<p>按照传输媒介分类</p>
+<ul>
+<li>有线信道：明线、对称电缆、同轴电缆及光纤等；</li>
+<li>无线信道：可以传输电磁波(包括光波)的空间；传输方式有地波、天波和视线传播三种。</li>
+</ul>
+<p>按信道特性分类</p>
+<ul>
+<li>恒定参量信道：信道特性参数随时间缓变或不变；</li>
+<li>随机参量信道：信道特性参数随时间随机变化；</li>
+</ul>
+</li>
+<li><p>多径效应</p>
+<p>多径传播：①信号的传输时延随时间而变②信号的传输时延随时间而变③信号经过几条路径到达接收端，且每条路径的时延和衰减都随时间而变。</p>
+<p>多径传播对信号的影响称为多径效应。</p>
+</li>
+<li><p>频率选择性衰弱</p>
+<p>衰弱与信号频率及相对时延差有关，当发送信号具有一定频带宽度时，多径传播会导致信号中某些频率成分发生严重的随机性衰弱。</p>
+</li>
+<li><p>连续信道容量的表达式 </p>
+<p>B(带宽Hz)、S(信号平均功率W)、N(噪声功率W)、n0(噪声功率谱密度W/Hz)</p>
+<script type="math/tex; mode=display">
+C_t = Blog_2(1+\frac{S}{N})=Blog_2(1+\frac{S}{n_0B})</script></li>
+</ol>
+<p><br></p>
+<h4 id="第五章-模拟调制系统"><a href="#第五章-模拟调制系统" class="headerlink" title="第五章 模拟调制系统"></a>第五章 模拟调制系统</h4><ol>
+<li><p>调制的目的和作用</p>
+<p>将基带信号转换成适合在信道中传输的已调信号，提高发射效率；实现信道的多路复用，以提高信道利用率；扩展信号带宽，提高系统抗干扰能力。</p>
+</li>
+<li><p>线性调制有哪一些？为什么要线性调制？</p>
+<p>调幅(AM)、双边带(DSB)、单边带(SSB)、残留边带(VSB)</p>
+<p>…</p>
+</li>
+<li><p>单边带调制实现的两种方法</p>
+<p>滤波法、相移法</p>
+</li>
+<li><p>调频信号的带宽</p>
+<script type="math/tex; mode=display">
+B_{FM}=2(m_f+1)f_m=2(\Delta f+f_m)</script></li>
+</ol>
+<p><br></p>
+<h4 id="第六章-数字基带传输系统"><a href="#第六章-数字基带传输系统" class="headerlink" title="第六章 数字基带传输系统"></a>第六章 数字基带传输系统</h4><ol>
+<li><p>什么是数字基带传输系统？</p>
+<p>未经过载波调制而直接传输数字基带信号的系统。</p>
+</li>
+<li><p>什么是数字频带传输系统？</p>
+<p>包括了调制和解调过程的传输系统。</p>
+</li>
+<li><p>导致误码率的两个原因</p>
+<p>码间串扰、噪声</p>
+</li>
+<li><p>数字基带信号的几种波形（画图）</p>
+<p>…</p>
+</li>
+<li><p>基带信号的频谱情况</p>
+<p>①二进制随机脉冲序列的功率谱$P_s(f)$可能包含连续谱和离散谱；</p>
+<p>②连续谱总是存在，因为实际中的$G1(f)  &ne; G2(f)$。连续谱的形状取决于$g_1(t)$和$g_2(t)$的频谱以及概率P；</p>
+<p>③离散谱是否存在，取决于$g_1(t)$和$g_2(t)$的频谱以及概率P。当$g_1(t) = g_2(t) = g(t) $ 且概率 $P=1/2$时，没有离散分量；</p>
+<p>④根据连续谱可以确定信号的带宽，根据离散谱可以确定随机序列是否有直流分量和定时分量。</p>
+</li>
+<li><p>无码间串扰的时域条件推导出频率条件(大题15)</p>
+<p>教材P146</p>
+</li>
+</ol>
+<p><br></p>
+<h4 id="第七章-数字带通传输系统"><a href="#第七章-数字带通传输系统" class="headerlink" title="第七章 数字带通传输系统"></a>第七章 数字带通传输系统</h4><ol>
+<li><p>两种解调方法</p>
+<p>非相干解调(包络检波法)、相干解调(同步检测法)</p>
+</li>
+<li><p>几种二进制调制系统所占带宽</p>
+<script type="math/tex; mode=display">
+B_{2ASK}=2f_B=2/T_B=2R_B</script><script type="math/tex; mode=display">
+B_{2FSK}\approx |f_2-f_1|+2f_B</script><script type="math/tex; mode=display">
+B_{2PSK}=B_{2DPSK}=B_{2ASK}=2f_B</script></li>
+<li><p>2DPSK的解调方法</p>
+<p> 相干解调(极性比较)—码反变换法、差分相干解调(相位比较法)</p>
+</li>
+<li><p>2FSK的分析模型图 （画图，图7-25,7-22,7-26） 每个模块的作用</p>
+<p><a href="https://imgchr.com/i/KxKt3D" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/11/04/KxKt3D.md.jpg" alt="KxKt3D.md.jpg"></a></p>
+<p><br></p>
+<p><a href="https://imgchr.com/i/KxKs4f" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/11/04/KxKs4f.md.jpg" alt="KxKs4f.md.jpg"></a></p>
+<p><br></p>
+<p><a href="https://imgchr.com/i/KxK2vQ" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/11/04/KxK2vQ.md.jpg" alt="KxK2vQ.md.jpg"></a></p>
+</li>
+<li><p>性能比较 为什么</p>
+<ul>
+<li>误码率：2PSK&lt;2DPSK&lt;2FSK&lt;2ASK</li>
+<li>频带宽度：2FSK系统的频带利用率最低</li>
+</ul>
+</li>
+</ol>
+<p><br></p>
+<h4 id="第十章-信源编码"><a href="#第十章-信源编码" class="headerlink" title="第十章 信源编码"></a>第十章 信源编码</h4><ol>
+<li><p>数字化三个步骤</p>
+<p>抽样、量化、编码</p>
+</li>
+<li><p>两个抽样定理</p>
+<p>低通抽样定理：</p>
+<script type="math/tex; mode=display">
+最低抽样速率f_S\geq2f_H,最大抽样间隔T_s\leq\frac{1}{2f_H}</script><p>带通抽样定理：</p>
+<script type="math/tex; mode=display">
+fs = 2B(1+\frac{k}{n})，B为信号带宽,n为f_H/B的整数部分,k为小数部分</script></li>
+<li><p>典型电话信号带宽</p>
+<p>最高频率3400Hz，抽样频率8000Hz</p>
+</li>
+<li><p>13、15折线（例题）</p>
+<ul>
+<li>A=1和$\mu$=0无压缩效果</li>
+<li>实用的典型值A=87.5，$\mu$=255</li>
+</ul>
+</li>
+</ol>
+<p><br></p>
+<h4 id="第十一章-差错控制编码"><a href="#第十一章-差错控制编码" class="headerlink" title="第十一章 差错控制编码"></a>第十一章 差错控制编码</h4><ol>
+<li><p>差错控制编码的作用</p>
+<p>克服信道噪声及其他干扰引起的误码，提高传输可靠性</p>
+</li>
+<li><p>最小码距d0和编码检错纠错的关系</p>
+<ul>
+<li>要求检测e个错码：$d_0 \geq e+1$</li>
+<li>要求纠正t个错误：$d_0 \geq 2t+1$</li>
+<li>要求纠正t个错码，同时检测e个错误：$d_0 \geq e+t+1,e \gt t$</li>
+</ul>
+</li>
+</ol>
+<p><br></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+
+    <div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-heart"></i>感谢阅读-------------</div>
+    
+</div>
+
+  
+</div>
+
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>Thanks :)</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="Quincy 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="Quincy 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Quincy
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://quincy.ink/通信原理-学习笔记.html" title="通信原理 学习笔记">http://quincy.ink/通信原理-学习笔记.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/通信原理/" rel="tag"><i class="fa fa-tag"></i> 通信原理</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019杭电多校-补题日志.html" rel="next" title="2019杭电多校 补题日志">
+                <i class="fa fa-chevron-left"></i> 2019杭电多校 补题日志
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/数字图像处理-学习笔记.html" rel="prev" title="数字图像处理 学习笔记">
+                数字图像处理 学习笔记 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/01.jpg" alt="Quincy">
+            
+              <p class="site-author-name" itemprop="name">Quincy</p>
+              <p class="site-description motion-element" itemprop="description">生活明朗，万物可爱；<br>人间值得，未来可期。</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">26</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">52</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/QuincyTan" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1589366031@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.baidu.com/" title="百度" target="_blank">百度</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://zhihu.com/" title="知乎" target="_blank">知乎</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.nowcoder.com/" title="牛客" target="_blank">牛客</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#第一章-绪论"><span class="nav-number">1.</span> <span class="nav-text">第一章 绪论</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第二章-确知信号"><span class="nav-number">2.</span> <span class="nav-text">第二章 确知信号</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第三章-随机过程"><span class="nav-number">3.</span> <span class="nav-text">第三章 随机过程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第四章-信道"><span class="nav-number">4.</span> <span class="nav-text">第四章 信道</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第五章-模拟调制系统"><span class="nav-number">5.</span> <span class="nav-text">第五章 模拟调制系统</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第六章-数字基带传输系统"><span class="nav-number">6.</span> <span class="nav-text">第六章 数字基带传输系统</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第七章-数字带通传输系统"><span class="nav-number">7.</span> <span class="nav-text">第七章 数字带通传输系统</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第十章-信源编码"><span class="nav-number">8.</span> <span class="nav-text">第十章 信源编码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第十一章-差错控制编码"><span class="nav-number">9.</span> <span class="nav-text">第十一章 差错控制编码</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-snowflake-o"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Quincy</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">88.2k</span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>访客数
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      人
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>访问量
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      人次
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="//cdn.jsdelivr.net/fastclick/1.0.6/fastclick.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.lazyload/1.9.3/jquery.lazyload.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.ui.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
     var GUEST = ['nick','mail','link'];
     var guest = 'nick,mail,link';
     guest = guest.split(',').filter(item=>{
@@ -35,7 +1195,13 @@ fs = 2B(1+\frac{k}{n})，B为信号带宽,n为f_H/B的整数部分,k为小数部
         guest_info:guest,
         pageSize:'10' || 10,
     });
-  </script><script type="text/javascript">
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
     // Popup Window;
     var isfetched = false;
     var isXml = true;
@@ -350,7 +1516,39 @@ fs = 2B(1+\frac{k}{n})，B为信号带宽,n为f_H/B的整数部分,k为小数部
         onPopupClose();
       }
     });
-  </script><script>!function(){var t=document.createElement("script"),e=window.location.protocol.split(":")[0];t.src="https"===e?"https://zz.bdstatic.com/linksubmit/push.js":"http://push.zhanzhang.baidu.com/push.js";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}()</script><script type="text/x-mathjax-config">
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
       MathJax.Hub.Config({
         tex2jax: {
           inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
@@ -358,11 +1556,26 @@ fs = 2B(1+\frac{k}{n})，B为信号带宽,n为f_H/B的整数部分,k为小数部
           skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
         }
       });
-    </script><script type="text/x-mathjax-config">
+    </script>
+
+    <script type="text/x-mathjax-config">
       MathJax.Hub.Queue(function() {
         var all = MathJax.Hub.getAllJax(), i;
         for (i=0; i < all.length; i += 1) {
           all[i].SourceElement().parentNode.className += ' has-jax';
         }
       });
-    </script><script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></body></html>
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  
+
+
+  
+
+  
+
+<!--   <script type="text/javascript" src="/js/src/love.js"></script> -->
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</body>
+</html>
