@@ -137,7 +137,7 @@
 <meta property="og:image" content="https://s2.ax1x.com/2019/11/04/KxKt3D.md.jpg">
 <meta property="og:image" content="https://s2.ax1x.com/2019/11/04/KxKs4f.md.jpg">
 <meta property="og:image" content="https://s2.ax1x.com/2019/11/04/KxK2vQ.md.jpg">
-<meta property="og:updated_time" content="2019-11-08T02:45:52.186Z">
+<meta property="og:updated_time" content="2019-11-12T13:55:19.285Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="通信原理 学习笔记">
 <meta name="twitter:description" content="第一章 绪论 模拟信号与数字信号的区别(给定信号，要求能够区分) 模拟信号：载荷消息的信号参量取值连续（不可数、无穷多），如电话机输出的语音信号，其电压瞬时值随时间连续变化。也称为连续信号，连续是指信号载荷的消息的常量连续变化，在某一取值范围内可以取无穷多个值，而不一定要在时间上连续。 数字信号：载荷消息的信号参量只有有限个取值，如电报机、计算机输出的信号。">
@@ -378,8 +378,8 @@
           
   <span class="post-updated">
     &nbsp; | &nbsp; 更新于
-    <time itemprop="dateUpdated" datetime="2019-11-08T10:45:52+08:00" content="2019-11-08">
-      2019-11-08
+    <time itemprop="dateUpdated" datetime="2019-11-12T21:55:19+08:00" content="2019-11-12">
+      2019-11-12
     </time>
   </span>
 
@@ -575,7 +575,7 @@ C_t = Blog_2(1+\frac{S}{N})=Blog_2(1+\frac{S}{n_0B})</script></li>
 </li>
 <li><p>线性调制有哪一些？为什么称为线性调制？</p>
 <p>调幅(AM)、双边带(DSB)、单边带(SSB)、残留边带(VSB)</p>
-<p>幅度调制是高频正弦载波的幅度随调制信号瞬时值而变化的过程。从频谱上看,已调信号的频谱仅仅是调制信号频谱的搬移,故也称线性调制。</p>
+<p>在频谱结构上，幅度已调信号的频谱完全是基带信号在频域内的简单搬移，由于这种搬移是线性的，因此幅度调制又称为线性调制。</p>
 </li>
 <li><p>单边带调制实现的两种方法</p>
 <p>滤波法、相移法</p>
@@ -590,13 +590,13 @@ B_{FM}=2(m_f+1)f_m=2(\Delta f+f_m)</script></li>
 <p>未经过载波调制而直接传输数字基带信号的系统。</p>
 </li>
 <li><p>什么是数字频带传输系统？</p>
-<p>包括了调制和解调过程的传输系统。</p>
+<p>包括了调制和解调过程的数字传输系统。</p>
 </li>
 <li><p>导致误码率的两个原因</p>
 <p>码间串扰、噪声</p>
 </li>
 <li><p>数字基带信号的几种波形（画图）</p>
-<p>…</p>
+<p>单极性、双极性、单极性归零、双极性归零、差分、多电平</p>
 </li>
 <li><p>基带信号的频谱情况</p>
 <p>①二进制随机脉冲序列的功率谱$P_s(f)$可能包含连续谱和离散谱；</p>
@@ -604,8 +604,8 @@ B_{FM}=2(m_f+1)f_m=2(\Delta f+f_m)</script></li>
 <p>③离散谱是否存在，取决于$g_1(t)$和$g_2(t)$的频谱以及概率P。当$g_1(t) = g_2(t) = g(t) $ 且概率 $P=1/2$时，没有离散分量；</p>
 <p>④根据连续谱可以确定信号的带宽，根据离散谱可以确定随机序列是否有直流分量和定时分量。</p>
 </li>
-<li><p>无码间串扰的时域条件推导出频率条件(大题15)</p>
-<p>教材P146</p>
+<li><p>无码间串扰的时域条件推导出频域条件(大题15)</p>
+<p>教材P146 and 习题</p>
 </li>
 </ol>
 <p><br></p>
@@ -619,7 +619,7 @@ B_{2ASK}=2f_B=2/T_B=2R_B</script><script type="math/tex; mode=display">
 B_{2FSK}\approx |f_2-f_1|+2f_B</script><script type="math/tex; mode=display">
 B_{2PSK}=B_{2DPSK}=B_{2ASK}=2f_B</script></li>
 <li><p>2DPSK的解调方法</p>
-<p> 相干解调(极性比较)—码反变换法、差分相干解调(相位比较法)</p>
+<p> 相干解调(极性比较)&amp;&amp;码反变换法、差分相干解调(相位比较法)</p>
 </li>
 <li><p>2FSK的分析模型图 （画图，图7-25,7-22,7-26） 每个模块的作用</p>
 <p><a href="https://imgchr.com/i/KxKt3D" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/11/04/KxKt3D.md.jpg" alt="KxKt3D.md.jpg"></a></p>
@@ -647,7 +647,7 @@ B_{2PSK}=B_{2DPSK}=B_{2ASK}=2f_B</script></li>
 <script type="math/tex; mode=display">
 fs = 2B(1+\frac{k}{n})，B为信号带宽,n为f_H/B的整数部分,k为小数部分</script></li>
 <li><p>典型电话信号带宽</p>
-<p>最高频率3400Hz，抽样频率8000Hz</p>
+<p>频率限制300Hz-3400Hz，抽样频率8000Hz</p>
 </li>
 <li><p>13、15折线（习题）</p>
 <ul>
