@@ -133,7 +133,8 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://s2.ax1x.com/2019/11/20/MhYC01.png">
 <meta property="og:image" content="https://s2.ax1x.com/2019/11/20/MhtXM4.png">
-<meta property="og:updated_time" content="2019-11-20T15:11:39.350Z">
+<meta property="og:image" content="https://s2.ax1x.com/2019/11/21/M5KqHK.md.png">
+<meta property="og:updated_time" content="2019-11-21T03:06:47.009Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数字图像处理 学习笔记">
 <meta name="twitter:description" content="第一章 数字图像基础 数字图像的概念（理解） 数字图像用二维的亮度函数 f(x,y) 表示，函数值与对应点的光强成正比。其中数字化的空间位置称为像素（Pixel），数字化的亮度值称为灰度值，表示数字图像的二维矩阵N*M为空间分辨率。">
@@ -374,8 +375,8 @@
           
   <span class="post-updated">
     &nbsp; | &nbsp; 更新于
-    <time itemprop="dateUpdated" datetime="2019-11-20T23:11:39+08:00" content="2019-11-20">
-      2019-11-20
+    <time itemprop="dateUpdated" datetime="2019-11-21T11:06:47+08:00" content="2019-11-21">
+      2019-11-21
     </time>
   </span>
 
@@ -548,6 +549,54 @@
 </ul>
 <p>空域滤波器分类</p>
 <p><img src="https://s2.ax1x.com/2019/11/20/MhtXM4.png" alt="MhtXM4.png"></p>
+<p>图像平滑的作用：模糊、降低噪声</p>
+<p>图像空域平滑分类：线性平滑滤波、统计排序平滑滤波</p>
+<p>线性平滑模板特征：权系数全为正值、系数之和等于1</p>
+<p>均值平滑(最简单)、加权平均模板(加权系数中大边小)</p>
+</li>
+<li><p>双边滤波（理解）</p>
+<p>中值滤波：区域内像素排序后取中值；平滑了边缘和细节，对滤除脉冲噪声(椒盐噪声)非常有效</p>
+<p>统计排序平滑滤波：选取领域内最大(小)值-最大(小)值滤波</p>
+</li>
+<li><p>图像锐化（掌握）</p>
+<p>作用：增强图像中的边缘和细节， 如边缘增强；减弱或清除灰度变化缓慢的区域，如边缘检测</p>
+<p>差分近似偏导数，差分算子的响应程度与图像在该点灰度值的突变程度有关，图像锐化使用差分算子</p>
+<p>一阶差分特点：在边缘处有一个强的响应，形成一个峰；一阶差分算子用于边缘检测</p>
+<p>二阶差分特点：在边缘过零点，在过零点两侧，分别形成一个峰和一个谷；二阶差分算子用于边缘增强</p>
+<p><strong>[#]</strong>Sobel算子</p>
+<p><strong>[#]</strong>拉普拉斯算子</p>
+</li>
+</ol>
+<p><br></p>
+<h4 id="第五章-频域图像增强"><a href="#第五章-频域图像增强" class="headerlink" title="第五章 频域图像增强"></a>第五章 频域图像增强</h4><ol>
+<li><p>滤波基础（理解）</p>
+<p>卷积定理是空间域滤波和频率域滤波之间的纽带。</p>
+<p>频率平面与图像空域特性的关系：</p>
+<ul>
+<li>图像变化平缓的部分靠近频率平面的圆心，这个区域为低频区域</li>
+<li>图像中的边、噪声、变化陡峻的部分，以放射方向离开频率平面的圆心，这个区域为高频区域</li>
+</ul>
+<p>为什么要在频率域研究图像增强？</p>
+<ul>
+<li>可以利用<strong>频率成分和图像表观之间的对应关系</strong>。一些在空间域表述困难的增强任务，在频率域中变得非常简单</li>
+<li><strong>滤波在频率域更为直观</strong>，它可以解释空间域滤波的某些性质</li>
+<li>可以<strong>在频率域指定滤波器</strong>，做逆变换，然后在空间域使用结果滤波器作为空间域滤波器的指导</li>
+</ul>
+<p>频域滤波的基本流程：空域-&gt;频域；频域滤波；频域-&gt;空域</p>
+<p><a href="https://imgchr.com/i/M5KqHK" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/11/21/M5KqHK.md.png" alt="M5KqHK.md.png"></a></p>
+</li>
+<li><p>低通滤波器（理解）</p>
+<p>概念：允许图像的低频成分通过，限制高频成分通过；低通滤波器和空域中的平滑模板具有等效的作用</p>
+<p>振铃效应：在图像灰度剧烈变化的邻域产生灰度振荡的图像失真现象</p>
+<p>理想低通滤波器：完全截断频谱中的高频成分；锐截止频率<strong>不能</strong>用电子器件实现，且会产生<strong>振铃效应</strong>，表现为在图像灰度剧烈变化的邻域产生<strong>灰度振荡</strong>；非常不实用，但是原理简单</p>
+<p>巴特沃斯低通滤波器：物理可实现；通带与阻带之间并非锐截止而是逐渐下降为零，通带到阻带之间平滑过渡，因而滤波图像的振铃效应不明显；随着阶数增加，振铃效应越明显</p>
+<p>指数低通滤波器：物理可实现；一阶二阶都没有振铃效应；随着阶数的增加，接近理想低通滤波器，振铃现象越明显</p>
+</li>
+<li><p>高通滤波器（理解）</p>
+</li>
+<li><p>带通、带阻与陷波滤波器（理解）</p>
+</li>
+<li><p>空滤滤波与频率滤波的对应关系（理解）</p>
 </li>
 </ol>
 
@@ -837,7 +886,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#第一章-数字图像基础"><span class="nav-number">1.</span> <span class="nav-text">第一章 数字图像基础</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第二章-数字图像处理基础"><span class="nav-number">2.</span> <span class="nav-text">第二章 数字图像处理基础</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第三章-空域图像增强"><span class="nav-number">3.</span> <span class="nav-text">第三章 空域图像增强</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#第一章-数字图像基础"><span class="nav-number">1.</span> <span class="nav-text">第一章 数字图像基础</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第二章-数字图像处理基础"><span class="nav-number">2.</span> <span class="nav-text">第二章 数字图像处理基础</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第三章-空域图像增强"><span class="nav-number">3.</span> <span class="nav-text">第三章 空域图像增强</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第五章-频域图像增强"><span class="nav-number">4.</span> <span class="nav-text">第五章 频域图像增强</span></a></li></ol></div>
             
 
           </div>
@@ -871,7 +920,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">88.4k</span>
+    <span title="Site words total count">89.3k</span>
   
 </div>
 
