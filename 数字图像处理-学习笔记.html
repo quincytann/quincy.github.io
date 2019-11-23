@@ -134,7 +134,12 @@
 <meta property="og:image" content="https://s2.ax1x.com/2019/11/20/MhYC01.png">
 <meta property="og:image" content="https://s2.ax1x.com/2019/11/20/MhtXM4.png">
 <meta property="og:image" content="https://s2.ax1x.com/2019/11/21/M5KqHK.md.png">
-<meta property="og:updated_time" content="2019-11-21T03:06:47.009Z">
+<meta property="og:image" content="https://s2.ax1x.com/2019/11/23/MH7fOI.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/11/23/MH7qpQ.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/11/23/Mbb4hT.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/11/23/Mbbbu9.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/11/23/MbqS3D.png">
+<meta property="og:updated_time" content="2019-11-23T12:26:58.855Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数字图像处理 学习笔记">
 <meta name="twitter:description" content="第一章 数字图像基础 数字图像的概念（理解） 数字图像用二维的亮度函数 f(x,y) 表示，函数值与对应点的光强成正比。其中数字化的空间位置称为像素（Pixel），数字化的亮度值称为灰度值，表示数字图像的二维矩阵N*M为空间分辨率。">
@@ -209,7 +214,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle">学习时长两年的在校本科生</p>
+        <p class="site-subtitle">学习时长两年半的在校本科生</p>
       
   </div>
 
@@ -375,8 +380,8 @@
           
   <span class="post-updated">
     &nbsp; | &nbsp; 更新于
-    <time itemprop="dateUpdated" datetime="2019-11-21T11:06:47+08:00" content="2019-11-21">
-      2019-11-21
+    <time itemprop="dateUpdated" datetime="2019-11-23T20:26:58+08:00" content="2019-11-23">
+      2019-11-23
     </time>
   </span>
 
@@ -593,11 +598,89 @@
 <p>指数低通滤波器：物理可实现；一阶二阶都没有振铃效应；随着阶数的增加，接近理想低通滤波器，振铃现象越明显</p>
 </li>
 <li><p>高通滤波器（理解）</p>
+<p>概念：允许图像的高频成分通过，而限制低频成分通过；限制或减弱频谱中的低频成分可以起到图像锐化的作用</p>
+<p>理想高通滤波器：无法用电子器件实现的，且会产生明显的振铃效应；随着截止频率的增大，被滤除的低频成分越多，边缘、细节逐渐突出；存在振铃效应，截止频率为15和30的振铃效应在图像上体现为边缘产生重影。随着截止频率的进一步增大，振铃效应应趋于增强，但是允许通过的高频也进一步减少，边缘逐渐细化，振铃效应反而不明显</p>
+<p>巴特沃斯高通滤波器：物理可实现；如同二阶巴特沃斯低通滤波器，二阶巴特沃斯高通滤波器的传递函数在阻带与通带之间不是锐截止，是平滑的过渡，使滤波器具有良好的性能；随着截止频率的增大，被滤除的低频成分越多，边缘更加清晰化</p>
+<p>指数高通滤波器：物理可实现；如同高斯低通滤波器，高斯高通滤波器的传递函数在阻带与通带之间平滑的过渡，使滤波器具有良好的性能；随着截止频率增加，被滤除的低频成分越多，边缘更加清晰化；相同截止频率的指数高通滤波器比巴特沃斯高通滤波器允许更多的低频成分通过，保留了更多的背景基调</p>
 </li>
 <li><p>带通、带阻与陷波滤波器（理解）</p>
+<p>带通滤波器：允许一定频带的信号通过，用于抑制低于或高于该频带的信号、噪声干扰</p>
+<p>带阻滤波器：与带通滤波器执行相反的操作；带阻滤波器限制某一带宽范围的频率成分通过，而允许带宽范围以外的频率成分通过</p>
+<p>陷波滤波器：一种窄阻带的带阻滤波器；限制某一中心频率邻域内的频率成分通过，而允许其他频率成分通过</p>
 </li>
 <li><p>空滤滤波与频率滤波的对应关系（理解）</p>
+<ul>
+<li>频域滤波器的传递函数和空域冲激响应函数<strong>互为傅里叶变换对</strong></li>
+<li>通过<strong>分析频域特性「主要是幅度特性」来分析空域模板的作用</strong>；借助频域滤波器的设计来指导空域模板</li>
+<li>在频域图像增强中，利用频率成分和图像内容之间的对应关系，<strong>主观判断指定频域滤波器</strong>。一些直接在空域中表述困难的增强任务，在频域中变得直观</li>
+<li>空域模板的作用可以通过<strong>分析其频域特性</strong>而知</li>
+</ul>
 </li>
+</ol>
+<p><br></p>
+<h4 id="第八章-数学形态图像处理"><a href="#第八章-数学形态图像处理" class="headerlink" title="第八章 数学形态图像处理"></a>第八章 数学形态图像处理</h4><ol>
+<li><p>背景（了解）</p>
+<p>数学形态学的概念：数学形态学是一种基于形状的图像处理理论和方法，数学形态学图像处理的基本思想是选择具有一定尺寸和形状的结构元素度量，并提取图像中相关形状结构的图像分量，以达到对图像分析和识别的目的</p>
+</li>
+<li><p>基础（理解）</p>
+<p>集合运算：并集、交集、差集、补集、映射、平移</p>
+<p>逻辑运算：与、或、非</p>
+<p>结构元素：是一个由0值和1值组成的矩阵；每一个结构元素有一个原点，结构元素中的原点指定待处理像素的位置；结构元素中的1值定义了结构元素的邻域，输出图像中对应原点的值建立在输入图像中相应像素及其邻域像素比较的基础上</p>
+</li>
+<li><p>二值图像形态学基本运算（掌握）</p>
+<p>膨胀：$A  \oplus  B$，在图像中目标边界周围增添像素；结构元素对集合膨胀生成的集合是 B 的映射平移集合与集合 A 相交至少有一个非零元素时 B 的原点位置的集合</p>
+<p><img src="https://s2.ax1x.com/2019/11/23/MH7fOI.png" alt="MH7fOI.png"></p>
+<p>腐蚀：$A   \ominus   B$，移除图像中目标边界的像素；结构元素 B 对集合 A 腐蚀生成的集合是 B 的平移集合完全包含在集合 A 中时，B 的原点位置的集合</p>
+<p><img src="https://s2.ax1x.com/2019/11/23/MH7qpQ.png" alt="MH7qpQ.png"></p>
+<p>开运算：$A  \circ  B$，先腐蚀后膨胀；能消除小尺寸的目标和细小的突出部分，断开细小的桥接部分而分离目标区域、并在不明显改变目标区域面积的条件下平滑较大目标边界的作用</p>
+<p>闭运算：$A  \bullet B$，先膨胀后腐蚀；能填补目标区域内部小尺寸的孔洞和细窄的缺口、桥接狭窄的断裂部分而使目标区域连通、并在不明显改变目标区域面积的条件下平滑较大目标边界的作用</p>
+<p>击中击不中运算：$A \otimes  B$，定义在交集为空集的两个结构元素的膨胀和腐蚀运算的基础上；当且仅当 B1 平移某一z值包含在集合 A 的内部「即   B1 击中 A  」，且  B2 平移同一z值包含在集合  A  的外部「即  B2  击不中  A 」，这两个条件同时成立时，B  的原点位置的集合</p>
+</li>
+<li><p>二值图像形态学实用算法（掌握）</p>
+<p>去噪：先开运算后闭运算</p>
+<p>边界提取：$ \beta(A)=A-(A \ominus B)$</p>
+<p>空洞填充：利用膨胀不断将由连通的边界包围的背景区域构成目标区域</p>
+</li>
+<li><p>二值图像形态学运算及其性质总结（理解）</p>
+<p><br></p>
+</li>
+<li><p>灰度图像形态学算法（了解）</p>
+<p>灰度膨胀</p>
+<p>灰度腐蚀</p>
+<p>灰度开运算</p>
+<p>灰度闭运算</p>
+</li>
+</ol>
+<p><br></p>
+<h4 id="第九章-图像分割"><a href="#第九章-图像分割" class="headerlink" title="第九章 图像分割"></a>第九章 图像分割</h4><ol>
+<li><p>图像分割基础（理解）</p>
+<p>概念：将图像划分为若干有意义的区域或部分，或者从图像中提取感兴趣目标的图像处理技术</p>
+<p>基本策略：根据特征（灰度、颜色、纹理等）； 图像各区域表现为不连续性（边缘检测）和相似性（阈值处理、区域生长）</p>
+<p>图像抠图和图像分割的区别：图像抠图是指从一幅图像中尽可能完整地提取出感兴趣的目标；图像分割只是将一幅图像中的前景（目标）从背景中分离出来</p>
+</li>
+<li><p>基于边界的分割</p>
+<p>边缘的定义（理解）：图像中灰度发生突变或不连续的微小区域（一组相连的像素集合），即是两个具有相对不同灰度值特性的区域的分界线。有方向和幅度两个特性。</p>
+<p>一阶差分算子（掌握）</p>
+<p><img src="https://s2.ax1x.com/2019/11/23/Mbb4hT.png" alt="Mbb4hT.png"></p>
+<p><img src="https://s2.ax1x.com/2019/11/23/Mbbbu9.png" alt="Mbbbu9.png"></p>
+<p><img src="https://s2.ax1x.com/2019/11/23/MbqS3D.png" alt="MbqS3D.png"></p>
+<p>二阶差分算子（掌握）</p>
+</li>
+</ol>
+<p>   不同边缘检测算子间的比较（掌握）</p>
+<ul>
+<li><p>梯度算子</p>
+<p>Roberts算子利用一阶差分检测边缘，边缘定位精度较高，但抑制噪声能力较差，适用于陡峭边缘且信噪比高的图像。</p>
+<p>Sobel与Prewitt算子等效于首先对图像进行加权平滑处理，然后再计算差分，因此，对噪声有一定的抑制能力，但检测出的边缘具有一定宽度，且不能形成闭合、连通的轮廓。</p>
+</li>
+<li><p>二阶差分算子<br>拉普拉斯算子对噪声非常敏感，不适合直接用于边缘检测。<br>LoG算子克服了拉普拉斯算子抗噪能力差的弱点，并能产生闭合、连通的轮廓，但在抑制噪声的同时也模糊了边缘，从而造成弱边缘漏检。<br>Canny算子可以形成闭合、连通且单像素宽度的边缘，但也会产生类似意大利式细面条盘子效应的虚假边缘</p>
+</li>
+</ul>
+<ol>
+<li>基于阈值的图像分割</li>
+</ol>
+<ol>
+<li>基于区域的图像分割</li>
 </ol>
 
       
@@ -886,7 +969,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#第一章-数字图像基础"><span class="nav-number">1.</span> <span class="nav-text">第一章 数字图像基础</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第二章-数字图像处理基础"><span class="nav-number">2.</span> <span class="nav-text">第二章 数字图像处理基础</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第三章-空域图像增强"><span class="nav-number">3.</span> <span class="nav-text">第三章 空域图像增强</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第五章-频域图像增强"><span class="nav-number">4.</span> <span class="nav-text">第五章 频域图像增强</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#第一章-数字图像基础"><span class="nav-number">1.</span> <span class="nav-text">第一章 数字图像基础</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第二章-数字图像处理基础"><span class="nav-number">2.</span> <span class="nav-text">第二章 数字图像处理基础</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第三章-空域图像增强"><span class="nav-number">3.</span> <span class="nav-text">第三章 空域图像增强</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第五章-频域图像增强"><span class="nav-number">4.</span> <span class="nav-text">第五章 频域图像增强</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第八章-数学形态图像处理"><span class="nav-number">5.</span> <span class="nav-text">第八章 数学形态图像处理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第九章-图像分割"><span class="nav-number">6.</span> <span class="nav-text">第九章 图像分割</span></a></li></ol></div>
             
 
           </div>
@@ -920,7 +1003,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">89.3k</span>
+    <span title="Site words total count">91.3k</span>
   
 </div>
 
