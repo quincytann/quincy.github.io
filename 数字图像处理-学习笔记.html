@@ -139,7 +139,7 @@
 <meta property="og:image" content="https://s2.ax1x.com/2019/11/23/Mbb4hT.png">
 <meta property="og:image" content="https://s2.ax1x.com/2019/11/23/Mbbbu9.png">
 <meta property="og:image" content="https://s2.ax1x.com/2019/11/23/MbqS3D.png">
-<meta property="og:updated_time" content="2019-11-24T01:39:29.185Z">
+<meta property="og:updated_time" content="2019-11-25T11:18:13.580Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数字图像处理 学习笔记">
 <meta name="twitter:description" content="第一章 数字图像基础 数字图像的概念（理解） 数字图像用二维的亮度函数 f(x,y) 表示，函数值与对应点的光强成正比。其中数字化的空间位置称为像素（Pixel），数字化的亮度值称为灰度值，表示数字图像的二维矩阵N*M为空间分辨率。">
@@ -380,8 +380,8 @@
           
   <span class="post-updated">
     &nbsp; | &nbsp; 更新于
-    <time itemprop="dateUpdated" datetime="2019-11-24T09:39:29+08:00" content="2019-11-24">
-      2019-11-24
+    <time itemprop="dateUpdated" datetime="2019-11-25T19:18:13+08:00" content="2019-11-25">
+      2019-11-25
     </time>
   </span>
 
@@ -535,10 +535,11 @@
 <p>阈值增强：生成一幅高对比度的图像；软阈值，硬阈值。</p>
 </li>
 <li><p>直方图处理</p>
-<p>基础理论（理解）：点处理方法，通过对灰度直方图进行变换有效地实现图像增强</p>
+<p>基础理论（理解）：<strong>点处理</strong>方法，通过对灰度直方图进行变换有效地实现图像增强</p>
 <p>直方图均衡化（掌握）：将直方图的灰度级概率分布变换为均匀分布</p>
 <p>matlab函数：J = histeq(I)</p>
 <p><img src="https://s2.ax1x.com/2019/11/20/MhYC01.png" alt="MhYC01.png"></p>
+<p>通常新直方图分布比原直方图分布疏散，$S_k$的级数比$r_k$少</p>
 </li>
 <li><p>算术运算（掌握）</p>
 <p>图像相加：对同一场景的多幅序列图像求取平均值，降低加性随机噪声；将一幅图像叠加到另一幅图像上，实现二次曝光效果</p>
@@ -547,7 +548,7 @@
 <li><p>空域滤波（理解）</p>
 <p>基本概念</p>
 <ul>
-<li>空域滤波是一种邻域处理方法，通过直接在图像空间中对邻域内像素进行处理</li>
+<li>空域滤波是一种<strong>邻域处理</strong>方法，通过直接在图像空间中对邻域内像素进行处理</li>
 <li>作用域：像素及其邻域</li>
 <li>空域滤波通常使用空域模板进行的图像处理，模板本身被称为空域滤波器</li>
 <li>目的： 达到平滑或锐化图像的作用</li>
@@ -555,13 +556,23 @@
 <p>空域滤波器分类</p>
 <p><img src="https://s2.ax1x.com/2019/11/20/MhtXM4.png" alt="MhtXM4.png"></p>
 <p>图像平滑的作用：模糊、降低噪声</p>
-<p>图像空域平滑分类：线性平滑滤波、统计排序平滑滤波</p>
-<p>线性平滑模板特征：权系数全为正值、系数之和等于1</p>
-<p>均值平滑(最简单)、加权平均模板(加权系数中大边小)</p>
+<p>图像空域平滑分类：</p>
+<ul>
+<li><p>线性平滑滤波</p>
+<p>特征：权系数全为正值；系数之和等于1，不会增加总体灰度程度</p>
+<p>均值平滑(加权系数平均)、加权平均模板(加权系数中大边小)</p>
+</li>
+<li><p>统计排序平滑滤波</p>
+<p>中值滤波：区域内像素排序后取中值；去噪同时保留了边缘和细节，对滤除脉冲噪声(椒盐噪声)非常有效</p>
+<p>选取领域内最大(小)值-最大(小)值滤波</p>
+</li>
+</ul>
 </li>
 <li><p>双边滤波（理解）</p>
-<p>中值滤波：区域内像素排序后取中值；平滑了边缘和细节，对滤除脉冲噪声(椒盐噪声)非常有效</p>
-<p>统计排序平滑滤波：选取领域内最大(小)值-最大(小)值滤波</p>
+<p>非线性滤波</p>
+<p>权系数由空域和值域平滑函数的乘积给出</p>
+<p>随着与中心像素的距离和灰度差值的增大，邻域像素的权系数逐渐减小</p>
+<p>双边滤波很好地保持图像的边缘；平滑低对比度变化的细节特征，包括噪声；值域尺度越小，则边缘保持越好</p>
 </li>
 <li><p>图像锐化（掌握）</p>
 <p>作用：增强图像中的边缘和细节， 如边缘增强；减弱或清除灰度变化缓慢的区域，如边缘检测</p>
@@ -805,6 +816,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/网络协议分析-学习笔记.html" rel="prev" title="网络协议分析 学习笔记">
+                网络协议分析 学习笔记 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -891,7 +906,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">26</span>
+                  <span class="site-state-item-count">27</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -902,7 +917,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -913,7 +928,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">52</span>
+                  <span class="site-state-item-count">53</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -1026,7 +1041,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">92k</span>
+    <span title="Site words total count">92.6k</span>
   
 </div>
 
