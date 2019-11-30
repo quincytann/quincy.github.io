@@ -139,7 +139,7 @@
 <meta property="og:image" content="https://s2.ax1x.com/2019/11/27/QCJ0DU.md.png">
 <meta property="og:image" content="https://s2.ax1x.com/2019/11/27/QCYHwF.md.png">
 <meta property="og:image" content="https://s2.ax1x.com/2019/11/28/QPZHrn.png">
-<meta property="og:updated_time" content="2019-11-30T10:09:14.920Z">
+<meta property="og:updated_time" content="2019-11-30T12:34:13.945Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="网络协议分析 学习笔记">
 <meta name="twitter:description" content="第一章 TCP/IP概述 什么是Internet？ Network of Networks（网络之网络），连接各个子网的网络">
@@ -380,7 +380,7 @@
           
   <span class="post-updated">
     &nbsp; | &nbsp; 更新于
-    <time itemprop="dateUpdated" datetime="2019-11-30T18:09:14+08:00" content="2019-11-30">
+    <time itemprop="dateUpdated" datetime="2019-11-30T20:34:13+08:00" content="2019-11-30">
       2019-11-30
     </time>
   </span>
@@ -652,10 +652,8 @@
 <li><p>需解决问题</p>
 <p>循环投递问题：可能会耗尽网络资源。TTL可以避免这种后果；<br>分片丢失问题：重组超时时钟可防止重组程序无限期等待；<br>投递失败：选路失败、目的主机关机、目的主机处理数据报失败等情况。</p>
 <p>拥塞控制问题：路由器处理能力达到极限时要告诉源端慢点发；<br>选路优化问题：有更好的路径时应通知源端；<br>目的地可达性判断；<br>时钟同步问题。</p>
-</li>
-</ol>
 <p>传递控制信息+提供差错报告=ICMP</p>
-<ol>
+</li>
 <li><p>原则</p>
 <ol>
 <li>ICMP差错报告报文的数据区包括发生差错的<strong>IP数据报首部以及数据区的至少前64比特</strong>。</li>
@@ -742,13 +740,14 @@
 <li>所有数据报从网点传到Internet或从Internet传到网点时，都要通过NAT盒。</li>
 </ul>
 </li>
-<li><p>NAT对传入数据报和外发数据报中的地址进行转换，即用G替换每个外发数据报中的源地址，用主机的专用地址替换每个传入数据报的目的地址。</p>
-<ul>
-<li>从外部主机的角度来看，所有数据报都来自NAT盒，所有响应也返回到NAT盒；从内部主机的角度来看，NAT盒看上去是一个可达Internet的路由器。 </li>
+<li>NAT对传入数据报和外发数据报中的地址进行转换，即用G替换每个外发数据报中的源地址，用主机的专用地址替换每个传入数据报的目的地址。</li>
 </ul>
 </li>
-<li><p>地址转换方式</p>
+</ol>
 <ul>
+<li><p>从外部主机的角度来看，所有数据报都来自NAT盒，所有响应也返回到NAT盒；从内部主机的角度来看，NAT盒看上去是一个可达Internet的路由器。 </p>
+<ul>
+<li>地址转换方式<ul>
 <li>静态NAT，一对一，出于安全考虑</li>
 <li>动态NAT，多对多</li>
 <li>网络地址端口转换，多对一，利用了TCP或UDP协议端口号来提供并发性</li>
@@ -756,7 +755,7 @@
 </li>
 </ul>
 </li>
-</ol>
+</ul>
 <p><br></p>
 <h4 id="第九章-路由协议概述"><a href="#第九章-路由协议概述" class="headerlink" title="第九章 路由协议概述"></a>第九章 路由协议概述</h4><ol>
 <li>距离向量算法应用协议：RIP，BGP</li>
@@ -827,8 +826,32 @@
 </li>
 </ol>
 <p><br></p>
-<h4 id="第十五章-应用层系统服务"><a href="#第十五章-应用层系统服务" class="headerlink" title="第十五章 应用层系统服务"></a>第十五章 应用层系统服务</h4><p><br></p>
-<h4 id="第十六章-网络管理标准"><a href="#第十六章-网络管理标准" class="headerlink" title="第十六章 网络管理标准"></a>第十六章 网络管理标准</h4><p><br></p>
+<h4 id="第十五章-应用层系统服务"><a href="#第十五章-应用层系统服务" class="headerlink" title="第十五章 应用层系统服务"></a>第十五章 应用层系统服务</h4><ol>
+<li><p>自举协议BOOTH</p>
+<p>解决无盘工作站获取IP地址、网关、掩码、域名服务器等信息的问题。<br>基于UDP，使用端口号67</p>
+<p>Q：没有自己的IP地址，怎么通信？<br>A：使用有限广播，源IP地址字段设置为全0。</p>
+<p>Q：客户端不知道自己的IP地址，也没有IP/MAC映射关系，怎么办？<br>A：（1）在收到BOOTP请求后，服务器就把其中包含的物理地址及相应的IP地址写入ARP缓存，随后使用单播方式发送；<br>（2）广播响应，响应中包含客户端硬件地址。</p>
+<p>Q：什么是冷备份、热备份？优缺点是什么？<br>A： 冷备份：先关闭数据库停止使用，再执行备份的方式；优点是简单快速、容易恢复到某个时间点、方便维护；缺点是只能恢复到某个时间点、备份期间数据不便正常使用。<br>热备份：指执行备份时不影响备份文档正常使用的方式；优点是备份速度快、不影响数据使用；缺点是所有操作都会同步，包括删除。 </p>
+</li>
+<li><p>动态主机配置协议DHCP</p>
+<p>工作原理：设置DHCP服务器，客户端请求服务器给自己分配IP地址。<br>配置方式：手工配置，即管理员可以为特定的计算机配置一个永久IP地址；自动配置，即为某个第一次上网的计算机分配一个永久地址；动态配置，即为上网的计算机分配一个临时地址。</p>
+</li>
+<li><p>域名系统DNS</p>
+<p>作用：IP地址不方便记忆，给Internet上的主机起个便于记忆的名字，同时解决名字到IP地址的映射问题</p>
+<p>两个要素：抽象要素，指明了名字语法和名字的授权管理规则；具体要素，指明了将名字映射到IP地址的具体方法。</p>
+<p>域名解析过程：客户端/服务器模型</p>
+<p>DNS既可以基于TCP，也可以基于UDP，服务器则使用知名端口53。<br>核心：数据传输量少，可靠性要求低的时候用UDP；否则用TCP。</p>
+<p>DNS欺骗：恶意攻击者改变DNS响应并把解析结果指向自己可控的主机</p>
+</li>
+<li><p>域名前加www.的作用？</p>
+<p> 标识这是一个需要用浏览器来访问的网页服务 </p>
+</li>
+<li><p>域名和IP地址的映射关系是一对多还是多对多？为什么？</p>
+<p>多对多；<br>一个域名可以对应多个ip， 根据请求的位置和运营商返回不同的解析结果，比如负载均衡应用；一个ip也可以指向多个域名，比如购买的虚拟主机。 </p>
+</li>
+</ol>
+<p><br></p>
+<h4 id="第十六章-网络管理标准SNMP"><a href="#第十六章-网络管理标准SNMP" class="headerlink" title="第十六章 网络管理标准SNMP"></a>第十六章 网络管理标准SNMP</h4><p><br></p>
 <h4 id="第十七章-万维网与电子邮件系统"><a href="#第十七章-万维网与电子邮件系统" class="headerlink" title="第十七章 万维网与电子邮件系统"></a>第十七章 万维网与电子邮件系统</h4><p><br></p>
 
       
@@ -1038,7 +1061,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">54</span>
+                  <span class="site-state-item-count">53</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -1117,7 +1140,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#第一章-TCP-IP概述"><span class="nav-number">1.</span> <span class="nav-text">第一章 TCP/IP概述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第二章-点到点协议PPP"><span class="nav-number">2.</span> <span class="nav-text">第二章 点到点协议PPP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第三章-Internet地址及地址解析"><span class="nav-number">3.</span> <span class="nav-text">第三章 Internet地址及地址解析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第四章-互联网协议IP"><span class="nav-number">4.</span> <span class="nav-text">第四章 互联网协议IP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第五章-Internet控制报文协议ICMP"><span class="nav-number">5.</span> <span class="nav-text">第五章 Internet控制报文协议ICMP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第六章-用户数据报协议UDP"><span class="nav-number">6.</span> <span class="nav-text">第六章 用户数据报协议UDP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第七章-传输控制协议TCP"><span class="nav-number">7.</span> <span class="nav-text">第七章 传输控制协议TCP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第八章-Internet地址扩展技术"><span class="nav-number">8.</span> <span class="nav-text">第八章 Internet地址扩展技术</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第九章-路由协议概述"><span class="nav-number">9.</span> <span class="nav-text">第九章 路由协议概述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第十章-选路信息协议RIP"><span class="nav-number">10.</span> <span class="nav-text">第十章 选路信息协议RIP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第十一章-开放式最短路径优先OSPF"><span class="nav-number">11.</span> <span class="nav-text">第十一章 开放式最短路径优先OSPF</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第十二章-边界网关协议BGP"><span class="nav-number">12.</span> <span class="nav-text">第十二章 边界网关协议BGP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第十三章-Internet组播"><span class="nav-number">13.</span> <span class="nav-text">第十三章 Internet组播</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第十四章-移动IP"><span class="nav-number">14.</span> <span class="nav-text">第十四章 移动IP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第十五章-应用层系统服务"><span class="nav-number">15.</span> <span class="nav-text">第十五章 应用层系统服务</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第十六章-网络管理标准"><span class="nav-number">16.</span> <span class="nav-text">第十六章 网络管理标准</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第十七章-万维网与电子邮件系统"><span class="nav-number">17.</span> <span class="nav-text">第十七章 万维网与电子邮件系统</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#第一章-TCP-IP概述"><span class="nav-number">1.</span> <span class="nav-text">第一章 TCP/IP概述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第二章-点到点协议PPP"><span class="nav-number">2.</span> <span class="nav-text">第二章 点到点协议PPP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第三章-Internet地址及地址解析"><span class="nav-number">3.</span> <span class="nav-text">第三章 Internet地址及地址解析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第四章-互联网协议IP"><span class="nav-number">4.</span> <span class="nav-text">第四章 互联网协议IP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第五章-Internet控制报文协议ICMP"><span class="nav-number">5.</span> <span class="nav-text">第五章 Internet控制报文协议ICMP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第六章-用户数据报协议UDP"><span class="nav-number">6.</span> <span class="nav-text">第六章 用户数据报协议UDP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第七章-传输控制协议TCP"><span class="nav-number">7.</span> <span class="nav-text">第七章 传输控制协议TCP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第八章-Internet地址扩展技术"><span class="nav-number">8.</span> <span class="nav-text">第八章 Internet地址扩展技术</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第九章-路由协议概述"><span class="nav-number">9.</span> <span class="nav-text">第九章 路由协议概述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第十章-选路信息协议RIP"><span class="nav-number">10.</span> <span class="nav-text">第十章 选路信息协议RIP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第十一章-开放式最短路径优先OSPF"><span class="nav-number">11.</span> <span class="nav-text">第十一章 开放式最短路径优先OSPF</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第十二章-边界网关协议BGP"><span class="nav-number">12.</span> <span class="nav-text">第十二章 边界网关协议BGP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第十三章-Internet组播"><span class="nav-number">13.</span> <span class="nav-text">第十三章 Internet组播</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第十四章-移动IP"><span class="nav-number">14.</span> <span class="nav-text">第十四章 移动IP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第十五章-应用层系统服务"><span class="nav-number">15.</span> <span class="nav-text">第十五章 应用层系统服务</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第十六章-网络管理标准SNMP"><span class="nav-number">16.</span> <span class="nav-text">第十六章 网络管理标准SNMP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第十七章-万维网与电子邮件系统"><span class="nav-number">17.</span> <span class="nav-text">第十七章 万维网与电子邮件系统</span></a></li></ol></div>
             
 
           </div>
@@ -1151,7 +1174,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">97.6k</span>
+    <span title="Site words total count">98.3k</span>
   
 </div>
 
