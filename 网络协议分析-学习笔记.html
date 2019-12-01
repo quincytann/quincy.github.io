@@ -139,7 +139,7 @@
 <meta property="og:image" content="https://s2.ax1x.com/2019/11/27/QCJ0DU.md.png">
 <meta property="og:image" content="https://s2.ax1x.com/2019/11/27/QCYHwF.md.png">
 <meta property="og:image" content="https://s2.ax1x.com/2019/11/28/QPZHrn.png">
-<meta property="og:updated_time" content="2019-11-30T12:34:13.945Z">
+<meta property="og:updated_time" content="2019-12-01T08:17:29.201Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="网络协议分析 学习笔记">
 <meta name="twitter:description" content="第一章 TCP/IP概述 什么是Internet？ Network of Networks（网络之网络），连接各个子网的网络">
@@ -380,8 +380,8 @@
           
   <span class="post-updated">
     &nbsp; | &nbsp; 更新于
-    <time itemprop="dateUpdated" datetime="2019-11-30T20:34:13+08:00" content="2019-11-30">
-      2019-11-30
+    <time itemprop="dateUpdated" datetime="2019-12-01T16:17:29+08:00" content="2019-12-01">
+      2019-12-01
     </time>
   </span>
 
@@ -616,7 +616,7 @@
 <li><p>字段含义</p>
 <ul>
 <li>标识：2字节，用于数据报分片及重组，相同的分片此字段值相同</li>
-<li>标示：3位，MF为1表示后面还有分片，DF为1表示不能分片</li>
+<li>标志：3位，MF为1表示后面还有分片，DF为1表示不能分片</li>
 <li>片偏移量：13位，起始地址/8</li>
 </ul>
 </li>
@@ -679,8 +679,7 @@
 </li>
 <li><p>校验和与IP首部校验和的区别</p>
 <p>计算方法类似，UDP需要将伪首部被附加在UDP报文首部和数据区之前；<br>IP只检验数据报的首部 ，UDP 将首部和数据部分一起都检验 。</p>
-<p>IP只检验数据报的首部 ，UDP 将首部和数据部分一起都检验 。</p>
-<p>计算方法： ①把伪首部添加到UDP上；②将检验和字段添零；③所有位划分为16位的字； 把所有16位的字相加， 0和0相加是0，0和1相加是1，1和1相加是0但要产生一个进位1，加到下一列。若最高位相加后产生进位，则最后得到的结果要加1 ；④最后和取反。</p>
+<p>CRC计算方法： ①把伪首部添加到UDP上；②将检验和字段添零；③所有位划分为16位的字； 把所有16位的字相加， 0和0相加是0，0和1相加是1，1和1相加是0但要产生一个进位1，加到下一列。若最高位相加后产生进位，则最后得到的结果要加1 ；④最后和取反。</p>
 <p>校验时和为1说明无差错。</p>
 </li>
 <li><p>端口号的实质：缓存</p>
@@ -707,9 +706,6 @@
 <p>① 防止丢失的机制：带重传的肯定确认技术<br>如果确认报文丢失， 则对该报文进行重传，在达到一定次数还没有成功时放弃并发送一个复位信号。 </p>
 <p>② 防止重复乱序<br>重复原因：确认重传机制造成不必要重传<br>乱序原因：每个报文封装在IP数据报中独立传输<br>解决方案：引入序号，第n+1个报文的序号= 第n个报文的序号+ 第n个报文的长度  </p>
 </li>
-<li><p>超时重传定时器的设置</p>
-<p>calc…</p>
-</li>
 <li><p>传输效率与流量控制<br>滑动窗口思想</p>
 </li>
 </ol>
@@ -723,7 +719,11 @@
 </li>
 <li><p>子网编址</p>
 <p>思想：把一个网络分成若干个物理网络<br>IP地址 = 网络号+物理地址+主机<br>分类：定长子网划分、变长子网划分<br>定长子网的子网号不能全1是为了方便定向广播，变长子网的子网号可以全1是为了更好利用地址空间。</p>
+<p>选路算法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">1.  从数据报中提取目的IP地址D,并计算网络前缀N</span><br><span class="line">2.  if N与任何直连的网络地址匹配</span><br><span class="line">    then 通过该网络把数据直接交付到目的地D</span><br><span class="line">3.  else if 表中含D的特定主机路由</span><br><span class="line">	then 把数据报发送到表中指定的下一跳</span><br><span class="line">4.  else if 表中含到N的路由</span><br><span class="line">	then 把数据报发送到表中指定的下一跳</span><br><span class="line">5.  else if 表中含默认路由</span><br><span class="line">	then 把数据报发送到表中指定的下一跳</span><br><span class="line">6.  else 宣布选路出错</span><br></pre></td></tr></table></figure>
 </li>
+</ol>
+<ol>
 <li><p>匿名点到点链路</p>
 </li>
 <li><p>超网编址CIDR</p>
@@ -809,10 +809,13 @@
 <li>2 主机既能发送也能接收组播数据报</li>
 </ul>
 </li>
+<li><p>管理</p>
+<p>当主机要加入一个群组时，必须向本地组播路由器发送IGMP报文，其中包含该群组的地址，以宣布其成员状态；<br>组播路由器收到报文后，向互联网上的其它组播路由器传播该信息以建立必要的路由。<br>组播路由器周期性地<strong>轮询</strong>本地网络上的主机，以确定现在各个群组中有哪些主机。<br>如果经过若干次轮询后，某个群组中始终没有主机应答，则组播路由器就认为本地网络中不再有该群组的成员，并停止向其它组播路由器通告该群组的成员信息。</p>
+</li>
 </ul>
 </li>
 <li><p>管理为什么使用轮询不用广播？</p>
-<p>使用广播的话，主机可能不应答；<br>轮询更有利于安全性；<br>IGMP是不紧急的事件，允许一定时延</p>
+<p>使用广播的话，主机可能不应答，避免了广播风暴；<br>轮询更有利于安全性；<br>IGMP是不紧急的事件，允许一定时延</p>
 </li>
 </ol>
 <p><br></p>
@@ -851,8 +854,45 @@
 </li>
 </ol>
 <p><br></p>
-<h4 id="第十六章-网络管理标准SNMP"><a href="#第十六章-网络管理标准SNMP" class="headerlink" title="第十六章 网络管理标准SNMP"></a>第十六章 网络管理标准SNMP</h4><p><br></p>
-<h4 id="第十七章-万维网与电子邮件系统"><a href="#第十七章-万维网与电子邮件系统" class="headerlink" title="第十七章 万维网与电子邮件系统"></a>第十七章 万维网与电子邮件系统</h4><p><br></p>
+<h4 id="第十六章-网络管理标准SNMP"><a href="#第十六章-网络管理标准SNMP" class="headerlink" title="第十六章 网络管理标准SNMP"></a>第十六章 网络管理标准SNMP</h4><ol>
+<li><p>网络管理需求</p>
+<p>FCAPS<br>1）故障管理（Fault Management）：用于检测、定位和排除网络硬件和软件中的故障。出现故障时，要能够确认故障、记录故障，找出故障位置并尽可能排除。<br>2.）配置管理（Configuration Management）：掌握和控制网络的运行状态，包括网络内部设备的状态及其连接关系。<br>3）帐务管理（Account Management）：度量各个终端用户和应用程序对网络资源的使用情况，按照一定标准计算费用并进行保存。<br>4） 性能管理（Performance Management）：考虑的是网络运行的好坏。性能需要用一些指标来衡量，比如：吞吐率、响应时间等。</p>
+<p>5）安全管理（Security Management）：对网络资源及重要信息进行访问约束控制。</p>
+</li>
+<li><p>SNMP的3个组件</p>
+<p>MIB：Management Information Base，管理信息库，定义了管理对象的全集；<br>SNMP通信协议：定义了实施网络管理时的通信规约；<br>SMI：Structure of Management Information，管理信息结构，定义了管理对象和传输报文的标准语法。</p>
+</li>
+<li><p>MIB = 对象+实例</p>
+</li>
+<li><p>SNMP规定的内容：访问控制机制、通信规约、报文格式</p>
+</li>
+<li><p>基于UDP，使用端口161（被管者）和162（管理者）</p>
+</li>
+</ol>
+<p><br></p>
+<h4 id="第十七章-万维网与电子邮件系统"><a href="#第十七章-万维网与电子邮件系统" class="headerlink" title="第十七章 万维网与电子邮件系统"></a>第十七章 万维网与电子邮件系统</h4><ol>
+<li><p>WWW</p>
+<p>World Wide Web，万维网<br>组成：大量Web页面，每个页面是一个超媒体（hypermedia）</p>
+</li>
+<li><p>URL：Universal Resource Locator，统一资源定位符，每个页面唯一的标识</p>
+</li>
+<li><p>HTTP</p>
+<p>HyperText Transfer Protocol，超文本传输协议，基于TCP，80端口<br>客户端/服务器模型。页面存储于服务器，客户端通过HTTP向服务器请求页面</p>
+<p>请求方式：<br>GET：读取页面或向某个页面附加资源，体现在URL中。POST：向某个页面附加资源，体现在HTTP的消息主体中<br>HEAD：请求读取某个Web页面的头部；可用于测试URL的有效性和搜索引擎<br>CGI：Common Gateway Interface，公共网关接口，用于连接WWW和数据库的接口脚本或程序，通常放在cgi-bin目录下；动态创建页面<br>表单：用于将数据从浏览器传递给服务器，提交时参数和数据都传递</p>
+<p>非持久连接：客户端与服务器建立连接，获取页面，之后关闭连接。<br>持久连接：一旦客户端与服务器建立了TCP连接，就可以在这个请求上发送多次请求并接收响应，等所有请求都发送完成后再关闭连接。<br>流水线技术：在响应到来之前就可以发送下一个请求。<br>问题：如何分隔每个请求？解答：发送数据前加入相应长度。</p>
+<p>服务器驱动协商方式：浏览器首先发出协商请求，指定一系列选项值及URL；服务器收到请求后，从中选取满足浏览器需求的一项。如果有多项符合条件，则服务器选取优先级最高的一项。<br>浏览器驱动协商方式：浏览器向服务器发送请求，询问可用的内容。服务器返回可能的内容列表。浏览器之后从中选取一项，发送第二个请求获得该数据项。</p>
+<p>代理服务器：浏览器和服务器的中介，提高通信效率，减轻服务器负担。<br>浏览器：使用代理服务器可以绕过某些限制。<br>高速缓存：代理服务器设置，缓存页面，不必每次都到服务器取。</p>
+<p>报文格式：字符串，包括开始行、首部行、实体主体。首部和实体之间间隔一个空行。</p>
+<p>HTTP1问题：只允许一次发送个请求。<br>解决：使用多条链接来并行发送网站请求。<br>HTTP2特点：引入多路复用（Multiplexing）技术来解决请求数量受限的问题，允许同时通过单一的HTTP2连接发起多重的请求-响应消息。</p>
+</li>
+<li><p>电子邮件系统</p>
+<p>MIMIE（Multipurpose Internet Mail Extensions，多用途互联网邮件扩充）解决的问题：让邮件可以发送各种格式的附件</p>
+<p>SMTP：发送邮件的协议；使用客户端/服务器模型；基于TCP，使用知名端口号25；定义了14条命令21种应答。</p>
+<p>POP：Post Office Protocol，用于接收邮件。使用客户端/服务器模型，基于TCP，使用知名端口号110；用户从邮箱中读取邮件时，会把邮件下载到本地保存，之后服务器会把邮件删除掉。</p>
+<p>IMAP：Internet Mail Access Protocol，用于接收邮件。使用客户端/服务器模型，基于TCP，使用知名端口号143 ；对远程邮箱的管理和操作功能更强大，且用IMAP读邮件时，本地并不保存该邮件，在用户明确地发出删除命令之前，服务器都不会删除这个邮件。</p>
+</li>
+</ol>
+<p><br></p>
 
       
     </div>
@@ -1174,7 +1214,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">98.3k</span>
+    <span title="Site words total count">99.8k</span>
   
 </div>
 
