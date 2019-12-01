@@ -139,7 +139,7 @@
 <meta property="og:image" content="https://s2.ax1x.com/2019/11/27/QCJ0DU.md.png">
 <meta property="og:image" content="https://s2.ax1x.com/2019/11/27/QCYHwF.md.png">
 <meta property="og:image" content="https://s2.ax1x.com/2019/11/28/QPZHrn.png">
-<meta property="og:updated_time" content="2019-12-01T08:17:29.201Z">
+<meta property="og:updated_time" content="2019-12-01T08:49:20.961Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="网络协议分析 学习笔记">
 <meta name="twitter:description" content="第一章 TCP/IP概述 什么是Internet？ Network of Networks（网络之网络），连接各个子网的网络">
@@ -380,7 +380,7 @@
           
   <span class="post-updated">
     &nbsp; | &nbsp; 更新于
-    <time itemprop="dateUpdated" datetime="2019-12-01T16:17:29+08:00" content="2019-12-01">
+    <time itemprop="dateUpdated" datetime="2019-12-01T16:49:20+08:00" content="2019-12-01">
       2019-12-01
     </time>
   </span>
@@ -786,6 +786,9 @@
 </li>
 <li><p>路由器分类<br>（1）内部路由器（IR）：一个路由器所有直接相连的网络都在同一区域，同一区域内的各内部路由器有着相同的链路状态数据库。<br>（2）区域边界路由器（ABR）：一个路由器的接口位于多个区域。ABR拥有所连每个区域的链路状态数据库，并将其中的信息进行汇总，发送到骨干区域，后者再将这些信息分发到其它区域。<br>（3）骨干路由器（BR）：一个路由器至少有一个接口位于骨干区域，所有ABR和骨干区域中的IR都是骨干路由器。<br>（4）自治系统边界路由器（ASBR）：负责与其它自治系统交换路由信息。它位于骨干区域，将本自治系统的路由信息向其它自治系统通告，也向整个自治系统通告所得到的自治系统外部的路由信息。自治系统内的所有路由器都知道通往ASBR的路径。</p>
 </li>
+<li><p>区域分类（骨干和非骨干）</p>
+<p>“桩”的引入：减少计算开销。<br>桩域：仅接受默认路由和汇总LSA，不接受AS外部链路，不包含ASBR的非骨干区域都可以配置为桩域；</p>
+</li>
 </ol>
 <p><br></p>
 <h4 id="第十二章-边界网关协议BGP"><a href="#第十二章-边界网关协议BGP" class="headerlink" title="第十二章 边界网关协议BGP"></a>第十二章 边界网关协议BGP</h4><ol>
@@ -892,7 +895,7 @@
 <p>IMAP：Internet Mail Access Protocol，用于接收邮件。使用客户端/服务器模型，基于TCP，使用知名端口号143 ；对远程邮箱的管理和操作功能更强大，且用IMAP读邮件时，本地并不保存该邮件，在用户明确地发出删除命令之前，服务器都不会删除这个邮件。</p>
 </li>
 </ol>
-<p><br></p>
+<p><br> </p>
 
       
     </div>
@@ -1214,7 +1217,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">99.8k</span>
+    <span title="Site words total count">99.9k</span>
   
 </div>
 
