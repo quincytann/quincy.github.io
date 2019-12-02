@@ -139,7 +139,7 @@
 <meta property="og:image" content="https://s2.ax1x.com/2019/11/27/QCJ0DU.md.png">
 <meta property="og:image" content="https://s2.ax1x.com/2019/11/27/QCYHwF.md.png">
 <meta property="og:image" content="https://s2.ax1x.com/2019/11/28/QPZHrn.png">
-<meta property="og:updated_time" content="2019-12-01T08:53:09.645Z">
+<meta property="og:updated_time" content="2019-12-02T02:44:16.455Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="网络协议分析 学习笔记">
 <meta name="twitter:description" content="第一章 TCP/IP概述 什么是Internet？ Network of Networks（网络之网络），连接各个子网的网络">
@@ -380,8 +380,8 @@
           
   <span class="post-updated">
     &nbsp; | &nbsp; 更新于
-    <time itemprop="dateUpdated" datetime="2019-12-01T16:53:09+08:00" content="2019-12-01">
-      2019-12-01
+    <time itemprop="dateUpdated" datetime="2019-12-02T10:44:16+08:00" content="2019-12-02">
+      2019-12-02
     </time>
   </span>
 
@@ -680,7 +680,7 @@
 <li><p>校验和与IP首部校验和的区别</p>
 <p>计算方法类似，UDP需要将伪首部被附加在UDP报文首部和数据区之前；<br>IP只检验数据报的首部 ，UDP 将首部和数据部分一起都检验 。</p>
 <p>校验和计算方法： ①把伪首部添加到UDP上；②将检验和字段添零；③所有位划分为16位的字； 把所有16位的字相加， 0和0相加是0，0和1相加是1，1和1相加是0但要产生一个进位1，加到下一列。若最高位相加后产生进位，则最后得到的结果要加1 ；④最后和取反。</p>
-<p>校验时和为1说明无差错。</p>
+<p>校验时求和取反为0说明无差错。</p>
 </li>
 <li><p>端口号的实质：缓存</p>
 </li>
@@ -722,8 +722,6 @@
 <p>选路算法</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">1.  从数据报中提取目的IP地址D,并计算网络前缀N</span><br><span class="line">2.  if N与任何直连的网络地址匹配</span><br><span class="line">    then 通过该网络把数据直接交付到目的地D</span><br><span class="line">3.  else if 表中含D的特定主机路由</span><br><span class="line">	then 把数据报发送到表中指定的下一跳</span><br><span class="line">4.  else if 表中含到N的路由</span><br><span class="line">	then 把数据报发送到表中指定的下一跳</span><br><span class="line">5.  else if 表中含默认路由</span><br><span class="line">	then 把数据报发送到表中指定的下一跳</span><br><span class="line">6.  else 宣布选路出错</span><br></pre></td></tr></table></figure>
 </li>
-</ol>
-<ol>
 <li><p>匿名点到点链路</p>
 </li>
 <li><p>超网编址CIDR</p>
@@ -738,16 +736,12 @@
 <ul>
 <li>将全球有效地址（或地址段）G分配给把网点连接到Internet上并运行NAT软件的计算机（一般是一台多地址主机或路由器，称为NAT盒，NAT box）。</li>
 <li>所有数据报从网点传到Internet或从Internet传到网点时，都要通过NAT盒。</li>
-</ul>
-</li>
 <li>NAT对传入数据报和外发数据报中的地址进行转换，即用G替换每个外发数据报中的源地址，用主机的专用地址替换每个传入数据报的目的地址。</li>
+<li>从外部主机的角度来看，所有数据报都来自NAT盒，所有响应也返回到NAT盒；从内部主机的角度来看，NAT盒看上去是一个可达Internet的路由器。 </li>
 </ul>
 </li>
-</ol>
+<li><p>地址转换方式</p>
 <ul>
-<li><p>从外部主机的角度来看，所有数据报都来自NAT盒，所有响应也返回到NAT盒；从内部主机的角度来看，NAT盒看上去是一个可达Internet的路由器。 </p>
-<ul>
-<li>地址转换方式<ul>
 <li>静态NAT，一对一，出于安全考虑</li>
 <li>动态NAT，多对多</li>
 <li>网络地址端口转换，多对一，利用了TCP或UDP协议端口号来提供并发性</li>
@@ -755,7 +749,7 @@
 </li>
 </ul>
 </li>
-</ul>
+</ol>
 <p><br></p>
 <h4 id="第九章-路由协议概述"><a href="#第九章-路由协议概述" class="headerlink" title="第九章 路由协议概述"></a>第九章 路由协议概述</h4><ol>
 <li>距离向量算法应用协议：RIP，BGP</li>
@@ -782,7 +776,7 @@
 <p><br></p>
 <h4 id="第十一章-开放式最短路径优先OSPF"><a href="#第十一章-开放式最短路径优先OSPF" class="headerlink" title="第十一章 开放式最短路径优先OSPF"></a>第十一章 开放式最短路径优先OSPF</h4><ol>
 <li><p>区域的概念</p>
-<p>区域包括路由器和网络，用一个编号标识。<br>每个AS都有一个股骨干区域，编号为0。<br>所有非骨干区域都与骨干区域相连。<br>每个区域内的路由器相互通告链路状态，维护本区域内的链路状态数据库；同一自治系统中的各区域之间只交换经过汇总的路由信息。<br>非骨干区域之间不能直接进行路由信息交互，它们之间的路由信息分发由骨干区域负责。<br>这种体系结构不仅使得路由维护高效，而且可以隐藏区域内的网络拓扑结构，有利于提高网络安全性。</p>
+<p>区域包括路由器和网络，用一个编号标识。<br>每个AS都有一个骨干区域，编号为0。<br>所有非骨干区域都与骨干区域相连。<br>每个区域内的路由器相互通告链路状态，维护本区域内的链路状态数据库；同一自治系统中的各区域之间只交换经过汇总的路由信息。<br>非骨干区域之间不能直接进行路由信息交互，它们之间的路由信息分发由骨干区域负责。<br>这种体系结构不仅使得路由维护高效，而且可以隐藏区域内的网络拓扑结构，有利于提高网络安全性。</p>
 </li>
 <li><p>路由器分类<br>（1）内部路由器（IR）：一个路由器所有直接相连的网络都在同一区域，同一区域内的各内部路由器有着相同的链路状态数据库。<br>（2）区域边界路由器（ABR）：一个路由器的接口位于多个区域。ABR拥有所连每个区域的链路状态数据库，并将其中的信息进行汇总，发送到骨干区域，后者再将这些信息分发到其它区域。<br>（3）骨干路由器（BR）：一个路由器至少有一个接口位于骨干区域，所有ABR和骨干区域中的IR都是骨干路由器。<br>（4）自治系统边界路由器（ASBR）：负责与其它自治系统交换路由信息。它位于骨干区域，将本自治系统的路由信息向其它自治系统通告，也向整个自治系统通告所得到的自治系统外部的路由信息。自治系统内的所有路由器都知道通往ASBR的路径。</p>
 </li>
