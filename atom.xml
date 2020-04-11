@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://quincy.ink/"/>
-  <updated>2020-03-23T04:44:37.049Z</updated>
+  <updated>2020-04-11T09:36:23.519Z</updated>
   <id>http://quincy.ink/</id>
   
   <author>
@@ -17,13 +17,35 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>面经</title>
+    <link href="http://quincy.ink/%E9%9D%A2%E7%BB%8F.html"/>
+    <id>http://quincy.ink/面经.html</id>
+    <published>2020-04-11T08:47:38.000Z</published>
+    <updated>2020-04-11T09:36:23.519Z</updated>
+    
+    <content type="html"><![CDATA[<p>记录一下找工作的小颠簸~~<a id="more"></a></p><blockquote><p><strong>总结</strong>：<br>问题不会就是不会，不要把自己弄得很尴尬；<br>回答问题后不要询问回答是否正确；</p></blockquote><h3 id="蚂蚁金服——JAVA研发工程师"><a href="#蚂蚁金服——JAVA研发工程师" class="headerlink" title="蚂蚁金服——JAVA研发工程师"></a>蚂蚁金服——JAVA研发工程师</h3><h4 id="笔试"><a href="#笔试" class="headerlink" title="笔试"></a>笔试</h4><blockquote><p>A. 给一个长度n（1e5）的数字序列，对每个数定义f[i]为i左边第一个大于a[i]的数，g[i]为i右边第一个小于a[i]的数，问有多少个a[i]的f[i]和g[i]是倍数关系？<br>思路：set+二分</p><p>B. 给一个n*m(1e3)的矩阵，每个位置有个权值，问从第一行任意起点到第n行任意终点的最小路径权值和是多少？<br>思路：bfs+优先队列</p></blockquote><h4 id="一面"><a href="#一面" class="headerlink" title="一面"></a>一面</h4><blockquote><p>自我介绍<br>询问ACM训练情况，组内分工，印象最深的一道题，大学影响最大的一件事<br>问题：<br>1、两幅扑克牌(108张)，四个人玩(每人27张)，问一个人同时拿到一对大王的概率？<br>2、所有你知道的排序算法的思想及比较<br>3、百度搜索引擎返回的结果1e6条，只显示前十条，这个情景下哪个排序算法最好？<br>4、你所知道的树结构及其定义<br>5、数据库的索引<br>6、TCP三次握手和四次挥手<br>7、健康码实现需要的东西？（开放题）<br>8、简历中课程项目的实现、效率以及是否可以优化（C语言大作业——IP地址查询系统）<br>9、编程题<br>// 给定一个字符串S和有效单词的字典D，请确定可以插入到S中的最小空格数，使得最终的字符串完全由D中的有效单词组成，并输出解。<br>// 如果没有解则应该输出n/a<br>//S = “ilikealibaba”<br>//D = [“i”, “like”, “ali”, “liba”, “baba”, “alibaba”]<br>//输出<br>//“i like alibaba”</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="comment">//只给了半小时，中间出bug没调出来，吃个饭回来就写完了...</span></span><br><span class="line">&gt; <span class="comment">//trie+dfs 理论O(n)</span></span><br><span class="line">&gt; <span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line">&gt; <span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line">&gt; <span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">1e5</span>+<span class="number">5</span>;</span><br><span class="line">&gt; </span><br><span class="line">&gt; <span class="class"><span class="keyword">struct</span> <span class="title">trie</span> &#123;</span></span><br><span class="line">&gt;     <span class="keyword">int</span> nex[maxn][<span class="number">26</span>],cnt;</span><br><span class="line">&gt;     <span class="keyword">bool</span> exist[maxn];</span><br><span class="line">&gt;     <span class="function"><span class="keyword">void</span> <span class="title">Insert</span><span class="params">(<span class="keyword">char</span> s[], <span class="keyword">int</span> len)</span> </span>&#123;</span><br><span class="line">&gt;         <span class="keyword">int</span> p = <span class="number">0</span>;</span><br><span class="line">&gt;         <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len; i++) &#123;</span><br><span class="line">&gt;             <span class="keyword">int</span> c = s[i] - <span class="string">'a'</span>;</span><br><span class="line">&gt;             <span class="keyword">if</span> (!nex[p][c]) nex[p][c] = ++cnt;</span><br><span class="line">&gt;             p = nex[p][c];</span><br><span class="line">&gt;         &#125;</span><br><span class="line">&gt;         exist[p] = <span class="number">1</span>;</span><br><span class="line">&gt;     &#125;</span><br><span class="line">&gt; </span><br><span class="line">&gt;     <span class="function"><span class="keyword">void</span> <span class="title">Find</span><span class="params">(<span class="keyword">char</span> s[],<span class="keyword">int</span> st,<span class="keyword">int</span> ed,<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &amp;vc)</span> </span>&#123;</span><br><span class="line">&gt;     <span class="keyword">int</span> p = <span class="number">0</span> ,le = <span class="number">0</span>;</span><br><span class="line">&gt;         <span class="keyword">for</span> (<span class="keyword">int</span> i = st; i &lt; ed; i++) &#123;</span><br><span class="line">&gt;             <span class="keyword">int</span> c = s[i] - <span class="string">'a'</span>;</span><br><span class="line">&gt;             <span class="keyword">if</span> (!nex[p][c]) <span class="keyword">break</span>;</span><br><span class="line">&gt;             p = nex[p][c];</span><br><span class="line">&gt;             le ++;</span><br><span class="line">&gt;             <span class="keyword">if</span>(exist[p]) vc.push_back(le);</span><br><span class="line">&gt;         &#125;</span><br><span class="line">&gt;     &#125;</span><br><span class="line">&gt; &#125;t;</span><br><span class="line">&gt; </span><br><span class="line">&gt; <span class="keyword">int</span> vis[maxn];</span><br><span class="line">&gt; <span class="keyword">char</span> s[maxn];</span><br><span class="line">&gt; <span class="keyword">bool</span> ok=<span class="literal">false</span>;</span><br><span class="line">&gt; <span class="function"><span class="keyword">bool</span> <span class="title">dfs</span><span class="params">(<span class="keyword">char</span> s[],<span class="keyword">int</span> pre,<span class="keyword">int</span> len)</span></span>&#123;</span><br><span class="line">&gt; <span class="keyword">if</span>(pre&gt;=len) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&gt; <span class="keyword">if</span>(ok) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&gt; </span><br><span class="line">&gt; <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; tmp;</span><br><span class="line">&gt; t.Find(s,pre,len,tmp);</span><br><span class="line">&gt; <span class="keyword">if</span>(tmp.size()==<span class="number">0</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&gt; <span class="keyword">for</span>(<span class="keyword">int</span> i=tmp.size()<span class="number">-1</span>;i&gt;=<span class="number">0</span>;i--)&#123;</span><br><span class="line">&gt; <span class="keyword">if</span>(dfs(s,pre+tmp[i],len))&#123;</span><br><span class="line">&gt; vis[pre+tmp[i]<span class="number">-1</span>] = <span class="number">1</span>;</span><br><span class="line">&gt; <span class="keyword">return</span> ok=<span class="literal">true</span>; </span><br><span class="line">&gt; &#125;</span><br><span class="line">&gt; &#125;</span><br><span class="line">&gt; <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&gt; &#125;</span><br><span class="line">&gt; </span><br><span class="line">&gt; </span><br><span class="line">&gt; <span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">&gt; <span class="keyword">int</span> n;</span><br><span class="line">&gt; <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</span><br><span class="line">&gt; <span class="keyword">while</span>(n--)&#123;</span><br><span class="line">&gt; <span class="built_in">scanf</span>(<span class="string">"%s"</span>,s);</span><br><span class="line">&gt; <span class="keyword">int</span> len=<span class="built_in">strlen</span>(s);</span><br><span class="line">&gt; t.Insert(s,len);</span><br><span class="line">&gt; &#125;</span><br><span class="line">&gt; </span><br><span class="line">&gt; <span class="built_in">scanf</span>(<span class="string">"%s"</span>,s);</span><br><span class="line">&gt; <span class="keyword">int</span> len=<span class="built_in">strlen</span>(s);</span><br><span class="line">&gt; <span class="keyword">if</span>(dfs(s,<span class="number">0</span>,len))&#123;</span><br><span class="line">&gt; <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;len;i++)&#123;</span><br><span class="line">&gt; <span class="built_in">printf</span>(<span class="string">"%c"</span>,s[i]);</span><br><span class="line">&gt; <span class="keyword">if</span>(vis[i]) <span class="built_in">printf</span>(<span class="string">" "</span>);</span><br><span class="line">&gt; &#125;</span><br><span class="line">&gt; &#125;</span><br><span class="line">&gt; <span class="keyword">else</span> <span class="built_in">puts</span>(<span class="string">"n/a"</span>);</span><br><span class="line">&gt; <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&gt; &#125;</span><br><span class="line">&gt; <span class="comment">/*</span></span><br><span class="line"><span class="comment">&gt; 6</span></span><br><span class="line"><span class="comment">&gt; i</span></span><br><span class="line"><span class="comment">&gt; like</span></span><br><span class="line"><span class="comment">&gt; ali</span></span><br><span class="line"><span class="comment">&gt; liba</span></span><br><span class="line"><span class="comment">&gt; baba</span></span><br><span class="line"><span class="comment">&gt; alibaba</span></span><br><span class="line"><span class="comment">&gt; </span></span><br><span class="line"><span class="comment">&gt; ilikealibaba</span></span><br><span class="line"><span class="comment">&gt; </span></span><br><span class="line"><span class="comment">&gt; */</span></span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;记录一下找工作的小颠簸~~
+    
+    </summary>
+    
+      <category term="工作" scheme="http://quincy.ink/categories/%E5%B7%A5%E4%BD%9C/"/>
+    
+    
+      <category term="面经" scheme="http://quincy.ink/tags/%E9%9D%A2%E7%BB%8F/"/>
+    
+  </entry>
+  
+  <entry>
     <title>工程经济学 学习笔记</title>
     <link href="http://quincy.ink/%E5%B7%A5%E7%A8%8B%E7%BB%8F%E6%B5%8E%E5%AD%A6-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.html"/>
     <id>http://quincy.ink/工程经济学-学习笔记.html</id>
     <published>2020-03-11T01:49:17.000Z</published>
-    <updated>2020-03-23T04:44:37.049Z</updated>
+    <updated>2020-03-24T02:17:19.325Z</updated>
     
-    <content type="html"><![CDATA[<h4 id="第一章-绪论"><a href="#第一章-绪论" class="headerlink" title="第一章 绪论"></a>第一章 绪论</h4><ul><li><p>工程与经济的关系：工程是手段，经济是目的</p></li><li><p>工程师的基本责任：分析成本<a id="more"></a></p></li></ul><p><br></p><h4 id="第二章-资金的时间价值与现金流量"><a href="#第二章-资金的时间价值与现金流量" class="headerlink" title="第二章 资金的时间价值与现金流量"></a>第二章 资金的时间价值与现金流量</h4><ul><li><p>定义：i 利率 n年数 P现值 F终值 A年金</p></li><li><p>计息方式</p></li></ul><script type="math/tex; mode=display">单利：F=P(1+ni)\\复利：F=P(1+i)^n</script><ul><li><p>现金流量</p><p>CI 现金流入，CO 现金流出<br>现金是价值风险最小的一种资产</p></li><li><p>复利等值计算</p><p>一次支付终值公式：$F=P(1+i)^{n}$<br>一次支付现值公式:$P=F(1+i)^{-n}$<br>年金终值公式:$F=A+A(1+i)+A(1+i)^2+…+A(1+i)^{n-1}=A[(1+i)^{n}-1]／i$<br>偿债基金公式:$A=Fi/[(1+i)^{n}-1]$<br>年金现值公式:$P=A[(1+i)^{n}-1]／\{i(1+i)^{n}\}\quad 永久年金:P=A/i$<br>资金回收公式:$A=Pi(1+i)^{n}/[(1+i)^{n}-1]$<br>名义利率r与实际利率i的换算:$i =(1＋r/m)^m-1 \quad$(m为每年计息次数)</p></li></ul><p><br></p><h4 id="第三章-建设项目评价的基本经济要素"><a href="#第三章-建设项目评价的基本经济要素" class="headerlink" title="第三章 建设项目评价的基本经济要素"></a>第三章 建设项目评价的基本经济要素</h4><ul><li><p>折旧——固定资产<br>摊销——无形资产</p></li><li><p>线性折旧法</p><p>1.平均年限法<br>年折旧额 = 原值 * 折旧率<br>折旧率 = （1 - 净残值率）/ 折旧年限<br>2.工作量法<br>年折旧额 = 工作量 * 折旧率<br>折旧率 = 原值 *（1 - 净残值率）/ 工作量</p></li><li><p>经营成本 = 总成本 - 折旧、摊销 - 财务费用<br>= 外购原材料、燃料、动力费 + 工资及福利费 + 修理费 + 其他费用</p></li><li><p>增值额税 = 销项额税 - 进项额税<br>= 销项额(不含税)* 增值税率  -  进项额(不含税)* 增值税率<br>= [销项额(含税)/(1+增值税率)]* 增值税率  -  [进项额(不含税)/(1+增值税率)]* 增值税率</p></li><li><p>企业所得税的税率为25％<br>所得税 = 营业收入-总成本 = 营业收入-折旧-摊销-经营成本-财务费用(税收、利息等)</p></li><li><p>利润</p><p>营业利润=营业收入－总成本－营业税及附加<br>利润总额＝营业利润＋投资净收益＋营业外收支净额<br>净利润＝利润总额－所得税</p></li></ul><p><br></p><h4 id="第四章-建设项目经济评价指标体系"><a href="#第四章-建设项目经济评价指标体系" class="headerlink" title="第四章 建设项目经济评价指标体系"></a>第四章 建设项目经济评价指标体系</h4><ul><li><p>投资回收期<br>$Pt = T - 1 + \frac{第T-1年年净现金流累计值的绝对值}{第T年的现金流}$，T为累积净现金流量首次为非负值所对应的年份<br>计算动态回收期将净现金流折算到投资初期即可<br>评价标准：Pt ≤ Pc(基准回收期)</p></li><li><p>净现值</p><p>$NPV = \sum_{t=0}^n NCF_t(P/F,ic,t)$<br>评价标准：NPV≥ 0</p></li><li><p>内部收益率</p><p>$\sum_{t=0}^nNCF(1+IRR)^{-t}=0$<br>$IRR =i_1 + \frac{NPV_1}{NPV_1+|NPV_2|}(i_2-i_1)，i_2-i_1&lt;0.05$<br>评价标准：IRR≥ic(社会折现率)</p></li><li><p>利息备付率</p><p>ICR = EBIT / PI = 息税前利润 / 计入成本的应付利息<br>评价标准：ICR&gt;2</p></li><li><p>偿债备付率</p><p>DSCR = (EBITAD - TAX)/PD = (息税折旧摊销前利润 - 企业所得税额) / 应还本付息金额<br>评价标准：DSCR&gt;1</p></li></ul><p><br></p><h4 id="第五章-多方案的经济性比较和选择"><a href="#第五章-多方案的经济性比较和选择" class="headerlink" title="第五章  多方案的经济性比较和选择"></a>第五章  多方案的经济性比较和选择</h4><p>A-B</p><p><br></p>]]></content>
+    <content type="html"><![CDATA[<h4 id="第一章-绪论"><a href="#第一章-绪论" class="headerlink" title="第一章 绪论"></a>第一章 绪论</h4><ul><li><p>工程与经济的关系：工程是手段，经济是目的</p></li><li><p>工程师的基本责任：分析成本<a id="more"></a></p></li></ul><p><br></p><h4 id="第二章-资金的时间价值与现金流量"><a href="#第二章-资金的时间价值与现金流量" class="headerlink" title="第二章 资金的时间价值与现金流量"></a>第二章 资金的时间价值与现金流量</h4><ul><li><p>定义：i 利率 n年数 P现值 F终值 A年金</p></li><li><p>计息方式</p></li></ul><script type="math/tex; mode=display">单利：F=P(1+ni)\\复利：F=P(1+i)^n</script><ul><li><p>现金流量</p><p>CI 现金流入，CO 现金流出<br>现金是价值风险最小的一种资产</p></li><li><p>复利等值计算</p><p>一次支付终值公式：$F=P(1+i)^{n}$<br>一次支付现值公式:$P=F(1+i)^{-n}$<br>年金终值公式:$F=A+A(1+i)+A(1+i)^2+…+A(1+i)^{n-1}=A[(1+i)^{n}-1]／i$<br>偿债基金公式:$A=Fi/[(1+i)^{n}-1]$<br>年金现值公式:$P=A[(1+i)^{n}-1]／\{i(1+i)^{n}\}\quad 永久年金:P=A/i$<br>资金回收公式:$A=Pi(1+i)^{n}/[(1+i)^{n}-1]$<br>名义利率r与实际利率i的换算:$i =(1＋r/m)^m-1 \quad$(m为每年计息次数)</p></li></ul><p><br></p><h4 id="第三章-建设项目评价的基本经济要素"><a href="#第三章-建设项目评价的基本经济要素" class="headerlink" title="第三章 建设项目评价的基本经济要素"></a>第三章 建设项目评价的基本经济要素</h4><ul><li><p>折旧——固定资产<br>摊销——无形资产</p></li><li><p>线性折旧法</p><p>1.平均年限法<br>年折旧额 = 原值 * 折旧率<br>折旧率 = （1 - 净残值率）/ 折旧年限<br>2.工作量法<br>年折旧额 = 工作量 * 折旧率<br>折旧率 = 原值 *（1 - 净残值率）/ 工作量</p></li><li><p>经营成本 = 总成本 - 折旧、摊销 - 财务费用<br>= 外购原材料、燃料、动力费 + 工资及福利费 + 修理费 + 其他费用</p></li><li><p>增值额税 = 销项额税 - 进项额税<br>= 销项额(不含税)* 增值税率  -  进项额(不含税)* 增值税率<br>= [销项额(含税)/(1+增值税率)]* 增值税率  -  [进项额(不含税)/(1+增值税率)]* 增值税率</p></li><li><p>企业所得税的税率为25％<br>所得税 = ( 营业收入 - 总成本 = 营业收入-折旧-摊销-经营成本-财务费用(税收、利息等) )*税率</p></li><li><p>利润</p><p>营业利润=营业收入－总成本－营业税及附加<br>利润总额＝营业利润＋投资净收益＋营业外收支净额<br>净利润＝利润总额－所得税</p></li></ul><p><br></p><h4 id="第四章-建设项目经济评价指标体系"><a href="#第四章-建设项目经济评价指标体系" class="headerlink" title="第四章 建设项目经济评价指标体系"></a>第四章 建设项目经济评价指标体系</h4><ul><li><p>投资回收期<br>$Pt = T - 1 + \frac{第T-1年年净现金流累计值的绝对值}{第T年的现金流}$，T为累积净现金流量首次为非负值所对应的年份<br>计算动态回收期将净现金流折算到投资初期即可<br>评价标准：Pt ≤ Pc(基准回收期)</p></li><li><p>净现值</p><p>$NPV = \sum_{t=0}^n NCF_t(P/F,ic,t)$<br>评价标准：NPV≥ 0</p></li><li><p>内部收益率</p><p>$\sum_{t=0}^nNCF(1+IRR)^{-t}=0$<br>$IRR =i_1 + \frac{NPV_1}{NPV_1+|NPV_2|}(i_2-i_1)，i_2-i_1&lt;0.05$<br>评价标准：IRR≥ic(社会折现率)</p></li><li><p>利息备付率</p><p>ICR = EBIT / PI = 息税前利润 / 计入成本的应付利息<br>评价标准：ICR&gt;2</p></li><li><p>偿债备付率</p><p>DSCR = (EBITAD - TAX)/PD = (息税折旧摊销前利润 - 企业所得税额) / 应还本付息金额<br>评价标准：DSCR&gt;1</p></li></ul><p><br></p><h4 id="第五章-多方案的经济性比较和选择"><a href="#第五章-多方案的经济性比较和选择" class="headerlink" title="第五章  多方案的经济性比较和选择"></a>第五章  多方案的经济性比较和选择</h4><p>A-B</p><p><br></p>]]></content>
     
     <summary type="html">
     
@@ -132,17 +154,15 @@
       <category term="ACM" scheme="http://quincy.ink/categories/ACM/"/>
     
     
-      <category term="线段树" scheme="http://quincy.ink/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/"/>
-    
       <category term="贪心" scheme="http://quincy.ink/tags/%E8%B4%AA%E5%BF%83/"/>
-    
-      <category term="二分" scheme="http://quincy.ink/tags/%E4%BA%8C%E5%88%86/"/>
-    
-      <category term="hash" scheme="http://quincy.ink/tags/hash/"/>
     
       <category term="PAM" scheme="http://quincy.ink/tags/PAM/"/>
     
+      <category term="线段树" scheme="http://quincy.ink/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/"/>
+    
       <category term="主席树" scheme="http://quincy.ink/tags/%E4%B8%BB%E5%B8%AD%E6%A0%91/"/>
+    
+      <category term="二分" scheme="http://quincy.ink/tags/%E4%BA%8C%E5%88%86/"/>
     
       <category term="找规律" scheme="http://quincy.ink/tags/%E6%89%BE%E8%A7%84%E5%BE%8B/"/>
     
@@ -151,6 +171,8 @@
       <category term="LIS" scheme="http://quincy.ink/tags/LIS/"/>
     
       <category term="最大子段和" scheme="http://quincy.ink/tags/%E6%9C%80%E5%A4%A7%E5%AD%90%E6%AE%B5%E5%92%8C/"/>
+    
+      <category term="hash" scheme="http://quincy.ink/tags/hash/"/>
     
       <category term="博弈" scheme="http://quincy.ink/tags/%E5%8D%9A%E5%BC%88/"/>
     
@@ -178,29 +200,25 @@
       <category term="ACM" scheme="http://quincy.ink/categories/ACM/"/>
     
     
-      <category term="线段树" scheme="http://quincy.ink/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/"/>
-    
-      <category term="STL" scheme="http://quincy.ink/tags/STL/"/>
-    
-      <category term="dfs" scheme="http://quincy.ink/tags/dfs/"/>
-    
-      <category term="二分" scheme="http://quincy.ink/tags/%E4%BA%8C%E5%88%86/"/>
-    
-      <category term="dp" scheme="http://quincy.ink/tags/dp/"/>
-    
-      <category term="离散化" scheme="http://quincy.ink/tags/%E7%A6%BB%E6%95%A3%E5%8C%96/"/>
-    
-      <category term="并查集" scheme="http://quincy.ink/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/"/>
-    
       <category term="PAM" scheme="http://quincy.ink/tags/PAM/"/>
+    
+      <category term="线段树" scheme="http://quincy.ink/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/"/>
     
       <category term="主席树" scheme="http://quincy.ink/tags/%E4%B8%BB%E5%B8%AD%E6%A0%91/"/>
     
+      <category term="二分" scheme="http://quincy.ink/tags/%E4%BA%8C%E5%88%86/"/>
+    
       <category term="分治" scheme="http://quincy.ink/tags/%E5%88%86%E6%B2%BB/"/>
+    
+      <category term="dp" scheme="http://quincy.ink/tags/dp/"/>
     
       <category term="单调栈" scheme="http://quincy.ink/tags/%E5%8D%95%E8%B0%83%E6%A0%88/"/>
     
+      <category term="dfs" scheme="http://quincy.ink/tags/dfs/"/>
+    
       <category term="bitset" scheme="http://quincy.ink/tags/bitset/"/>
+    
+      <category term="STL" scheme="http://quincy.ink/tags/STL/"/>
     
       <category term="单调队列" scheme="http://quincy.ink/tags/%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97/"/>
     
@@ -211,6 +229,10 @@
       <category term="组合数学" scheme="http://quincy.ink/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/"/>
     
       <category term="几何" scheme="http://quincy.ink/tags/%E5%87%A0%E4%BD%95/"/>
+    
+      <category term="离散化" scheme="http://quincy.ink/tags/%E7%A6%BB%E6%95%A3%E5%8C%96/"/>
+    
+      <category term="并查集" scheme="http://quincy.ink/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/"/>
     
   </entry>
   
@@ -307,11 +329,11 @@
       <category term="ACM" scheme="http://quincy.ink/categories/ACM/"/>
     
     
-      <category term="cf" scheme="http://quincy.ink/tags/cf/"/>
+      <category term="贪心" scheme="http://quincy.ink/tags/%E8%B4%AA%E5%BF%83/"/>
     
       <category term="STL" scheme="http://quincy.ink/tags/STL/"/>
     
-      <category term="贪心" scheme="http://quincy.ink/tags/%E8%B4%AA%E5%BF%83/"/>
+      <category term="cf" scheme="http://quincy.ink/tags/cf/"/>
     
       <category term="字符串" scheme="http://quincy.ink/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
     
@@ -337,13 +359,13 @@
       <category term="程序设计实践" scheme="http://quincy.ink/categories/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%AE%9E%E8%B7%B5/"/>
     
     
-      <category term="数学" scheme="http://quincy.ink/tags/%E6%95%B0%E5%AD%A6/"/>
-    
       <category term="STL" scheme="http://quincy.ink/tags/STL/"/>
     
-      <category term="暴力" scheme="http://quincy.ink/tags/%E6%9A%B4%E5%8A%9B/"/>
-    
       <category term="模拟" scheme="http://quincy.ink/tags/%E6%A8%A1%E6%8B%9F/"/>
+    
+      <category term="数学" scheme="http://quincy.ink/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+      <category term="暴力" scheme="http://quincy.ink/tags/%E6%9A%B4%E5%8A%9B/"/>
     
       <category term="程序设计实践" scheme="http://quincy.ink/tags/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%AE%9E%E8%B7%B5/"/>
     
@@ -381,9 +403,9 @@
     
       <category term="二分" scheme="http://quincy.ink/tags/%E4%BA%8C%E5%88%86/"/>
     
-      <category term="manacher" scheme="http://quincy.ink/tags/manacher/"/>
-    
       <category term="hash" scheme="http://quincy.ink/tags/hash/"/>
+    
+      <category term="manacher" scheme="http://quincy.ink/tags/manacher/"/>
     
   </entry>
   
@@ -530,13 +552,13 @@
       <category term="ACM" scheme="http://quincy.ink/categories/ACM/"/>
     
     
-      <category term="数学" scheme="http://quincy.ink/tags/%E6%95%B0%E5%AD%A6/"/>
-    
       <category term="dp" scheme="http://quincy.ink/tags/dp/"/>
     
-      <category term="bfs" scheme="http://quincy.ink/tags/bfs/"/>
-    
       <category term="并查集" scheme="http://quincy.ink/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/"/>
+    
+      <category term="数学" scheme="http://quincy.ink/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+      <category term="bfs" scheme="http://quincy.ink/tags/bfs/"/>
     
   </entry>
   
@@ -566,45 +588,17 @@
       <category term="ACM" scheme="http://quincy.ink/categories/ACM/"/>
     
     
+      <category term="二分" scheme="http://quincy.ink/tags/%E4%BA%8C%E5%88%86/"/>
+    
       <category term="STL" scheme="http://quincy.ink/tags/STL/"/>
     
-      <category term="二分" scheme="http://quincy.ink/tags/%E4%BA%8C%E5%88%86/"/>
+      <category term="离散化" scheme="http://quincy.ink/tags/%E7%A6%BB%E6%95%A3%E5%8C%96/"/>
     
       <category term="字符串hash" scheme="http://quincy.ink/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2hash/"/>
     
       <category term="暴力" scheme="http://quincy.ink/tags/%E6%9A%B4%E5%8A%9B/"/>
     
       <category term="kmp" scheme="http://quincy.ink/tags/kmp/"/>
-    
-      <category term="离散化" scheme="http://quincy.ink/tags/%E7%A6%BB%E6%95%A3%E5%8C%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>EOJ Monthly 2019.2</title>
-    <link href="http://quincy.ink/EOJ-Monthly-2019-2.html"/>
-    <id>http://quincy.ink/EOJ-Monthly-2019-2.html</id>
-    <published>2019-02-23T06:03:29.000Z</published>
-    <updated>2019-03-02T01:43:05.072Z</updated>
-    
-    <content type="html"><![CDATA[<p>原题链接：<a href="https://acm.ecnu.edu.cn/contest/140/" target="_blank" rel="noopener">https://acm.ecnu.edu.cn/contest/140/</a></p><p>A,B,C,E To be continue…</p><p><br></p><blockquote><p><strong>D 进制转换</strong></p></blockquote><p><strong>题意：</strong>求[l,r]中所有数的k进制末尾恰好有m个零的数有多少个<a id="more"></a></p><p><strong>思路：</strong></p><p>x在k进制下末尾恰好有m个零说明x%(k^m)恒等于0，而x%(k^(m+1))不恒等于0，而x%(k^m)==0的情况包含了x%(k^(m+1))==0的情况，所以由容斥定理有[1,x]中满足题意的数有 x/(k^m) - x/(k^(m+1)) 个</p><p><strong>代码：</strong></p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">1e6</span>+<span class="number">5</span>;</span><br><span class="line"></span><br><span class="line"><span class="function">ll <span class="title">calc</span><span class="params">(ll k,ll m,ll x)</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=m;i++)&#123;</span><br><span class="line">        x/=k;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> x;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    ll l,r,k,m;</span><br><span class="line">    <span class="keyword">int</span> T;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;T);</span><br><span class="line">    <span class="keyword">while</span>(T--)&#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%lld%lld%lld%lld"</span>,&amp;l,&amp;r,&amp;k,&amp;m);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%lld\n"</span>,calc(k,m,r)-calc(k,m+<span class="number">1</span>,r)-calc(k,m,l<span class="number">-1</span>)+calc(k,m+<span class="number">1</span>,l<span class="number">-1</span>));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><br></p><blockquote><p><strong>F 方差</strong></p></blockquote><p><strong>题意：</strong> 在n个数中选m个数，使得这m个数的方差*(m^2)最小<!--more--></p><p><strong>思路：</strong></p><p>首先想到要使方差越小，则要这m个数与平均数的差距越小，所以我们可以先排序再尺取m长;</p><p>不难发现将方差公式乘以m^2后可以化简得到 </p><script type="math/tex; mode=display">m(a_1^2+a_2^2+⋯+a_m^2) − (a_1+a_2+⋯+a_m)^2</script><p>（MathJax真好用，小声哔哔</p><p>然后维护一个前缀和与一个前缀平方和即可</p><p><strong>代码：</strong></p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">1e6</span>+<span class="number">5</span>;</span><br><span class="line"><span class="keyword">int</span> a[maxn];</span><br><span class="line">ll sum1[maxn],sum2[maxn];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n,m;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;m);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;a[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    sort(a+<span class="number">1</span>,a+<span class="number">1</span>+n);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">        sum1[i]=sum1[i<span class="number">-1</span>]+a[i];</span><br><span class="line">        sum2[i]=sum2[i<span class="number">-1</span>]+a[i]*a[i];</span><br><span class="line">    &#125;</span><br><span class="line">    ll ans=<span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=m;i&lt;=n;i++)&#123;</span><br><span class="line">        ll tmp=m*(sum2[i]-sum2[i-m])-(sum1[i]-sum1[i-m])*(sum1[i]-sum1[i-m]);</span><br><span class="line">        <span class="keyword">if</span>(ans==<span class="number">-1</span>||ans&gt;tmp) ans=tmp;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%lld\n"</span>,ans);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;原题链接：&lt;a href=&quot;https://acm.ecnu.edu.cn/contest/140/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://acm.ecnu.edu.cn/contest/140/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;A,B,C,E To be continue…&lt;/p&gt;
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;D 进制转换&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;题意：&lt;/strong&gt;求[l,r]中所有数的k进制末尾恰好有m个零的数有多少个
-    
-    </summary>
-    
-      <category term="ACM" scheme="http://quincy.ink/categories/ACM/"/>
-    
-    
-      <category term="数学" scheme="http://quincy.ink/tags/%E6%95%B0%E5%AD%A6/"/>
     
   </entry>
   
