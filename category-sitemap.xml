@@ -79,7 +79,14 @@
 
     <url>
         <loc>http://quincy.ink/categories/%E5%B7%A5%E7%A8%8B%E7%BB%8F%E6%B5%8E%E5%AD%A6/</loc>
-        <lastmod>2020-03-17T14:46:45.496Z</lastmod>
+        <lastmod>2020-03-24T02:17:19.325Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://quincy.ink/categories/%E5%B7%A5%E4%BD%9C/</loc>
+        <lastmod>2020-04-30T08:09:48.321Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
