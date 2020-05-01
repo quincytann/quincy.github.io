@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[CS-Note 刷题总结]]></title>
+    <url>%2FCS-Note-%E5%88%B7%E9%A2%98%E6%80%BB%E7%BB%93.html</url>
+    <content type="text"><![CDATA[刷了一些题目来源剑指offer、Leetcode的简单算法题和sql题，做下总结 算法篇1、对于指针操作，务必先判断是否为NULL2、快速统计二进制中1的个数 1234while (n != 0) &#123; cnt++; n &amp;= (n - 1); //依次消掉低位第一个1&#125; 3、判断是否为2的次幂 1return x&gt;0 &amp;&amp; x&amp;(x-1)==0; 4、根据前序中序遍历结果构造二叉树 123456789101112TreeNode* reConstructBinaryTree(vector&lt;int&gt; &amp;pre,vector&lt;int&gt; &amp;in) &#123; for(int i=0;i&lt;in.size();i++) pos[in[i]]=i; return dfs(pre,0,pre.size()-1,0);&#125;TreeNode* dfs(vector&lt;int&gt; &amp;pre,int preL,int preR,int inL)&#123; if(preL &gt; preR) return NULL; int val = pre[preL],Lsize = pos[val]-inL; TreeNode* root = new TreeNode(val); root-&gt;left = dfs(pre,preL+1,preL+Lsize,inL); root-&gt;right = dfs(pre,preL+Lsize+1,preR,inL+Lsize+1); return root;&#125; 5、判断链表是否存在环 12345678910bool hasCycle(ListNode *head) &#123; if(head==NULL) return false; ListNode *p1=head,*p2=head-&gt;next; //快慢指针 while(p1!=NULL &amp;&amp; p2!=NULL &amp;&amp; p2-&gt;next!=NULL)&#123; if(p1==p2) return true; p1=p1-&gt;next; p2=p2-&gt;next-&gt;next; &#125; return false;&#125; 6、快排partition写法（才发现之前算法实验课写的有点bug） 1234567891011int partition(vector&lt;int&gt;&amp; a,int l,int h)&#123; int pivot = a[l]; while (l&lt;h) &#123; while(l&lt;h &amp;&amp; a[h]&gt;=pivot) h--; a[l]=a[h]; while(l&lt;h &amp;&amp; a[l]&lt;=pivot) l++; a[h]=a[l]; &#125; a[l]=pivot; return l;&#125; SQL篇1、or/and关键字会使查询全文扫描导致效率较低，如果查询列有索引可以分别查询然后union/intersect 2、将表中性别取反 12update salaryset sex = if(sex='m','f','m'); //异或也行sex = char(ascii(sex)^ascii('m')^ascii('f'))]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[面经]]></title>
     <url>%2F%E9%9D%A2%E7%BB%8F.html</url>
     <content type="text"><![CDATA[记录一下找工作的小颠簸~~ 总结：开头自我介绍和最后问面试官的问题比较重要，做好充分准备；回答问题后不要询问回答是否正确；问题不会就是不会，不要把自己弄得很尴尬（态度问题）；最重要的还是专业知识的review； 蚂蚁金服——JAVA研发工程师笔试（4.3） A. 给一个长度n(1e5)的数字序列，对每个数定义f[i]为i左边第一个大于a[i]的数，g[i]为i右边第一个小于a[i]的数，问有多少个a[i]的f[i]和g[i]是倍数关系？思路：set+二分 B. 给一个n*m(1e3)的矩阵，每个位置有个权值，问从第一行任意起点到第n行任意终点的最小路径权值和是多少？思路：bfs+优先队列 一面（4.11） 自我介绍询问ACM训练情况，队内分工，印象最深的一道题，大学影响最大的一件事问题：1、两幅扑克牌(108张)，四个人玩(每人27张)，问一个人同时拿到一对大王的概率？2、所知道的排序算法的思想及比较3、百度搜索引擎返回结果1e6条，只显示前十条，这个case下哪个排序算法最好？4、所知道的树结构及其定义5、数据库的索引和B+树的特点6、TCP三次握手和四次挥手7、健康码实现需要的东西？（开放题）8、简历中课程项目的实现、效率以及是否可以优化（C语言大作业——IP地址查询系统）9、编程题给定一个字符串S和有效单词的字典D，请确定可以插入到S中的最小空格数，使得最终的字符串完全由D中的有效单词组成，并输出解。如果没有解则应该输出n/aS = “ilikealibaba”D = [“i”, “like”, “ali”, “liba”, “baba”, “alibaba”]输出“i like alibaba”思路：trie+dfs，代码点这 一面（4.19） 自我介绍问题：1、Java线程池2、synchronized锁3、Student类需要什么条件才能作为HashMap或者HashSet的Key？4、HashMap的内部实现5、关键词final finally finalize区别6、JVM7、怎么找到一个Class？8、弱引用、强引用9、数据库三大范式10、索引可能的带来的坏处11、左连接、右连接、全连接12、SQL注入的定义和防止方法13、问了下高等数学的成绩14、进程和线程的区别15、进程间的通信方式16、OSI七层协议17、TCP、UDP的区别18、TCP的三次握手、四次挥手19、大学遇到比较有成就感or有困难的事情？20、除了算法方面主动学习还有其他的吗？21、问了下移动终端编程小项目22、Java是上课教的还是自学的？23、学习过程中给我帮助最大的人或者最佩服或者最想学习的人是谁？（当然是斯巨啦）24、有关注互联网领域前沿的知识吗？25、说说职业规划26、确认工作地点]]></content>
@@ -164,9 +169,9 @@
         <category>程序设计实践</category>
       </categories>
       <tags>
-        <tag>数学</tag>
         <tag>STL</tag>
         <tag>模拟</tag>
+        <tag>数学</tag>
         <tag>暴力</tag>
         <tag>程序设计实践</tag>
         <tag>动态规划</tag>
@@ -249,9 +254,9 @@
         <category>ACM</category>
       </categories>
       <tags>
-        <tag>数学</tag>
         <tag>dp</tag>
         <tag>并查集</tag>
+        <tag>数学</tag>
         <tag>bfs</tag>
       </tags>
   </entry>
