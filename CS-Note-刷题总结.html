@@ -110,7 +110,7 @@
 
 
 
-  <meta name="keywords" content="Quincy">
+  <meta name="keywords" content="算法,sql,">
 
 
 
@@ -123,17 +123,18 @@
 
 
 
-<meta name="description" content="刷了一些题目来源剑指offer、Leetcode的简单算法题和sql题，做下总结">
+<meta name="description" content="刷了一些题目来源剑指offer、Leetcode的简单算法题和sql题，做些总结~~">
+<meta name="keywords" content="算法,sql">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CS-Note 刷题总结">
 <meta property="og:url" content="http://quincy.ink/CS-Note-刷题总结.html">
 <meta property="og:site_name" content="Quincy&#39;s Blog">
-<meta property="og:description" content="刷了一些题目来源剑指offer、Leetcode的简单算法题和sql题，做下总结">
+<meta property="og:description" content="刷了一些题目来源剑指offer、Leetcode的简单算法题和sql题，做些总结~~">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-05-01T02:04:01.502Z">
+<meta property="og:updated_time" content="2020-05-02T01:09:55.298Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CS-Note 刷题总结">
-<meta name="twitter:description" content="刷了一些题目来源剑指offer、Leetcode的简单算法题和sql题，做下总结">
+<meta name="twitter:description" content="刷了一些题目来源剑指offer、Leetcode的简单算法题和sql题，做些总结~~">
 
 
 
@@ -368,14 +369,29 @@
           </span>
 
           
-  <span class="post-updated">
-    &nbsp; | &nbsp; 更新于
-    <time itemprop="dateUpdated" datetime="2020-05-01T10:04:01+08:00" content="2020-05-01">
-      2020-05-01
-    </time>
-  </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/刷题总结/" itemprop="url" rel="index">
+                    <span itemprop="name">刷题总结</span>
+                  </a>
+                </span>
 
+                
+                
+              
+            </span>
           
 
           
@@ -414,7 +430,7 @@
       
 
       
-        <p>刷了一些题目来源剑指offer、Leetcode的简单算法题和sql题，做下总结<a id="more"></a></p>
+        <p>刷了一些题目来源剑指offer、Leetcode的简单算法题和sql题，做些总结~~<a id="more"></a></p>
 <h4 id="算法篇"><a href="#算法篇" class="headerlink" title="算法篇"></a>算法篇</h4><p>1、对于指针操作，务必先判断是否为NULL<br>2、快速统计二进制中1的个数</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> (n != <span class="number">0</span>) &#123;</span><br><span class="line">    cnt++;</span><br><span class="line">    n &amp;= (n - <span class="number">1</span>); <span class="comment">//依次消掉低位第一个1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>3、判断是否为2的次幂</p>
@@ -427,7 +443,7 @@
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">partition</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; a,<span class="keyword">int</span> l,<span class="keyword">int</span> h)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> pivot = a[l];</span><br><span class="line">    <span class="keyword">while</span> (l&lt;h) &#123;</span><br><span class="line">        <span class="keyword">while</span>(l&lt;h &amp;&amp; a[h]&gt;=pivot) h--;</span><br><span class="line">        a[l]=a[h];</span><br><span class="line">        <span class="keyword">while</span>(l&lt;h &amp;&amp; a[l]&lt;=pivot) l++;</span><br><span class="line">        a[h]=a[l];</span><br><span class="line">    &#125;</span><br><span class="line">    a[l]=pivot;</span><br><span class="line">    <span class="keyword">return</span> l;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><br></p>
 <h4 id="SQL篇"><a href="#SQL篇" class="headerlink" title="SQL篇"></a>SQL篇</h4><p>1、or/and关键字会使查询全文扫描导致效率较低，如果查询列有索引可以分别查询然后union/intersect</p>
-<p>2、将表中性别取反</p>
+<p>2、将表中性别列的值取反</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">update</span> salary</span><br><span class="line"><span class="keyword">set</span> sex = <span class="keyword">if</span>(sex=<span class="string">'m'</span>,<span class="string">'f'</span>,<span class="string">'m'</span>); //异或也行sex = char(ascii(sex)^ascii('m')^ascii('f'))</span><br></pre></td></tr></table></figure>
 
       
@@ -503,6 +519,14 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/算法/" rel="tag"><i class="fa fa-tag"></i> 算法</a>
+          
+            <a href="/tags/sql/" rel="tag"><i class="fa fa-tag"></i> sql</a>
+          
+        </div>
       
 
       
@@ -620,7 +644,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -631,7 +655,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">55</span>
+                  <span class="site-state-item-count">57</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
