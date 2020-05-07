@@ -1,30 +1,25 @@
-http://quincy.ink/CS-Note-刷题总结.html
-http://quincy.ink/面经.html
-http://quincy.ink/工程经济学-学习笔记.html
-http://quincy.ink/网络协议分析-学习笔记.html
-http://quincy.ink/数字图像处理-学习笔记.html
-http://quincy.ink/通信原理-学习笔记.html
-http://quincy.ink/2019杭电多校-补题日志.html
-http://quincy.ink/2019牛客暑期多校训练营-补题日志.html
-http://quincy.ink/CCPC2019女生专场D-Tree.html
-http://quincy.ink/牛客小白月赛16-CodeForces1191-补题.html
-http://quincy.ink/英语语法学习-转.html
-http://quincy.ink/Codeforces-1182C-Beautiful-Lyrics.html
-http://quincy.ink/湘潭大学2019程序设计实践.html
-http://quincy.ink/湖南大学第15届校赛-H-Longest-Common-Palindrome-Substring.html
-http://quincy.ink/Template-of-ACM.html
-http://quincy.ink/ARM嵌入式系统-学习笔记.html
-http://quincy.ink/算法设计与分析-学习笔记.html
-http://quincy.ink/物联网概论-学习笔记.html
-http://quincy.ink/概率论与数理统计-学习笔记.html
-http://quincy.ink/牛客练习赛-41.html
-http://quincy.ink/牛客OI周赛7-普及组.html
-http://quincy.ink/EOJ-Monthly-2019-2.html
-http://quincy.ink/牛客OI周赛7-提高组.html
-http://quincy.ink/牛客练习赛-40A--小D的剧场.html
-http://quincy.ink/牛客练习赛-40C--小A与欧拉路.html
-http://quincy.ink/CSU 1803--2016.html
-http://quincy.ink/ZOJ 4011--Happy-Sequence.html
-http://quincy.ink/ZOJ 2594--Driving-Straight.html
-http://quincy.ink/Codeforces 110D--Lucky Probability.html
-http://quincy.ink/POJ 2774--Long Long Message.html
+http://quincy.ink/post/f06a1fe6.html
+http://quincy.ink/post/98e6f621.html
+http://quincy.ink/post/fa8e3b91.html
+http://quincy.ink/post/c6770e59.html
+http://quincy.ink/post/4ff37aa6.html
+http://quincy.ink/post/b5fbac7e.html
+http://quincy.ink/post/95e88c92.html
+http://quincy.ink/post/30897d7f.html
+http://quincy.ink/post/18d71047.html
+http://quincy.ink/post/ccc91f18.html
+http://quincy.ink/post/76aac626.html
+http://quincy.ink/post/7ba5fd12.html
+http://quincy.ink/post/5f8600d5.html
+http://quincy.ink/post/4b7358b7.html
+http://quincy.ink/post/c54c604d.html
+http://quincy.ink/post/2dcb219.html
+http://quincy.ink/post/ecab3815.html
+http://quincy.ink/post/2887108d.html
+http://quincy.ink/post/8acb8928.html
+http://quincy.ink/post/ec536e41.html
+http://quincy.ink/post/81348f2b.html
+http://quincy.ink/post/undefined.html
+http://quincy.ink/post/ae8e5760.html
+http://quincy.ink/post/cd41c611.html
+http://quincy.ink/post/d4401c4f.html

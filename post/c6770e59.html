@@ -1,0 +1,1751 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+<script>
+(function(){
+    if(''){
+        if (prompt('请输入文章密码') !== ''){
+            alert('密码错误！');
+            history.back();
+        }
+    }
+})();
+</script>
+
+
+
+  
+  
+    
+      
+    
+    
+      
+    
+  <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+  <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-flash.min.css" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  <link href="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+  
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/favicon.png?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="网络协议,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Quincy's Blog" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="第一章 TCP/IP概述 什么是Internet？ Network of Networks（网络之网络），连接各个子网的网络">
+<meta name="keywords" content="网络协议">
+<meta property="og:type" content="article">
+<meta property="og:title" content="网络协议分析 学习笔记">
+<meta property="og:url" content="http://quincy.ink/post/c6770e59.html">
+<meta property="og:site_name" content="Quincy&#39;s Blog">
+<meta property="og:description" content="第一章 TCP/IP概述 什么是Internet？ Network of Networks（网络之网络），连接各个子网的网络">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://s2.ax1x.com/2019/11/25/MvjaOx.jpg">
+<meta property="og:image" content="https://s2.ax1x.com/2019/11/25/MvvxKI.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/11/25/MvxkGQ.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/11/28/QFlA0g.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/11/27/QpReUI.jpg">
+<meta property="og:image" content="https://s2.ax1x.com/2019/11/27/QCJ0DU.md.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/11/27/QCYHwF.md.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/11/28/QPZHrn.png">
+<meta property="og:updated_time" content="2020-05-07T14:10:39.987Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="网络协议分析 学习笔记">
+<meta name="twitter:description" content="第一章 TCP/IP概述 什么是Internet？ Network of Networks（网络之网络），连接各个子网的网络">
+<meta name="twitter:image" content="https://s2.ax1x.com/2019/11/25/MvjaOx.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"always","offset":10,"b2t":false,"scrollpercent":true,"onmobile":true},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://quincy.ink/post/c6770e59.html">
+
+
+
+
+
+  <title>网络协议分析 学习笔记 | Quincy's Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Quincy's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">学习时长两年半的在校本科生</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://quincy.ink/post/c6770e59.html">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Quincy">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/01.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Quincy's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">网络协议分析 学习笔记</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-25T10:40:31+08:00">
+                2019-11-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/专业课程/" itemprop="url" rel="index">
+                    <span itemprop="name">专业课程</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/post/c6770e59.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/post/c6770e59.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h4 id="第一章-TCP-IP概述"><a href="#第一章-TCP-IP概述" class="headerlink" title="第一章 TCP/IP概述"></a>第一章 TCP/IP概述</h4><ol>
+<li><p>什么是Internet？</p>
+<p>Network of Networks（网络之网络），连接各个子网的网络<a id="more"></a></p>
+</li>
+<li><p>如何将异构网络互联？</p>
+<p>使用IP地址，屏蔽所有物理细节，实现异构网络互联</p>
+</li>
+<li><p>TCP/IP分层模型及OSI对应关系</p>
+<p><a href="https://s2.ax1x.com/2019/11/25/MvjaOx.jpg" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/11/25/MvjaOx.jpg" alt="MvjaOx.jpg"></a></p>
+</li>
+<li><p>多路复用</p>
+<p>从源主机的不同套接字中收集数据块，并为每个数据块封装上首部信息从而生成报文段，然后将报文段传递到网络层中去</p>
+<p><a href="https://s2.ax1x.com/2019/11/25/MvvxKI.png" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/11/25/MvvxKI.png" alt="MvvxKI.png"></a></p>
+</li>
+<li><p>多路分解</p>
+<p>在接收端，运输层检查这些字段并标识出接收套接字，然后将该报文定向到该套接字。其工作方式可以简单地认为是这样的，主机上的每个套接字被分配一个端口号，当报文到达主机时，运输层检查报文段中的目的端口号，并将其定向到相应的套接字</p>
+<p><a href="https://s2.ax1x.com/2019/11/25/MvxkGQ.png" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/11/25/MvxkGQ.png" alt="MvxkGQ.png"></a></p>
+</li>
+</ol>
+<p><br></p>
+<h4 id="第二章-点到点协议PPP"><a href="#第二章-点到点协议PPP" class="headerlink" title="第二章 点到点协议PPP"></a>第二章 点到点协议PPP</h4><ol>
+<li><p>PPP： Point to Point Protocol</p>
+</li>
+<li><p>PPPoE(PPP over Ethernet)：以太网上的PPP，实际上是两种协议的结合</p>
+</li>
+<li><p>PPP规定的内容：<br>1）帧格式及成帧方法；<br>2）链路控制协议LCP：用于建立、配置和测试PPP链路的（Link Control Protocol）；<br>3）网络控制协议NCP：用于建立和配置网络层协议（Network Control Protocol）。</p>
+</li>
+<li><p>使用的认证协议：<br>1）口令认证协议PAP：Password Authentication Protocol；<br>2）基于挑战的握手认证协议CHAP：Challenge Handshake Authentication Protocol。</p>
+</li>
+<li><p>通信过程</p>
+<p><img src="https://s2.ax1x.com/2019/11/28/QFlA0g.png" width="30%/"></p>
+</li>
+<li><p>以太网回顾</p>
+<p>CSMA/CD：多点接入、载波监听、碰撞检测<br>CA半双工；CD全双工</p>
+</li>
+<li><p>PPPoE的优点</p>
+<p>高带宽；提供用户认证、控制、服务、记账等功能</p>
+</li>
+<li><p>PPPoE协议流程</p>
+<ul>
+<li><p>发现阶段</p>
+<p>发起：客户端通过广播请求以获取可用的AC<br>提供：在收到请求后，若AC可以提供服务，则返回该报文<br>请求：如果客户端收到来自多个AC的应答，则必须从中选择一个并向该AC发出请求<br>确认：收到请求的AC向客户端返回确认，从而建立PPP连接及会话</p>
+</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li><p>会话阶段</p>
+</li>
+<li><p>断开链路</p>
+</li>
+</ul>
+<p><br></p>
+<h4 id="第三章-Internet地址及地址解析"><a href="#第三章-Internet地址及地址解析" class="headerlink" title="第三章 Internet地址及地址解析"></a>第三章 Internet地址及地址解析</h4><p>1. ARP针对问题</p>
+<p>实现IP地址到物理地址之间的映射</p>
+<p>2. ARP 命令</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><strong>参数</strong></th>
+<th style="text-align:center"><strong>含义</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">-a</td>
+<td style="text-align:center">列出ARP缓存中的所有条目</td>
+</tr>
+<tr>
+<td style="text-align:center">-a inet_addr</td>
+<td style="text-align:center">列出与inet_addr对应的条目</td>
+</tr>
+<tr>
+<td style="text-align:center">-d inet_addr</td>
+<td style="text-align:center">删除与inet_addr对应的条目</td>
+</tr>
+<tr>
+<td style="text-align:center">-s inet_addr eth_addr</td>
+<td style="text-align:center">在ARP缓存中添加一个条目</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>3.  IP地址分类</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>类型</strong></th>
+<th style="text-align:left"><strong>标志</strong></th>
+<th style="text-align:left"><strong>范围</strong></th>
+<th style="text-align:left"><strong>网络号长度</strong></th>
+<th style="text-align:left"><strong>适用范围</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">A</td>
+<td style="text-align:left">首位比特为“0”</td>
+<td style="text-align:left">1.0.0.0 - 126.255.255.255</td>
+<td style="text-align:left">1字节</td>
+<td style="text-align:left">超级大网</td>
+</tr>
+<tr>
+<td style="text-align:left">B</td>
+<td style="text-align:left">前两个比特为“10”</td>
+<td style="text-align:left">128.0.0.0 - 191.255.255.255</td>
+<td style="text-align:left">2字节</td>
+<td style="text-align:left">中规模网络</td>
+</tr>
+<tr>
+<td style="text-align:left">C</td>
+<td style="text-align:left">前三个比特为“110”</td>
+<td style="text-align:left">192.0.0.0 - 223.255.255.255</td>
+<td style="text-align:left">3字节</td>
+<td style="text-align:left">小规模网络</td>
+</tr>
+<tr>
+<td style="text-align:left">D</td>
+<td style="text-align:left">前四个比特为“1110”</td>
+<td style="text-align:left">224.0.0.0 - 239.255.255.255</td>
+<td style="text-align:left">—</td>
+<td style="text-align:left">组播地址</td>
+</tr>
+<tr>
+<td style="text-align:left">E</td>
+<td style="text-align:left">前四个比特为“1111”</td>
+<td style="text-align:left">240.0.0.0 - 255.255.255.254</td>
+<td style="text-align:left">—</td>
+<td style="text-align:left">保留</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>特殊的IP地址</p>
+<p>1）网络地址：标识网络，主机号部分设置为全0 ；<br>2）定向广播地址：标识某个网络中的全部主机，主机号部分为全1 ；<br>3）有限广播地址：用于需要在本地网络上广播，又不知道自己所处网络的情形，形式为255.255.255.255 ；<br>4）回送地址：用于本机进程间的通信或协议软件测试，首字节为127；<br>5）保留地址：192.168.0.0 ~ 192.168.255.255//用于私有内部网络</p>
+<p>4. ARP的思想与步骤</p>
+<p>思想：广播询问，单播回应</p>
+<p>步骤：</p>
+<ul>
+<li>发送发以广播方式发送一个ARP请求报文，其中包含接收方的IP地址；</li>
+<li>网络上所有主机接受该请求，将其中IP地址与自身IP地址比较，如果相同则向发送方回应，回应包含自己的物理地址，否则不回应。</li>
+</ul>
+<p>代理ARP：R代理主机D向A发送ARP应答（两次来回）</p>
+<p>安全问题：如何实现ARP劫持？</p>
+<p><img src="https://s2.ax1x.com/2019/11/27/QpReUI.jpg" width="30%"></p>
+<p>嗅探：用以获取网络中的通信数据。<br>共享环境下（广播投递模式）：直接把网卡设置为工作于“混杂（promiscuous）”模式。<br>交换环境下：基于ARP欺骗的嗅探器及会话劫持<br>防范：静态缓存、专门的ARP欺骗防范工具</p>
+<p>5. ARP提高通信效率的措施（没有最好，只有最合适）</p>
+<p>使用缓存机制<br>捎带机制、入网或更换网卡时广播自己的IP/MAC映射关系<br>软状态：如果在给定的时间段（通常为20分钟）内都没有使用某个物理地址，则相应的记录会被删除。（统计性方法或者类似LRU算法的方法优化）</p>
+<p>6.反向地址解析协议RARP</p>
+<p>问题：IP地址保存在硬盘里，无盘工作站没有硬盘，怎么办？<br>RARP：放在服务器里。<br>问题：没有IP地址怎么通信？解决：使用物理广播。 </p>
+<p><br></p>
+<h4 id="第四章-互联网协议IP"><a href="#第四章-互联网协议IP" class="headerlink" title="第四章 互联网协议IP"></a>第四章 互联网协议IP</h4><ol>
+<li><p>引入目的</p>
+<p>用IP（Internet Protocol）屏蔽底层物理网络协议差异，实现异构网络互联。</p>
+</li>
+<li><p>IP协议提供无连接、不保证可靠、<strong>尽最大努力的投递机制</strong>体现在哪里？</p>
+<p>使用ICMP协议允许路由器或主机报告差错情况和提供有关信息 ，帮IP协议尽最大努力服务。</p>
+</li>
+<li><p>IP数据报中的分片问题</p>
+<ul>
+<li><p>字段含义</p>
+<ul>
+<li>标识：2字节，用于数据报分片及重组，相同的分片此字段值相同</li>
+<li>标志：3位，MF为1表示后面还有分片，DF为1表示不能分片</li>
+<li>片偏移量：13位，起始地址/8</li>
+</ul>
+</li>
+<li><p>为什么使用片偏移量，而序列号不行？</p>
+<p>因为永远不知道下一个网络的MTU是多大，可能会继续分片</p>
+</li>
+<li><p>重组：将若干个分片重新组合还原为原来的数据报，地点在目的主机</p>
+</li>
+<li><p>分片迟迟不来怎么处理？</p>
+<p>设置<strong>定时器</strong>防止由于分片丢失造成重组过程无限延长</p>
+</li>
+</ul>
+</li>
+<li><p>Ping命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">-t             Ping 指定的主机，直到停止。</span><br><span class="line">               若要查看统计信息并继续操作，请键入 Ctrl+Break；</span><br><span class="line">               若要停止，请键入 Ctrl+C。</span><br><span class="line">-a             将地址解析为主机名。</span><br><span class="line">-n count       要发送的回显请求数。</span><br><span class="line">-l size        发送缓冲区大小。</span><br><span class="line">-f             在数据包中设置“不分段”标记(仅适用于 IPv4)。</span><br><span class="line">-i TTL         生存时间。</span><br><span class="line">-v TOS         服务类型(仅适用于 IPv4。该设置已被弃用，</span><br><span class="line">               对 IP 标头中的服务类型字段没有任何</span><br><span class="line">               影响)。</span><br><span class="line">-r count       记录计数跃点的路由(仅适用于 IPv4)。</span><br><span class="line">-s count       计数跃点的时间戳(仅适用于 IPv4)。</span><br><span class="line">-j host-list   与主机列表一起使用的松散源路由(仅适用于 IPv4)。</span><br><span class="line">-k host-list    与主机列表一起使用的严格源路由(仅适用于 IPv4)。</span><br><span class="line">-w timeout     等待每次回复的超时时间(毫秒)。</span><br><span class="line">-R             同样使用路由标头测试反向路由(仅适用于 IPv6)。</span><br><span class="line">               根据 RFC 5095，已弃用此路由标头。</span><br><span class="line">               如果使用此标头，某些系统可能丢弃</span><br><span class="line">               回显请求。</span><br><span class="line">-S srcaddr     要使用的源地址。</span><br><span class="line">-c compartment 路由隔离舱标识符。</span><br><span class="line">-p             Ping Hyper-V 网络虚拟化提供程序地址。</span><br><span class="line">-4             强制使用 IPv4。</span><br><span class="line">-6             强制使用 IPv6。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>两种选路方式</p>
+<p>直接选路：源主机和目的主机连接于同一物理网络<br>间接选路：源主机和目的主机不在同一物理网络上<br>选路的基础：路由表</p>
+</li>
+<li><p>路由表构成</p>
+<p>目标网络、子网掩码、网关地址、接口</p>
+</li>
+<li><p>处理传入的数据报</p>
+<p>原则：主机和路由器都要参与选路；仅路由器会转发IP数据报，主机不会转发IP数据报。</p>
+</li>
+</ol>
+<p><br></p>
+<h4 id="第五章-Internet控制报文协议ICMP"><a href="#第五章-Internet控制报文协议ICMP" class="headerlink" title="第五章 Internet控制报文协议ICMP"></a>第五章 Internet控制报文协议ICMP</h4><ol>
+<li><p>Internet <strong>Control</strong> Message Protocol</p>
+</li>
+<li><p>回送应答报文丢了不会重传。</p>
+</li>
+<li><p>需解决问题</p>
+<p>循环投递问题：可能会耗尽网络资源。TTL可以避免这种后果；<br>分片丢失问题：重组超时时钟可防止重组程序无限期等待；<br>投递失败：选路失败、目的主机关机、目的主机处理数据报失败等情况。</p>
+<p>拥塞控制问题：路由器处理能力达到极限时要告诉源端慢点发；<br>选路优化问题：有更好的路径时应通知源端；<br>目的地可达性判断；<br>时钟同步问题。</p>
+<p>传递控制信息+提供差错报告=ICMP</p>
+</li>
+<li><p>原则</p>
+<ol>
+<li>ICMP差错报告报文的数据区包括发生差错的<strong>IP数据报首部以及数据区的至少前64比特</strong>。</li>
+<li>仅能向数据报的<strong>源端</strong>报告差错，不能向中间路由器报告差错。</li>
+<li>当携带ICMP差错报文的IP数据报出现差错时，不会再生成ICMP报文。</li>
+<li>对于被分片的IP数据报，仅能对<strong>第一个分片</strong>应用ICMP协议。</li>
+</ol>
+</li>
+<li><p>差错报告报文分类</p>
+<p>目的站不可达报文：当路由器无法转发报文或交付数据时，可使用该报文通知数据报的发送者<br>超时报文：TTL=0或者分片重组超时<br>参数错误报文：当问题严重到必须把数据报丢弃时发送<br>Photuris：用于IPsec</p>
+</li>
+<li><p>网络控制报文分类</p>
+<p>回送请求/回送应答报文：用于测试网络连通性<br>路由器通告/路由器恳求报文：用于一个网络中有多个路由器的场合<br>时戳请求/时戳应答报文：分布式系统时钟同步；估算两台主机之间传输数据报的往返时间</p>
+<p>初始时戳：记录发送者生成时戳请求报文的时间$T_i$ ；<br>接收时戳：记录接收者收到请求的时间$T_r$ ；<br>传送时戳：记录接收者生成应答报文的时间$T_t$ ；<br>发送方收到回应的时间$T_h$；<br>传输时延：$D_t = [(T_h - T_i) – (T_t - T_r)]/2$</p>
+</li>
+</ol>
+<p><br></p>
+<h4 id="第六章-用户数据报协议UDP"><a href="#第六章-用户数据报协议UDP" class="headerlink" title="第六章 用户数据报协议UDP"></a>第六章 用户数据报协议UDP</h4><ol>
+<li><p>提供不可靠、无连接的数据交互服务</p>
+</li>
+<li><p>报文格式</p>
+<p>源端口，目的端口 ，报文长度，校验和（可选），都为2字节</p>
+</li>
+<li><p>校验和与IP首部校验和的区别</p>
+<p>计算方法类似，UDP需要将伪首部被附加在UDP报文首部和数据区之前；<br>IP只检验数据报的首部 ，UDP 将首部和数据部分一起都检验 。</p>
+<p>校验和计算方法： ①把伪首部添加到UDP上；②将检验和字段添零；③所有位划分为16位的字； 把所有16位的字相加， 0和0相加是0，0和1相加是1，1和1相加是0但要产生一个进位1，加到下一列。若最高位相加后产生进位，则最后得到的结果要加1 ；④最后和取反。</p>
+<p>校验时求和取反为0说明无差错。</p>
+</li>
+<li><p>端口号的实质：缓存</p>
+</li>
+</ol>
+<p><br></p>
+<h4 id="第七章-传输控制协议TCP"><a href="#第七章-传输控制协议TCP" class="headerlink" title="第七章 传输控制协议TCP"></a>第七章 传输控制协议TCP</h4><ol>
+<li><p>三次握手</p>
+<p><img src="https://s2.ax1x.com/2019/11/27/QCJ0DU.md.png" width="50%"></p>
+<p>注意服务端的序列号不是x+1，而是y。</p>
+</li>
+<li><p>改进的三次握手</p>
+<p><img src="https://s2.ax1x.com/2019/11/27/QCYHwF.md.png" width="50%"></p>
+<p>提供半关闭能力：一个方向的连接关闭后，另一个方向的还可以继续使用。</p>
+</li>
+<li><p>RST的作用</p>
+<p>连接双方立即停止传输，关闭连接，并释放所有缓冲区等有关资源。</p>
+</li>
+<li><p>半开连接检测</p>
+<p>服务器发现一条TCP连接上已经很长时间没有传输数据。</p>
+<p>解决方案：引入<strong>保活定时器</strong>（通常2小时）。</p>
+</li>
+<li><p>提供可靠的数据交付服务</p>
+<p>① 防止丢失的机制：带重传的肯定确认技术<br>如果确认报文丢失， 则对该报文进行重传，在达到一定次数还没有成功时放弃并发送一个复位信号。 </p>
+<p>② 防止重复乱序<br>重复原因：确认重传机制造成不必要重传<br>乱序原因：每个报文封装在IP数据报中独立传输<br>解决方案：引入序号，第n+1个报文的序号= 第n个报文的序号+ 第n个报文的长度  </p>
+</li>
+<li><p>传输效率与流量控制<br>滑动窗口思想</p>
+</li>
+</ol>
+<p><br></p>
+<h4 id="第八章-Internet地址扩展技术"><a href="#第八章-Internet地址扩展技术" class="headerlink" title="第八章 Internet地址扩展技术"></a>第八章 Internet地址扩展技术</h4><ol>
+<li><p>透明路由器</p>
+<p>广域网和局域网的中转<br>局域网：没有自己的IP前缀<br>外部视图：透明，是一般的主机；内部视图：网关<br>优点：节省IP地址；支持负载均衡<br>缺点：适用有大量地址空间的网络；不提供标准路由器提供的服务；不能完全参与ICMP或IGMP等网络管理协议。</p>
+</li>
+<li><p>代理ARP</p>
+<p>允许一个网络地址由两个物理网络共享，一个主网络，一个隐藏网络。主网络和隐藏网络通信的路由器运行代理ARP</p>
+</li>
+<li><p>子网编址</p>
+<p>思想：把一个网络分成若干个物理网络<br>IP地址 = 网络号+物理地址+主机<br>分类：定长子网划分、变长子网划分<br>定长子网的子网号不能全1是为了方便定向广播，变长子网的子网号可以全1是为了更好利用地址空间。</p>
+<p>选路算法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">1.  从数据报中提取目的IP地址D,并计算网络前缀N</span><br><span class="line">2.  if N与任何直连的网络地址匹配</span><br><span class="line">    then 通过该网络把数据直接交付到目的地D</span><br><span class="line">3.  else if 表中含D的特定主机路由</span><br><span class="line">	then 把数据报发送到表中指定的下一跳</span><br><span class="line">4.  else if 表中含到N的路由</span><br><span class="line">	then 把数据报发送到表中指定的下一跳</span><br><span class="line">5.  else if 表中含默认路由</span><br><span class="line">	then 把数据报发送到表中指定的下一跳</span><br><span class="line">6.  else 宣布选路出错</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>匿名点到点链路</p>
+</li>
+<li><p>超网编址CIDR</p>
+<p>思想：无类型编址，将两个或多个小型网络合并成一个大网络<br>表示方法：最低地址+子网掩码；斜杠表示法<br>优点：分配各种大小地址块时的灵活性</p>
+</li>
+<li><p>NAT</p>
+<ul>
+<li><p>概念</p>
+<p>不需要网点上的每台主机都拥有一个全球有效的IP地址，仅需要网点有一条到Internet的连接，并且至少有一个全球有效的IP地址G。</p>
+</li>
+<li><p>工作原理</p>
+<ul>
+<li>将全球有效地址（或地址段）G分配给把网点连接到Internet上并运行NAT软件的计算机（一般是一台多地址主机或路由器，称为NAT盒，NAT box）。</li>
+<li>所有数据报从网点传到Internet或从Internet传到网点时，都要通过NAT盒。</li>
+<li>NAT对传入数据报和外发数据报中的地址进行转换，即用G替换每个外发数据报中的源地址，用主机的专用地址替换每个传入数据报的目的地址。</li>
+<li>从外部主机的角度来看，所有数据报都来自NAT盒，所有响应也返回到NAT盒；从内部主机的角度来看，NAT盒看上去是一个可达Internet的路由器。 </li>
+</ul>
+</li>
+<li><p>地址转换方式</p>
+<ul>
+<li>静态NAT，一对一，出于安全考虑</li>
+<li>动态NAT，多对多</li>
+<li>网络地址端口转换，多对一，利用了TCP或UDP协议端口号来提供并发性</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p><br></p>
+<h4 id="第九章-路由协议概述"><a href="#第九章-路由协议概述" class="headerlink" title="第九章 路由协议概述"></a>第九章 路由协议概述</h4><ol>
+<li>距离向量算法应用协议：RIP，BGP</li>
+<li>内部网关协议IGP：在一个自制系统内部使用的路由选择协议，如RIP和OSPF协议</li>
+<li>外部网关协议EGP：数据报传到自治系统边界时用到，如BGP</li>
+</ol>
+<p><br></p>
+<h4 id="第十章-选路信息协议RIP"><a href="#第十章-选路信息协议RIP" class="headerlink" title="第十章 选路信息协议RIP"></a>第十章 选路信息协议RIP</h4><ol>
+<li><p>工作原理</p>
+<p>1)RIP路由器使用UDP进行路由信息交换，知名端口为520；<br>2)请求（request）报文：用来向相邻路由器请求路由信息；<br>3)响应（response）报文：用来向相邻路由器通告本地路由信息；<br>4)使用向量距离路由算法。通告路由信息（目的站地址，距离）；<br>5)采用跳数作为距离度量标准。路由器与直接相连网络的距离为1跳。一个路由器R到目的站的一条路径长度是该路径上所有路由器（包括路由器R在内）的数目，有效范围为1-16，其中16表示网络不可达；<br>6)系统启动时，协议模块在所有配置RIP的接口上发出request报文，并进入循环等待状态，等待相邻路由器的request报文或response报文的到来。相邻路由器收到request报文后，将本地路由信息包含在response报文中，予以应答。每当收到response报文，协议模块将调用向量-距离算法，依次处理其中的每一路由条目；<br>7)每个RIP路由器周期性地向相邻路由器通告本地路由信息，该信息也以response报文传送；<br>8)在实际应用中，RIP路由器分为主动型（Active）和被动型（Passive）两种。主机运行RIP时，只能采用被动方式。</p>
+</li>
+<li><p>慢收敛问题</p>
+<p>画拓扑图说明以下对策</p>
+<p><img src="https://s2.ax1x.com/2019/11/28/QPZHrn.png" width="50%"></p>
+<p>计算到无穷问题：R1检测到网络1已经断开，于是将路径设置为不可达（16），并向R2通告该信息；R2也会向R1通告该信息。<br>情形1：在收到R2的通知前，R1已经将信息通报出去，这是理想的情况；<br>情形2：在R1通告前，R2的更新报文已到达，这就坏了……</p>
+<ul>
+<li>简单分割范围法：当路由器向一个接口发送路由更新报文时，其中不包含从该接口获取的路径信息。</li>
+<li><strong>带毒性逆转的分割范围法</strong>：当路由器向一个接口发送路由更新报文时，如果某个条目是通过该接口获得的，则将该条目的距离设置为无穷大。</li>
+<li>抑制法：所有路由器在收到某个网络不可达的消息后，将相应表项的距离值置为16，并将此信息保留一段时间（坏消息保留时间默认60秒）。</li>
+<li>触发更新法：一旦发现网络连接消失，就将该网络设置为不可达，并立即发送路由更新报文，而不等待正常的路由更新周期时间到。</li>
+</ul>
+</li>
+</ol>
+<p><br></p>
+<h4 id="第十一章-开放式最短路径优先OSPF"><a href="#第十一章-开放式最短路径优先OSPF" class="headerlink" title="第十一章 开放式最短路径优先OSPF"></a>第十一章 开放式最短路径优先OSPF</h4><ol>
+<li><p>区域的概念</p>
+<p>区域包括路由器和网络，用一个编号标识。<br>每个AS都有一个骨干区域，编号为0。<br>所有非骨干区域都与骨干区域相连。<br>每个区域内的路由器相互通告链路状态，维护本区域内的链路状态数据库；同一自治系统中的各区域之间只交换经过汇总的路由信息。<br>非骨干区域之间不能直接进行路由信息交互，它们之间的路由信息分发由骨干区域负责。<br>这种体系结构不仅使得路由维护高效，而且可以隐藏区域内的网络拓扑结构，有利于提高网络安全性。</p>
+</li>
+<li><p>路由器分类<br>（1）内部路由器（IR）：一个路由器所有直接相连的网络都在同一区域，同一区域内的各内部路由器有着相同的链路状态数据库。<br>（2）区域边界路由器（ABR）：一个路由器的接口位于多个区域。ABR拥有所连每个区域的链路状态数据库，并将其中的信息进行汇总，发送到骨干区域，后者再将这些信息分发到其它区域。<br>（3）骨干路由器（BR）：一个路由器至少有一个接口位于骨干区域，所有ABR和骨干区域中的IR都是骨干路由器。<br>（4）自治系统边界路由器（ASBR）：负责与其它自治系统交换路由信息。它位于骨干区域，将本自治系统的路由信息向其它自治系统通告，也向整个自治系统通告所得到的自治系统外部的路由信息。自治系统内的所有路由器都知道通往ASBR的路径。</p>
+</li>
+<li><p>区域分类（骨干和非骨干）</p>
+<p>“桩”的引入：减少计算开销。<br>桩域：仅接受默认路由和汇总LSA，不接受AS外部链路，不包含ASBR的非骨干区域都可以配置为桩域；</p>
+</li>
+</ol>
+<p><br></p>
+<h4 id="第十二章-边界网关协议BGP"><a href="#第十二章-边界网关协议BGP" class="headerlink" title="第十二章 边界网关协议BGP"></a>第十二章 边界网关协议BGP</h4><ol>
+<li>用于AS之间进行路由信息交换</li>
+<li>基本原理<br>通过相邻AS之间交换路由信息，使得每个AS都拥有一个AS级的Internet连通图。两个相邻AS之间交换路由信息时，要选择相邻的BGP路由器作为发言人（Speaker）。每个发言人向外通告经过聚类后的可达性路由信息，以降低路由表规模和隐藏网络拓扑结构。这些信息可能是关于其AS内部的，也可能来自其它AS。BGP使用<as有序列表，目的站>来表示一条路由信息，为跨越AS的数据报传递确定路径。</as有序列表，目的站></li>
+<li>基于TCP，使用端口号179</li>
+</ol>
+<p><br></p>
+<h4 id="第十三章-Internet组播"><a href="#第十三章-Internet组播" class="headerlink" title="第十三章 Internet组播"></a>第十三章 Internet组播</h4><ol>
+<li><p>使用D类地址，前四位1110</p>
+<p>永久分配地址：用于Internet上的主要服务及基础设施的维护。<br>临时使用地址：需要时创建，当组成员数为0时予以丢弃。</p>
+</li>
+<li><p>群组管理协议IGMP</p>
+<ul>
+<li><p>功能：成员加入退出群组，判断群组中是否还有组成员。</p>
+</li>
+<li><p>分级</p>
+<ul>
+<li>0 主机不能发送也不能接收组播数据报</li>
+<li>1 主机<strong>能发送但不能接收</strong>组播数据报</li>
+<li>2 主机既能发送也能接收组播数据报</li>
+</ul>
+</li>
+<li><p>管理</p>
+<p>当主机要加入一个群组时，必须向本地组播路由器发送IGMP报文，其中包含该群组的地址，以宣布其成员状态；<br>组播路由器收到报文后，向互联网上的其它组播路由器传播该信息以建立必要的路由。<br>组播路由器周期性地<strong>轮询</strong>本地网络上的主机，以确定现在各个群组中有哪些主机。<br>如果经过若干次轮询后，某个群组中始终没有主机应答，则组播路由器就认为本地网络中不再有该群组的成员，并停止向其它组播路由器通告该群组的成员信息。</p>
+</li>
+</ul>
+</li>
+<li><p>管理为什么使用轮询不用广播？</p>
+<p>使用广播的话，主机可能不应答，避免了广播风暴；<br>轮询更有利于安全性；<br>IGMP是不紧急的事件，允许一定时延</p>
+</li>
+</ol>
+<p><br></p>
+<h4 id="第十四章-移动IP"><a href="#第十四章-移动IP" class="headerlink" title="第十四章 移动IP"></a>第十四章 移动IP</h4><ol>
+<li><p>主机在变换网络后，仍能以原来的IP地址与Internet上的其它主机进行通信。</p>
+</li>
+<li><p>特点<br>透明性；互操作性；安全性；宏安全性</p>
+</li>
+<li><p>两个IP地址</p>
+<p>1) 家乡地址：家乡网络给MH分配的固定地址，在移动过程中保持不变，被主机的应用程序和传输层使用；<br>2) 转交地址：外地网络给MH分配的临时地址，随MH的移动而改变。</p>
+</li>
+</ol>
+<p><br></p>
+<h4 id="第十五章-应用层系统服务"><a href="#第十五章-应用层系统服务" class="headerlink" title="第十五章 应用层系统服务"></a>第十五章 应用层系统服务</h4><ol>
+<li><p>自举协议BOOTH</p>
+<p>解决无盘工作站获取IP地址、网关、掩码、域名服务器等信息的问题。<br>基于UDP，使用端口号67</p>
+<p>Q：没有自己的IP地址，怎么通信？<br>A：使用有限广播，源IP地址字段设置为全0。</p>
+<p>Q：客户端不知道自己的IP地址，也没有IP/MAC映射关系，怎么办？<br>A：（1）在收到BOOTP请求后，服务器就把其中包含的物理地址及相应的IP地址写入ARP缓存，随后使用单播方式发送；<br>（2）广播响应，响应中包含客户端硬件地址。</p>
+<p>Q：什么是冷备份、热备份？优缺点是什么？<br>A： 冷备份：先关闭数据库停止使用，再执行备份的方式；优点是简单快速、容易恢复到某个时间点、方便维护；缺点是只能恢复到某个时间点、备份期间数据不便正常使用。<br>热备份：指执行备份时不影响备份文档正常使用的方式；优点是备份速度快、不影响数据使用；缺点是所有操作都会同步，包括删除。 </p>
+</li>
+<li><p>动态主机配置协议DHCP</p>
+<p>工作原理：设置DHCP服务器，客户端请求服务器给自己分配IP地址。<br>配置方式：手工配置，即管理员可以为特定的计算机配置一个永久IP地址；自动配置，即为某个第一次上网的计算机分配一个永久地址；动态配置，即为上网的计算机分配一个临时地址。</p>
+</li>
+<li><p>域名系统DNS</p>
+<p>作用：IP地址不方便记忆，给Internet上的主机起个便于记忆的名字，同时解决名字到IP地址的映射问题</p>
+<p>两个要素：抽象要素，指明了名字语法和名字的授权管理规则；具体要素，指明了将名字映射到IP地址的具体方法。</p>
+<p>域名解析过程：客户端/服务器模型</p>
+<p>DNS既可以基于TCP，也可以基于UDP，服务器则使用知名端口53。<br>核心：数据传输量少，可靠性要求低的时候用UDP；否则用TCP。</p>
+<p>DNS欺骗：恶意攻击者改变DNS响应并把解析结果指向自己可控的主机</p>
+</li>
+<li><p>域名前加www.的作用？</p>
+<p> 标识这是一个需要用浏览器来访问的网页服务 </p>
+</li>
+<li><p>域名和IP地址的映射关系是一对多还是多对多？为什么？</p>
+<p>多对多；<br>一个域名可以对应多个ip， 根据请求的位置和运营商返回不同的解析结果，比如负载均衡应用；一个ip也可以指向多个域名，比如购买的虚拟主机。 </p>
+</li>
+</ol>
+<p><br></p>
+<h4 id="第十六章-网络管理标准SNMP"><a href="#第十六章-网络管理标准SNMP" class="headerlink" title="第十六章 网络管理标准SNMP"></a>第十六章 网络管理标准SNMP</h4><ol>
+<li><p>网络管理需求</p>
+<p>FCAPS<br>1）故障管理（Fault Management）：用于检测、定位和排除网络硬件和软件中的故障。出现故障时，要能够确认故障、记录故障，找出故障位置并尽可能排除。<br>2.）配置管理（Configuration Management）：掌握和控制网络的运行状态，包括网络内部设备的状态及其连接关系。<br>3）帐务管理（Account Management）：度量各个终端用户和应用程序对网络资源的使用情况，按照一定标准计算费用并进行保存。<br>4） 性能管理（Performance Management）：考虑的是网络运行的好坏。性能需要用一些指标来衡量，比如：吞吐率、响应时间等。</p>
+<p>5）安全管理（Security Management）：对网络资源及重要信息进行访问约束控制。</p>
+</li>
+<li><p>SNMP的3个组件</p>
+<p>MIB：Management Information Base，管理信息库，定义了管理对象的全集；<br>SNMP通信协议：定义了实施网络管理时的通信规约；<br>SMI：Structure of Management Information，管理信息结构，定义了管理对象和传输报文的标准语法。</p>
+</li>
+<li><p>MIB = 对象+实例</p>
+</li>
+<li><p>SNMP规定的内容：访问控制机制、通信规约、报文格式</p>
+</li>
+<li><p>基于UDP，使用端口161（被管者）和162（管理者）</p>
+</li>
+</ol>
+<p><br></p>
+<h4 id="第十七章-万维网与电子邮件系统"><a href="#第十七章-万维网与电子邮件系统" class="headerlink" title="第十七章 万维网与电子邮件系统"></a>第十七章 万维网与电子邮件系统</h4><ol>
+<li><p>WWW</p>
+<p>World Wide Web，万维网<br>组成：大量Web页面，每个页面是一个超媒体（hypermedia）</p>
+</li>
+<li><p>URL：Universal Resource Locator，统一资源定位符，每个页面唯一的标识</p>
+</li>
+<li><p>HTTP</p>
+<p>HyperText Transfer Protocol，超文本传输协议，基于TCP，80端口<br>客户端/服务器模型。页面存储于服务器，客户端通过HTTP向服务器请求页面</p>
+<p>请求方式：<br>GET：读取页面或向某个页面附加资源，体现在URL中。POST：向某个页面附加资源，体现在HTTP的消息主体中<br>HEAD：请求读取某个Web页面的头部；可用于测试URL的有效性和搜索引擎<br>CGI：Common Gateway Interface，公共网关接口，用于连接WWW和数据库的接口脚本或程序，通常放在cgi-bin目录下；动态创建页面<br>表单：用于将数据从浏览器传递给服务器，提交时参数和数据都传递</p>
+<p>非持久连接：客户端与服务器建立连接，获取页面，之后关闭连接。<br>持久连接：一旦客户端与服务器建立了TCP连接，就可以在这个请求上发送多次请求并接收响应，等所有请求都发送完成后再关闭连接。<br>流水线技术：在响应到来之前就可以发送下一个请求。<br>问题：如何分隔每个请求？解答：发送数据前加入相应长度。</p>
+<p>服务器驱动协商方式：浏览器首先发出协商请求，指定一系列选项值及URL；服务器收到请求后，从中选取满足浏览器需求的一项。如果有多项符合条件，则服务器选取优先级最高的一项。<br>浏览器驱动协商方式：浏览器向服务器发送请求，询问可用的内容。服务器返回可能的内容列表。浏览器之后从中选取一项，发送第二个请求获得该数据项。</p>
+<p>代理服务器：浏览器和服务器的中介，提高通信效率，减轻服务器负担。<br>浏览器：使用代理服务器可以绕过某些限制。<br>高速缓存：代理服务器设置，缓存页面，不必每次都到服务器取。</p>
+<p>报文格式：字符串，包括开始行、首部行、实体主体。首部和实体之间间隔一个空行。</p>
+<p>HTTP1问题：只允许一次发送个请求。<br>解决：使用多条链接来并行发送网站请求。<br>HTTP2特点：引入多路复用（Multiplexing）技术来解决请求数量受限的问题，允许同时通过单一的HTTP2连接发起多重的请求-响应消息。</p>
+</li>
+<li><p>电子邮件系统</p>
+<p>MIMIE（Multipurpose Internet Mail Extensions，多用途互联网邮件扩充）解决的问题：让邮件可以发送各种格式的附件</p>
+<p>SMTP：发送邮件的协议；使用客户端/服务器模型；基于TCP，使用知名端口号25；定义了14条命令21种应答。</p>
+<p>POP：Post Office Protocol，用于接收邮件。使用客户端/服务器模型，基于TCP，使用知名端口号110；用户从邮箱中读取邮件时，会把邮件下载到本地保存，之后服务器会把邮件删除掉。</p>
+<p>IMAP：Internet Mail Access Protocol，用于接收邮件。使用客户端/服务器模型，基于TCP，使用知名端口号143 ；对远程邮箱的管理和操作功能更强大，且用IMAP读邮件时，本地并不保存该邮件，在用户明确地发出删除命令之前，服务器都不会删除这个邮件。</p>
+</li>
+</ol>
+<p><br> </p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+
+    <div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-heart"></i>感谢阅读-------------</div>
+    
+</div>
+
+  
+</div>
+
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>你的赏识是我前进的动力 Thanks :)</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="Quincy 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="Quincy 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/网络协议/" rel="tag"><i class="fa fa-tag"></i> 网络协议</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/post/4ff37aa6.html" rel="next" title="数字图像处理 学习笔记">
+                <i class="fa fa-chevron-left"></i> 数字图像处理 学习笔记
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/post/fa8e3b91.html" rel="prev" title="工程经济学 学习笔记">
+                工程经济学 学习笔记 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/01.jpg" alt="Quincy">
+            
+              <p class="site-author-name" itemprop="name">Quincy</p>
+              <p class="site-description motion-element" itemprop="description">生活明朗，万物可爱；<br>人间值得，未来可期。</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">57</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/QuincyTan" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1589366031@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.baidu.com/" title="百度" target="_blank">百度</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://zhihu.com/" title="知乎" target="_blank">知乎</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.nowcoder.com/" title="牛客" target="_blank">牛客</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#第一章-TCP-IP概述"><span class="nav-number">1.</span> <span class="nav-text">第一章 TCP/IP概述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第二章-点到点协议PPP"><span class="nav-number">2.</span> <span class="nav-text">第二章 点到点协议PPP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第三章-Internet地址及地址解析"><span class="nav-number">3.</span> <span class="nav-text">第三章 Internet地址及地址解析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第四章-互联网协议IP"><span class="nav-number">4.</span> <span class="nav-text">第四章 互联网协议IP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第五章-Internet控制报文协议ICMP"><span class="nav-number">5.</span> <span class="nav-text">第五章 Internet控制报文协议ICMP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第六章-用户数据报协议UDP"><span class="nav-number">6.</span> <span class="nav-text">第六章 用户数据报协议UDP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第七章-传输控制协议TCP"><span class="nav-number">7.</span> <span class="nav-text">第七章 传输控制协议TCP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第八章-Internet地址扩展技术"><span class="nav-number">8.</span> <span class="nav-text">第八章 Internet地址扩展技术</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第九章-路由协议概述"><span class="nav-number">9.</span> <span class="nav-text">第九章 路由协议概述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第十章-选路信息协议RIP"><span class="nav-number">10.</span> <span class="nav-text">第十章 选路信息协议RIP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第十一章-开放式最短路径优先OSPF"><span class="nav-number">11.</span> <span class="nav-text">第十一章 开放式最短路径优先OSPF</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第十二章-边界网关协议BGP"><span class="nav-number">12.</span> <span class="nav-text">第十二章 边界网关协议BGP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第十三章-Internet组播"><span class="nav-number">13.</span> <span class="nav-text">第十三章 Internet组播</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第十四章-移动IP"><span class="nav-number">14.</span> <span class="nav-text">第十四章 移动IP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第十五章-应用层系统服务"><span class="nav-number">15.</span> <span class="nav-text">第十五章 应用层系统服务</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第十六章-网络管理标准SNMP"><span class="nav-number">16.</span> <span class="nav-text">第十六章 网络管理标准SNMP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第十七章-万维网与电子邮件系统"><span class="nav-number">17.</span> <span class="nav-text">第十七章 万维网与电子邮件系统</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-snowflake-o"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Quincy</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">96.6k</span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="//cdn.jsdelivr.net/fastclick/1.0.6/fastclick.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.lazyload/1.9.3/jquery.lazyload.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.ui.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'wCkNQOHecMN5C6aRW3BxL9LP-gzGzoHsz',
+        appKey: 'KynTTW0NoMoKrQaKMMqUKmhy',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  
+
+
+  
+
+  
+
+<!--   <script type="text/javascript" src="/js/src/love.js"></script> -->
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</body>
+</html>
