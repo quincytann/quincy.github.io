@@ -203,7 +203,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle">学习时长两年半的在校本科生</p>
+        <p class="site-subtitle">学习时长三年的在校本科生</p>
       
   </div>
 
@@ -350,7 +350,7 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/post/f06a1fe6.html" itemprop="url">
+            <a class="post-title-link" href="/posts/f06a1fe6.html" itemprop="url">
               
                 <span itemprop="name">CS-Note 刷题总结</span>
               
@@ -385,7 +385,7 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/post/98e6f621.html" itemprop="url">
+            <a class="post-title-link" href="/posts/98e6f621.html" itemprop="url">
               
                 <span itemprop="name">面经</span>
               
@@ -420,7 +420,7 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/post/fa8e3b91.html" itemprop="url">
+            <a class="post-title-link" href="/posts/fa8e3b91.html" itemprop="url">
               
                 <span itemprop="name">工程经济学 学习笔记</span>
               
@@ -460,7 +460,7 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/post/c6770e59.html" itemprop="url">
+            <a class="post-title-link" href="/posts/c6770e59.html" itemprop="url">
               
                 <span itemprop="name">网络协议分析 学习笔记</span>
               
@@ -495,7 +495,7 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/post/4ff37aa6.html" itemprop="url">
+            <a class="post-title-link" href="/posts/4ff37aa6.html" itemprop="url">
               
                 <span itemprop="name">数字图像处理 学习笔记</span>
               
@@ -530,7 +530,7 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/post/b5fbac7e.html" itemprop="url">
+            <a class="post-title-link" href="/posts/b5fbac7e.html" itemprop="url">
               
                 <span itemprop="name">通信原理 学习笔记</span>
               
@@ -565,7 +565,7 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/post/95e88c92.html" itemprop="url">
+            <a class="post-title-link" href="/posts/95e88c92.html" itemprop="url">
               
                 <span itemprop="name">2019杭电多校 补题日志</span>
               
@@ -600,7 +600,7 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/post/30897d7f.html" itemprop="url">
+            <a class="post-title-link" href="/posts/30897d7f.html" itemprop="url">
               
                 <span itemprop="name">2019牛客暑期多校训练营 补题日志</span>
               
@@ -635,7 +635,7 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/post/18d71047.html" itemprop="url">
+            <a class="post-title-link" href="/posts/18d71047.html" itemprop="url">
               
                 <span itemprop="name">CCPC2019女生专场D-Tree</span>
               
@@ -670,7 +670,7 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/post/ccc91f18.html" itemprop="url">
+            <a class="post-title-link" href="/posts/ccc91f18.html" itemprop="url">
               
                 <span itemprop="name">牛客小白月赛16&&CodeForces1191 补题</span>
               
@@ -1023,26 +1023,30 @@
 
 
 
-<!-- LOCAL: You can save these files to your site and update links -->
-    
-        
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/default.css">
-        <script src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/gitment.browser.js"></script>
-    
-<!-- END LOCAL -->
-
-    
-      <style>
-        a.gitment-editor-footer-tip { display: none; }
-        .gitment-container.gitment-footer-container { display: none; }
-      </style>
-    
-
-    
 
 
 
-
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: true,
+        appId: 'wCkNQOHecMN5C6aRW3BxL9LP-gzGzoHsz',
+        appKey: 'KynTTW0NoMoKrQaKMMqUKmhy',
+        placeholder: '如果您有任何问题，上方备注昵称和邮箱并留言哦~',
+        avatar:'wavatar',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 

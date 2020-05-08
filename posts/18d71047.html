@@ -110,7 +110,7 @@
 
 
 
-  <meta name="keywords" content="数学,">
+  <meta name="keywords" content="线段树,树链剖分,">
 
 
 
@@ -123,18 +123,18 @@
 
 
 
-<meta name="description" content="原题链接：https://acm.ecnu.edu.cn/contest/140/ A,B,C,E To be continue…   D 进制转换  题意：求[l,r]中所有数的k进制末尾恰好有m个零的数有多少个">
-<meta name="keywords" content="数学">
+<meta name="description" content="今天花一天时间好好学习了下树链剖分，之前听上去很高大上的样子，上半年寒假集训学长讲的时候还完全不懂，现在学着学着就很好理解了。刚好这道最近要补的题就是个裸题，拿来练练手。">
+<meta name="keywords" content="线段树,树链剖分">
 <meta property="og:type" content="article">
-<meta property="og:title" content="EOJ Monthly 2019.2">
-<meta property="og:url" content="http://quincy.ink/post/ec536e41.html">
+<meta property="og:title" content="CCPC2019女生专场D-Tree">
+<meta property="og:url" content="http://quincy.ink/posts/18d71047.html">
 <meta property="og:site_name" content="Quincy&#39;s Blog">
-<meta property="og:description" content="原题链接：https://acm.ecnu.edu.cn/contest/140/ A,B,C,E To be continue…   D 进制转换  题意：求[l,r]中所有数的k进制末尾恰好有m个零的数有多少个">
+<meta property="og:description" content="今天花一天时间好好学习了下树链剖分，之前听上去很高大上的样子，上半年寒假集训学长讲的时候还完全不懂，现在学着学着就很好理解了。刚好这道最近要补的题就是个裸题，拿来练练手。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-05-07T14:10:39.967Z">
+<meta property="og:updated_time" content="2019-07-14T16:00:00.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="EOJ Monthly 2019.2">
-<meta name="twitter:description" content="原题链接：https://acm.ecnu.edu.cn/contest/140/ A,B,C,E To be continue…   D 进制转换  题意：求[l,r]中所有数的k进制末尾恰好有m个零的数有多少个">
+<meta name="twitter:title" content="CCPC2019女生专场D-Tree">
+<meta name="twitter:description" content="今天花一天时间好好学习了下树链剖分，之前听上去很高大上的样子，上半年寒假集训学长讲的时候还完全不懂，现在学着学着就很好理解了。刚好这道最近要补的题就是个裸题，拿来练练手。">
 
 
 
@@ -164,13 +164,13 @@
 
 
 
-  <link rel="canonical" href="http://quincy.ink/post/ec536e41.html">
+  <link rel="canonical" href="http://quincy.ink/posts/18d71047.html">
 
 
 
 
 
-  <title>EOJ Monthly 2019.2 | Quincy's Blog</title>
+  <title>CCPC2019女生专场D-Tree | Quincy's Blog</title>
   
 
 
@@ -205,7 +205,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle">学习时长两年半的在校本科生</p>
+        <p class="site-subtitle">学习时长三年的在校本科生</p>
       
   </div>
 
@@ -329,7 +329,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://quincy.ink/post/ec536e41.html">
+    <link itemprop="mainEntityOfPage" href="http://quincy.ink/posts/18d71047.html">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Quincy">
@@ -346,7 +346,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">EOJ Monthly 2019.2</h1>
+          <h1 class="post-title" itemprop="name headline">CCPC2019女生专场D-Tree</h1>
         
 
         <div class="post-meta">
@@ -358,8 +358,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-23T14:03:29+08:00">
-                2019-02-23
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-15T19:53:58+08:00">
+                2019-07-15
               </time>
             
 
@@ -374,8 +374,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2020-05-07T22:10:39+08:00">
-                2020-05-07
+              <time title="更新于" itemprop="dateModified" datetime="2019-07-15T00:00:00+08:00">
+                2019-07-15
               </time>
             
           </span>
@@ -408,6 +408,16 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/posts/18d71047.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/posts/18d71047.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -432,30 +442,11 @@
       
 
       
-        <p>原题链接：<a href="https://acm.ecnu.edu.cn/contest/140/" target="_blank" rel="noopener">https://acm.ecnu.edu.cn/contest/140/</a></p>
-<p>A,B,C,E To be continue…</p>
-<p><br></p>
-<blockquote>
-<p><strong>D 进制转换</strong></p>
-</blockquote>
-<p><strong>题意：</strong>求[l,r]中所有数的k进制末尾恰好有m个零的数有多少个<a id="more"></a></p>
-<p><strong>思路：</strong></p>
-<p>x在k进制下末尾恰好有m个零说明x%(k^m)恒等于0，而x%(k^(m+1))不恒等于0，而x%(k^m)==0的情况包含了x%(k^(m+1))==0的情况，所以由容斥定理有[1,x]中满足题意的数有 x/(k^m) - x/(k^(m+1)) 个</p>
-<p><strong>代码：</strong></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">1e6</span>+<span class="number">5</span>;</span><br><span class="line"></span><br><span class="line"><span class="function">ll <span class="title">calc</span><span class="params">(ll k,ll m,ll x)</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=m;i++)&#123;</span><br><span class="line">        x/=k;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> x;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    ll l,r,k,m;</span><br><span class="line">    <span class="keyword">int</span> T;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;T);</span><br><span class="line">    <span class="keyword">while</span>(T--)&#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%lld%lld%lld%lld"</span>,&amp;l,&amp;r,&amp;k,&amp;m);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%lld\n"</span>,calc(k,m,r)-calc(k,m+<span class="number">1</span>,r)-calc(k,m,l<span class="number">-1</span>)+calc(k,m+<span class="number">1</span>,l<span class="number">-1</span>));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><br></p>
-<blockquote>
-<p><strong>F 方差</strong></p>
-</blockquote>
-<p><strong>题意：</strong> 在n个数中选m个数，使得这m个数的方差*(m^2)最小<!--more--></p>
-<p><strong>思路：</strong></p>
-<p>首先想到要使方差越小，则要这m个数与平均数的差距越小，所以我们可以先排序再尺取m长;</p>
-<p>不难发现将方差公式乘以m^2后可以化简得到 </p>
-<script type="math/tex; mode=display">
-m(a_1^2+a_2^2+⋯+a_m^2) − (a_1+a_2+⋯+a_m)^2</script><p>（MathJax真好用，小声哔哔</p>
-<p>然后维护一个前缀和与一个前缀平方和即可</p>
-<p><strong>代码：</strong></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">1e6</span>+<span class="number">5</span>;</span><br><span class="line"><span class="keyword">int</span> a[maxn];</span><br><span class="line">ll sum1[maxn],sum2[maxn];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n,m;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;m);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;a[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    sort(a+<span class="number">1</span>,a+<span class="number">1</span>+n);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">        sum1[i]=sum1[i<span class="number">-1</span>]+a[i];</span><br><span class="line">        sum2[i]=sum2[i<span class="number">-1</span>]+a[i]*a[i];</span><br><span class="line">    &#125;</span><br><span class="line">    ll ans=<span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=m;i&lt;=n;i++)&#123;</span><br><span class="line">        ll tmp=m*(sum2[i]-sum2[i-m])-(sum1[i]-sum1[i-m])*(sum1[i]-sum1[i-m]);</span><br><span class="line">        <span class="keyword">if</span>(ans==<span class="number">-1</span>||ans&gt;tmp) ans=tmp;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%lld\n"</span>,ans);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <p>今天花一天时间好好学习了下树链剖分，之前听上去很高大上的样子，上半年寒假集训学长讲的时候还完全不懂，现在学着学着就很好理解了。刚好这道最近要补的题就是个裸题，拿来练练手。</p>
+<a id="more"></a>
+<p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=6547" target="_blank" rel="noopener">原题链接</a></p>
+<p>如果想区间维护更新的话因为是开根号，不满足加减乘幂等运算性质，所以只好单点更新，但这样复杂度会是O(qnlogn)？实际上，因为ai最大1e9，对其在在10次开根号的操作下会变为1，然后就不会变了，所以维护一个区间最大值，每次更新看是否最大值&lt;=1，是的话线段树就不要递归向下更新了</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> lson l,mid,o&lt;&lt;1</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> rson mid+1,r,o&lt;&lt;1|1</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">1e5</span>+<span class="number">10</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxm = <span class="number">1e5</span>+<span class="number">10</span>;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">read</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> x=<span class="number">0</span>; <span class="keyword">bool</span> f=<span class="number">0</span>; <span class="keyword">char</span> ch=getchar();</span><br><span class="line">    <span class="keyword">while</span> (ch&lt;<span class="string">'0'</span> || <span class="string">'9'</span>&lt;ch) f|=ch==<span class="string">'-'</span>, ch=getchar();</span><br><span class="line">    <span class="keyword">while</span> (<span class="string">'0'</span>&lt;=ch &amp;&amp; ch&lt;=<span class="string">'9'</span>) x=x*<span class="number">10</span>+ch-<span class="string">'0'</span>, ch=getchar();</span><br><span class="line">    <span class="keyword">return</span> f?-x:x;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">edge</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> next,to;</span><br><span class="line">&#125;e[maxm*<span class="number">2</span>];</span><br><span class="line"><span class="keyword">int</span> head[maxn],cnt;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">addedge</span><span class="params">(<span class="keyword">int</span> u,<span class="keyword">int</span> v)</span></span>&#123;</span><br><span class="line">    e[++cnt]=edge&#123;head[u],v&#125;;</span><br><span class="line">    head[u]=cnt;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> n,q,val[maxn];</span><br><span class="line"><span class="keyword">int</span> fa[maxn],deep[maxn],siz[maxn],son[maxn],rk[maxn],top[maxn],id[maxn];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs1</span><span class="params">(<span class="keyword">int</span> u,<span class="keyword">int</span> pre,<span class="keyword">int</span> dep)</span></span>&#123;</span><br><span class="line">    fa[u]=pre;deep[u]=dep;siz[u]=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=head[u];i;i=e[i].next)&#123;</span><br><span class="line">        <span class="keyword">int</span> v=e[i].to;</span><br><span class="line">        <span class="keyword">if</span>(v==pre)<span class="keyword">continue</span>;</span><br><span class="line">        dfs1(v,u,dep+<span class="number">1</span>);</span><br><span class="line">        siz[u]+=siz[v];</span><br><span class="line">        <span class="keyword">if</span>(siz[v]&gt;siz[son[u]])son[u]=v;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs2</span><span class="params">(<span class="keyword">int</span> u,<span class="keyword">int</span> t)</span></span>&#123;</span><br><span class="line">    top[u]=t;id[u]=++cnt;rk[cnt]=u;</span><br><span class="line">    <span class="keyword">if</span>(!son[u])<span class="keyword">return</span>;</span><br><span class="line">    dfs2(son[u],t);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=head[u];i;i=e[i].next)&#123;</span><br><span class="line">        <span class="keyword">int</span> v=e[i].to;</span><br><span class="line">        <span class="keyword">if</span>(v!=son[u]&amp;&amp;v!=fa[u])dfs2(v,v);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">ll Max[maxn&lt;&lt;<span class="number">2</span>],Sum[maxn&lt;&lt;<span class="number">2</span>];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">push_up</span><span class="params">(<span class="keyword">int</span> o)</span></span>&#123;</span><br><span class="line">    Sum[o]=Sum[o&lt;&lt;<span class="number">1</span>]+Sum[o&lt;&lt;<span class="number">1</span>|<span class="number">1</span>];</span><br><span class="line">    Max[o]=max(Max[o&lt;&lt;<span class="number">1</span>],Max[o&lt;&lt;<span class="number">1</span>|<span class="number">1</span>]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">build</span><span class="params">(<span class="keyword">int</span> l,<span class="keyword">int</span> r,<span class="keyword">int</span> o)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(l==r)&#123;</span><br><span class="line">        Max[o]=Sum[o]=val[rk[l]];</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> mid=(l+r)&gt;&gt;<span class="number">1</span>;</span><br><span class="line">    build(lson);</span><br><span class="line">    build(rson);</span><br><span class="line">    push_up(o);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">update</span><span class="params">(<span class="keyword">int</span> L,<span class="keyword">int</span> R,<span class="keyword">int</span> l,<span class="keyword">int</span> r,<span class="keyword">int</span> o)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(Max[o]&lt;=<span class="number">1</span>) <span class="keyword">return</span>;</span><br><span class="line">    <span class="keyword">if</span>(l==r)&#123;</span><br><span class="line">        Sum[o]=(<span class="keyword">int</span>)<span class="built_in">sqrt</span>(Sum[o]);</span><br><span class="line">        Max[o]=Sum[o];</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> mid=(l+r)&gt;&gt;<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span>(L&lt;=mid)  update(L,R,lson);</span><br><span class="line">    <span class="keyword">if</span>(R&gt;mid) update(L,R,rson);</span><br><span class="line">    push_up(o);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">ll <span class="title">querysum</span><span class="params">(<span class="keyword">int</span> L,<span class="keyword">int</span> R,<span class="keyword">int</span> l,<span class="keyword">int</span> r,<span class="keyword">int</span> o)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(L&lt;=l&amp;&amp;r&lt;=R)&#123;</span><br><span class="line">        <span class="keyword">return</span> Sum[o];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> mid=(l+r)&gt;&gt;<span class="number">1</span>;ll ret=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span>(L&lt;=mid) ret+=querysum(L,R,lson);</span><br><span class="line">    <span class="keyword">if</span>(R&gt;mid)  ret+=querysum(L,R,rson);</span><br><span class="line">    <span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">PathUpdate</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span>&#123;</span><br><span class="line">    <span class="keyword">while</span>(top[x]!=top[y])&#123;</span><br><span class="line">        <span class="keyword">if</span>(deep[top[x]]&lt;deep[top[y]]) swap(x,y);</span><br><span class="line">        update(id[top[x]],id[x],<span class="number">1</span>,n,<span class="number">1</span>);</span><br><span class="line">        x=fa[top[x]];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(id[x]&gt;id[y]) swap(x,y);</span><br><span class="line">    update(id[x],id[y],<span class="number">1</span>,n,<span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">ll <span class="title">PathQuery</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span>&#123;</span><br><span class="line">    ll ret=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(top[x]!=top[y])&#123;</span><br><span class="line">        <span class="keyword">if</span>(deep[top[x]]&lt;deep[top[y]]) swap(x,y);</span><br><span class="line">        ret+=querysum(id[top[x]],id[x],<span class="number">1</span>,n,<span class="number">1</span>);</span><br><span class="line">        x=fa[top[x]];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(id[x]&gt;id[y])swap(x,y);</span><br><span class="line">    ret+=querysum(id[x],id[y],<span class="number">1</span>,n,<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    n=read(),q=read();</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) val[i]=read();</span><br><span class="line">    cnt=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) head[i]=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n<span class="number">-1</span>;i++)&#123;</span><br><span class="line">        <span class="keyword">int</span> u=read(),v=read();</span><br><span class="line">        addedge(u,v);</span><br><span class="line">        addedge(v,u);</span><br><span class="line">    &#125;</span><br><span class="line">    cnt=<span class="number">0</span>;</span><br><span class="line">    dfs1(<span class="number">1</span>,<span class="number">0</span>,<span class="number">1</span>);</span><br><span class="line">    dfs2(<span class="number">1</span>,<span class="number">1</span>);</span><br><span class="line">    build(<span class="number">1</span>,n,<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">while</span>(q--)&#123;</span><br><span class="line">        <span class="keyword">int</span> op=read(),x=read(),y=read();</span><br><span class="line">        <span class="keyword">if</span>(op==<span class="number">0</span>)&#123;</span><br><span class="line">            PathUpdate(x,y);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"%lld\n"</span>,PathQuery(x,y));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -515,7 +506,9 @@ m(a_1^2+a_2^2+⋯+a_m^2) − (a_1+a_2+⋯+a_m)^2</script><p>（MathJax真好用�
       
         <div class="post-tags">
           
-            <a href="/tags/数学/" rel="tag"><i class="fa fa-tag"></i> 数学</a>
+            <a href="/tags/线段树/" rel="tag"><i class="fa fa-tag"></i> 线段树</a>
+          
+            <a href="/tags/树链剖分/" rel="tag"><i class="fa fa-tag"></i> 树链剖分</a>
           
         </div>
       
@@ -528,8 +521,8 @@ m(a_1^2+a_2^2+⋯+a_m^2) − (a_1+a_2+⋯+a_m)^2</script><p>（MathJax真好用�
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/post/81348f2b.html" rel="next" title="CSU 1803--2016">
-                <i class="fa fa-chevron-left"></i> CSU 1803--2016
+              <a href="/posts/ccc91f18.html" rel="next" title="牛客小白月赛16&&CodeForces1191 补题">
+                <i class="fa fa-chevron-left"></i> 牛客小白月赛16&&CodeForces1191 补题
               </a>
             
           </div>
@@ -538,8 +531,8 @@ m(a_1^2+a_2^2+⋯+a_m^2) − (a_1+a_2+⋯+a_m)^2</script><p>（MathJax真好用�
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/post/8acb8928.html" rel="prev" title="概率论与数理统计 学习笔记">
-                概率论与数理统计 学习笔记 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/30897d7f.html" rel="prev" title="2019牛客暑期多校训练营 补题日志">
+                2019牛客暑期多校训练营 补题日志 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -571,11 +564,7 @@ m(a_1^2+a_2^2+⋯+a_m^2) − (a_1+a_2+⋯+a_m)^2</script><p>（MathJax真好用�
 
   
     <div class="comments" id="comments">
-      
-        <div id="gitment-container"></div>
-      
     </div>
-
   
 
 
@@ -897,48 +886,30 @@ m(a_1^2+a_2^2+⋯+a_m^2) − (a_1+a_2+⋯+a_m)^2</script><p>（MathJax真好用�
 
 
 
-<!-- LOCAL: You can save these files to your site and update links -->
-    
-        
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/default.css">
-        <script src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/gitment.browser.js"></script>
-    
-<!-- END LOCAL -->
-
-    
-      <style>
-        a.gitment-editor-footer-tip { display: none; }
-        .gitment-container.gitment-footer-container { display: none; }
-      </style>
-    
-
-    
-      <script type="text/javascript">
-      function renderGitment(){
-        var gitment = new Gitment({
-            id: '1550901809000',
-            owner: 'QuincyTan',
-            repo: 'QuincyTan.github.io',
-            
-            oauth: {
-            
-            
-                client_secret: 'bf4df682ed2deaa60f2b9429da6dde37cc5378ad',
-            
-                client_id: '082bc2b0a43ea6e3ae49'
-            }});
-        gitment.render('gitment-container');
-      }
-
-      
-      renderGitment();
-      
-      </script>
-    
 
 
 
-
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: true,
+        appId: 'wCkNQOHecMN5C6aRW3BxL9LP-gzGzoHsz',
+        appKey: 'KynTTW0NoMoKrQaKMMqUKmhy',
+        placeholder: '如果您有任何问题，上方备注昵称和邮箱并留言哦~',
+        avatar:'wavatar',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 

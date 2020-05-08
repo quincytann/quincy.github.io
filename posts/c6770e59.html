@@ -127,7 +127,7 @@
 <meta name="keywords" content="网络协议">
 <meta property="og:type" content="article">
 <meta property="og:title" content="网络协议分析 学习笔记">
-<meta property="og:url" content="http://quincy.ink/post/c6770e59.html">
+<meta property="og:url" content="http://quincy.ink/posts/c6770e59.html">
 <meta property="og:site_name" content="Quincy&#39;s Blog">
 <meta property="og:description" content="第一章 TCP/IP概述 什么是Internet？ Network of Networks（网络之网络），连接各个子网的网络">
 <meta property="og:locale" content="zh-Hans">
@@ -139,7 +139,7 @@
 <meta property="og:image" content="https://s2.ax1x.com/2019/11/27/QCJ0DU.md.png">
 <meta property="og:image" content="https://s2.ax1x.com/2019/11/27/QCYHwF.md.png">
 <meta property="og:image" content="https://s2.ax1x.com/2019/11/28/QPZHrn.png">
-<meta property="og:updated_time" content="2020-05-07T14:10:39.987Z">
+<meta property="og:updated_time" content="2019-12-22T16:00:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="网络协议分析 学习笔记">
 <meta name="twitter:description" content="第一章 TCP/IP概述 什么是Internet？ Network of Networks（网络之网络），连接各个子网的网络">
@@ -173,7 +173,7 @@
 
 
 
-  <link rel="canonical" href="http://quincy.ink/post/c6770e59.html">
+  <link rel="canonical" href="http://quincy.ink/posts/c6770e59.html">
 
 
 
@@ -214,7 +214,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle">学习时长两年半的在校本科生</p>
+        <p class="site-subtitle">学习时长三年的在校本科生</p>
       
   </div>
 
@@ -338,7 +338,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://quincy.ink/post/c6770e59.html">
+    <link itemprop="mainEntityOfPage" href="http://quincy.ink/posts/c6770e59.html">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Quincy">
@@ -383,8 +383,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2020-05-07T22:10:39+08:00">
-                2020-05-07
+              <time title="更新于" itemprop="dateModified" datetime="2019-12-23T00:00:00+08:00">
+                2019-12-23
               </time>
             
           </span>
@@ -416,6 +416,16 @@
           
 
           
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/posts/c6770e59.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/posts/c6770e59.html" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -952,7 +962,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/post/4ff37aa6.html" rel="next" title="数字图像处理 学习笔记">
+              <a href="/posts/4ff37aa6.html" rel="next" title="数字图像处理 学习笔记">
                 <i class="fa fa-chevron-left"></i> 数字图像处理 学习笔记
               </a>
             
@@ -962,7 +972,7 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/post/fa8e3b91.html" rel="prev" title="工程经济学 学习笔记">
+              <a href="/posts/fa8e3b91.html" rel="prev" title="工程经济学 学习笔记">
                 工程经济学 学习笔记 <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -995,11 +1005,7 @@
 
   
     <div class="comments" id="comments">
-      
-        <div id="gitment-container"></div>
-      
     </div>
-
   
 
 
@@ -1346,48 +1352,30 @@
 
 
 
-<!-- LOCAL: You can save these files to your site and update links -->
-    
-        
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/default.css">
-        <script src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/gitment.browser.js"></script>
-    
-<!-- END LOCAL -->
-
-    
-      <style>
-        a.gitment-editor-footer-tip { display: none; }
-        .gitment-container.gitment-footer-container { display: none; }
-      </style>
-    
-
-    
-      <script type="text/javascript">
-      function renderGitment(){
-        var gitment = new Gitment({
-            id: '1574649631000',
-            owner: 'QuincyTan',
-            repo: 'QuincyTan.github.io',
-            
-            oauth: {
-            
-            
-                client_secret: 'bf4df682ed2deaa60f2b9429da6dde37cc5378ad',
-            
-                client_id: '082bc2b0a43ea6e3ae49'
-            }});
-        gitment.render('gitment-container');
-      }
-
-      
-      renderGitment();
-      
-      </script>
-    
 
 
 
-
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: true,
+        appId: 'wCkNQOHecMN5C6aRW3BxL9LP-gzGzoHsz',
+        appKey: 'KynTTW0NoMoKrQaKMMqUKmhy',
+        placeholder: '如果您有任何问题，上方备注昵称和邮箱并留言哦~',
+        avatar:'wavatar',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 

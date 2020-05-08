@@ -110,7 +110,7 @@
 
 
 
-  <meta name="keywords" content="算法设计与分析,">
+  <meta name="keywords" content="dfs,">
 
 
 
@@ -123,18 +123,18 @@
 
 
 
-<meta name="description" content="第一章 算法概述算法的定义：是对特定问题求解步骤的一种描述，包含操作的有限规则和操作的有限序列 算法的性质：确定性（指令无歧义）、有限性（无死循环）、输入、输出 程序的定义：是算法用某种程序设计语言的具体实现">
-<meta name="keywords" content="算法设计与分析">
+<meta name="description" content="题意：  出个两个（P,V）范围在1e9的正整数区间，分别从其中随机选出一个数，选出的两个数作为一个新区间的左右端点。要求新区间内的幸运数刚好为k个的概率（幸运数指一个数的数位只有4或7）。 思路：">
+<meta name="keywords" content="dfs">
 <meta property="og:type" content="article">
-<meta property="og:title" content="算法设计与分析 学习笔记">
-<meta property="og:url" content="http://quincy.ink/post/ecab3815.html">
+<meta property="og:title" content="Codeforces 110D--Lucky Probability">
+<meta property="og:url" content="http://quincy.ink/posts/cd41c611.html">
 <meta property="og:site_name" content="Quincy&#39;s Blog">
-<meta property="og:description" content="第一章 算法概述算法的定义：是对特定问题求解步骤的一种描述，包含操作的有限规则和操作的有限序列 算法的性质：确定性（指令无歧义）、有限性（无死循环）、输入、输出 程序的定义：是算法用某种程序设计语言的具体实现">
+<meta property="og:description" content="题意：  出个两个（P,V）范围在1e9的正整数区间，分别从其中随机选出一个数，选出的两个数作为一个新区间的左右端点。要求新区间内的幸运数刚好为k个的概率（幸运数指一个数的数位只有4或7）。 思路：">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-05-07T14:10:39.985Z">
+<meta property="og:updated_time" content="2019-02-13T16:00:00.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="算法设计与分析 学习笔记">
-<meta name="twitter:description" content="第一章 算法概述算法的定义：是对特定问题求解步骤的一种描述，包含操作的有限规则和操作的有限序列 算法的性质：确定性（指令无歧义）、有限性（无死循环）、输入、输出 程序的定义：是算法用某种程序设计语言的具体实现">
+<meta name="twitter:title" content="Codeforces 110D--Lucky Probability">
+<meta name="twitter:description" content="题意：  出个两个（P,V）范围在1e9的正整数区间，分别从其中随机选出一个数，选出的两个数作为一个新区间的左右端点。要求新区间内的幸运数刚好为k个的概率（幸运数指一个数的数位只有4或7）。 思路：">
 
 
 
@@ -164,13 +164,13 @@
 
 
 
-  <link rel="canonical" href="http://quincy.ink/post/ecab3815.html">
+  <link rel="canonical" href="http://quincy.ink/posts/cd41c611.html">
 
 
 
 
 
-  <title>算法设计与分析 学习笔记 | Quincy's Blog</title>
+  <title>Codeforces 110D--Lucky Probability | Quincy's Blog</title>
   
 
 
@@ -205,7 +205,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle">学习时长两年半的在校本科生</p>
+        <p class="site-subtitle">学习时长三年的在校本科生</p>
       
   </div>
 
@@ -329,7 +329,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://quincy.ink/post/ecab3815.html">
+    <link itemprop="mainEntityOfPage" href="http://quincy.ink/posts/cd41c611.html">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Quincy">
@@ -346,7 +346,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">算法设计与分析 学习笔记</h1>
+          <h1 class="post-title" itemprop="name headline">Codeforces 110D--Lucky Probability</h1>
         
 
         <div class="post-meta">
@@ -358,8 +358,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-19T09:06:26+08:00">
-                2019-03-19
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-14T13:51:31+08:00">
+                2019-02-14
               </time>
             
 
@@ -374,8 +374,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2020-05-07T22:10:39+08:00">
-                2020-05-07
+              <time title="更新于" itemprop="dateModified" datetime="2019-02-14T00:00:00+08:00">
+                2019-02-14
               </time>
             
           </span>
@@ -395,8 +395,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/专业课程/" itemprop="url" rel="index">
-                    <span itemprop="name">专业课程</span>
+                  <a href="/categories/ACM/" itemprop="url" rel="index">
+                    <span itemprop="name">ACM</span>
                   </a>
                 </span>
 
@@ -407,6 +407,16 @@
           
 
           
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/posts/cd41c611.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/posts/cd41c611.html" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -432,78 +442,11 @@
       
 
       
-        <h4 id="第一章-算法概述"><a href="#第一章-算法概述" class="headerlink" title="第一章 算法概述"></a>第一章 算法概述</h4><p>算法的定义：是对特定问题求解步骤的一种描述，包含操作的有限规则和操作的有限序列</p>
-<p>算法的性质：确定性（指令无歧义）、有限性（无死循环）、输入、输出</p>
-<p>程序的定义：是算法用某种程序设计语言的具体实现<a id="more"></a></p>
-<p>程序和算法的区别：程序不一定满足有限性，比如操作系统 </p>
-<p>算法复杂性决定于：(1)求解问题的规模；(2)具体的输入数据；(3)算法本身的设计</p>
-<p>O(1)&lt;O(logn)&lt;O(n)&lt;O($n^c$)&lt;O($c^n$)&lt;O(n!)</p>
-<p>如果存在正的常数c和自然数n0，使得n&gt;=n0时有f(n)&lt;=cg(n)，则称f(n)当n充分大时有上界，且g(n)是它的一个上界，记为f(n)=O(g(n))，还说f(n)的阶不高于f(n)的阶。</p>
-<p>求上下界函数：</p>
-<script type="math/tex; mode=display">
-\lim_{n\rightarrow\infty} \frac{f(n)}{g(n)} = \begin{cases}0, & \text{f(n)=O(g(n))}\\\infty, & \text{f(n)= $\Omega$(g(n))}\\c,& \text{f(n)=$\Theta$(g(n))} \end{cases}</script><h4 id="第二章-递归与分治"><a href="#第二章-递归与分治" class="headerlink" title="第二章 递归与分治"></a>第二章 递归与分治</h4><p>一般递归方程时间复杂度分析</p>
-<script type="math/tex; mode=display">
-T(n)<=\begin{cases}1,&\text{n=1}\\ aT(n∣b)+D(n),&\text{n>1}     \end{cases}</script><p>其中，a是子问题的个数，b是递减的步长，|表示递减方式，D(n)是合成子问题的开销</p>
-<p>当|为减法：</p>
-<script type="math/tex; mode=display">
-T(n)<=\begin{cases}O(a^n),&\text{a>1}\\ O(n),&\text{a=1}     \end{cases}</script><p>当|为除法：</p>
-<p>$p=log_ba$</p>
-<p>①D(n)为常数</p>
-<script type="math/tex; mode=display">
-T(n)<=\begin{cases}O(n^p),&\text{a>1}\\ O(log_bn),&\text{a=1}     \end{cases}</script><p>②D(n)为线性函数cn</p>
-<script type="math/tex; mode=display">
-T(n)<=\begin{cases}O(n),&\text{a<b}\\ O(nlog_bn),&\text{a=b}\\ O(n^p),&\text{a>b} \end{cases}</script><p>③D(n)为幂函数$n^x$</p>
-<script type="math/tex; mode=display">
-T(n)<=\begin{cases}O(n^x),&\text{a<D(b)}\\ O(n^plog_bn),&\text{a=D(b)}\\ O(n^p),&\text{a>D(b)} \end{cases}</script><h4 id="第三章-动态规划"><a href="#第三章-动态规划" class="headerlink" title="第三章 动态规划"></a>第三章 动态规划</h4><p>动态规划算法的基本要素：最优子结构性质（自底向上）、重叠子问题性质（子问题之间并非独立）</p>
-<p>设计算法步骤：</p>
-<ul>
-<li>找出最优解的性质，刻画其结构特征</li>
-<li>递归定义最优值</li>
-<li>自底向上计算最优值</li>
-<li>根据最优值构造最优解</li>
-</ul>
-<p>可用动态规划方法时，贪心算法可能不适用</p>
-<h4 id="第四章-贪心算法"><a href="#第四章-贪心算法" class="headerlink" title="第四章 贪心算法"></a>第四章 贪心算法</h4><p>适用情形：设待求解问题有N个输入，根据必须满足的条件和目标函数，希望从问题的所有允许解中求出最优值；可用贪心算法时，动态规划方法可能不适用</p>
-<p>贪心算法的基本要素：贪心选择性质（局部最优、自顶向下）、最优子结构性质</p>
-<p>Prim：在保证连通的前提下依次选出权重较小的n – 1条边，O($n^2$)</p>
-<p>Kruskal：在保证无回路的前提下依次选出权重较小的n – 1条边，O(eloge)</p>
-<h4 id="第五章-回溯法"><a href="#第五章-回溯法" class="headerlink" title="第五章 回溯法"></a>第五章 回溯法</h4><p>适用情形：当需要找出它的解集或者要求回答什么解是满足某些约束条件的最佳解时，往往要使用回溯法</p>
-<p>搜索方式：</p>
-<ul>
-<li>深度优先搜索：不一定能找到解，时空复杂度较小</li>
-<li>广度优先搜索：一定能找到解，时空复杂度较大</li>
-<li>启发式搜索：较快找到解，取决于评价函数优劣</li>
-</ul>
-<h4 id="第六章-分支限界法"><a href="#第六章-分支限界法" class="headerlink" title="第六章 分支限界法"></a>第六章 分支限界法</h4><p>回溯法和分界限界法的相同点：都是在问题的解空间树上搜索问题解的算法</p>
-<p>回溯法和分界限界法的不同点：</p>
-<ul>
-<li>求解目标不同：求出满足约束的所有解；求出某种意义下的最优解</li>
-<li>剪枝不同：只通过约束条件剪掉非可行解；通过约束条件和目标函数的限界剪掉不包含最优解的可行解</li>
-<li>搜索方式不同：DFS；BFS</li>
-<li>实现数据结构不同：栈；队列</li>
-</ul>
-<h4 id="第七章-概率算法"><a href="#第七章-概率算法" class="headerlink" title="第七章 概率算法"></a>第七章 概率算法</h4><p>定义：是一种使用概率和统计方法在其执行过程中对于下一计算步骤作出随机选择的算法</p>
-<p>特征：</p>
-<ul>
-<li>输入包括原问题输入和供随机选择的随机序列两部分</li>
-<li>运行过程中，包括一次或多次随机选择，根据随机值决定程算法运行</li>
-<li>算法的结果不能保证一定是正确的，但可以限定其出错概率</li>
-<li>对于相同的输入实例可以有不同的结果，执行时间也可能不同</li>
-</ul>
-<p>分类：</p>
-<ul>
-<li>舍伍德算法：总能求得问题的一个解，且所求得解的结果总是正确的。其主要目的是消除算法所需计算时间对输入实例的依赖（如快速排序）</li>
-<li>拉斯维加斯算法：要么给出正确解，要么得不到解，反复求解多次可使失效的概率任意小</li>
-<li>蒙特卡罗算法：总能得到解，偶尔产生不正确解，反复求解多次可使不正确解的概率任意小</li>
-</ul>
-<h4 id="第八章-字符串"><a href="#第八章-字符串" class="headerlink" title="第八章 字符串"></a>第八章 字符串</h4><p>KMP：next[]，newnext[] 求解（0,1,…）</p>
-<p>BM：dist[] 求解（…,m）</p>
-<p>KR：速度要快、冲突概率要小、相邻两个字符串的hash值要有相关性</p>
-<p>以上算法时间复杂度：最好O(n+m)，最坏O(n*m)</p>
-<h4 id="第九章-NP完全问题"><a href="#第九章-NP完全问题" class="headerlink" title="第九章 NP完全问题"></a>第九章 NP完全问题</h4><p>P类问题：所有可以在多项式时间内求解的判定问题构成P类问题。判定问题：判断是否有一种能够解决某一类问题的能行算法的研究课题。</p>
-<p>NP类问题：所有的非确定性多项式时间可解的判定问题构成NP类问题。非确定性算法：非确定性算法将问题分解成猜测和验证两个阶段。</p>
-<p>NPC问题：NP中的某些问题的复杂性与整个类的复杂性相关联。这些问题中任何一个如果存在多项式时间的算法，那么所有NP问题都是多项式时间可解的，这些问题被称为NP-完全问题。</p>
-<p>$P \subseteq NP$</p>
+        <p><strong>题意：</strong> </p>
+<p>出个两个（P,V）范围在1e9的正整数区间，分别从其中随机选出一个数，选出的两个数作为一个新区间的左右端点。要求新区间内的幸运数刚好为k个的概率（幸运数指一个数的数位只有4或7）。</p>
+<p><strong>思路：</strong> <a id="more"></a><br>首先可以dfs找出所有在数据范围内的幸运数，记为L数组，因为数目不多，便可成k段遍历 L数组，每次分别计算【 L[i-1]+1，L[i]】与【Pl，Pr】的线段交集，和【 L[i+k-1]，L[i+k]-1】与【Vl，Vr】的线段交集，将两个结果相乘即是符合[i,i+k-1]区间幸运数的可能情况，同样的还要对P,V两个区间交换后在计算一遍，概率=所有可能情况/(Pr-Pl+1)/(Vr-Vl+1);然后还要注意k==1的情况会重复计算，需特判。</p>
+<p><strong>代码：</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line">ll L[<span class="number">1050</span>];</span><br><span class="line"><span class="keyword">int</span> num=<span class="number">0</span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> len,<span class="keyword">int</span> p,<span class="keyword">int</span> v)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(p==len)</span><br><span class="line">    &#123;</span><br><span class="line">        L[++num]=v;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    dfs(len,p+<span class="number">1</span>,v*<span class="number">10</span>+<span class="number">4</span>);</span><br><span class="line">    dfs(len,p+<span class="number">1</span>,v*<span class="number">10</span>+<span class="number">7</span>);</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function">ll <span class="title">contain</span><span class="params">(ll x1,ll y1,ll x2,ll y2)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ll l=max(x1,x2);</span><br><span class="line">    ll r=min(y1,y2);</span><br><span class="line">    <span class="keyword">return</span> r-l+<span class="number">1</span>&gt;<span class="number">0</span>?r-l+<span class="number">1</span>:<span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> len=<span class="number">1</span>;len&lt;=<span class="number">9</span>;len++) dfs(len,<span class="number">0</span>,<span class="number">0</span>);</span><br><span class="line">    L[<span class="number">0</span>]=<span class="number">0</span>;</span><br><span class="line">    L[++num]=<span class="number">1000000000</span>;</span><br><span class="line">    <span class="comment">//for(int i=1;i&lt;=num;i++) printf("%d  %lld\n",i,L[i]);</span></span><br><span class="line">    ll Pl,Pr,Vl,Vr;</span><br><span class="line">    <span class="keyword">int</span> k;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%lld%lld%lld%lld%d"</span>,&amp;Pl,&amp;Pr,&amp;Vl,&amp;Vr,&amp;k);</span><br><span class="line">    ll sum=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">1022</span>-k+<span class="number">1</span>;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> j=i+k<span class="number">-1</span>;</span><br><span class="line">        sum+=contain(L[i<span class="number">-1</span>]+<span class="number">1</span>,L[i],Pl,Pr)*contain(L[j],L[j+<span class="number">1</span>]<span class="number">-1</span>,Vl,Vr);</span><br><span class="line">        <span class="keyword">if</span>(L[i]&gt;Pr) <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">1022</span>-k+<span class="number">1</span>;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> j=i+k<span class="number">-1</span>;</span><br><span class="line">        sum+=contain(L[i<span class="number">-1</span>]+<span class="number">1</span>,L[i],Vl,Vr)*contain(L[j],L[j+<span class="number">1</span>]<span class="number">-1</span>,Pl,Pr);</span><br><span class="line">        <span class="keyword">if</span>(L[i]&gt;Vr) <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="keyword">if</span>(k==<span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">1022</span>;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(contain(L[i],L[i],Pl,Pr)&amp;&amp;contain(L[i],L[i],Vl,Vr)) sum--;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%.10f\n"</span>,sum*<span class="number">1.0</span>/(Vr-Vl+<span class="number">1</span>)/(Pr-Pl+<span class="number">1</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -563,7 +506,7 @@ T(n)<=\begin{cases}O(n^x),&\text{a<D(b)}\\ O(n^plog_bn),&\text{a=D(b)}\\ O(n^p),
       
         <div class="post-tags">
           
-            <a href="/tags/算法设计与分析/" rel="tag"><i class="fa fa-tag"></i> 算法设计与分析</a>
+            <a href="/tags/dfs/" rel="tag"><i class="fa fa-tag"></i> dfs</a>
           
         </div>
       
@@ -576,8 +519,8 @@ T(n)<=\begin{cases}O(n^x),&\text{a<D(b)}\\ O(n^plog_bn),&\text{a=D(b)}\\ O(n^p),
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/post/2887108d.html" rel="next" title="物联网概论 学习笔记">
-                <i class="fa fa-chevron-left"></i> 物联网概论 学习笔记
+              <a href="/posts/d4401c4f.html" rel="next" title="POJ 2774--Long Long Message">
+                <i class="fa fa-chevron-left"></i> POJ 2774--Long Long Message
               </a>
             
           </div>
@@ -586,8 +529,8 @@ T(n)<=\begin{cases}O(n^x),&\text{a<D(b)}\\ O(n^plog_bn),&\text{a=D(b)}\\ O(n^p),
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/post/2dcb219.html" rel="prev" title="ARM嵌入式系统 学习笔记">
-                ARM嵌入式系统 学习笔记 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/ae8e5760.html" rel="prev" title="ZOJ 2594--Driving-Straight">
+                ZOJ 2594--Driving-Straight <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -619,11 +562,7 @@ T(n)<=\begin{cases}O(n^x),&\text{a<D(b)}\\ O(n^plog_bn),&\text{a=D(b)}\\ O(n^p),
 
   
     <div class="comments" id="comments">
-      
-        <div id="gitment-container"></div>
-      
     </div>
-
   
 
 
@@ -653,17 +592,8 @@ T(n)<=\begin{cases}O(n^x),&\text{a<D(b)}\\ O(n^plog_bn),&\text{a=D(b)}\\ O(n^p),
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -771,22 +701,6 @@ T(n)<=\begin{cases}O(n^x),&\text{a<D(b)}\\ O(n^plog_bn),&\text{a=D(b)}\\ O(n^p),
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#第一章-算法概述"><span class="nav-number">1.</span> <span class="nav-text">第一章 算法概述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第二章-递归与分治"><span class="nav-number">2.</span> <span class="nav-text">第二章 递归与分治</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第三章-动态规划"><span class="nav-number">3.</span> <span class="nav-text">第三章 动态规划</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第四章-贪心算法"><span class="nav-number">4.</span> <span class="nav-text">第四章 贪心算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第五章-回溯法"><span class="nav-number">5.</span> <span class="nav-text">第五章 回溯法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第六章-分支限界法"><span class="nav-number">6.</span> <span class="nav-text">第六章 分支限界法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第七章-概率算法"><span class="nav-number">7.</span> <span class="nav-text">第七章 概率算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第八章-字符串"><span class="nav-number">8.</span> <span class="nav-text">第八章 字符串</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第九章-NP完全问题"><span class="nav-number">9.</span> <span class="nav-text">第九章 NP完全问题</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
@@ -970,48 +884,30 @@ T(n)<=\begin{cases}O(n^x),&\text{a<D(b)}\\ O(n^plog_bn),&\text{a=D(b)}\\ O(n^p),
 
 
 
-<!-- LOCAL: You can save these files to your site and update links -->
-    
-        
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/default.css">
-        <script src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/gitment.browser.js"></script>
-    
-<!-- END LOCAL -->
-
-    
-      <style>
-        a.gitment-editor-footer-tip { display: none; }
-        .gitment-container.gitment-footer-container { display: none; }
-      </style>
-    
-
-    
-      <script type="text/javascript">
-      function renderGitment(){
-        var gitment = new Gitment({
-            id: '1552957586000',
-            owner: 'QuincyTan',
-            repo: 'QuincyTan.github.io',
-            
-            oauth: {
-            
-            
-                client_secret: 'bf4df682ed2deaa60f2b9429da6dde37cc5378ad',
-            
-                client_id: '082bc2b0a43ea6e3ae49'
-            }});
-        gitment.render('gitment-container');
-      }
-
-      
-      renderGitment();
-      
-      </script>
-    
 
 
 
-
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: true,
+        appId: 'wCkNQOHecMN5C6aRW3BxL9LP-gzGzoHsz',
+        appKey: 'KynTTW0NoMoKrQaKMMqUKmhy',
+        placeholder: '如果您有任何问题，上方备注昵称和邮箱并留言哦~',
+        avatar:'wavatar',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 

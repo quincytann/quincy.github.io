@@ -110,7 +110,7 @@
 
 
 
-  <meta name="keywords" content="算法,sql,">
+  <meta name="keywords" content="dp,">
 
 
 
@@ -123,20 +123,18 @@
 
 
 
-<meta name="description" content="刷了一些题目来自剑指offer、leetcode的简单算法题和sql题，做些总结~~">
-<meta name="keywords" content="算法,sql">
+<meta name="description" content="题意： 给一个n和m，求所有组成m长且值在1-n内且满足 a[i]%a[i-1]==0 的序列方案数。 思路：">
+<meta name="keywords" content="dp">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CS-Note 刷题总结">
-<meta property="og:url" content="http://quincy.ink/post/f06a1fe6.html">
+<meta property="og:title" content="ZOJ 4011--Happy-Sequence">
+<meta property="og:url" content="http://quincy.ink/posts/undefined.html">
 <meta property="og:site_name" content="Quincy&#39;s Blog">
-<meta property="og:description" content="刷了一些题目来自剑指offer、leetcode的简单算法题和sql题，做些总结~~">
+<meta property="og:description" content="题意： 给一个n和m，求所有组成m长且值在1-n内且满足 a[i]%a[i-1]==0 的序列方案数。 思路：">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://s1.ax1x.com/2020/05/07/YZV5Ax.png">
-<meta property="og:updated_time" content="2020-05-07T14:24:00.616Z">
+<meta property="og:updated_time" content="2019-02-13T16:00:00.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CS-Note 刷题总结">
-<meta name="twitter:description" content="刷了一些题目来自剑指offer、leetcode的简单算法题和sql题，做些总结~~">
-<meta name="twitter:image" content="https://s1.ax1x.com/2020/05/07/YZV5Ax.png">
+<meta name="twitter:title" content="ZOJ 4011--Happy-Sequence">
+<meta name="twitter:description" content="题意： 给一个n和m，求所有组成m长且值在1-n内且满足 a[i]%a[i-1]==0 的序列方案数。 思路：">
 
 
 
@@ -166,13 +164,13 @@
 
 
 
-  <link rel="canonical" href="http://quincy.ink/post/f06a1fe6.html">
+  <link rel="canonical" href="http://quincy.ink/posts/undefined.html">
 
 
 
 
 
-  <title>CS-Note 刷题总结 | Quincy's Blog</title>
+  <title>ZOJ 4011--Happy-Sequence | Quincy's Blog</title>
   
 
 
@@ -207,7 +205,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle">学习时长两年半的在校本科生</p>
+        <p class="site-subtitle">学习时长三年的在校本科生</p>
       
   </div>
 
@@ -331,7 +329,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://quincy.ink/post/f06a1fe6.html">
+    <link itemprop="mainEntityOfPage" href="http://quincy.ink/posts/undefined.html">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Quincy">
@@ -348,7 +346,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">CS-Note 刷题总结</h1>
+          <h1 class="post-title" itemprop="name headline">ZOJ 4011--Happy-Sequence</h1>
         
 
         <div class="post-meta">
@@ -360,8 +358,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-05-01T09:16:13+08:00">
-                2020-05-01
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-14T14:06:40+08:00">
+                2019-02-14
               </time>
             
 
@@ -376,8 +374,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2020-05-07T22:24:00+08:00">
-                2020-05-07
+              <time title="更新于" itemprop="dateModified" datetime="2019-02-14T00:00:00+08:00">
+                2019-02-14
               </time>
             
           </span>
@@ -397,8 +395,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/刷题总结/" itemprop="url" rel="index">
-                    <span itemprop="name">刷题总结</span>
+                  <a href="/categories/ACM/" itemprop="url" rel="index">
+                    <span itemprop="name">ACM</span>
                   </a>
                 </span>
 
@@ -409,6 +407,16 @@
           
 
           
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/posts/undefined.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/posts/undefined.html" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -434,28 +442,12 @@
       
 
       
-        <p>刷了一些题目来自剑指offer、leetcode的简单算法题和sql题，做些总结~~<a id="more"></a></p>
-<h4 id="算法篇"><a href="#算法篇" class="headerlink" title="算法篇"></a>算法篇</h4><p>1、对于指针操作，务必先判断是否为NULL<br>2、快速统计二进制中1的个数</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> (n != <span class="number">0</span>) &#123;</span><br><span class="line">    cnt++;</span><br><span class="line">    n &amp;= (n - <span class="number">1</span>); <span class="comment">//依次消掉低位第一个1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>3、判断是否为2的次幂</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span> x&gt;<span class="number">0</span> &amp;&amp; x&amp;(x<span class="number">-1</span>)==<span class="number">0</span>;</span><br></pre></td></tr></table></figure>
-<p>4、根据前序中序遍历结果构造二叉树</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">TreeNode* <span class="title">reConstructBinaryTree</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &amp;pre,<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &amp;in)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;in.size();i++) pos[in[i]]=i;</span><br><span class="line">        <span class="keyword">return</span> dfs(pre,<span class="number">0</span>,pre.size()<span class="number">-1</span>,<span class="number">0</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">TreeNode* <span class="title">dfs</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &amp;pre,<span class="keyword">int</span> preL,<span class="keyword">int</span> preR,<span class="keyword">int</span> inL)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(preL &gt; preR) <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">int</span> val = pre[preL],Lsize = pos[val]-inL;</span><br><span class="line">    TreeNode* root = <span class="keyword">new</span> TreeNode(val);</span><br><span class="line">    root-&gt;left = dfs(pre,preL+<span class="number">1</span>,preL+Lsize,inL);</span><br><span class="line">    root-&gt;right = dfs(pre,preL+Lsize+<span class="number">1</span>,preR,inL+Lsize+<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">return</span> root;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>5、判断链表是否存在环</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">hasCycle</span><span class="params">(ListNode *head)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(head==<span class="literal">NULL</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    ListNode *p1=head,*p2=head-&gt;next; <span class="comment">//快慢指针</span></span><br><span class="line">    <span class="keyword">while</span>(p1!=<span class="literal">NULL</span> &amp;&amp; p2!=<span class="literal">NULL</span> &amp;&amp; p2-&gt;next!=<span class="literal">NULL</span>)&#123;</span><br><span class="line">        <span class="keyword">if</span>(p1==p2) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        p1=p1-&gt;next;</span><br><span class="line">        p2=p2-&gt;next-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>6、快排partition写法（才发现之前算法实验课写的有点bug）</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">partition</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; a,<span class="keyword">int</span> l,<span class="keyword">int</span> h)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> pivot = a[l];</span><br><span class="line">    <span class="keyword">while</span> (l&lt;h) &#123;</span><br><span class="line">        <span class="keyword">while</span>(l&lt;h &amp;&amp; a[h]&gt;=pivot) h--;</span><br><span class="line">        a[l]=a[h];</span><br><span class="line">        <span class="keyword">while</span>(l&lt;h &amp;&amp; a[l]&lt;=pivot) l++;</span><br><span class="line">        a[h]=a[l];</span><br><span class="line">    &#125;</span><br><span class="line">    a[l]=pivot;</span><br><span class="line">    <span class="keyword">return</span> l;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>7、指定位置插入vector&amp;&amp;list</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">vec.insert(vec.begin()+k,item); <span class="comment">//平均O(n) 较慢</span></span><br><span class="line"></span><br><span class="line">iter = lst.begin();</span><br><span class="line">advance(iter, k); <span class="comment">//迭代器向前移动k个 k为负则向后移动</span></span><br><span class="line">lst.insert(iter, item);</span><br></pre></td></tr></table></figure>
-<p><br></p>
-<h4 id="SQL篇"><a href="#SQL篇" class="headerlink" title="SQL篇"></a>SQL篇</h4><p>1、or/and关键字会使查询全文扫描导致效率较低，如果查询列有索引可以分别查询然后union/intersect</p>
-<p>2、将表中性别列的值取反</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">update</span> salary</span><br><span class="line"><span class="keyword">set</span> sex = <span class="keyword">if</span>(sex=<span class="string">'m'</span>,<span class="string">'f'</span>,<span class="string">'m'</span>); //异或也行sex = char(ascii(sex)^ascii('m')^ascii('f'))</span><br></pre></td></tr></table></figure>
-<p>3、不能将同一张表同时更新和查询，可利用子查询的方式解决</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">delete</span> <span class="keyword">from</span> person </span><br><span class="line"><span class="keyword">where</span> <span class="keyword">id</span> <span class="keyword">not</span> <span class="keyword">in</span> </span><br><span class="line">    (<span class="keyword">select</span> <span class="keyword">id</span> <span class="keyword">from</span>(<span class="keyword">select</span> <span class="keyword">min</span>(<span class="keyword">id</span>) <span class="keyword">as</span> <span class="keyword">id</span> <span class="keyword">from</span> Person <span class="keyword">group</span> <span class="keyword">by</span> Email) <span class="keyword">as</span> temp);</span><br></pre></td></tr></table></figure>
-<p>4、sql各种连接</p>
-<p><img src="https://s1.ax1x.com/2020/05/07/YZV5Ax.png" alt="YZV5Ax.png"></p>
-<p>另外还有内连接；交叉连接（cross join），即笛卡尔积。这两种后面用where判断条件。</p>
+        <p><strong>题意：</strong></p>
+<p>给一个n和m，求所有组成m长且值在1-n内且满足 a[i]%a[i-1]==0 的序列方案数。</p>
+<p><strong>思路：</strong><a id="more"></a></p>
+<p>dp[i] [j] 表示长度为 i 的序列的最后一位为 j ,转移方程：dp[i] [j]=0 , dp[i] [j]+=dp[i-1] [ j的因子 ] 。因子可以通过埃氏筛打表得到，dp[m] [i]累加和即为答案，预处理2000*2000以内所有答案即可。</p>
+<p><strong>代码：</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"> </span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> N 2005</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> mod 1000000007</span></span><br><span class="line"><span class="keyword">int</span> dp[N][N];</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;y[N];         <span class="comment">//储存因子</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"> </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=N; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=i; j&lt;=N; j+=i)</span><br><span class="line">        &#123;</span><br><span class="line">            y[j].push_back(i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=N; i++) dp[<span class="number">1</span>][i]=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>; i&lt;=N; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>; j&lt;=N; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">0</span>; k&lt;y[j].size(); k++)</span><br><span class="line">            &#123;</span><br><span class="line">                dp[i][j]=(dp[i][j]+dp[i<span class="number">-1</span>][y[j][k]])%mod;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> t;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;t);</span><br><span class="line">    <span class="keyword">while</span>(t--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> n,m;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;m);</span><br><span class="line">        <span class="keyword">int</span> ans=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=n; i++) ans=(ans+dp[m][i])%mod;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,ans);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -515,9 +507,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/算法/" rel="tag"><i class="fa fa-tag"></i> 算法</a>
-          
-            <a href="/tags/sql/" rel="tag"><i class="fa fa-tag"></i> sql</a>
+            <a href="/tags/dp/" rel="tag"><i class="fa fa-tag"></i> dp</a>
           
         </div>
       
@@ -530,8 +520,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/post/98e6f621.html" rel="next" title="面经">
-                <i class="fa fa-chevron-left"></i> 面经
+              <a href="/posts/ae8e5760.html" rel="next" title="ZOJ 2594--Driving-Straight">
+                <i class="fa fa-chevron-left"></i> ZOJ 2594--Driving-Straight
               </a>
             
           </div>
@@ -539,6 +529,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/posts/81348f2b.html" rel="prev" title="CSU 1803--2016">
+                CSU 1803--2016 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -569,11 +563,7 @@
 
   
     <div class="comments" id="comments">
-      
-        <div id="gitment-container"></div>
-      
     </div>
-
   
 
 
@@ -603,17 +593,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -721,22 +702,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#算法篇"><span class="nav-number">1.</span> <span class="nav-text">算法篇</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#SQL篇"><span class="nav-number">2.</span> <span class="nav-text">SQL篇</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
@@ -920,48 +885,30 @@
 
 
 
-<!-- LOCAL: You can save these files to your site and update links -->
-    
-        
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/default.css">
-        <script src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/gitment.browser.js"></script>
-    
-<!-- END LOCAL -->
-
-    
-      <style>
-        a.gitment-editor-footer-tip { display: none; }
-        .gitment-container.gitment-footer-container { display: none; }
-      </style>
-    
-
-    
-      <script type="text/javascript">
-      function renderGitment(){
-        var gitment = new Gitment({
-            id: '1588295773000',
-            owner: 'QuincyTan',
-            repo: 'QuincyTan.github.io',
-            
-            oauth: {
-            
-            
-                client_secret: 'bf4df682ed2deaa60f2b9429da6dde37cc5378ad',
-            
-                client_id: '082bc2b0a43ea6e3ae49'
-            }});
-        gitment.render('gitment-container');
-      }
-
-      
-      renderGitment();
-      
-      </script>
-    
 
 
 
-
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: true,
+        appId: 'wCkNQOHecMN5C6aRW3BxL9LP-gzGzoHsz',
+        appKey: 'KynTTW0NoMoKrQaKMMqUKmhy',
+        placeholder: '如果您有任何问题，上方备注昵称和邮箱并留言哦~',
+        avatar:'wavatar',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 

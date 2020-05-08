@@ -110,7 +110,7 @@
 
 
 
-  <meta name="keywords" content="二分,线段树,PAM,主席树,贪心,找规律,trie,LIS,最大子段和,hash,博弈,构造,扫描线,">
+  <meta name="keywords" content="贪心,PAM,线段树,主席树,二分,找规律,trie,LIS,最大子段和,hash,博弈,构造,扫描线,">
 
 
 
@@ -124,14 +124,14 @@
 
 
 <meta name="description" content="留点曾经被搞自闭的印象…">
-<meta name="keywords" content="二分,线段树,PAM,主席树,贪心,找规律,trie,LIS,最大子段和,hash,博弈,构造,扫描线">
+<meta name="keywords" content="贪心,PAM,线段树,主席树,二分,找规律,trie,LIS,最大子段和,hash,博弈,构造,扫描线">
 <meta property="og:type" content="article">
 <meta property="og:title" content="2019杭电多校 补题日志">
-<meta property="og:url" content="http://quincy.ink/post/95e88c92.html">
+<meta property="og:url" content="http://quincy.ink/posts/95e88c92.html">
 <meta property="og:site_name" content="Quincy&#39;s Blog">
 <meta property="og:description" content="留点曾经被搞自闭的印象…">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-05-07T14:10:39.956Z">
+<meta property="og:updated_time" content="2019-08-21T16:00:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="2019杭电多校 补题日志">
 <meta name="twitter:description" content="留点曾经被搞自闭的印象…">
@@ -164,7 +164,7 @@
 
 
 
-  <link rel="canonical" href="http://quincy.ink/post/95e88c92.html">
+  <link rel="canonical" href="http://quincy.ink/posts/95e88c92.html">
 
 
 
@@ -205,7 +205,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle">学习时长两年半的在校本科生</p>
+        <p class="site-subtitle">学习时长三年的在校本科生</p>
       
   </div>
 
@@ -329,7 +329,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://quincy.ink/post/95e88c92.html">
+    <link itemprop="mainEntityOfPage" href="http://quincy.ink/posts/95e88c92.html">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Quincy">
@@ -374,8 +374,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2020-05-07T22:10:39+08:00">
-                2020-05-07
+              <time title="更新于" itemprop="dateModified" datetime="2019-08-22T00:00:00+08:00">
+                2019-08-22
               </time>
             
           </span>
@@ -407,6 +407,16 @@
           
 
           
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/posts/95e88c92.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/posts/95e88c92.html" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -553,15 +563,15 @@
       
         <div class="post-tags">
           
-            <a href="/tags/二分/" rel="tag"><i class="fa fa-tag"></i> 二分</a>
-          
-            <a href="/tags/线段树/" rel="tag"><i class="fa fa-tag"></i> 线段树</a>
+            <a href="/tags/贪心/" rel="tag"><i class="fa fa-tag"></i> 贪心</a>
           
             <a href="/tags/PAM/" rel="tag"><i class="fa fa-tag"></i> PAM</a>
           
+            <a href="/tags/线段树/" rel="tag"><i class="fa fa-tag"></i> 线段树</a>
+          
             <a href="/tags/主席树/" rel="tag"><i class="fa fa-tag"></i> 主席树</a>
           
-            <a href="/tags/贪心/" rel="tag"><i class="fa fa-tag"></i> 贪心</a>
+            <a href="/tags/二分/" rel="tag"><i class="fa fa-tag"></i> 二分</a>
           
             <a href="/tags/找规律/" rel="tag"><i class="fa fa-tag"></i> 找规律</a>
           
@@ -590,7 +600,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/post/30897d7f.html" rel="next" title="2019牛客暑期多校训练营 补题日志">
+              <a href="/posts/30897d7f.html" rel="next" title="2019牛客暑期多校训练营 补题日志">
                 <i class="fa fa-chevron-left"></i> 2019牛客暑期多校训练营 补题日志
               </a>
             
@@ -600,7 +610,7 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/post/b5fbac7e.html" rel="prev" title="通信原理 学习笔记">
+              <a href="/posts/b5fbac7e.html" rel="prev" title="通信原理 学习笔记">
                 通信原理 学习笔记 <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -633,11 +643,7 @@
 
   
     <div class="comments" id="comments">
-      
-        <div id="gitment-container"></div>
-      
     </div>
-
   
 
 
@@ -984,48 +990,30 @@
 
 
 
-<!-- LOCAL: You can save these files to your site and update links -->
-    
-        
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/default.css">
-        <script src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/gitment.browser.js"></script>
-    
-<!-- END LOCAL -->
-
-    
-      <style>
-        a.gitment-editor-footer-tip { display: none; }
-        .gitment-container.gitment-footer-container { display: none; }
-      </style>
-    
-
-    
-      <script type="text/javascript">
-      function renderGitment(){
-        var gitment = new Gitment({
-            id: '1563796793000',
-            owner: 'QuincyTan',
-            repo: 'QuincyTan.github.io',
-            
-            oauth: {
-            
-            
-                client_secret: 'bf4df682ed2deaa60f2b9429da6dde37cc5378ad',
-            
-                client_id: '082bc2b0a43ea6e3ae49'
-            }});
-        gitment.render('gitment-container');
-      }
-
-      
-      renderGitment();
-      
-      </script>
-    
 
 
 
-
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: true,
+        appId: 'wCkNQOHecMN5C6aRW3BxL9LP-gzGzoHsz',
+        appKey: 'KynTTW0NoMoKrQaKMMqUKmhy',
+        placeholder: '如果您有任何问题，上方备注昵称和邮箱并留言哦~',
+        avatar:'wavatar',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 

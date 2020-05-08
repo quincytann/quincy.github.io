@@ -1955,7 +1955,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffd5e9;
+  background: #11bd93;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2366,19 +2366,6 @@ pre .javascript .function {
 .theme-next .this_ua.browser.QQBrowser {
   background-color: #78ace9 !important;
   border-color: #4cae4c !important;
-}
-#gitment-display-button {
-  display: inline-block;
-  padding: 0 15px;
-  color: #0a9caf;
-  cursor: pointer;
-  font-size: 14px;
-  border: 1px solid #0a9caf;
-  border-radius: 4px;
-}
-#gitment-display-button:hover {
-  color: #fff;
-  background: #0a9caf;
 }
 .post-spread {
   margin-top: 20px;
@@ -3198,7 +3185,14 @@ header.post-header {
   }
 }
 .post {
-  margin-bottom: 42px;
+  margin-top: -50px;
+  margin-left: -30px;
+  margin-right: -30px;
+  margin-bottom: 60px;
+  padding: 20px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 3px rgba(202,203,203,0.7);
+  -moz-box-shadow: 0 0 3px rgba(202,203,204,0.7);
 }
 .footer-inner {
   color: #cd5c5c;
@@ -3217,10 +3211,10 @@ header.post-header {
   border-bottom: 1px solid #fc6423;
 }
 ::selection {
-  background: #00c4b6;
-  color: #f7f7f7;
+  background: #1e90ff;
+  color: #fff;
 }
 ::-moz-selection {
-  background: #00c4b6;
-  color: #f7f7f7;
+  background: #1e90ff;
+  color: #fff;
 }

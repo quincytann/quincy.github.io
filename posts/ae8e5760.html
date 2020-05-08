@@ -110,7 +110,7 @@
 
 
 
-  <meta name="keywords" content="dfs,">
+  <meta name="keywords" content="bfs,">
 
 
 
@@ -123,18 +123,18 @@
 
 
 
-<meta name="description" content="题意：  出个两个（P,V）范围在1e9的正整数区间，分别从其中随机选出一个数，选出的两个数作为一个新区间的左右端点。要求新区间内的幸运数刚好为k个的概率（幸运数指一个数的数位只有4或7）。 思路：">
-<meta name="keywords" content="dfs">
+<meta name="description" content="题意： 给出一个(2*m-1)*(2*n-1)的图，要求输出从左下角走到右上角最短距离走法的路径，只能在 ‘-’ 或 ‘|’ 上移动，答案保证有解，有多解输出任一，n,m&amp;lt;=400。 思路：">
+<meta name="keywords" content="bfs">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Codeforces 110D--Lucky Probability">
-<meta property="og:url" content="http://quincy.ink/post/cd41c611.html">
+<meta property="og:title" content="ZOJ 2594--Driving-Straight">
+<meta property="og:url" content="http://quincy.ink/posts/ae8e5760.html">
 <meta property="og:site_name" content="Quincy&#39;s Blog">
-<meta property="og:description" content="题意：  出个两个（P,V）范围在1e9的正整数区间，分别从其中随机选出一个数，选出的两个数作为一个新区间的左右端点。要求新区间内的幸运数刚好为k个的概率（幸运数指一个数的数位只有4或7）。 思路：">
+<meta property="og:description" content="题意： 给出一个(2*m-1)*(2*n-1)的图，要求输出从左下角走到右上角最短距离走法的路径，只能在 ‘-’ 或 ‘|’ 上移动，答案保证有解，有多解输出任一，n,m&amp;lt;=400。 思路：">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-05-07T14:10:39.963Z">
+<meta property="og:updated_time" content="2019-02-13T16:00:00.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Codeforces 110D--Lucky Probability">
-<meta name="twitter:description" content="题意：  出个两个（P,V）范围在1e9的正整数区间，分别从其中随机选出一个数，选出的两个数作为一个新区间的左右端点。要求新区间内的幸运数刚好为k个的概率（幸运数指一个数的数位只有4或7）。 思路：">
+<meta name="twitter:title" content="ZOJ 2594--Driving-Straight">
+<meta name="twitter:description" content="题意： 给出一个(2*m-1)*(2*n-1)的图，要求输出从左下角走到右上角最短距离走法的路径，只能在 ‘-’ 或 ‘|’ 上移动，答案保证有解，有多解输出任一，n,m&amp;lt;=400。 思路：">
 
 
 
@@ -164,13 +164,13 @@
 
 
 
-  <link rel="canonical" href="http://quincy.ink/post/cd41c611.html">
+  <link rel="canonical" href="http://quincy.ink/posts/ae8e5760.html">
 
 
 
 
 
-  <title>Codeforces 110D--Lucky Probability | Quincy's Blog</title>
+  <title>ZOJ 2594--Driving-Straight | Quincy's Blog</title>
   
 
 
@@ -205,7 +205,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle">学习时长两年半的在校本科生</p>
+        <p class="site-subtitle">学习时长三年的在校本科生</p>
       
   </div>
 
@@ -329,7 +329,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://quincy.ink/post/cd41c611.html">
+    <link itemprop="mainEntityOfPage" href="http://quincy.ink/posts/ae8e5760.html">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Quincy">
@@ -346,7 +346,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Codeforces 110D--Lucky Probability</h1>
+          <h1 class="post-title" itemprop="name headline">ZOJ 2594--Driving-Straight</h1>
         
 
         <div class="post-meta">
@@ -358,7 +358,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-14T13:51:31+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-14T14:02:16+08:00">
                 2019-02-14
               </time>
             
@@ -374,8 +374,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2020-05-07T22:10:39+08:00">
-                2020-05-07
+              <time title="更新于" itemprop="dateModified" datetime="2019-02-14T00:00:00+08:00">
+                2019-02-14
               </time>
             
           </span>
@@ -408,6 +408,16 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/posts/ae8e5760.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/posts/ae8e5760.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -432,11 +442,13 @@
       
 
       
-        <p><strong>题意：</strong> </p>
-<p>出个两个（P,V）范围在1e9的正整数区间，分别从其中随机选出一个数，选出的两个数作为一个新区间的左右端点。要求新区间内的幸运数刚好为k个的概率（幸运数指一个数的数位只有4或7）。</p>
-<p><strong>思路：</strong> <a id="more"></a><br>首先可以dfs找出所有在数据范围内的幸运数，记为L数组，因为数目不多，便可成k段遍历 L数组，每次分别计算【 L[i-1]+1，L[i]】与【Pl，Pr】的线段交集，和【 L[i+k-1]，L[i+k]-1】与【Vl，Vr】的线段交集，将两个结果相乘即是符合[i,i+k-1]区间幸运数的可能情况，同样的还要对P,V两个区间交换后在计算一遍，概率=所有可能情况/(Pr-Pl+1)/(Vr-Vl+1);然后还要注意k==1的情况会重复计算，需特判。</p>
+        <p><strong>题意：</strong></p>
+<p>给出一个(2*m-1)*(2*n-1)的图，要求输出从左下角走到右上角最短距离走法的路径，只能在 ‘-’ 或 ‘|’ 上移动，答案保证有解，有多解输出任一，n,m&lt;=400。</p>
+<p><strong>思路：</strong><a id="more"></a></p>
+<p>因为题目要求输出路径，而bfs中如果每个状态都记录到当前状态的路径，可能会TLE或者MLE。</p>
+<p>所以考虑先从终点开始bfs出每个点到终点的最短距离，然后再从起点出发bfs一直找 当前点的最短距离-1==下一步的最短距离 的位置就可以回到终点，注意方向的变换。</p>
 <p><strong>代码：</strong></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line">ll L[<span class="number">1050</span>];</span><br><span class="line"><span class="keyword">int</span> num=<span class="number">0</span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> len,<span class="keyword">int</span> p,<span class="keyword">int</span> v)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(p==len)</span><br><span class="line">    &#123;</span><br><span class="line">        L[++num]=v;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    dfs(len,p+<span class="number">1</span>,v*<span class="number">10</span>+<span class="number">4</span>);</span><br><span class="line">    dfs(len,p+<span class="number">1</span>,v*<span class="number">10</span>+<span class="number">7</span>);</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function">ll <span class="title">contain</span><span class="params">(ll x1,ll y1,ll x2,ll y2)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ll l=max(x1,x2);</span><br><span class="line">    ll r=min(y1,y2);</span><br><span class="line">    <span class="keyword">return</span> r-l+<span class="number">1</span>&gt;<span class="number">0</span>?r-l+<span class="number">1</span>:<span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> len=<span class="number">1</span>;len&lt;=<span class="number">9</span>;len++) dfs(len,<span class="number">0</span>,<span class="number">0</span>);</span><br><span class="line">    L[<span class="number">0</span>]=<span class="number">0</span>;</span><br><span class="line">    L[++num]=<span class="number">1000000000</span>;</span><br><span class="line">    <span class="comment">//for(int i=1;i&lt;=num;i++) printf("%d  %lld\n",i,L[i]);</span></span><br><span class="line">    ll Pl,Pr,Vl,Vr;</span><br><span class="line">    <span class="keyword">int</span> k;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%lld%lld%lld%lld%d"</span>,&amp;Pl,&amp;Pr,&amp;Vl,&amp;Vr,&amp;k);</span><br><span class="line">    ll sum=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">1022</span>-k+<span class="number">1</span>;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> j=i+k<span class="number">-1</span>;</span><br><span class="line">        sum+=contain(L[i<span class="number">-1</span>]+<span class="number">1</span>,L[i],Pl,Pr)*contain(L[j],L[j+<span class="number">1</span>]<span class="number">-1</span>,Vl,Vr);</span><br><span class="line">        <span class="keyword">if</span>(L[i]&gt;Pr) <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">1022</span>-k+<span class="number">1</span>;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> j=i+k<span class="number">-1</span>;</span><br><span class="line">        sum+=contain(L[i<span class="number">-1</span>]+<span class="number">1</span>,L[i],Vl,Vr)*contain(L[j],L[j+<span class="number">1</span>]<span class="number">-1</span>,Pl,Pr);</span><br><span class="line">        <span class="keyword">if</span>(L[i]&gt;Vr) <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="keyword">if</span>(k==<span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">1022</span>;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(contain(L[i],L[i],Pl,Pr)&amp;&amp;contain(L[i],L[i],Vl,Vr)) sum--;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%.10f\n"</span>,sum*<span class="number">1.0</span>/(Vr-Vl+<span class="number">1</span>)/(Pr-Pl+<span class="number">1</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">char</span> mp[<span class="number">1005</span>][<span class="number">1005</span>];</span><br><span class="line"><span class="keyword">int</span> dis[<span class="number">1005</span>][<span class="number">1005</span>];</span><br><span class="line"><span class="keyword">int</span> m,n;</span><br><span class="line"><span class="keyword">int</span> dx[<span class="number">10</span>]=&#123;<span class="number">-1</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>&#125;;   <span class="comment">//反向由北到西顺时针 依次为0123</span></span><br><span class="line"><span class="keyword">int</span> dy[<span class="number">10</span>]=&#123;<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">-1</span>&#125;;</span><br><span class="line"><span class="keyword">int</span> dd[<span class="number">10</span>][<span class="number">10</span>] = &#123;</span><br><span class="line">&#123;<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;,   <span class="comment">// F</span></span><br><span class="line">&#123;<span class="number">3</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>&#125;,   <span class="comment">// L</span></span><br><span class="line">&#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">0</span>&#125;    <span class="comment">// R</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">char</span> dir[<span class="number">10</span>]=&#123;<span class="string">'F'</span>,<span class="string">'L'</span>,<span class="string">'R'</span>&#125;;</span><br><span class="line"> </span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> x,y;</span><br><span class="line">    node()&#123;&#125;</span><br><span class="line">    node(<span class="keyword">int</span> x,<span class="keyword">int</span> y):x(x),y(y)&#123;&#125;</span><br><span class="line">&#125;;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">bfs</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">queue</span>&lt;node&gt;q;</span><br><span class="line">    <span class="built_in">memset</span>(dis,<span class="number">-1</span>,<span class="keyword">sizeof</span>(dis));</span><br><span class="line">    dis[<span class="number">1</span>][<span class="number">2</span>*n<span class="number">-1</span>]=<span class="number">0</span>;</span><br><span class="line">    q.push(node(<span class="number">1</span>,<span class="number">2</span>*n<span class="number">-1</span>));</span><br><span class="line">    node now;</span><br><span class="line">    <span class="keyword">int</span> x,y,px,py;</span><br><span class="line">    <span class="keyword">while</span>(!q.empty())</span><br><span class="line">    &#123;</span><br><span class="line">        now=q.front();</span><br><span class="line">        q.pop();</span><br><span class="line">        px=now.x,py=now.y;</span><br><span class="line">        <span class="comment">//printf("%d %d\n",px,py);</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">4</span>;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            x=px+dx[i];</span><br><span class="line">            y=py+dy[i];</span><br><span class="line">            <span class="keyword">if</span>(mp[x][y]==<span class="string">'-'</span> || mp[x][y]==<span class="string">'|'</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                x+=dx[i];</span><br><span class="line">                y+=dy[i];</span><br><span class="line">                <span class="keyword">if</span>(dis[x][y]==<span class="number">-1</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    dis[x][y]=dis[px][py]+<span class="number">1</span>;</span><br><span class="line">                    q.push(node(x,y));</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> statu,x,y,px,py;</span><br><span class="line">    <span class="keyword">if</span>(mp[<span class="number">2</span>*m<span class="number">-1</span>][<span class="number">2</span>]==<span class="string">'-'</span> &amp;&amp; dis[<span class="number">2</span>*m<span class="number">-1</span>][<span class="number">1</span>]<span class="number">-1</span>==dis[<span class="number">2</span>*m<span class="number">-1</span>][<span class="number">3</span>])</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">puts</span>(<span class="string">"E"</span>);</span><br><span class="line">        px=<span class="number">2</span>*m<span class="number">-1</span>,py=<span class="number">3</span>;</span><br><span class="line">        statu=<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(mp[<span class="number">2</span>*m<span class="number">-2</span>][<span class="number">1</span>]==<span class="string">'|'</span> &amp;&amp; dis[<span class="number">2</span>*m<span class="number">-1</span>][<span class="number">1</span>]<span class="number">-1</span>==dis[<span class="number">2</span>*m<span class="number">-3</span>][<span class="number">1</span>])</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">puts</span>(<span class="string">"N"</span>);</span><br><span class="line">        px=<span class="number">2</span>*m<span class="number">-3</span>,py=<span class="number">1</span>;</span><br><span class="line">        statu=<span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="keyword">while</span>(<span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(dis[px][py]==<span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">puts</span>(<span class="string">""</span>);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">3</span>;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            x=px+dx[dd[i][statu]];</span><br><span class="line">            y=py+dy[dd[i][statu]];</span><br><span class="line">            <span class="keyword">if</span>(mp[x][y]==<span class="string">'-'</span> || mp[x][y]==<span class="string">'|'</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                x+=dx[dd[i][statu]];</span><br><span class="line">                y+=dy[dd[i][statu]];</span><br><span class="line">                <span class="keyword">if</span>(dis[x][y]==dis[px][py]<span class="number">-1</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="built_in">printf</span>(<span class="string">"%c"</span>,dir[i]);</span><br><span class="line">                    statu=dd[i][statu];</span><br><span class="line">                    px=x,py=y;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> T;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;T);</span><br><span class="line">    <span class="keyword">while</span>(T--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;m,&amp;n);</span><br><span class="line">        <span class="built_in">memset</span>(mp,<span class="string">' '</span>,<span class="keyword">sizeof</span>(mp));</span><br><span class="line">        getchar();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=<span class="number">2</span>*m<span class="number">-1</span>; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            gets(mp[i]+<span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        bfs();</span><br><span class="line">        <span class="comment">/*for(int i=1;i&lt;=2*m-1;i+=2)</span></span><br><span class="line"><span class="comment">        &#123;</span></span><br><span class="line"><span class="comment">            for(int j=1;j&lt;=2*n-1;j+=2)</span></span><br><span class="line"><span class="comment">            &#123;</span></span><br><span class="line"><span class="comment">                printf("%3d",dis[i][j]);</span></span><br><span class="line"><span class="comment">            &#125;puts("");</span></span><br><span class="line"><span class="comment">        &#125;*/</span></span><br><span class="line">        print();</span><br><span class="line">        <span class="keyword">if</span>(T) <span class="built_in">puts</span>(<span class="string">""</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">2</span></span><br><span class="line"><span class="comment">4 4</span></span><br><span class="line"><span class="comment">+-+-+-+</span></span><br><span class="line"><span class="comment">|</span></span><br><span class="line"><span class="comment">+-+-+-+</span></span><br><span class="line"><span class="comment">      |</span></span><br><span class="line"><span class="comment">+-+-+-+</span></span><br><span class="line"><span class="comment">|</span></span><br><span class="line"><span class="comment">+-+-+-+</span></span><br><span class="line"><span class="comment">N</span></span><br><span class="line"><span class="comment">RFFLLFFRRFF</span></span><br><span class="line"><span class="comment">4 4</span></span><br><span class="line"><span class="comment">+-+ +-+</span></span><br><span class="line"><span class="comment">| |   |</span></span><br><span class="line"><span class="comment">+ +-+-+</span></span><br><span class="line"><span class="comment">|   | |</span></span><br><span class="line"><span class="comment">+-+-+-+</span></span><br><span class="line"><span class="comment">|     |</span></span><br><span class="line"><span class="comment">+-+-+-+</span></span><br><span class="line"><span class="comment">E</span></span><br><span class="line"><span class="comment">FFLFF</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -496,7 +508,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/dfs/" rel="tag"><i class="fa fa-tag"></i> dfs</a>
+            <a href="/tags/bfs/" rel="tag"><i class="fa fa-tag"></i> bfs</a>
           
         </div>
       
@@ -509,8 +521,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/post/d4401c4f.html" rel="next" title="POJ 2774--Long Long Message">
-                <i class="fa fa-chevron-left"></i> POJ 2774--Long Long Message
+              <a href="/posts/cd41c611.html" rel="next" title="Codeforces 110D--Lucky Probability">
+                <i class="fa fa-chevron-left"></i> Codeforces 110D--Lucky Probability
               </a>
             
           </div>
@@ -519,8 +531,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/post/ae8e5760.html" rel="prev" title="ZOJ 2594--Driving-Straight">
-                ZOJ 2594--Driving-Straight <i class="fa fa-chevron-right"></i>
+              <a href="/posts/undefined.html" rel="prev" title="ZOJ 4011--Happy-Sequence">
+                ZOJ 4011--Happy-Sequence <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -552,11 +564,7 @@
 
   
     <div class="comments" id="comments">
-      
-        <div id="gitment-container"></div>
-      
     </div>
-
   
 
 
@@ -878,48 +886,30 @@
 
 
 
-<!-- LOCAL: You can save these files to your site and update links -->
-    
-        
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/default.css">
-        <script src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/gitment.browser.js"></script>
-    
-<!-- END LOCAL -->
-
-    
-      <style>
-        a.gitment-editor-footer-tip { display: none; }
-        .gitment-container.gitment-footer-container { display: none; }
-      </style>
-    
-
-    
-      <script type="text/javascript">
-      function renderGitment(){
-        var gitment = new Gitment({
-            id: '1550123491000',
-            owner: 'QuincyTan',
-            repo: 'QuincyTan.github.io',
-            
-            oauth: {
-            
-            
-                client_secret: 'bf4df682ed2deaa60f2b9429da6dde37cc5378ad',
-            
-                client_id: '082bc2b0a43ea6e3ae49'
-            }});
-        gitment.render('gitment-container');
-      }
-
-      
-      renderGitment();
-      
-      </script>
-    
 
 
 
-
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: true,
+        appId: 'wCkNQOHecMN5C6aRW3BxL9LP-gzGzoHsz',
+        appKey: 'KynTTW0NoMoKrQaKMMqUKmhy',
+        placeholder: '如果您有任何问题，上方备注昵称和邮箱并留言哦~',
+        avatar:'wavatar',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 
