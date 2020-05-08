@@ -110,7 +110,7 @@
 
 
 
-  <meta name="keywords" content="STL,模拟,数学,暴力,程序设计实践,动态规划,图论,">
+  <meta name="keywords" content="STL,模拟,数学,程序设计实践,暴力,动态规划,图论,">
 
 
 
@@ -124,7 +124,7 @@
 
 
 <meta name="description" content="抄袭一时爽，查重火葬场因考前会查重，故仅提供思路参考，代码后续补上，有问题欢迎下方评论留言 ericxie官方解析点这里 食用此篇博文代码前建议上网自学一些C++STL容器(set、vector、map等)的用法">
-<meta name="keywords" content="STL,模拟,数学,暴力,程序设计实践,动态规划,图论">
+<meta name="keywords" content="STL,模拟,数学,程序设计实践,暴力,动态规划,图论">
 <meta property="og:type" content="article">
 <meta property="og:title" content="湘潭大学2019程序设计实践">
 <meta property="og:url" content="http://quincy.ink/post/5f8600d5.html">
@@ -144,7 +144,7 @@
     root: '/',
     scheme: 'Pisces',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"always","offset":10,"b2t":false,"scrollpercent":true,"onmobile":true},
+    sidebar: {"position":"left","display":"always","offset":10,"b2t":false,"scrollpercent":false,"onmobile":true},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -364,7 +364,19 @@
             
 
             
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2020-05-07T22:10:39+08:00">
+                2020-05-07
+              </time>
             
           </span>
 
@@ -395,16 +407,6 @@
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/post/5f8600d5.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/post/5f8600d5.html" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -662,9 +664,9 @@
           
             <a href="/tags/数学/" rel="tag"><i class="fa fa-tag"></i> 数学</a>
           
-            <a href="/tags/暴力/" rel="tag"><i class="fa fa-tag"></i> 暴力</a>
-          
             <a href="/tags/程序设计实践/" rel="tag"><i class="fa fa-tag"></i> 程序设计实践</a>
+          
+            <a href="/tags/暴力/" rel="tag"><i class="fa fa-tag"></i> 暴力</a>
           
             <a href="/tags/动态规划/" rel="tag"><i class="fa fa-tag"></i> 动态规划</a>
           
@@ -724,7 +726,11 @@
 
   
     <div class="comments" id="comments">
+      
+        <div id="gitment-container"></div>
+      
     </div>
+
   
 
 
@@ -803,7 +809,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">57</span>
+                  <span class="site-state-item-count">52</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -944,8 +950,6 @@
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
         
-          <span id="scrollpercent"><span>0</span>%</span>
-        
       </div>
     
 
@@ -1073,30 +1077,48 @@
 
 
 
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/default.css">
+        <script src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/gitment.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+      <style>
+        a.gitment-editor-footer-tip { display: none; }
+        .gitment-container.gitment-footer-container { display: none; }
+      </style>
+    
+
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitment({
+            id: '1559537118000',
+            owner: 'QuincyTan',
+            repo: 'QuincyTan.github.io',
+            
+            oauth: {
+            
+            
+                client_secret: 'bf4df682ed2deaa60f2b9429da6dde37cc5378ad',
+            
+                client_id: '082bc2b0a43ea6e3ae49'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      renderGitment();
+      
+      </script>
+    
 
 
 
-  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-  
-  <script type="text/javascript">
-    var GUEST = ['nick','mail','link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item=>{
-      return GUEST.indexOf(item)>-1;
-    });
-    new Valine({
-        el: '#comments' ,
-        verify: false,
-        notify: false,
-        appId: 'wCkNQOHecMN5C6aRW3BxL9LP-gzGzoHsz',
-        appKey: 'KynTTW0NoMoKrQaKMMqUKmhy',
-        placeholder: 'Just go go',
-        avatar:'mm',
-        guest_info:guest,
-        pageSize:'10' || 10,
-    });
-  </script>
+
 
 
 
