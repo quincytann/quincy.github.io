@@ -75,11 +75,11 @@
         <category>ACM</category>
       </categories>
       <tags>
-        <tag>贪心</tag>
-        <tag>PAM</tag>
-        <tag>线段树</tag>
-        <tag>主席树</tag>
         <tag>二分</tag>
+        <tag>线段树</tag>
+        <tag>PAM</tag>
+        <tag>主席树</tag>
+        <tag>贪心</tag>
         <tag>找规律</tag>
         <tag>trie</tag>
         <tag>LIS</tag>
@@ -98,9 +98,6 @@
         <category>ACM</category>
       </categories>
       <tags>
-        <tag>PAM</tag>
-        <tag>线段树</tag>
-        <tag>主席树</tag>
         <tag>二分</tag>
         <tag>分治</tag>
         <tag>dp</tag>
@@ -109,11 +106,14 @@
         <tag>bitset</tag>
         <tag>STL</tag>
         <tag>单调队列</tag>
+        <tag>线段树</tag>
         <tag>模拟</tag>
         <tag>SAM</tag>
+        <tag>PAM</tag>
         <tag>组合数学</tag>
         <tag>几何</tag>
         <tag>离散化</tag>
+        <tag>主席树</tag>
         <tag>并查集</tag>
       </tags>
   </entry>
@@ -137,8 +137,8 @@
         <category>ACM</category>
       </categories>
       <tags>
-        <tag>线段树</tag>
         <tag>二分</tag>
+        <tag>线段树</tag>
         <tag>树状数组</tag>
         <tag>gcd</tag>
       </tags>
@@ -162,8 +162,8 @@
         <category>ACM</category>
       </categories>
       <tags>
-        <tag>贪心</tag>
         <tag>STL</tag>
+        <tag>贪心</tag>
         <tag>cf</tag>
         <tag>字符串</tag>
       </tags>
