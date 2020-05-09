@@ -131,12 +131,12 @@
 <meta property="og:site_name" content="Quincy&#39;s Blog">
 <meta property="og:description" content="刷了一些题目来自剑指offer、leetcode的简单算法题和sql题，做些总结~~">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://s1.ax1x.com/2020/05/07/YZV5Ax.png">
-<meta property="og:updated_time" content="2020-05-07T14:24:00.616Z">
+<meta property="og:image" content="https://gitee.com/quincytan/blog-picgo/raw/master/img/YZV5Ax.png">
+<meta property="og:updated_time" content="2020-05-09T12:49:51.023Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CS-Note 刷题总结">
 <meta name="twitter:description" content="刷了一些题目来自剑指offer、leetcode的简单算法题和sql题，做些总结~~">
-<meta name="twitter:image" content="https://s1.ax1x.com/2020/05/07/YZV5Ax.png">
+<meta name="twitter:image" content="https://gitee.com/quincytan/blog-picgo/raw/master/img/YZV5Ax.png">
 
 
 
@@ -373,8 +373,8 @@
           
             <span class="post-updated">
               &nbsp; | &nbsp; 更新于
-              <time itemprop="dateUpdated" datetime="2020-05-07T22:24:00+08:00" content="2020-05-07">
-                2020-05-07
+              <time itemprop="dateUpdated" datetime="2020-05-09T20:49:51+08:00" content="2020-05-09">
+                2020-05-09
               </time>
             </span>
           
@@ -460,8 +460,10 @@
 <p>3、不能将同一张表同时更新和查询，可利用子查询的方式解决</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">delete</span> <span class="keyword">from</span> person </span><br><span class="line"><span class="keyword">where</span> <span class="keyword">id</span> <span class="keyword">not</span> <span class="keyword">in</span> </span><br><span class="line">    (<span class="keyword">select</span> <span class="keyword">id</span> <span class="keyword">from</span>(<span class="keyword">select</span> <span class="keyword">min</span>(<span class="keyword">id</span>) <span class="keyword">as</span> <span class="keyword">id</span> <span class="keyword">from</span> Person <span class="keyword">group</span> <span class="keyword">by</span> Email) <span class="keyword">as</span> temp);</span><br></pre></td></tr></table></figure>
 <p>4、sql各种连接</p>
-<p><img src="https://s1.ax1x.com/2020/05/07/YZV5Ax.png" alt="YZV5Ax.png"></p>
+<p><img src="https://gitee.com/quincytan/blog-picgo/raw/master/img/YZV5Ax.png" alt="YZV5Ax.png"></p>
 <p>另外还有内连接；交叉连接（cross join），即笛卡尔积。这两种后面用where判断条件。</p>
+<p>5、判断是否为NULL 只能用 is null 或 is not null，不能采用=, &lt;, &lt;&gt;, !=这些操作符</p>
+<p>6、多个属性in判断需要括号括起来，(x,y) in (…)</p>
 
       
     </div>
