@@ -152,7 +152,8 @@
 <meta property="og:image" content="https://gitee.com/quincytan/blog-picgo/raw/master/img/image-20200509082451069.png">
 <meta property="og:image" content="https://gitee.com/quincytan/blog-picgo/raw/master/img/image-20200509102828728.png">
 <meta property="og:image" content="https://gitee.com/quincytan/blog-picgo/raw/master/img/image-20200509103123506.png">
-<meta property="og:updated_time" content="2020-05-09T03:11:25.156Z">
+<meta property="og:image" content="https://gitee.com/quincytan/blog-picgo/raw/master/img/image-20200509164302202.png">
+<meta property="og:updated_time" content="2020-05-09T09:26:43.924Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="移动通信基础 复习笔记">
 <meta name="twitter:description" content="整理来自老师的《移动通信基础》课程复习参考资料">
@@ -393,7 +394,7 @@
           
             <span class="post-updated">
               &nbsp; | &nbsp; 更新于
-              <time itemprop="dateUpdated" datetime="2020-05-09T11:11:25+08:00" content="2020-05-09">
+              <time itemprop="dateUpdated" datetime="2020-05-09T17:26:43+08:00" content="2020-05-09">
                 2020-05-09
               </time>
             </span>
@@ -589,16 +590,29 @@
 </ol>
 <h4 id="第五章-第三代移动通信系统（3G）"><a href="#第五章-第三代移动通信系统（3G）" class="headerlink" title="第五章 第三代移动通信系统（3G）"></a>第五章 第三代移动通信系统（3G）</h4><ol>
 <li><p>全球四大3G标准</p>
+<p>WCDMA（联通），CDMA2000（电信），TD-SCDMA（移动），WiMAX</p>
 </li>
-<li><p>WCDMA系统的网络结构</p>
+<li><p>WCDMA系统的网络结构<br><img src="https://gitee.com/quincytan/blog-picgo/raw/master/img/image-20200509164302202.png" style="width:70%"><br>UE（用户终端设备）<br>通过Uu接口与网络设备进行数据交互，为用户提供电路域和分组域内的各种业务功能。<br>UE包括两部分：ME和USIM</p>
+<p>NodeB<br>WCDMA系统的基站，通过lub接口与RNC互连，完成Uu接口物理层协议的处理。<br>主要功能是扩频调制信道编码及解扩解调信道编码，还包括基带信号和射频信号的相互转换等功能。</p>
+<p>RNC（Radio Network Controller）<br>切换系统信息广播与系统接入控制功能<br>切换和RNC迁移等移动性管理功能<br>宏分集合并功率控制无线承载等无线资源管理和控制功能</p>
+<p>CN（Core NEtwork）<br>负责与其他网络的连接和对UE的通通信和管理</p>
 </li>
 <li><p>3G的主流多址技术</p>
+<p>CDMA<br>因为TDMA并不是现代蜂窝移动通信的最佳无线接入，而CDMA多址技术完全适合现代移动通信网大容量、高质量、高速率、综合业务、软切换、国际漫游、向下兼容等要求。</p>
 </li>
 <li><p>ARQ、FEC</p>
+<p>反馈重发(ARQ)<br>&emsp;这种方式在是发信端采用某种能发现一定程度传输差错的简单编码方法对所传信息进行编码 ，加入少量监督码元，在接收端则根据编码规则收到的编码信号进行检查，一量检测出(发现)有错码时，即向发信端发出询问的信号，要求重发。发信端收到询问信号时，立即重发 已发生传输差错的那部分发信息，直到正确收到为止。<br>&emsp;反馈纠错可用于双向数据通信，前向纠错则用于单向数字信号的传输，例如广播数字电视系统，因为这种系统没有反馈通道。</p>
+<p>前向纠错(FEC)<br>&emsp;这种方式是发信端采用某种在解码时能纠正一定程度传输差错的较复杂的编码方法，使接收端在收到信码中不仅能发现错码，还能够纠正错码。采用前向纠错方式时，不需要反馈信道，也无需反复重发而延误传输 时间，对实时传输有利，但是纠错设备比较复杂。</p>
 </li>
 <li><p>高速分组下行技术（HSDPA）</p>
+<p>HSDPA是3GPP在R5协议中为了满足上/下行数据业务不对称的需求提出的一种调制解调算法。<br>它可以在不改变已经建设的WCDMA网络结构的情况下，把下行数据业务速率提高到10Mb/s。<br>该技术是WCDMA网络建设后期提高下行容量和数据业务速率的一种重要技术。</p>
+<p>在具体实现中，采用了自适应调制和编码（AMC）、混合自动重传请求（HARQ）、快速调度等技术。</p>
 </li>
 <li><p>我国采用的三种主流3G标准的方案性能比较</p>
+<p>①在CDMA技术利用程度方面:<br>TD-SCDMA在充分利用CDMA方面较差。原因是：一方面，TD-CDMA要和GSM兼容：另一方面，由于不能充分利用多径，降低了系统的效率，而且软切换和软容量能力实现起来相对较困难。但联合检测容易。</p>
+<p>②在同步方式，功率控制和支持高速能力方面:<br>目前的IS-95采用64位的Walsh正交扩频码序列，反向链路采用非相关接收方式，成为限制容量的主要问题，所以在第三代系统中反向链路普遍采用相关接收方式。<br>TD-SCDMA继承了GSM900／DCS1800正反向信道同步的特点，从而克服了反向信道的容量瓶颈效应。而同步意味着帧反向信道均可使用正交码，从而克服了远近效应，降低了对功率控制的要求。<br>WCDMA支持异步传输，其它两个需同步</p>
+<p>③在频谱利用率方面:<br>TD-SCDMA具有明显的优势，被认为是目前频谱利用率最高的技术。<br>其原因一方面是TDD方式能够更好地利用频率资源，另一方面在于，TD-SCDMA的设计目标是要做到设计的所有码道都能同时工作。<br>此外，不对称的移动因特网将是IMT-2000的主要业务。TD-SCDMA因为能很好地支持不对称业务，而成为最适合移动因特网业务的技术，也被认为是TD-SCDMA的一个重要优势，而FDD系统在支持不对称业务时，频谱利用率会降低，并且目前尚未找到更为理想的解决方案。</p>
+<p>④在市场前景方面:<br>WCDMA产业链最完善，在全球拥有最多的市场支持<br>CDMA2000技术本身优秀，但产业链被高通独占，前景不乐观<br>TD-SCDMA中国拥有自主知识产权，政府大力支持</p>
 <p><br></p>
 </li>
 </ol>
@@ -943,7 +957,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">103.3k</span>
+    <span title="Site words total count">104.5k</span>
   
 </div>
 
