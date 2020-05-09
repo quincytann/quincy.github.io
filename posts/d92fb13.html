@@ -149,7 +149,10 @@
 <meta property="og:image" content="https://gitee.com/quincytan/blog-picgo/raw/master/img/wps24.jpg">
 <meta property="og:image" content="https://gitee.com/quincytan/blog-picgo/raw/master/img/wps25.jpg">
 <meta property="og:image" content="https://gitee.com/quincytan/blog-picgo/raw/master/img/wps26.jpg">
-<meta property="og:updated_time" content="2020-05-08T14:00:35.851Z">
+<meta property="og:image" content="https://gitee.com/quincytan/blog-picgo/raw/master/img/image-20200509082451069.png">
+<meta property="og:image" content="https://gitee.com/quincytan/blog-picgo/raw/master/img/image-20200509102828728.png">
+<meta property="og:image" content="https://gitee.com/quincytan/blog-picgo/raw/master/img/image-20200509103123506.png">
+<meta property="og:updated_time" content="2020-05-09T03:11:25.156Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="移动通信基础 复习笔记">
 <meta name="twitter:description" content="整理来自老师的《移动通信基础》课程复习参考资料">
@@ -390,8 +393,8 @@
           
             <span class="post-updated">
               &nbsp; | &nbsp; 更新于
-              <time itemprop="dateUpdated" datetime="2020-05-08T22:00:35+08:00" content="2020-05-08">
-                2020-05-08
+              <time itemprop="dateUpdated" datetime="2020-05-09T11:11:25+08:00" content="2020-05-09">
+                2020-05-09
               </time>
             </span>
           
@@ -515,8 +518,7 @@
 <p>CDMA：各基站使用同一频率并在同一时间进行信息传输的技术。由于发送信号时叠加了伪随机码，使信号的频谱大大加宽。采用这种技术的通信系统也称为扩频通信系统。</p>
 </li>
 <li><p>扩频通信的基本原理，主要优缺点<br>在发端输入的信息先经信息调制形成数字信号，然后由扩频码发生器产生的扩频码序列去调制数字信号以展宽信号的频谱。展宽后的信号再调制到射频发送出去。（使得传输信息所用的带宽远大于信息本身带宽）<br>在接收端收到的宽带射频信号，变频至中频，然后由本地产生的与发端相同的扩频码序列去相关解扩。再经信息解调、恢复成原始信息输出。<img src="https://gitee.com/quincytan/blog-picgo/raw/master/img/wps17.jpg" alt="img"><br><strong>优点：</strong><br>①抗干扰性能好，它具有极强的抗人为宽带干扰、窄带瞄准式干扰、中继转发式干扰的能力，有利于电子反对抗。如果再采用自适应对消、自适应天线、自适应滤波，可以使多径干扰消除，这对军用和民用移动通信是很有利的。<br>②隐蔽性强、干扰小，因信号在很宽的频带上被扩展，单位带宽上的功率很小，即信号功率谱密度很低。信号淹没在白噪声之中，难以发现信号的存在，再加上扩频编码，就更难拾取有用信号。扩频通信技术把被传送的信号带宽展宽，从而降低了系统在单位频宽内的电波“通量密度”，这对空间通信大有好处。<br>③易于实现码分多址，扩频通信占用宽带频谱资源，改善了抗干扰能力，提高了频带的利用率。</p>
-<p><strong>缺点：</strong></p>
-<p>①系统用频带宽。<br>②相对于FDMA、TDMA多址方式，采用扩频技术的CDMA多址方式在移动通信的系统实现更为复杂。</p>
+<p><strong>缺点：</strong><br>①系统用频带宽。<br>②相对于FDMA、TDMA多址方式，采用扩频技术的CDMA多址方式在移动通信的系统实现更为复杂。</p>
 </li>
 <li><p>移动通信对调制技术的要求</p>
 <p>①调制频谱的旁瓣应该尽量小，避免对邻近信道的干扰。<br>②调制频谱效率高，即要求单位带宽传送的比特速率高。<br>③能适应瑞利衰落信道，抗衰落性能好。即在瑞利衰落环境中，达到规定的误码率要求，解调时所需的信噪比低。<br>④调制和解调的电路容易实现 。</p>
@@ -552,20 +554,37 @@
 <li><p>越区切换的概念，主要分为哪几类<br>越区切换：指移动用户在通话期间从一小区移动到另外一个小区，网络能实时控制将移动台从原来的信道切换到新小区的某个信道，并且保持通话不间断。 </p>
 <p>分类：<br>&emsp;① 同一BSC控制区内不同小区之间的切换<br>&emsp;② 同一MSC/VLR内不同BSC控制小区间的切换<br>&emsp;③ 不同MSC/VLR控制的小区间的切换 </p>
 </li>
-<li><p>GSM系统采用的安全措施<br>①鉴权：移动台的主叫和被叫过程需要与VLR验证合法性；<br>②加密：在MS和BTS都会采取A5算法加密发送数据和解密接受数据；<br>③移动设备识别；<br>④国际用户识别码（IMSI）保密。</p>
+<li><p>GSM系统采用的安全措施</p>
+<p>①鉴权：移动台的主叫和被叫过程需要与VLR验证合法性；<br>②加密：在MS和BTS都会采取A5算法加密发送数据和解密接受数据；<br>③移动设备识别；<br>④国际用户识别码（IMSI）保密。</p>
 </li>
 <li><p>CDMA系统的软切换和软容量</p>
+<p><strong>软切换</strong><br>指移动台开始与新的基站通信但不立即中断它和原来基站通信的一种切换方式。软切换只能在同一频率的CDMA信道中进行。软切换是CDMA蜂窝系统独有的切换方式，可有效地提高切换的可靠性，而且若移动台处于小区的边缘上，软切换能提供正向业务信道分集，也能提供反向业务信道的分集，从而保证通信质量。</p>
+<p>导频分类：<br>①激活组：和分配给移动台的正向业务信道结合的导频。<br>②候补组：未列入激活组，但具有足够的强度表明它与正向业务信道结合并能成功地被解调。<br>③邻近组：未列入激活组和候补组，但可作为切换的备用导频。<br>④剩余组：未列入上述⑴、⑵、⑶组的导频。</p>
+<p>切换过程：<br><img src="https://gitee.com/quincytan/blog-picgo/raw/master/img/image-20200509082451069.png" style="width:70%"></p>
+<p>⑴ 导频强度超过门限（上），移动台向基站发送一导频强度测量消息，并把导频转换到候补组；<br>⑵ 基站向移动台发送一切换引导消息；<br>⑶ 移动台把导频转换到激活组，并向基站发送一切换完成消息；<br>⑷ 导频强度降低到门限（下）之下，移动台启动切换下降计时器；<br>⑸ 切换下降计时器终止；移动台向基站发送一导频测量消息；<br>⑹ 基站向移动台发送一切换消息；<br>⑺ 移动台把导频从激活组转移到邻近组，并向基站发送一切换完成消息。</p>
+<p><strong>软容量</strong><br>在CDMA系统中，用户数目和服务质量之间可以相互折中，灵活确定。例如系统经营者可以在话务量高峰期将误帧率稍微提高，从而增加可用信道数。同时，当相邻小区的负荷较轻时，本小区受到的干扰减少，容量就可适当增加。<br>体现软容量的另一种形式是小区呼吸功能。所谓小区呼吸功能就是指各个小区的覆盖大小是动态的，当相邻两个小区负荷一轻—重时，负荷重的小区通过减小导频发射功率，使本小区的边缘用户由于导频强度不够，切换到相邻小区，使负荷分担，即相当于增加了容量。这项功能对切换也特别有用，可避免信道紧缺而导致呼叫中断。在模拟系统和数字TDMA系统中，如果一条信道不可用，呼叫必须重新被分配到另—条信道，或者在切换时中断。但是在CDMA系统中，在一个呼叫结束前，可以接纳另一个呼叫。</p>
 </li>
 <li><p>功率控制</p>
+<p>(1) 功率控制功能<br>&emsp;CDMA系统中所有的移动台在相同的频段工作，所以系统内部的干扰在决定系统容量和通信方面起到关键作用。为了获得大容量、高质量的通信，CDMA系统移动通信系统必须具有功率控制功能。<br>(2) 反向功率控制方法（控制移动台发射功率，分开环闭环）<br>(3) 正向功率控制方法（控制基站发射功率，分开环闭环）</p>
 <p><br></p>
 </li>
 </ol>
-<h4 id="第四章-B3G移动通信系统"><a href="#第四章-B3G移动通信系统" class="headerlink" title="第四章 B3G移动通信系统"></a>第四章 B3G移动通信系统</h4><ol>
+<h4 id="第四章-B2G移动通信系统"><a href="#第四章-B2G移动通信系统" class="headerlink" title="第四章 B2G移动通信系统"></a>第四章 B2G移动通信系统</h4><ol>
 <li><p>GPRS的特点</p>
+<p>资源共享，频率利用率高。<br>数据传输速率高。<br>实行动态链路适配。<br>用户一直处于在线连接状态，接入速度快。<br>向用户提供4种QoS类别的服务，并且用户QoS的配置是可以协商的。<br>支持IP协议和X.25协议。<br>采用数据流量计费。</p>
 </li>
 <li><p>GPRS的移动性管理</p>
+<p>GPRS移动性管理（GMM）的功能是实现对移动终端的位置管理，将MS的当前位置报告给网络。其管理流程主要有附着（attach）、分离（detach）、位置管理等处理流程，每个处理流程中通常会加入登记、鉴权、IMSI校验、加密等接入控制与安全管理功能。<br>GPRS移动台有3种移动性管理状态：Idle（空闲）、Standby（待命）、Ready（就绪）。某个时刻的MS总是处在其中某一状态下。由下图可以看出MS的3种MM（移动性管理）状态之间相互转换的关系和条件。<br><img src="https://gitee.com/quincytan/blog-picgo/raw/master/img/image-20200509102828728.png" alt="image-20200509102828728"></p>
+<p><strong>管理过程：</strong><br>(1) GPRS附着过程<br>当GPRS用户开机时，GPRS手机将监听无线信道，接收系统信息，然后在系统信息指出的控制信道上发送接入请求，系统将分配无线信道给GPRS手机，之后，GPRS手机将在系统分配的无线信道上向SGSN发送注册连接请求，移动台注册成功后，要想访问外部数据网，还需发起PDP（分组数据协议）场景激活过程。</p>
+<p>(2) PDP场景激活过程<br><img src="https://gitee.com/quincytan/blog-picgo/raw/master/img/image-20200509103123506.png" alt="image-20200509103123506"><br>第1步，移动终端向SGSN发送激活PDP场景请求消息，消息中带有如下信息：访问点名=WWW.sina.com.cn；PDP地址为空，表示请求动态地址分配；服务质量和其他选项。<br>第2步，SGSN请求DNS对APN进行解析，得到该APN对应的GGSN的IP地址。<br>第3步，SGSN向GGSN发送建立PDP场景的请求消息，消息中带有如下信息：访问点名=WWW.sina.com.cn；PDP地址为空，表示请求动态地址分配；服务质量和其他选项。<br>第4步，GGSN对该用户进行认证，认证通过以后使用RADIUS（远程用户拨号认证服务器）服务器、DHCP（动态主机配置协议）服务器或直接由GGSN为该用户分配动态IP地址。GGSN向SGSN返回建立PDP场景响应消息。<br>第5步，SGSN向移动终端发送激活PDP场景接受消息。</p>
+<p>(3) GPRS分离过程<br>分离过程允许移动台通知网络，它需要GPRS和/或IMSI分离；同时也允许网络通知移动台，网络已经分离GPRS或IMSI。这就是说，分离过程可以由移动台发起，也可以由网络发起。共有3种类型的分离：IMSI分离、GPRS分离、GPRS/IMSI联合分离（只能由移动台发起）。<br>当移动台不可到达定时器超时以后，或者不可恢复的无线错误引起逻辑链路被拆除，此时发生隐式分离，网络分离移动台而不用通知移动台。 </p>
+<p><strong>SGSN和MSC/VLR间的交互</strong><br>通过SGSN的IMSI连接和分离，允许组合GPRS/IMSI连接，以及组合GPRS/IMSI分离，这样节省无线资源；<br>统一协调位置区和路由区（RA）更新，包括周期更新，节省无线资源，从移动台至SGSN，发送一次组合路由区/位置区更新，SGSN将位置区更新往前送给VLR。<br>通过SGSN寻呼，建立CS连接；<br>非GPRS业务告警过程；<br>识别过程；<br>移动性管理信息过程。</p>
 </li>
 <li><p>EDGE系统的关键技术</p>
+<p>(1) 增强的调制技术<br>&emsp;在GSM/GPRS网络中，使用的是GMSK调制方式。在EDGE中，为了提高数据传输速率，引入了8PSK调制方式。由8种不同相位表示3个比特的信息量（000－111），传输速率提高到GSM/GPRS系统采用的GMSK（高斯最小移频键控，为两相键控）的3倍，其符号速率保持在270kb/s，每个时隙可以得到最大59.2kb/s的有效载荷速率。 </p>
+<p>(2) 自适应调制编码技术<br>&emsp;2种调制方案和9种编码方案组合的9种不同传输模式，根据信道等条件自适应选择。</p>
+<p>(3) 增量冗余技术<br>&emsp;EDGE中另外一种对付链路质量变化的方式是逐步增加冗余度。在这种方式中，信息刚开始传输时，采用纠错能力较低的编码方式，如果接收端解码正确，则能得到比较高的信息码率。反之，如果解码失败，则需要增加编码冗余量，直到解码正确为止。显然，编码冗余度的增加将导致有效数据速率的降低和延时的增加。</p>
+<p><br></p>
 </li>
 </ol>
 <h4 id="第五章-第三代移动通信系统（3G）"><a href="#第五章-第三代移动通信系统（3G）" class="headerlink" title="第五章 第三代移动通信系统（3G）"></a>第五章 第三代移动通信系统（3G）</h4><ol>
@@ -580,6 +599,7 @@
 <li><p>高速分组下行技术（HSDPA）</p>
 </li>
 <li><p>我国采用的三种主流3G标准的方案性能比较</p>
+<p><br></p>
 </li>
 </ol>
 <h4 id="第六章-第四代移动通信系统（4G）"><a href="#第六章-第四代移动通信系统（4G）" class="headerlink" title="第六章 第四代移动通信系统（4G）"></a>第六章 第四代移动通信系统（4G）</h4><ol>
@@ -592,6 +612,7 @@
 <li><p>LTE/LTE-A的最小资源和最小调度资源</p>
 </li>
 <li><p>LTE/LTE-A的语音解决方案有哪几种？各自的优缺点</p>
+<p><br></p>
 </li>
 </ol>
 <h4 id="第七章-第五代移动通信系统（5G）"><a href="#第七章-第五代移动通信系统（5G）" class="headerlink" title="第七章 第五代移动通信系统（5G）"></a>第七章 第五代移动通信系统（5G）</h4><ol>
@@ -606,15 +627,17 @@
 <li><p>5G承载网络架构</p>
 </li>
 <li><p>5G智能终端</p>
+<p><br></p>
 </li>
 </ol>
 <h4 id="第八章-移动通信与计算机网络通信的融合"><a href="#第八章-移动通信与计算机网络通信的融合" class="headerlink" title="第八章 移动通信与计算机网络通信的融合"></a>第八章 移动通信与计算机网络通信的融合</h4><ol>
 <li><p>TCP/IP协议</p>
 </li>
 <li><p>移动通信和计算机网络通信的三种融合方式</p>
+<p><br></p>
 </li>
 </ol>
-<h4 id="第八章-移动通信网络的规划、设计与优化"><a href="#第八章-移动通信网络的规划、设计与优化" class="headerlink" title="第八章 移动通信网络的规划、设计与优化"></a>第八章 移动通信网络的规划、设计与优化</h4><ol>
+<h4 id="第九章-移动通信网络的规划、设计与优化"><a href="#第九章-移动通信网络的规划、设计与优化" class="headerlink" title="第九章 移动通信网络的规划、设计与优化"></a>第九章 移动通信网络的规划、设计与优化</h4><ol>
 <li>无线传播Okumura-Hata模型</li>
 </ol>
 
@@ -886,7 +909,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#第一章-移动通信概论"><span class="nav-number">1.</span> <span class="nav-text">第一章 移动通信概论</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第二章-移动通信基本技术及原理"><span class="nav-number">2.</span> <span class="nav-text">第二章 移动通信基本技术及原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第三章-数字移动通信系统（2G）"><span class="nav-number">3.</span> <span class="nav-text">第三章 数字移动通信系统（2G）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第四章-B3G移动通信系统"><span class="nav-number">4.</span> <span class="nav-text">第四章 B3G移动通信系统</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第五章-第三代移动通信系统（3G）"><span class="nav-number">5.</span> <span class="nav-text">第五章 第三代移动通信系统（3G）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第六章-第四代移动通信系统（4G）"><span class="nav-number">6.</span> <span class="nav-text">第六章 第四代移动通信系统（4G）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第七章-第五代移动通信系统（5G）"><span class="nav-number">7.</span> <span class="nav-text">第七章 第五代移动通信系统（5G）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第八章-移动通信与计算机网络通信的融合"><span class="nav-number">8.</span> <span class="nav-text">第八章 移动通信与计算机网络通信的融合</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第八章-移动通信网络的规划、设计与优化"><span class="nav-number">9.</span> <span class="nav-text">第八章 移动通信网络的规划、设计与优化</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#第一章-移动通信概论"><span class="nav-number">1.</span> <span class="nav-text">第一章 移动通信概论</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第二章-移动通信基本技术及原理"><span class="nav-number">2.</span> <span class="nav-text">第二章 移动通信基本技术及原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第三章-数字移动通信系统（2G）"><span class="nav-number">3.</span> <span class="nav-text">第三章 数字移动通信系统（2G）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第四章-B2G移动通信系统"><span class="nav-number">4.</span> <span class="nav-text">第四章 B2G移动通信系统</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第五章-第三代移动通信系统（3G）"><span class="nav-number">5.</span> <span class="nav-text">第五章 第三代移动通信系统（3G）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第六章-第四代移动通信系统（4G）"><span class="nav-number">6.</span> <span class="nav-text">第六章 第四代移动通信系统（4G）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第七章-第五代移动通信系统（5G）"><span class="nav-number">7.</span> <span class="nav-text">第七章 第五代移动通信系统（5G）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第八章-移动通信与计算机网络通信的融合"><span class="nav-number">8.</span> <span class="nav-text">第八章 移动通信与计算机网络通信的融合</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第九章-移动通信网络的规划、设计与优化"><span class="nav-number">9.</span> <span class="nav-text">第九章 移动通信网络的规划、设计与优化</span></a></li></ol></div>
             
 
           </div>
@@ -920,7 +943,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">101.3k</span>
+    <span title="Site words total count">103.3k</span>
   
 </div>
 
