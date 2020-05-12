@@ -132,7 +132,7 @@
 <meta property="og:description" content="刷了一些题目来自剑指offer、leetcode的简单算法题和sql题，做些总结~~">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://gitee.com/quincytan/blog-picgo/raw/master/img/YZV5Ax.png">
-<meta property="og:updated_time" content="2020-05-11T10:40:32.024Z">
+<meta property="og:updated_time" content="2020-05-12T03:15:48.769Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CS-Note 刷题总结">
 <meta name="twitter:description" content="刷了一些题目来自剑指offer、leetcode的简单算法题和sql题，做些总结~~">
@@ -373,8 +373,8 @@
           
             <span class="post-updated">
               &nbsp; | &nbsp; 更新于
-              <time itemprop="dateUpdated" datetime="2020-05-11T18:40:32+08:00" content="2020-05-11">
-                2020-05-11
+              <time itemprop="dateUpdated" datetime="2020-05-12T11:15:48+08:00" content="2020-05-12">
+                2020-05-12
               </time>
             </span>
           
@@ -461,6 +461,12 @@
 </li>
 <li><p>指定位置插入vector&amp;&amp;list</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">vec.insert(vec.begin()+k,item); <span class="comment">//平均O(n) 较慢</span></span><br><span class="line"></span><br><span class="line">iter = lst.begin();</span><br><span class="line">advance(iter, k); <span class="comment">//迭代器向前移动k个 k为负则向后移动</span></span><br><span class="line">lst.insert(iter, item);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>O(n)求两链表的相交结点</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//a+c+b = b+c+a c为公共部分长度</span></span><br><span class="line">ListNode *p1=headA,*p2=headB;</span><br><span class="line"><span class="keyword">while</span>(p1!=p2)&#123;</span><br><span class="line">    p1 = p1==<span class="literal">NULL</span>?headB:p1-&gt;next;</span><br><span class="line">    p2 = p2==<span class="literal">NULL</span>?headA:p2-&gt;next;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> p1;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>有序链表去重</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//比迭代写法精简多了</span></span><br><span class="line"><span class="function">ListNode* <span class="title">deleteDuplicates</span><span class="params">(ListNode* head)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(head==<span class="literal">NULL</span> || head-&gt;next==<span class="literal">NULL</span>) <span class="keyword">return</span> head;</span><br><span class="line">    head-&gt;next = deleteDuplicates(head-&gt;next);</span><br><span class="line">    <span class="keyword">return</span> head-&gt;val==head-&gt;next-&gt;val?head-&gt;next:head;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <p><br></p>
@@ -795,7 +801,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">105.7k</span>
+    <span title="Site words total count">105.8k</span>
   
 </div>
 
