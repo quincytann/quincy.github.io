@@ -132,7 +132,7 @@
 <meta property="og:description" content="刷了一些题目来自剑指offer、leetcode的简单算法题和sql题，做些总结~~">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://gitee.com/quincytan/blog-picgo/raw/master/img/YZV5Ax.png">
-<meta property="og:updated_time" content="2020-05-14T02:14:35.264Z">
+<meta property="og:updated_time" content="2020-05-14T03:11:21.195Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CS-Note 刷题总结">
 <meta name="twitter:description" content="刷了一些题目来自剑指offer、leetcode的简单算法题和sql题，做些总结~~">
@@ -373,7 +373,7 @@
           
             <span class="post-updated">
               &nbsp; | &nbsp; 更新于
-              <time itemprop="dateUpdated" datetime="2020-05-14T10:14:35+08:00" content="2020-05-14">
+              <time itemprop="dateUpdated" datetime="2020-05-14T11:11:21+08:00" content="2020-05-14">
                 2020-05-14
               </time>
             </span>
@@ -479,6 +479,12 @@
 </li>
 <li><p>O(n)求二叉树中所有路径和为target的路径数（之前只会O(n^2)的做法）</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">unordered_map</span>&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt;presum;<span class="comment">//根节点到所有父节点的路径和及其个数</span></span><br><span class="line"><span class="keyword">int</span> ans;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">pathSum</span><span class="params">(TreeNode* root, <span class="keyword">int</span> target)</span> </span>&#123;</span><br><span class="line">    ans=<span class="number">0</span>;</span><br><span class="line">    presum[<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">    dfs(root,<span class="number">0</span>,target);</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(TreeNode* root,<span class="keyword">int</span> cursum,<span class="keyword">int</span> target)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!root) <span class="keyword">return</span>;</span><br><span class="line">    cursum += root-&gt;val;</span><br><span class="line">    <span class="keyword">if</span>(presum.count(cursum-target)) ans += presum[cursum-target];</span><br><span class="line">    presum[cursum]++;</span><br><span class="line">    dfs(root-&gt;left,cursum,target);</span><br><span class="line">    dfs(root-&gt;right,cursum,target);</span><br><span class="line">    presum[cursum]--; <span class="comment">//回溯注意减掉</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>约瑟夫环的数学解法O(n)</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;n, &amp;m); <span class="comment">//总人数[1...n] 每次跳m步</span></span><br><span class="line"><span class="keyword">int</span> s = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> (i = <span class="number">2</span>; i &lt;= n; i++)&#123;</span><br><span class="line">    s = (s + m) % i;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> s+<span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>N的阶乘末尾0的个数</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//0只能由2*5得到，把N个数质因数分解，2的个数明显多于5，实际就只需统计因子数为5的个数</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">trailingZeroes</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> ret = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(n)&#123;</span><br><span class="line">        ret += n/<span class="number">5</span>;</span><br><span class="line">        n /= <span class="number">5</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <p><br></p>
@@ -700,7 +706,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">53</span>
+                  <span class="site-state-item-count">55</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -813,7 +819,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">106.1k</span>
+    <span title="Site words total count">106.4k</span>
   
 </div>
 
