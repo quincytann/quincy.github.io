@@ -136,7 +136,7 @@
 <meta property="og:image" content="https://gitee.com/quincytan/blog-picgo/raw/master/img/image-20200529110936970.png">
 <meta property="og:image" content="https://gitee.com/quincytan/blog-picgo/raw/master/img/image-20200529111247940.png">
 <meta property="og:image" content="https://gitee.com/quincytan/blog-picgo/raw/master/img/image-20200529111814998.png">
-<meta property="og:updated_time" content="2020-05-29T03:26:11.773Z">
+<meta property="og:updated_time" content="2020-05-29T04:07:46.979Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="湘大校园-健康信息填报自动打卡">
 <meta name="twitter:description" content="前言学校明确了非毕业班学生不返校，却还要我们每天上app打卡一次，偶尔还会忘了导致给负责该工作的学工办老师和班委带来麻烦，所以花了点时间拯救下自己的双手。另外此教程只适用每天上报信息不会变的同学，切勿滥用！">
@@ -377,7 +377,7 @@
           
             <span class="post-updated">
               &nbsp; | &nbsp; 更新于
-              <time itemprop="dateUpdated" datetime="2020-05-29T11:26:11+08:00" content="2020-05-29">
+              <time itemprop="dateUpdated" datetime="2020-05-29T12:07:46+08:00" content="2020-05-29">
                 2020-05-29
               </time>
             </span>
@@ -446,7 +446,7 @@
       
         <h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>学校明确了非毕业班学生不返校，却还要我们每天上app打卡一次，偶尔还会忘了导致给负责该工作的学工办老师和班委带来麻烦，所以花了点时间拯救下自己的双手。另外此教程<font style="color:red">只适用每天上报信息不会变</font>的同学，切勿滥用！</p>
 <a id="more"></a>
-<p>基本原理：因为对于上报信息不变的同学来讲，每天提交的http报文都是一样的（除了cookie可能会失效需要更新一下），所以就可以抓到提交的完整报文然后交给py的requests库封装一下再重新提交，再将写好的py代码部署在腾讯云函数上就可以每天定时帮你运行代码提交报文也将相当于打卡了。</p>
+<p>实现原理：因为对于上报信息不变的同学来讲，每天提交的http报文都是一样的（除了cookie可能会失效需要更新一下），所以就可以抓到提交的完整报文然后交给py的requests库封装一下再重新提交，再将写好的py代码部署在腾讯云函数（每月的流量免费额度基本用不完）上就可以每天定时帮你运行代码提交报文也将相当于打卡了。</p>
 <h4 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h4><p>手机端：湘大校园app<br>电脑端：Fiddler<a href="https://www.telerik.com/fiddler" target="_blank" rel="noopener">[官网下载]</a>,<a href="https://www.cnblogs.com/woaixuexi9999/p/9247705.html" target="_blank" rel="noopener">[配置教程]</a>；python3.6（需requests库、json库）<br>腾讯云函数：<a href="https://cloud.tencent.com/login?s_url=https%3A%2F%2Fconsole.cloud.tencent.com%2Fscf%2Findex%2F1" target="_blank" rel="noopener">[官网注册并激活]</a></p>
 <p>为什么要用电脑来抓包呢？是因为实际操作直接用手机抓包app会提示没网或者提示定位未开启（玄学问题无解）。</p>
 <h4 id="实操"><a href="#实操" class="headerlink" title="实操"></a>实操</h4><ol>
@@ -457,7 +457,7 @@
 <li><p>手机到健康信息上报界面点提交，这时候根据host过滤Fiddler会抓到以下三个报文</p>
 <p><img src="https://gitee.com/quincytan/blog-picgo/raw/master/img/image-20200529105509100.png" alt="image-20200529105509100"></p>
 </li>
-<li><p>我们只需第一个报文，双击查看报文切换Raw格式，下方data部分里面就是我们要提交的数据</p>
+<li><p>我们只需第一个报文，双击查看报文切换Raw格式，下方data部分里面就是我们要提交的数据，注意“locationAddr”字段是定位的位置必须不为空且合法</p>
 <p><img src="https://gitee.com/quincytan/blog-picgo/raw/master/img/image-20200529112016697.png" alt="image-20200529112016697"></p>
 </li>
 <li><p>将报文的所有内容改一改格式写进py</p>
