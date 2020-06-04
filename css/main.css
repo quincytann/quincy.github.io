@@ -1955,7 +1955,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #62ffa2;
+  background: #dfff1b;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3195,7 +3195,7 @@ header.post-header {
   -moz-box-shadow: 0 0 3px rgba(202,203,204,0.7);
 }
 .post:hover {
-  box-shadow: 0 0 3px #f00;
+  box-shadow: 0 0 3px #000;
   -webkit-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
 }
