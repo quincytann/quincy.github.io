@@ -15,13 +15,6 @@
     </url>
 
     <url>
-        <loc>http://quincy.ink/categories/%E5%B7%A5%E4%BD%9C/</loc>
-        <lastmod>2020-04-18T16:00:00.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://quincy.ink/categories/%E4%B8%93%E4%B8%9A%E8%AF%BE%E7%A8%8B/</loc>
         <lastmod>2020-05-21T11:46:38.384Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -36,15 +29,22 @@
     </url>
 
     <url>
-        <loc>http://quincy.ink/categories/ACM/</loc>
-        <lastmod>2020-06-11T10:51:51.713Z</lastmod>
+        <loc>http://quincy.ink/categories/%E6%95%99%E7%A8%8B%E6%80%BB%E7%BB%93/</loc>
+        <lastmod>2020-06-12T02:27:30.046Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://quincy.ink/categories/%E6%95%99%E7%A8%8B%E6%80%BB%E7%BB%93/</loc>
-        <lastmod>2020-06-12T02:27:30.046Z</lastmod>
+        <loc>http://quincy.ink/categories/ACM/</loc>
+        <lastmod>2020-06-21T07:31:23.004Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://quincy.ink/categories/%E5%B7%A5%E4%BD%9C/</loc>
+        <lastmod>2020-08-08T02:02:07.087Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
