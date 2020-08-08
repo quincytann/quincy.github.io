@@ -131,7 +131,7 @@
 <meta property="og:site_name" content="Quincy&#39;s Blog">
 <meta property="og:description" content="记录一下找工作的小颠簸~~">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-08-08T02:02:07.087Z">
+<meta property="og:updated_time" content="2020-08-08T09:54:26.633Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面经">
 <meta name="twitter:description" content="记录一下找工作的小颠簸~~">
@@ -371,7 +371,7 @@
           
             <span class="post-updated">
               &nbsp; | &nbsp; 更新于
-              <time itemprop="dateUpdated" datetime="2020-08-08T10:02:07+08:00" content="2020-08-08">
+              <time itemprop="dateUpdated" datetime="2020-08-08T17:54:26+08:00" content="2020-08-08">
                 2020-08-08
               </time>
             </span>
@@ -440,7 +440,7 @@
       
         <p>记录一下找工作的小颠簸~~<a id="more"></a></p>
 <blockquote>
-<p>基本情况：<br>蚂蚁金服：笔试+1面+1面挂<br>字节跳动：提前批3面挂<br>快手：提前批简历挂<br>美团：笔试</p>
+<p>基本情况：<br>蚂蚁金服：笔试ak+1面+1面挂<br>字节跳动：提前批3面挂<br>快手：提前批简历挂<br>美团：笔试ak</p>
 <p><strong>面试总结</strong>：<br>开头自我介绍和最后问面试官的问题比较重要，做好充分准备；<br>回答问题后不要询问回答是否正确；<br>问题不会就说不会，不要给自己挖坑；<br>压力面沉着冷静；<br>多看面经查漏补缺；<br>最重要的还是专业知识的review；<br>“我们并不指望你掌握所有知识，当今社会这也是不现实的，我们更加希望你对你会的东西有自己的理解，能作一些合理的推断”</p>
 </blockquote>
 <h3 id="蚂蚁金服——JAVA研发工程师"><a href="#蚂蚁金服——JAVA研发工程师" class="headerlink" title="蚂蚁金服——JAVA研发工程师"></a>蚂蚁金服——JAVA研发工程师</h3><h4 id="笔试（4-3）"><a href="#笔试（4-3）" class="headerlink" title="笔试（4.3）"></a>笔试（4.3）</h4><blockquote>
@@ -462,10 +462,13 @@
 </blockquote>
 <h4 id="三面（7-9）"><a href="#三面（7-9）" class="headerlink" title="三面（7.9）"></a>三面（7.9）</h4><blockquote>
 <p>1、编程题：计算从一棵多叉树的根节点走N步，能走到节点x的概率，任何一个走过的节点不能走第二次，如果没路可以走可以原地走，如果有路可走，但是步数没用完需要接着走</p>
-<p>​        1<br>   2       3       4<br>5    6    7     8   9<br>N = 2，x = 6<br>ans = 1/6<br>struct Node {<br>  int val;<br>  vector<node *=""> subNodes<br>};</node></p>
+<p>​        1<br>   2       3       4<br>5    6    7     8   9<br>N = 2，x = 6<br>ans = 1/6<br>struct Node {<br>  int val;<br>  vector<node \*=""> subNodes<br>};</node></p>
 <p>float func(Node *root, int N, int x){</p>
 <p>}</p>
-<p>2、Java和C++的区别<br>3、C++的内存管理<br>4、下面obj的空间会被回收吗？delete p会发生什么？p指向的是堆内存还是栈内存？<br>classA obj;<br>classA <em>p = &obj;<br>p = NULL;<br>5、指针和引用的区别，引用所占字节大小<br>6、读代码，分析输出结果<br>class Base {<br>    virtual void f(){<br>        printf(“base”);<br>     }<br>}<br>class Sub : public Base{<br>    vitrual void f(){<br>        printf(“sub”);<br>    }<br>}<br>Base </em>p = new Sub();<br>p-&gt;f();  //sub<br>Base obj = *p;<br>obj.f();  //base<br>p = &obj;<br>p-&gt;f(); //base<br>7、系统设计<br>设计一个oj<br>功能包括：题库、排名、代码提交运行、运行结果返回给用户<br>(…其中各种子问题)</p>
+<p>2、Java和C++的区别<br>3、C++的内存管理<br>4、下面obj的空间会被回收吗？delete p会发生什么？p指向的是堆内存还是栈内存？<br>classA obj;<br>classA *p = &obj;<br>p = NULL;<br>5、指针和引用的区别，引用所占字节大小<br>6、读代码，分析输出结果<br>class Base {<br>    virtual void f(){<br>        printf(“base”);<br>     }<br>}<br>class Sub : public Base{<br>    vitrual void f(){<br>        printf(“sub”);<br>    }<br>}<br>Base *p = new Sub();<br>p-&gt;f();  //sub<br>Base obj = *p;<br>obj.f();  //base<br>p = &obj;<br>p-&gt;f(); //base<br>7、系统设计<br>设计一个oj<br>功能包括：题库、排名、代码提交运行、运行结果返回给用户<br>(…其中各种子问题)</p>
+</blockquote>
+<h3 id="美团——数据开发工程师"><a href="#美团——数据开发工程师" class="headerlink" title="美团——数据开发工程师"></a>美团——数据开发工程师</h3><h4 id="笔试（8-8）"><a href="#笔试（8-8）" class="headerlink" title="笔试（8.8）"></a>笔试（8.8）</h4><blockquote>
+<p>1、求平均数输出保留一位小数，不四舍五入进位<br>思路：显然%.1f输出就挂了，手动模拟除法就好了<br>2、一个关于优惠券的简单贪心题<br>3、求一个数从根节点到所有节点路径和的和，还有带往返情况的最小的路径和<br>思路：第一个直接dfs记录路径和即可，第二个dfs求出从根节点出发的最长路径，然后用所有边权*2再减掉这个最长路径即为答案，也就是在最长的路径上不回头走<br>4、相邻两个相同的数可以合并，两个x合并后变x+1并放在原位置，问最多可以合并多少次<br>思路：很经典的一个题了，考查栈的应用，用栈模拟即可<br>5、一颗树的每个结点要么黑色要么黄色，求以每个结点为根节点的子树中，所有和根结点不同颜色结点到该结点路径的和<br>思路：直接dfs，对于每个结点先返回当前子树下的黑结点个数、所有黑结点到当前结点路径和、黄结点个数和所有黄结点到当前结点路径和，父结点更新的时候将所有子结点的这四个信息汇总即可，其中结点数直接求和，路径和需要将结点数和路径和一起更新，比如<br>father.cnt0 += sub.cnt0;<br>father.sum0 += sub.sum0+tmp.cnt0;</p>
 </blockquote>
 
       
@@ -740,7 +743,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#蚂蚁金服——JAVA研发工程师"><span class="nav-number">1.</span> <span class="nav-text">蚂蚁金服——JAVA研发工程师</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#笔试（4-3）"><span class="nav-number">1.1.</span> <span class="nav-text">笔试（4.3）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#一面（4-11）"><span class="nav-number">1.2.</span> <span class="nav-text">一面（4.11）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#一面（4-19）"><span class="nav-number">1.3.</span> <span class="nav-text">一面（4.19）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字节跳动——客户端开发工程师"><span class="nav-number">2.</span> <span class="nav-text">字节跳动——客户端开发工程师</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#一面（7-1）"><span class="nav-number">2.1.</span> <span class="nav-text">一面（7.1）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二面（7-3）"><span class="nav-number">2.2.</span> <span class="nav-text">二面（7.3）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#三面（7-9）"><span class="nav-number">2.3.</span> <span class="nav-text">三面（7.9）</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#蚂蚁金服——JAVA研发工程师"><span class="nav-number">1.</span> <span class="nav-text">蚂蚁金服——JAVA研发工程师</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#笔试（4-3）"><span class="nav-number">1.1.</span> <span class="nav-text">笔试（4.3）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#一面（4-11）"><span class="nav-number">1.2.</span> <span class="nav-text">一面（4.11）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#一面（4-19）"><span class="nav-number">1.3.</span> <span class="nav-text">一面（4.19）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字节跳动——客户端开发工程师"><span class="nav-number">2.</span> <span class="nav-text">字节跳动——客户端开发工程师</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#一面（7-1）"><span class="nav-number">2.1.</span> <span class="nav-text">一面（7.1）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二面（7-3）"><span class="nav-number">2.2.</span> <span class="nav-text">二面（7.3）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#三面（7-9）"><span class="nav-number">2.3.</span> <span class="nav-text">三面（7.9）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#美团——数据开发工程师"><span class="nav-number">3.</span> <span class="nav-text">美团——数据开发工程师</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#笔试（8-8）"><span class="nav-number">3.1.</span> <span class="nav-text">笔试（8.8）</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -774,7 +777,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">104.4k</span>
+    <span title="Site words total count">104.8k</span>
   
 </div>
 
