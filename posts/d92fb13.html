@@ -157,7 +157,7 @@
 <meta property="og:image" content="https://gitee.com/quincytan/blog-picgo/raw/master/img/image-20200510100536937.png">
 <meta property="og:image" content="https://gitee.com/quincytan/blog-picgo/raw/master/img/image-20200510101331105.png">
 <meta property="og:image" content="https://gitee.com/quincytan/blog-picgo/raw/master/img/image-20200510101637154.png">
-<meta property="og:updated_time" content="2020-08-22T02:39:08.066Z">
+<meta property="og:updated_time" content="2020-08-24T01:15:30.190Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="移动通信基础 复习笔记">
 <meta name="twitter:description" content="整理来自老师的《移动通信基础》课程复习参考资料">
@@ -398,8 +398,8 @@
           
             <span class="post-updated">
               &nbsp; | &nbsp; 更新于
-              <time itemprop="dateUpdated" datetime="2020-08-22T10:39:08+08:00" content="2020-08-22">
-                2020-08-22
+              <time itemprop="dateUpdated" datetime="2020-08-24T09:15:30+08:00" content="2020-08-24">
+                2020-08-24
               </time>
             </span>
           
@@ -588,16 +588,15 @@
 </li>
 </ol>
 <h4 id="第六章-第四代移动通信系统（4G）"><a href="#第六章-第四代移动通信系统（4G）" class="headerlink" title="第六章 第四代移动通信系统（4G）"></a>第六章 第四代移动通信系统（4G）</h4><ol>
-<li><p>4G移动通信系统的标准，这些标准之间的主要技术差异<br>4G移动通信系统有LTE、LTE-Advanced、WiMAX、WirelessMAN-Advanced、HSPA+五种标准。<br>①LTE：具有OFDMA多址技术、MIMO技术、HARQ技术、多维动态资源分配与链路适配技术、自适应调制编码和功率控制等核心技术。其中又有两个分支分别是LTE-FDD和LTE-TDD。<br>②LTE-Advanced：LTE技术的升级版，核心技术新增载波聚合技术、中继技术、协同多点传输技术。<br>③WiMax：全球微波互联接入，即IEEE802.16。具有多天线技术，从而实现更高的数据传输速率和更大的覆盖范围；提供QoS控制机制，可以在无线接入网部分为不同业务提供不同质量的服务。<br>④WirelessMAN-Advanced：WiMax的升级版，即IEEE802.16m。<br>⑤HSPA+：HSPA的升级版，主要运用高速下行分组接入技术和高速上行分组接入技术。</p>
+<li><p>4G移动通信系统的标准，这些标准之间的主要技术差异<br>①LTE-Advanced：LTE技术的升级版，核心技术新增载波聚合技术、中继技术、协同多点传输技术。<br>②WirelessMAN-Advanced：WiMax的升级版，即IEEE802.16m。<br>两者主要技术差不多，区别在于演进方向不一样。</p>
 </li>
-<li><p>LTE采用的多址方式</p>
-<p>OFDMA</p>
+<li><p>LTE采用的多址方式<br>上行：SC-FDMA<br>下行：OFDMA</p>
 </li>
 <li><p>LTE系统的关键技术和LTE-A系统的关键技术，这些技术分别解决什么问题。</p>
 <p>LTE系统的关键技术有：<br>① OFDMA多址技术：解决宽带移动通信系统中的频率选择性衰落和符号间干扰问题；<br>② MIMO技术：为了增大信道容量和提高频谱利用效率；<br>③ HARQ技术：为了补偿由于采用链路适配所带来的误码，提高数据传输速率，减小数据传输时延；<br>④ 多维动态资源分配与链路适配技术：为了实现上下行链路无线资源调度；<br>⑤ 自适应调制编码技术：根据信道条件调整调制和解码方式，从而提高信道利用率；<br>⑥ 功率控制技术：保证小区内的所有用户既能正确接收下行控制信令，又能保证下行数据的传输质量。</p>
 <p>LTE-A系统的关键技术有：<br>①载波聚合技术：为了满足单用户峰值速率和系统容量提升的要求；<br>②增强的MIMO技术：提高单用户上下行的峰值速率；<br>③协作多点传输技术：将多个接入点信号的发送与接收进行紧密协调，可以有效降低干扰、提高系统容量、改善小区边界的覆盖和用户数据速率；<br>④中继技术：为了改变系统容量和改善网络覆盖；<br>⑤异构网络与增强型小区干扰协调技术：为了减轻宏蜂窝负载、提高特定区域的覆盖质量、改善边缘用户性能、降低网络开销、减少能量消耗、降低运营商网络部署成本。</p>
 </li>
-<li><p>LTE/LTE-A的最小资源和最小调度资源<br>LTE/LTE-A的最小资源是RE(Resource Element)，频域上占用一个子载波(15KHz)，时域上占用一个symbol。最小调度资源是RB(Resource Block)，频域上占连续12个子载波(180KHz)，时域上占一个slot(0.5ms)。</p>
+<li><p>LTE/LTE-A的最小资源和最小调度资源<br>LTE/LTE-A的最小资源是RE(Resource Element)，频域上占用一个子载波(15KHz)，时域上占用一个symbol。最小调度资源是RB(Resource Block)，频域上占连续12个子载波(180KHz)，时域上占一个slot(0.5ms)。<br>1RB = 84RE</p>
 </li>
 <li><p>LTE/LTE-A的语音解决方案有哪几种？各自的优缺点<br>①CSFB语音方案：优点是能够在4G建网初期没有4G信号覆盖的时候能够回落到2G/3G信号上保证语音通话。缺点是需要升级2G/3G网络，数据和语音不能同时并发，即通话时不能利用LTE进行上网，同时反复切换信号还会导致掉话。<br>②SVLTE语音方案：优点是无需升级2G/3G网络就能能够实现单卡双待，同时处在LTE和2G/3G网络中，数据和语音可以同时并发，并不会相互干扰，通话时也可以利用LTE上网。缺点是需要终端支持，终端开发难度高。<br>③VoLTE语音方案：优点是采用全IP的端到端语音方案和高分辨率编解码技术，使通话有更高质量的效果和更低的时延，掉话率几乎为零，同时还能提高无线频谱利用率、降低网络成本。缺点是需要在核心网部署完善的IMS核心网网元设备来控制语音业务的发起和呼叫。</p>
 <p><br></p>
@@ -940,7 +939,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">103.2k</span>
+    <span title="Site words total count">103.1k</span>
   
 </div>
 
